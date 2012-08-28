@@ -14,7 +14,6 @@ set -o vi
 complete -W "$(echo $(grep '^ssh ' .bash_history | sort -u | sed 's/^ssh //'))" ssh
 
 # Directory bookmarking
-
 if [ ! -f ~/.dirs ]; then
     touch ~/.dirs
 else
