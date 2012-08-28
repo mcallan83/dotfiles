@@ -33,3 +33,8 @@ R () {
 }
 alias U='source ~/.dirs'
 shopt -s cdable_vars
+
+# Update VIM with new bundles using Vundle
+vundle-update() {
+    vim +BundleInstall +qall
+}
