@@ -12,3 +12,5 @@ ln -s ~/.dotfiles/gvimrc ~/.gvimrc
 
 # Install Vundle for VIM
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+# vim +BundleInstall +qall
