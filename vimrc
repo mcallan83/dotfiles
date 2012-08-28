@@ -20,6 +20,7 @@ Bundle 'Lokaltog/vim-powerline'
 " ************
 
 filetype plugin indent on
+set laststatus=2   " Always show the statusline
 syntax on
 
 " Color Scheme
@@ -30,9 +31,10 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
+
 " *******************
 " * Plugin Settings *
 " *******************
 "
 " Powerline
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
