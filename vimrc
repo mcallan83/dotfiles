@@ -7,11 +7,12 @@ filetype off
 " ***************
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 Bundle 'gmarik/vundle'
 
-" 3rd party plugins here
+" 3rd party plugins
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-powerline'
 
 
 " ************
@@ -29,3 +30,9 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
+" *******************
+" * Plugin Settings *
+" *******************
+"
+" Powerline
+let g:Powerline_symbols = 'fancy'
