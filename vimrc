@@ -14,6 +14,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mattn/zencoding-vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/snipmate-snippets'
 
 
 " ************
