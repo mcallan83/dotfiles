@@ -8,3 +8,6 @@ alias ql='qlmanage -p 2>/dev/null'
 
 //bashmarks
 source ~/.dotfiles/bin/bashmarks/bashmarks.sh
+
+//enable vim mode on bash prompt
+set -o vi
