@@ -1,0 +1,3 @@
+[submodule "/Users/mcallan/.dotfiles/bin/bashmarks"]
+	path = /Users/mcallan/.dotfiles/bin/bashmarks
+	url = https://github.com/huyng/bashmarks.git

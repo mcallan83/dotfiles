@@ -5,3 +5,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
 //open file in quicklook
 alias ql='qlmanage -p 2>/dev/null'
+
+//bashmarks
+source ~/.dotfiles/bin/bashmarks/bashmarks.sh
