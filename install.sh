@@ -3,10 +3,9 @@
 
 # Create symbolic links to dotfiles in ~/.dotfiles
 ln -s ~/.dotfiles/.slate ~/.slate
-ln -s ~/.dotfiles/.osx ~/.osx
 
 # Run OSX Defaults
-bash ~/.osx
+bash ~/.dotfiles/.osx
 
 # KeyRemap4MacBook Config
 mkdir -p ~/Library/Application\ Support/KeyRemap4MacBook
