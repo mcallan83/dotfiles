@@ -3,6 +3,8 @@
 
 # Create symbolic links to dotfiles in ~/.dotfiles
 ln -s ~/.dotfiles/.slate ~/.slate
+ln -s ~/.dotfiles/.bashrc ~/.bashrc
+ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
 
 # Run OSX Defaults
 bash ~/.dotfiles/.osx
