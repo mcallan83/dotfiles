@@ -10,6 +10,5 @@ unset file
 # enable vim mode on bash prompt
 set -o vi
 
-
 # load scripts
 source "$HOME/.dotfiles/scripts/bashmarks.sh"
