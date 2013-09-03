@@ -4,11 +4,11 @@ for file in .dotfiles/.{path,bash_prompt,exports,aliases,functions,localrc}; do
 done
 unset file
 
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
-
-# enable vim mode on bash prompt
-set -o vi
-
 # load scripts
-source "$HOME/.dotfiles/scripts/bashmarks.sh"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  #rvm
+source "$HOME/.dotfiles/scripts/bashmarks.sh" #bashmarks
+
+# bash settings
+set -o vi #vi mode
+shopt -s histappend #append history
+shopt -s cmdhist #force history commands to fit on one line
