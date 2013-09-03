@@ -41,6 +41,9 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # source ~/.bashrc
 alias reload='. ~/.bashrc'
 
+# laravel php framework
+alias art="php artisan"
+
 
 # osx-specific
 if [[ "$OSTYPE" =~ ^darwin ]]; then
