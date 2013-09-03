@@ -1,0 +1,2 @@
+#open file in quicklook
+alias ql='qlmanage -p 2>/dev/null'
