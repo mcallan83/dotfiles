@@ -56,7 +56,11 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
-#open file in quicklook
+# open file in quicklook
 alias ql='qlmanage -p 2>/dev/null'
 
+# source ~/.bashrc
 alias reload='. ~/.bashrc'
+
+# copy public key to clipboard
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to clipboard.'"
