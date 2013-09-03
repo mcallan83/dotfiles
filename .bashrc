@@ -7,5 +7,9 @@ unset file
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
-#enable vim mode on bash prompt
+# enable vim mode on bash prompt
 set -o vi
+
+
+# load scripts
+source "$HOME/.dotfiles/scripts/bashmarks.sh"
