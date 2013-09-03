@@ -9,6 +9,8 @@ unset file
 source "$HOME/.dotfiles/scripts/bashmarks.sh" #bashmarks
 
 # bash settings
-set -o vi #vi mode
-shopt -s histappend #append history
-shopt -s cmdhist #force history commands to fit on one line
+set -o vi # vi mode
+shopt -s histappend # append history
+shopt -s cmdhist # force history commands to fit on one line
+shopt -s checkwinsize # force bash to update window size
+shopt -s cdspell # autocorrect spelling mistakes when using cd
