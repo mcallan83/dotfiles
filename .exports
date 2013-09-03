@@ -1,3 +1,13 @@
+# editor
 export EDITOR='subl -w'
+
+# color 
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
+
+# history
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
+export HISTCONTROL=ignoreboth
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+export PROMPT_COMMAND='history -a' #record history right away
