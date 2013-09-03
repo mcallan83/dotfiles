@@ -14,3 +14,4 @@ shopt -s histappend # append history
 shopt -s cmdhist # force history commands to fit on one line
 shopt -s checkwinsize # force bash to update window size
 shopt -s nocaseglob # case insensitive globbing
+unset MAILCHECK # disable "you have mail" warning
