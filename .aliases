@@ -58,3 +58,5 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 
 #open file in quicklook
 alias ql='qlmanage -p 2>/dev/null'
+
+alias reload='. ~/.bashrc'
