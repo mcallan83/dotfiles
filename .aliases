@@ -41,9 +41,14 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # source ~/.bashrc
 alias reload='. ~/.bashrc'
 
+# tree
+if [ ! -x "$(which tree 2>/dev/null)" ]
+then
+  alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+fi
+
 # laravel php framework
 alias art="php artisan"
-
 
 # osx-specific
 if [[ "$OSTYPE" =~ ^darwin ]]; then
