@@ -35,32 +35,38 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 # enhanced whois lookups
 alias whois="whois -h whois-servers.net"
 
-# trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
-
-# recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-# hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
 # url-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-
-# merge pdf files
-# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
-
-# open file in quicklook
-alias ql='qlmanage -p 2>/dev/null'
 
 # source ~/.bashrc
 alias reload='. ~/.bashrc'
 
-# copy public key to clipboard
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to clipboard.'"
+
+# osx-specific
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+
+	# copy public key to clipboard
+	alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to clipboard.'"
+
+	# merge pdf files
+	# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
+	alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+	# open file in quicklook
+	alias ql='qlmanage -p 2>/dev/null'
+
+	# trim new lines and copy to clipboard
+	alias c="tr -d '\n' | pbcopy"
+
+	# recursively delete `.DS_Store` files
+	alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+	# show/hide hidden files in Finder
+	alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+	alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+	# hide/show all desktop icons (useful when presenting)
+	alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+	alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+fi

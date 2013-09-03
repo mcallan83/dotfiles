@@ -33,11 +33,6 @@ function mkd() {
     mkdir -p "$@" && cd "$@"
 }
 
-# change working directory to the top-most Finder window location
-function cdf() { # short for `cdfinder`
-    cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"
-}
-
 # determine size of a file or total size of a directory
 function fs() {
     if du -b /dev/null > /dev/null 2>&1; then
@@ -76,20 +71,33 @@ function phpserver() {
     php -S "${ip}:${port}"
 }
 
-# add reminder to reminders.app
-# usage: `remind 'foo'` or `echo 'foo' | remind`
-function remind() {
-    local text
-    if [ -t 0 ]; then
-        text="$1" # argument
-    else
-        text=$(cat) # pipe
-    fi
-    osascript >/dev/null <<EOF
+
+
+
+# osx-specific
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+
+    # add reminder to reminders.app
+    # usage: `remind 'foo'` or `echo 'foo' | remind`
+    function remind() {
+        local text
+        if [ -t 0 ]; then
+            text="$1" # argument
+        else
+            text=$(cat) # pipe
+        fi
+        osascript >/dev/null <<EOF
 tell application "Reminders"
     tell the default list
         make new reminder with properties {name:"$text"}
     end tell
 end tell
 EOF
-}
+    }
+
+    # change working directory to the top-most Finder window location
+    function cdf() { # short for `cdfinder`
+        cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"
+    }
+
+fi
