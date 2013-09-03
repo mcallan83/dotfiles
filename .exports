@@ -11,3 +11,22 @@ export HISTSIZE=1000000
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export PROMPT_COMMAND='history -a' #record history right away
+
+# colors
+export C0="\033[0;30m"
+export C1="\033[0;31m"
+export C2="\033[0;32m"
+export C3="\033[0;33m"
+export C4="\033[0;34m"
+export C5="\033[0;35m"
+export C6="\033[0;36m"
+export C7="\033[0;37m"
+export CB0="\033[1;30m"
+export CB1="\033[1;31m"
+export CB2="\033[1;32m"
+export CB3="\033[1;33m"
+export CB4="\033[1;34m"
+export CB5="\033[1;35m"
+export CB6="\033[1;36m"
+export CB7="\033[1;37m"
+export RESET="\033[m"
