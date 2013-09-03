@@ -49,4 +49,4 @@ function prompt_git() {
   echo "[$output]"
 }
 
-export PS1="\n\[$C4\]\u\[$C0\]@\[$C4\]\h \[$C2\]\w \[$C1\]\`prompt_git\`\[$RESET\] \[$CB6\]!\!\n\[$CB0\]$\[$RESET\]\[$RESET\] "
+export PS1="\n\[$C4\]\u\[$C0\]@\[$C4\]\h \[$C2\]\w \[$C1\]\`prompt_git\`\[$RESET\] \[$CB6\]!\!\n\[$CB2\]$\[$RESET\]\[$RESET\] "
