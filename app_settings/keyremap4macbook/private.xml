@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>F19 to Escape/Control</name>
+    <appendix>Tap F19 for Escape; Hold F19 for Control</appendix>
+    <appendix>(Use PCKeyboardHack to remap Caps Lock to F19.)</appendix>
+    <identifier>com.jasonrudolph.f192f19_escape_or_control</identifier>
+    <autogen>
+      --KeyOverlaidModifier--
+      KeyCode::F19,
+      KeyCode::CONTROL_L,
+      KeyCode::ESCAPE
+    </autogen>
+  </item>
+  <item>
+    <name>Double-tap Left Shift for Caps Lock</name>
+    <identifier>com.jasonrudolph.double_lshift_to_caps</identifier>
+    <autogen>__DoublePressModifier__ KeyCode::SHIFT_L, KeyCode::SHIFT_L, KeyCode::CAPSLOCK</autogen>
+  </item>
+</root>
