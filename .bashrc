@@ -1,5 +1,5 @@
 # load shell dotfiles
-for file in .dotfiles/.{path,bash_prompt,exports,aliases,functions,localrc}; do
+for file in ~/.dotfiles/.{path,bash_prompt,exports,aliases,functions,localrc}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -13,4 +13,3 @@ set -o vi # vi mode
 shopt -s histappend # append history
 shopt -s cmdhist # force history commands to fit on one line
 shopt -s checkwinsize # force bash to update window size
-shopt -s cdspell # autocorrect spelling mistakes when using cd
