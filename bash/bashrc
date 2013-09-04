@@ -1,6 +1,7 @@
+# mcallan83/dotfiles
 # bashrc
 
-
+#files
 declare -a files=(
     $HOME/.rvm/scripts/rvm # load RVM *as a function*
     $HOME/.dotfiles/bash/bash_options # options
@@ -10,7 +11,7 @@ declare -a files=(
     $HOME/.dotfiles/bash/scripts/* # scripts
     $HOME/.dotfiles/bash/bash_prompt # prompt
     $HOME/.localrc # local settings
-    $HOME/.dotfiles/bash/bash_paths # Path modifications (must source after `.bash_profile.local` in case of custom `brew` location)
+    $HOME/.dotfiles/bash/bash_paths # paths (source after `.localrc` in case of custom paths)
 )
 
 # source readable files

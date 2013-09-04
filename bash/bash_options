@@ -1,9 +1,11 @@
+# mcallan83/dotfiles
 # bash options
 
 
 set -o vi # vi mode
 shopt -s histappend # append history
 shopt -s cmdhist # force history commands to fit on one line
-shopt -s checkwinsize # force bash to update window size
+shopt -s checkwinsize # check window size and update values after every command
 shopt -s nocaseglob # case insensitive globbing
+shopt -s cdspell # autocorrect typos in path names when using `cd`
 unset MAILCHECK # disable "you have mail" warning

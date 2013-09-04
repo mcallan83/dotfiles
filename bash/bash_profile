@@ -1,4 +1,5 @@
-#bash profiles
+# mcallan83/dotfiles
+# bash profile
 
 
 if [ -f ~/.bashrc ]; then
