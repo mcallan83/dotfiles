@@ -13,6 +13,11 @@ alias v="vim"
 alias ss="subl ."
 alias oo="open ."
 
+# misc 
+alias cls="clear"
+alias cc="clear"
+alias qq="exit"
+
 # ls 
 if ls --color > /dev/null 2>&1; then 
 	colorflag="--color" # gnu ls
