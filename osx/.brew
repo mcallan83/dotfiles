@@ -1,0 +1,36 @@
+#!/usr/bin/env/ bash
+
+[[ "$OSTYPE" =~ ^darwin ]] || return 1
+
+# install homebrew
+if [[ ! "$(type -P brew)" ]]; then
+	echo "Installing Homebrew"
+ 	true | ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+fi
+
+# todo... try this out and add more casks
+
+# brew update
+# brew upgrade
+
+# install homebrew cask 
+# brew tap phinze/homebrew-cask
+# brew install brew-cask
+
+# install native mac apps
+# brew cask install alfred
+# brew cask install clamxav
+# brew cask install codekit
+# brew cask install dropbox
+# brew cask install google-chrome
+# brew cask install iterm2
+# brew cask install macvim
+# brew cask install nv-alt
+# brew cask install transmission
+# brew cask install virtualbox
+# brew cask install vlc
+
+# link alfred to cask apps
+# open /Applications/Alfred\ 2.app # open alfred to create prefs file
+# sleep 10 # wait 10 seconds
+# brew cask alfred link
