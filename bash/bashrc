@@ -1,0 +1,23 @@
+# bashrc
+
+
+declare -a files=(
+    $HOME/.rvm/scripts/rvm # load RVM *as a function*
+    $HOME/.dotfiles/bash/bash_options # options
+    $HOME/.dotfiles/bash/bash_exports # exports
+    $HOME/.dotfiles/bash/bash_aliases # aliases
+    $HOME/.dotfiles/bash/bash_functions # functions
+    $HOME/.dotfiles/bash/scripts/* # scripts
+    $HOME/.dotfiles/bash/bash_prompt # prompt
+    $HOME/.localrc # local settings
+    $HOME/.dotfiles/bash/bash_paths # Path modifications (must source after `.bash_profile.local` in case of custom `brew` location)
+)
+
+# source readable files
+for index in ${!files[*]}
+do
+    if [[ -r ${files[$index]} ]]; then
+        source ${files[$index]}
+    fi
+done
+unset files

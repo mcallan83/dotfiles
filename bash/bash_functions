@@ -1,3 +1,6 @@
+# bash functions
+
+
 # extract\mount archived files
 # http://nparikh.org/notes/zshrc.txt
 extract () {

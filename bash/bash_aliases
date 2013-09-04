@@ -1,3 +1,6 @@
+# bash aliases
+
+
 # navigation 
 alias ..="cd .."
 alias ...="cd ../.."
