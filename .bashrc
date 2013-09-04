@@ -4,7 +4,7 @@ for file in .{path,exports,bash_prompt,aliases,functions}; do
 	[ -r "$HOME/$file.local" ] && source "$HOME/$file.local"
 done
 unset file
-[ -r "$HOME/.localrc"] && source "$HOME/.localrc"
+#[ -r "$HOME/.localrc"] && source "$HOME/.localrc"
 
 # load scripts
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  #rvm
