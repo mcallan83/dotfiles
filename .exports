@@ -30,3 +30,6 @@ export CB5="\033[1;35m"
 export CB6="\033[1;36m"
 export CB7="\033[1;37m"
 export RESET="\033[m"
+
+# homebrew cask - set appdir to /Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
