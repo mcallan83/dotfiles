@@ -1,4 +1,7 @@
-"Vundle Manager
+" --------------
+" Vundle Manager
+" --------------
+
 set nocompatible
 filetype off
 let vundleFlag=1
@@ -14,7 +17,11 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-"Define Bundles
+
+" --------------
+" Define Bundles
+" --------------
+
 Bundle 'altercation/vim-colors-solarized' 
 Bundle 'bling/vim-airline' 
 	let g:airline#extensions#tabline#enabled = 1
@@ -37,7 +44,10 @@ Bundle 'tpope/vim-commentary'
 	"autocmd FileType php set commentstring=#\ %s
 
 
-"Install Bundles
+" ---------------
+" Install Bundles
+" ---------------
+
 if vundleFlag == 0
     echo "Installing Bundles, please ignore key map errors"
     echo ""
