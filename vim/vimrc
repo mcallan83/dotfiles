@@ -1,4 +1,6 @@
 "Vundle Manager
+set nocompatible
+filetype off
 let vundleFlag=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
@@ -8,17 +10,55 @@ if !filereadable(vundle_readme)
     silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
     let vundleFlag=0
 endif
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "Bundles
-Bundle 'Syntastic' 
-
+Bundle 'altercation/vim-colors-solarized' 
+Bundle 'bling/vim-airline' 
+Bundle 'kien/ctrlp.vim' 
 
 "Install Bundles
 if vundleFlag == 0
     echo "Installing Bundles, please ignore key map errors"
     echo ""
     :BundleInstall
+    :BundleInstall
 endif
+
+
+
+filetype plugin indent on "detect filetype
+set encoding=utf-8 "duh!
+syntax enable
+set laststatus=2
+set number
+
+" --------------------
+" Color
+" --------------------
+let g:solarized_visibility="high" 
+let g:solarized_diffmode="high"
+let g:solarized_menu=0
+set t_Co=256
+set background=light
+colorscheme solarized
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_detect_paste=1
+let g:airline_theme="solarized"
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+set noshowmode
+
+" --------------------
+" Custom Commands
+" --------------------
+"remap jj to <Esc> in insert mode
+inoremap jj <Esc>
