@@ -10,25 +10,26 @@ if !filereadable(vundle_readme)
     silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
     let vundleFlag=0
 endif
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-"Bundles
+"Define Bundles
 Bundle 'altercation/vim-colors-solarized' 
 Bundle 'bling/vim-airline' 
 Bundle 'kien/ctrlp.vim' 
+Bundle 'mattn/emmet-vim' 
+Bundle 'scrooloose/syntastic' 
+Bundle 'Lokaltog/vim-easymotion' 
+Bundle 'goldfeld/vim-seek' 
+Bundle 'nathanaelkane/vim-indent-guides' 
 
 "Install Bundles
 if vundleFlag == 0
     echo "Installing Bundles, please ignore key map errors"
     echo ""
     :BundleInstall
-    :BundleInstall
 endif
-
-
 
 filetype plugin indent on "detect filetype
 set encoding=utf-8 "duh!
@@ -46,6 +47,20 @@ set t_Co=256
 set background=light
 colorscheme solarized
 
+" --------------------
+" Text Formatting
+" --------------------
+set wrap "wrap lines
+set tabstop=4 "tab is 4 spaces
+set softtabstop=4 "tab is 4 spaces
+set shiftwidth=4 "tab is 4 spaces
+set autoindent "auto-indent
+set smartindent "make it smart
+set shiftround "always indent/outdent to the nearest tabstop
+set smarttab "tabs at start of line, spaces elsewhere
+set backspace=2
+
+
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
@@ -57,8 +72,20 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 set noshowmode
 
+" CtrlP
+let g:ctrlp_working_path_mode = 0
+
+" Indent Guides
+let g:indent_guides_guide_size = 1
+
 " --------------------
 " Custom Commands
 " --------------------
+
 "remap jj to <Esc> in insert mode
 inoremap jj <Esc>
+
+"remap <leader> to ,
+let mapleader=","
+let g:mapleader=","
+
