@@ -17,12 +17,25 @@ Bundle 'gmarik/vundle'
 "Define Bundles
 Bundle 'altercation/vim-colors-solarized' 
 Bundle 'bling/vim-airline' 
+	let g:airline#extensions#tabline#enabled = 1
+	let g:airline#extensions#whitespace#enabled = 0
+	let g:airline_detect_paste=1
+	let g:airline_theme="solarized"
+	let g:airline_left_sep = ''
+	let g:airline_left_alt_sep = ''
+	let g:airline_right_sep = ''
+	let g:airline_right_alt_sep = ''
+	set noshowmode
 Bundle 'kien/ctrlp.vim' 
+	let g:ctrlp_working_path_mode = 0
 Bundle 'mattn/emmet-vim' 
 Bundle 'scrooloose/syntastic' 
 Bundle 'Lokaltog/vim-easymotion' 
 Bundle 'goldfeld/vim-seek' 
 Bundle 'nathanaelkane/vim-indent-guides' 
+Bundle 'tpope/vim-commentary' 
+	"autocmd FileType php set commentstring=#\ %s
+
 
 "Install Bundles
 if vundleFlag == 0
@@ -61,19 +74,6 @@ set smarttab "tabs at start of line, spaces elsewhere
 set backspace=2
 
 
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline_detect_paste=1
-let g:airline_theme="solarized"
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-set noshowmode
-
-" CtrlP
-let g:ctrlp_working_path_mode = 0
 
 " Indent Guides
 let g:indent_guides_guide_size = 1
@@ -85,7 +85,10 @@ let g:indent_guides_guide_size = 1
 "remap jj to <Esc> in insert mode
 inoremap jj <Esc>
 
-"remap <leader> to ,
-let mapleader=","
-let g:mapleader=","
+"remap <leader> to ;
+let mapleader=";"
+let g:mapleader=";"
 
+map <leader>n :bn<cr>
+map <leader>p :bp<cr>
+map <leader>d :bd<cr>
