@@ -89,4 +89,8 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
 	alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 	alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+	# copy external ip address to clipboard
+	alias ipcopy="dig +short myip.opendns.com @resolver1.opendns.com | tr -d '\040\011\012\015' | pbcopy"
+
+
 fi
