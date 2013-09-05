@@ -9,3 +9,5 @@ Thumbs.db
 .svn
 *~
 .*.swp
+vim/*
+!vim/vimrc
