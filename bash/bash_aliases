@@ -56,6 +56,9 @@ then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 
+# edit vimrc
+alias vimrc="vim ~/.vimrc"
+
 # laravel php framework
 alias art="php artisan"
 
