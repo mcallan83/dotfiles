@@ -43,6 +43,8 @@ Bundle 'tpope/vim-commentary'
 	"autocmd FileType php set commentstring=#\ %s
 Bundle 'tpope/vim-surround' 
 Bundle 'godlygeek/tabular' 
+Bundle 'scrooloose/nerdtree' 
+	let g:NERDTreeWinSize = 40
 
 
 " ---------------
@@ -143,3 +145,6 @@ imap <c-u> =
 
 " bypass autoclosed quote or bracket in insert mode
 imap <C-l> <esc>wa
+
+
+nmap <leader>ne :NERDTree<cr>
