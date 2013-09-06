@@ -140,6 +140,6 @@ imap <c-h> <space>=><space>
 imap <c-k> _
 imap <c-j> -
 imap <c-u> =
-"
+
 " bypass autoclosed quote or bracket in insert mode
 imap <C-l> <esc>wa
