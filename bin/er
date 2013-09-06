@@ -1,0 +1,12 @@
+#! /bin/sh
+ 
+unset latest
+for file in "${1:-.}"/*
+do
+    if [ -f "$file" ]
+    then
+        latest=${latest-$file}
+        find "$file" -prune -newer "$latest" | read -r dummy && latest=$file
+    fi
+done
+test -e "$latest" && exec $EDITOR "$latest"
