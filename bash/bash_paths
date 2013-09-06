@@ -2,4 +2,4 @@
 # bash paths
 
 
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$HOME/.dotfiles/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$HOME/.dotfiles/bin:$HOME/.dotfiles/git/bin:$PATH"
