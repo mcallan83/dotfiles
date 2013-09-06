@@ -1,28 +1,27 @@
 " --------------
 " Vundle Manager
 " --------------
-
 set nocompatible
 filetype off
 let vundleFlag=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
-    echo "Installing Vundle"
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let vundleFlag=0
+	echo "Installing Vundle"
+	echo ""
+	silent !mkdir -p ~/.vim/bundle
+	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	let vundleFlag=0
 endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-
 
 " --------------
 " Define Bundles
 " --------------
 
 Bundle 'altercation/vim-colors-solarized' 
+Bundle 'Raimondi/delimitMate' 
 Bundle 'bling/vim-airline' 
 	let g:airline#extensions#tabline#enabled = 1
 	let g:airline#extensions#whitespace#enabled = 0
@@ -42,6 +41,8 @@ Bundle 'goldfeld/vim-seek'
 Bundle 'nathanaelkane/vim-indent-guides' 
 Bundle 'tpope/vim-commentary' 
 	"autocmd FileType php set commentstring=#\ %s
+Bundle 'tpope/vim-surround' 
+Bundle 'godlygeek/tabular' 
 
 
 " ---------------
@@ -93,12 +94,52 @@ let g:indent_guides_guide_size = 1
 " --------------------
 
 "remap jj to <Esc> in insert mode
-inoremap jj <Esc>
+inoremap kj <Esc>
 
 "remap <leader> to ;
 let mapleader=";"
 let g:mapleader=";"
 
+" buffers
 map <leader>n :bn<cr>
 map <leader>p :bp<cr>
 map <leader>d :bd<cr>
+
+" toggle line numbers with <C-n>
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+nnoremap <C-n> :call NumberToggle()<cr>
+
+" wrap word with "", '', (), [], or {} 
+map <leader>" ysiw"
+vmap <leader>" c"<C-R>""<ESC>
+map <leader>' ysiw'
+vmap <leader>' c'<C-R>"'<ESC>
+map <leader>) ysiw)
+map <leader>( ysiw)
+vmap <leader>) c(<C-R>")<ESC>
+vmap <leader>( c(<C-R>")<ESC>
+map <leader>] ysiw]
+map <leader>[ ysiw]
+vmap <leader>[ c[<C-R>"]<ESC>
+vmap <leader>] c[<C-R>"]<ESC>
+map <leader>} ysiw}
+map <leader>{ ysiw}
+vmap <leader>} c{<C-R>"}<ESC>
+vmap <leader>{ c{<C-R>"}<ESC>
+
+" hashrocket in insert mode
+imap <c-h> <space>=><space>
+
+" easy insert _, -, and = in insert mode
+imap <c-k> _
+imap <c-j> -
+imap <c-u> =
+"
+" bypass autoclosed quote or bracket in insert mode
+imap <C-l> <esc>wa
