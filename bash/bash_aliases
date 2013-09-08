@@ -33,6 +33,9 @@ alias la="ls -laF ${colorflag}" #long format with hidden files
 alias lsd='ls -lF ${colorflag} | grep "^d"' #only directories
 alias ls="command ls ${colorflag}" #always use color for ls
 
+# git
+alias gs="git status"
+
 # enable aliases to be sudo’ed
 alias sudo='sudo '
 
