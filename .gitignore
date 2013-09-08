@@ -11,3 +11,4 @@ Thumbs.db
 .*.swp
 vim/*
 !vim/vimrc
+.swp
