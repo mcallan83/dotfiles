@@ -117,6 +117,16 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
+
+"function! NumberShow()
+"	if(&nonumber == 1)
+"		set number
+"	else
+"		set nonumber
+"	endif
+"endfunc
+"nnoremap <C-N> :call NumberShow() <cr>
+
 " wrap word with "", '', (), [], or {} 
 map <leader>" ysiw"
 vmap <leader>" c"<C-R>""<ESC>
