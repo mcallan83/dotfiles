@@ -65,6 +65,9 @@ alias vimrc="vim ~/.vimrc"
 # laravel php framework
 alias art="php artisan"
 
+# download file using curl
+alias dl="curl -O "
+
 # osx-specific
 if [[ "$OSTYPE" =~ ^darwin ]]; then
 
