@@ -96,7 +96,7 @@ let g:indent_guides_guide_size = 1
 " --------------------
 
 "remap jj to <Esc> in insert mode
-inoremap kj <Esc>
+inoremap jj <Esc>
 
 "remap <leader> to ;
 let mapleader=";"
