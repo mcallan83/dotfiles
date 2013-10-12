@@ -1,0 +1,59 @@
+sudo -v
+
+function pause(){
+	read -p "$*"
+}
+
+
+# install homebrew
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+echo 'export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"' >> ~/.bash_profile
+brew doctor
+brew upgrade
+brew update
+
+# tap additional homebrew repos
+brew tap homebrew/dupes
+brew tap josegonzalez/php
+brew tap phinze/cask
+
+#install git
+brew install git
+git config --global user.name "Mike Callan"
+git config --global user.email "mcallan83@gmail.com"
+
+#install php 5.4 and composer
+brew install php54 php54-xdebug php54-mcrypt composer
+
+#install node and npm packages
+brew install node
+npm install -g grunt-cli less bower
+
+brew install ack
+brew install bash-completion
+	# add to bash_profile
+	# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+ 	#   . $(brew --prefix)/etc/bash_completion
+  	#fi
+brew install brew-cask
+brew install coreutils --default-names
+brew install ctags
+brew install gnutls --default-names
+brew install grep --default-names
+brew install phantomjs
+brew install rsync
+brew install tmux
+brew install wget
+
+#install ruby and rvm
+curl -L https://get.rvm.io | bash -s stable --ruby --autolibs=enable
+rvm osx-ssl-certs update all #update rvm certs
+sudo gem update --system
+gem install bundler
+
+# install vagrant, plugins, and virtual box
+brew cask install virtualbox
+brew cask install vagrant
+gem install berkshelf
+vagrant plugin install vagrant-berkshelf
+vagrant plugin install vagrant-hostmanager
