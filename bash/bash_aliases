@@ -35,6 +35,9 @@ alias ls="command ls ${colorflag}" #always use color for ls
 
 # git
 alias gs="git status"
+alias gpm="git pull origin master"
+alias gb="git branch"
+alias go="git checkout"
 
 # enable aliases to be sudo’ed
 alias sudo='sudo '
