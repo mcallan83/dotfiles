@@ -39,6 +39,7 @@ alias gpm="git pull origin master "
 alias gb="git branch "
 alias go="git checkout "
 alias gom="git checkout master"
+alias giem="${EDITOR} `git status --porcelain | sed -ne 's/^ M //p'`" #open modified files in editor
 
 # enable aliases to be sudo’ed
 alias sudo='sudo '
