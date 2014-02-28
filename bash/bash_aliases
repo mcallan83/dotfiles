@@ -38,7 +38,7 @@ alias gs="git status "
 alias gpm="git pull origin master "
 alias gb="git branch "
 alias go="git checkout "
-alias gom="git checkout master"
+alias gm="git commit "
 
 # web
 alias gogh="open http://www.github.com"
