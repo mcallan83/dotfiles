@@ -34,7 +34,14 @@ alias lsd='ls -lF ${colorflag} | grep "^d"' #only directories
 alias ls="command ls ${colorflag}" #always use color for ls
 
 # git
-alias gs="git status"
+alias gs="git status "
+alias gpm="git pull origin master "
+alias gb="git branch "
+alias go="git checkout "
+alias gm="git commit "
+
+# web
+alias gogh="open http://www.github.com"
 
 # enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -97,6 +104,5 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
 
 	# copy external ip address to clipboard
 	alias ipcopy="dig +short myip.opendns.com @resolver1.opendns.com | tr -d '\040\011\012\015' | pbcopy"
-
 
 fi

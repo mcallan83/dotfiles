@@ -27,7 +27,7 @@ brew install php54 php54-xdebug php54-mcrypt composer
 
 #install node and npm packages
 brew install node
-npm install -g grunt-cli less bower
+npm install -g grunt-cli less bower phantomjs
 
 brew install ack
 brew install bash-completion
@@ -40,7 +40,6 @@ brew install coreutils --default-names
 brew install ctags
 brew install gnutls --default-names
 brew install grep --default-names
-brew install phantomjs
 brew install rsync
 brew install tmux
 brew install wget
