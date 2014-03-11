@@ -8,7 +8,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" 
-alias -- -="cd -"
+alias --="cd -"
 
 # shortcuts
 alias h="history"
@@ -34,14 +34,8 @@ alias lsd='ls -lF ${colorflag} | grep "^d"' #only directories
 alias ls="command ls ${colorflag}" #always use color for ls
 
 # git
-alias gs="git status "
-alias gpm="git pull origin master "
-alias gb="git branch "
-alias go="git checkout "
-alias gm="git commit "
-
-# gitsh
 alias gg="gitsh"
+alias gs="git status "
 
 # web
 alias gogh="open http://www.github.com"
