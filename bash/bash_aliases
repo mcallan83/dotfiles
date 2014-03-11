@@ -40,6 +40,9 @@ alias gb="git branch "
 alias go="git checkout "
 alias gm="git commit "
 
+# gitsh
+alias gg="gitsh"
+
 # web
 alias gogh="open http://www.github.com"
 
