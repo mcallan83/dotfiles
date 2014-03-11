@@ -9,3 +9,4 @@ shopt -s checkwinsize # check window size and update values after every command
 shopt -s nocaseglob # case insensitive globbing
 shopt -s cdspell # autocorrect typos in path names when using `cd`
 unset MAILCHECK # disable "you have mail" warning
+bind "set completion-ignore-case on" # ignore case while auto completing
