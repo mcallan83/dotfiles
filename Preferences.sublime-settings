@@ -1,0 +1,40 @@
+{
+	"atomic_save": false,
+	"auto_find_in_selection": true,
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 1,
+	"caret_extra_top": 1,
+	"caret_extra_width": 2,
+	"caret_style": "smooth",
+	"draw_white_space": "all",
+	"find_selected_text": true,
+	"font_face": "Menlo",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 18.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+	],
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"line_padding_bottom": 4,
+	"line_padding_top": 4,
+	"margin": 4,
+	"rulers":
+	[
+		80,
+		120
+	],
+	"show_encoding": true,
+	"show_full_path": false,
+	"tab_size": 4,
+	"theme": "Spacegray Light.sublime-theme",
+	"use_simple_full_screen": true,
+	"word_wrap": true
+}
