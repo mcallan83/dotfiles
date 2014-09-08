@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"Base16 Color Schemes",
 		"GitGutter",
 		"Laravel Blade Highlighter",
 		"LESS",
