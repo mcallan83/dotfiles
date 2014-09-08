@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Base16 Color Schemes",
 		"DocBlockr",
 		"EasyMotion",
