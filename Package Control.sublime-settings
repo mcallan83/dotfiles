@@ -7,6 +7,10 @@
 		"LESS",
 		"SideBarEnhancements",
 		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"SublimeLinter-php",
 		"Theme - Soda",
 		"Twig"
 	]
