@@ -35,6 +35,7 @@
 	"show_encoding": true,
 	"show_full_path": false,
 	"tab_size": 4,
+	"theme": "Soda Light.sublime-theme",
 	"use_simple_full_screen": true,
 	"word_wrap": true
 }
