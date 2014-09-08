@@ -2,6 +2,7 @@
 	"installed_packages":
 	[
 		"Base16 Color Schemes",
+		"EasyMotion",
 		"GitGutter",
 		"Laravel Blade Highlighter",
 		"LESS",
