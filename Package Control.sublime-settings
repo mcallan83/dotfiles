@@ -2,6 +2,7 @@
 	"installed_packages":
 	[
 		"GitGutter",
+		"LESS",
 		"SublimeGit",
 		"Theme - Soda"
 	]
