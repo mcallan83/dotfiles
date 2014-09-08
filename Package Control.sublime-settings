@@ -14,7 +14,10 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
 		"SublimeLinter-php",
+		"Surround",
 		"Theme - Soda",
-		"Twig"
+		"Twig",
+		"Vintage Numbers",
+		"Vintage Surround"
 	]
 }
