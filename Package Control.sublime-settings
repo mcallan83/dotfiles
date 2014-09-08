@@ -2,8 +2,10 @@
 	"installed_packages":
 	[
 		"GitGutter",
+		"Laravel Blade Highlighter",
 		"LESS",
 		"SublimeGit",
-		"Theme - Soda"
+		"Theme - Soda",
+		"Twig"
 	]
 }
