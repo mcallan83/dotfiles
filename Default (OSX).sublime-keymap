@@ -1,10 +1,17 @@
 [
 	{
+		"keys": ["g", "s"],
+		"command": "git_status",
+		"context": [
+			{"key": "setting.is_widget", "operand": false}
+		]
+	},
+	{
 		"keys": ["j", "j"],
 		"command": "exit_insert_mode",
 		"context": [
-				{ "key": "setting.command_mode", "operand": false },
-				{ "key": "setting.is_widget", "operand": false }
+			{"key": "setting.command_mode", "operand": false},
+			{"key": "setting.is_widget", "operand": false}
 		]
 	}
 ]
