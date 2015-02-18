@@ -19,6 +19,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " packages 
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'Lokaltog/vim-easymotion'
 
 call neobundle#end()
 filetype plugin indent on
@@ -33,6 +34,9 @@ set background=light
 colorscheme solarized
 set number
 
+" set leader
+let mapleader = "\<Space>"
+
 " }}}
 " {{{ Plugin Config
 
@@ -46,5 +50,10 @@ highlight clear SignColumn " fix sign column bg color issue
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" vim-easy-motion
+let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-s2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 " }}}
