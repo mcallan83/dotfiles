@@ -42,6 +42,12 @@ set laststatus=2
 let mapleader = "\<Space>"
 
 " }}}
+" Advanced Settings {{{
+
+" disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" }}}
 " {{{ Plugin Config
 
 " solarized
