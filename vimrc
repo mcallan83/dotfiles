@@ -22,6 +22,7 @@ NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'bling/vim-airline'
 
 call neobundle#end()
 filetype plugin indent on
@@ -35,6 +36,7 @@ set t_Co=256
 set background=light
 colorscheme solarized
 set number
+set laststatus=2
 
 " set leader
 let mapleader = "\<Space>"
@@ -58,4 +60,8 @@ nmap s <Plug>(easymotion-s2)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
+" vim-airline
+let g:airline_left_sep = ""
+let g:airline_right_sep = ""
+let g:airline#extensions#tabline#enabled = 1
 " }}}
