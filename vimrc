@@ -16,9 +16,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" }}}
-" NeoBundle Packages {{{
-
+" packages 
 NeoBundle 'altercation/vim-colors-solarized'
 
 call neobundle#end()
