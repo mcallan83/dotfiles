@@ -21,6 +21,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'sheerun/vim-polyglot'
 
 call neobundle#end()
 filetype plugin indent on
