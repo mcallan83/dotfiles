@@ -17,3 +17,13 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " }}}
+
+" NeoBundle Packages {{{
+
+NeoBundle 'altercation/vim-colors-solarized'
+
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
+
+" }}}
