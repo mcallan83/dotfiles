@@ -18,6 +18,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " packages 
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'terryma/vim-expand-region'
 
 call neobundle#end()
 filetype plugin indent on
@@ -40,5 +41,10 @@ let g:solarized_visibility="high"
 let g:solarized_diffmode="high"
 let g:solarized_menu=0
 highlight clear SignColumn " fix sign column bg color issue
+
+" vim-expand-region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
 
 " }}}
