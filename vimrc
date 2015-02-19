@@ -23,6 +23,7 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'tpope/vim-speeddating'
 
 call neobundle#end()
 filetype plugin indent on
