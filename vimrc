@@ -98,7 +98,8 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " hashrocket in insert mode
 " imap <c-h> <space>=><space>
-
+"Let K be the opposite of J
+map K i<CR><Esc>
 
 " copy and paste to system clipboard
 vmap <Leader>y "+y
