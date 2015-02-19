@@ -41,6 +41,7 @@ set background=light
 colorscheme solarized
 set number
 set laststatus=2
+set noshowmode
 
 " set leader
 let mapleader = "\<Space>"
@@ -74,11 +75,15 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " vim-airline
-let g:airline_theme='solarized'
-let g:airline_left_sep = ""
-let g:airline_right_sep = ""
+let g:airline_theme="solarized"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_detect_paste=1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 " nerdtree
 map <leader>nn :NERDTreeToggle<cr>
