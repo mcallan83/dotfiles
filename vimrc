@@ -45,6 +45,9 @@ set laststatus=2
 " set leader
 let mapleader = "\<Space>"
 
+"remap jj to <Esc> in insert mode
+inoremap jj <Esc>
+
 " }}}
 " Advanced Settings {{{
 
@@ -79,5 +82,11 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " nerdtree
 map <leader>nn :NERDTreeToggle<cr>
+
+" }}}
+" {{{ TODO
+
+" hashrocket in insert mode
+" imap <c-h> <space>=><space>
 
 " }}}
