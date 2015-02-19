@@ -1,6 +1,6 @@
 " vim:fdm=marker
 
-" NeoBundle Start {{{
+" NeoBundle {{{
 
 if has('vim_starting')
 	set nocompatible
@@ -24,6 +24,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'scrooloose/nerdtree'
 
 call neobundle#end()
 filetype plugin indent on
@@ -32,6 +33,8 @@ NeoBundleCheck
 " }}}
 " Basic Settings {{{
 
+filetype plugin indent on "detect filetype
+set encoding=utf-8 "duh!
 syntax on
 set t_Co=256
 set background=light
@@ -73,5 +76,8 @@ let g:airline_left_sep = ""
 let g:airline_right_sep = ""
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" nerdtree
+map <leader>nn :NERDTreeToggle<cr>
 
 " }}}
