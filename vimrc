@@ -25,6 +25,7 @@ NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'kien/ctrlp.vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -88,10 +89,39 @@ let g:airline_right_alt_sep = ''
 " nerdtree
 map <leader>nn :NERDTreeToggle<cr>
 
+" ctrl+p
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = 'ra'
+
 " }}}
 " {{{ TODO
 
 " hashrocket in insert mode
 " imap <c-h> <space>=><space>
+
+
+" copy and paste to system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+" use enter\backspace to navigate lines 
+nnoremap <CR> G
+nnoremap <BS> gg
+
+" jump to end of pasted text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" select pasted text
+noremap gV `[v`]
+
+" jump to start/end of lines
+map H ^
+map L $
 
 " }}}
