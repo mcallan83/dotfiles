@@ -26,6 +26,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'airblade/vim-gitgutter'
 
 call neobundle#end()
 filetype plugin indent on
@@ -43,6 +44,9 @@ colorscheme solarized
 set number
 set laststatus=2
 set noshowmode
+set updatetime=750
+highlight clear SignColumn " fix sign column bg color issue
+
 
 " set leader
 let mapleader = "\<Space>"
@@ -63,7 +67,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:solarized_visibility="high"
 let g:solarized_diffmode="high"
 let g:solarized_menu=0
-highlight clear SignColumn " fix sign column bg color issue
 
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)
@@ -92,6 +95,10 @@ map <leader>nn :NERDTreeToggle<cr>
 " ctrl+p
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 'ra'
+
+
+" git-gutter
+let g:gitgutter_sign_column_always = 1
 
 " }}}
 " {{{ TODO
