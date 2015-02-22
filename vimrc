@@ -28,6 +28,7 @@ NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'majutsushi/tagbar'
 
 call neobundle#end()
 filetype plugin indent on
@@ -88,10 +89,11 @@ nmap <leader><leader> <Plug>(easymotion-s2)
 
 " vim-airline
 " ===========
-"let g:airline_theme="solarized"
+let g:airline_theme="powerlineish"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
 let g:airline_detect_paste=1
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
@@ -117,6 +119,13 @@ endif
 " ==========
 let g:gitgutter_sign_column_always = 1
 
+" tagbar
+" ======
+let g:tagbar_autofocus = 1
+nnoremap <leader>} :TagbarOpenAutoClose<cr>
+nnoremap <leader>] :TagbarToggle<cr>
+
+
 " }}}
 
 
@@ -124,12 +133,8 @@ let g:gitgutter_sign_column_always = 1
 
 " {{{ TODO
 
-NeoBundle 'majutsushi/tagbar'
 
-" tagbar
-" let g:tagbar_autofocus = 1
-" nnoremap <leader>] :TagbarOpenAutoClose<cr>
-" nnoremap <leader>} :TagbarToggle<cr>
+
 
 
 " hashrocket in insert mode
