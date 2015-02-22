@@ -17,6 +17,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " packages 
+" =========
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'Lokaltog/vim-easymotion'
@@ -36,7 +37,7 @@ NeoBundleCheck
 " Basic Settings {{{
 
 filetype plugin indent on "detect filetype
-set encoding=utf-8 "duh!
+set encoding=utf-8
 syntax on
 set t_Co=256
 set background=light
@@ -49,37 +50,45 @@ highlight clear SignColumn " fix sign column bg color issue
 
 
 " set leader
+" ==========
 let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
-"remap jj to <Esc> in insert mode
+" remap jj to <Esc> in insert mode
+" ================================
 inoremap jj <Esc>
 
 " }}}
 " Advanced Settings {{{
 
 " disable automatic comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" ===================================
+augroup comments
+	au!
+	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+augroup END
 
 " }}}
 " {{{ Plugin Config
 
 " solarized
+" =========
 let g:solarized_visibility="high"
 let g:solarized_diffmode="high"
 let g:solarized_menu=0
 
 " vim-expand-region
+" =================
 vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
 
 " vim-easy-motion
+" ===============
 let g:EasyMotion_smartcase = 1
-nmap s <Plug>(easymotion-s2)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
+nmap <leader><leader> <Plug>(easymotion-s2)
 
 " vim-airline
-let g:airline_theme="solarized"
+" ===========
+"let g:airline_theme="solarized"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#enabled = 0
@@ -90,35 +99,52 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 " nerdtree
-map <leader>nn :NERDTreeToggle<cr>
+" ========
+map <leader>[ :NERDTreeToggle<cr>
 
 " ctrl+p
+" ======
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 'ra'
+map <leader>b :CtrlPBuffer<CR> "buffer mode
 
+" use silversearcher if installed
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
+endif
 
 " git-gutter
+" ==========
 let g:gitgutter_sign_column_always = 1
 
 " }}}
+
+
+
+
 " {{{ TODO
+
+NeoBundle 'majutsushi/tagbar'
+
+" tagbar
+" let g:tagbar_autofocus = 1
+" nnoremap <leader>] :TagbarOpenAutoClose<cr>
+" nnoremap <leader>} :TagbarToggle<cr>
+
 
 " hashrocket in insert mode
 " imap <c-h> <space>=><space>
-"Let K be the opposite of J
-map K i<CR><Esc>
+
 
 " copy and paste to system clipboard
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
+" vmap <Leader>y "+y
+"vmap <Leader>d "+d
+"nmap <Leader>p "+p
+"nmap <Leader>P "+P
+"vmap <Leader>p "+p
+"vmap <Leader>P "+P
 
-" use enter\backspace to navigate lines 
-nnoremap <CR> G
-nnoremap <BS> gg
+
 
 " jump to end of pasted text
 vnoremap <silent> y y`]
@@ -126,10 +152,8 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
 " select pasted text
-noremap gV `[v`]
+" noremap gV `[v`]
 
-" jump to start/end of lines
-map H ^
-map L $
+
 
 " }}}
