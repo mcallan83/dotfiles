@@ -29,6 +29,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'tomtom/tcomment_vim'
 
 call neobundle#end()
 filetype plugin indent on
