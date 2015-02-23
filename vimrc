@@ -48,7 +48,10 @@ set laststatus=2
 set noshowmode
 set updatetime=750
 highlight clear SignColumn " fix sign column bg color issue
-
+set backspace=2
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " set leader
 " ==========
@@ -127,10 +130,6 @@ nnoremap <leader>] :TagbarToggle<cr>
 
 
 " }}}
-
-
-
-
 " {{{ TODO
 
 
