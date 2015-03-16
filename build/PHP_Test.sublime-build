@@ -1,0 +1,6 @@
+{
+	"cmd": ["grunt test --force --file $file"],
+	"shell": true,
+	"selector": "source.php",
+	"working_dir": "${project_path:${folder}}"
+}

@@ -1,12 +1,5 @@
 [
 	{
-		"keys": ["g", "s"],
-		"command": "git_status",
-		"context": [
-			{"key": "setting.is_widget", "operand": false}
-		]
-	},
-	{
 		"keys": ["g", "d"],
 		"command": "git_diff",
 		"context": [
