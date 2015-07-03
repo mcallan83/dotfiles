@@ -1,0 +1,5 @@
+.netrwhist
+bundle/
+*.swp
+*.swo
+*.bak
