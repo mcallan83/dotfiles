@@ -81,6 +81,9 @@ alias s="bookmark"
 alias d="deletemark"
 alias l="showmarks"
 
+# sublime
+alias ss="stt"
+
 ###########
 # Exports #
 ###########
