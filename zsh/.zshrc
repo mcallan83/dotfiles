@@ -68,6 +68,9 @@ alias ss="stt"
 # git
 alias gs="gst"
 
+# composer
+alias cdu="composer dump-autoload"
+
 ###########
 # Exports #
 ###########
