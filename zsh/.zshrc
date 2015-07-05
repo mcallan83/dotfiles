@@ -26,7 +26,7 @@ ZSH_THEME="pure"
 ZSH_CUSTOM=$HOME/.dotfiles/zsh/custom
 
 # plugins
-plugins=(git sudo k sublime zshmarks web-search composer zsh-syntax-highlighting)
+plugins=(git brew sudo k sublime zshmarks web-search composer zsh-syntax-highlighting)
 
 # path
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
