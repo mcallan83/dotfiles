@@ -45,6 +45,9 @@ alias gs="gst"
 # composer
 alias cdu="composer dump-autoload"
 
+# k
+alias ka="k -a"
+
 # mkdir and cd to it in one command
 function mkcd
 {
