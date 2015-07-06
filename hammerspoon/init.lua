@@ -1,3 +1,6 @@
+-- https://github.com/cmsj/hammerspoon-config/blob/master/init.lua
+-- https://github.com/BrianGilbert/.hammerspoon/blob/master/init.lua
+
 -- init grid
 hs.grid.MARGINX     = 0
 hs.grid.MARGINY     = 0
