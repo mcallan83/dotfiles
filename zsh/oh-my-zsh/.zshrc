@@ -3,9 +3,12 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="pure"
 ZSH_CUSTOM=$HOME/.dotfiles/zsh/oh-my-zsh/custom
 
-plugins=(git brew sudo k sublime zshmarks web-search composer zsh-syntax-highlighting)
+plugins=(git brew sudo k sublime composer zshmarks web-search zsh-syntax-highlighting)
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 source $ZSH/oh-my-zsh.sh
 
