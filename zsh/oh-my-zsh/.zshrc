@@ -3,7 +3,17 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME=""
 ZSH_CUSTOM=$HOME/.dotfiles/zsh/oh-my-zsh/custom
 
-plugins=(git brew sudo k sublime composer zshmarks web-search zsh-syntax-highlighting)
+plugins=(
+    brew
+    composer
+    git
+    k
+    sublime
+    sudo
+    web-search
+    zshmarks
+    zsh-syntax-highlighting
+)
 
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
