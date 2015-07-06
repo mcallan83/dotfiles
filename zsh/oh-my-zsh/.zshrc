@@ -13,7 +13,7 @@ export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # hack to get pure theme working properly
 fpath=( "$HOME/.dotfiles/zsh/pure/" $fpath )
 autoload -U promptinit && promptinit
-prompt pure
+#prompt pure
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,3 +44,10 @@ alias gs="gst"
 
 # composer
 alias cdu="composer dump-autoload"
+
+# mkdir and cd to it in one command
+function mkcd
+{
+    dir="$*";
+    mkdir -p "$dir" && cd "$dir";
+}
