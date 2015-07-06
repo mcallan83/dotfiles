@@ -8,6 +8,7 @@
 4. `ln -s .dotfiles/vim/.vim .vim`
 5. `ln -s .dotfiles/tmux/tmux.conf .tmux.conf`
 6. `ln -s .dotfiles/slate/slate .slate`
+7. `ln -s .dotfiles/hammerspoon/init.lua .hammerspoon/init.lua`
 
 ## Shortcuts\Aliases
 
@@ -18,3 +19,5 @@
 ### Tmux
 
 ### Slate
+
+### HammerSpoon
