@@ -13,3 +13,12 @@
 [submodule "submodules/zsh/zsh-autosuggestions"]
 	path = submodules/zsh/zsh-autosuggestions
 	url = https://github.com/tarruda/zsh-autosuggestions
+[submodule "submodules/iterm/Cobalt2-iterm"]
+	path = submodules/iterm/Cobalt2-iterm
+	url = https://github.com/wesbos/Cobalt2-iterm
+[submodule "submodules/iterm/solarized"]
+	path = submodules/iterm/solarized
+	url = https://github.com/altercation/solarized/
+[submodule "submodules/iterm/iterm2-color-schemes"]
+	path = submodules/iterm/iterm2-color-schemes
+	url = https://github.com/mbadolato/iTerm2-Color-Schemes
