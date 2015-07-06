@@ -37,6 +37,9 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 # Aliases #
 ###########
 
+#web-search 
+alias amazon='web_search duckduckgo \!az'
+
 # zsh
 alias zshrc="vim ~/.zshrc"
 
