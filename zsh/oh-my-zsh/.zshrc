@@ -23,7 +23,7 @@ ZSH_THEME="pure"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/.dotfiles/zsh/custom
+ZSH_CUSTOM=$HOME/.dotfiles/zsh/oh-my-zsh/custom
 
 # plugins
 plugins=(git brew sudo k sublime zshmarks web-search composer zsh-syntax-highlighting)
