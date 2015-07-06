@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="pure"
+ZSH_THEME=""
 ZSH_CUSTOM=$HOME/.dotfiles/zsh/oh-my-zsh/custom
 
 plugins=(git brew sudo k sublime composer zshmarks web-search zsh-syntax-highlighting)
@@ -9,6 +9,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# hack to get pure theme working properly
+fpath=( "$HOME/.dotfiles/zsh/pure/" $fpath )
+autoload -U promptinit && promptinit
+prompt pure
 
 source $ZSH/oh-my-zsh.sh
 
