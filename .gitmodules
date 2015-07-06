@@ -1,0 +1,15 @@
+[submodule "submodules/zsh/pure"]
+	path = submodules/zsh/pure
+	url = https://github.com/sindresorhus/pure
+[submodule "submodules/zsh/k"]
+	path = submodules/zsh/k
+	url = https://github.com/rimraf/k
+[submodule "submodules/zsh/zshmarks"]
+	path = submodules/zsh/zshmarks
+	url = https://github.com/jocelynmallon/zshmarks
+[submodule "submodules/zsh/zsh-syntax-highlighting"]
+	path = submodules/zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "submodules/zsh/zsh-autosuggestions"]
+	path = submodules/zsh/zsh-autosuggestions
+	url = https://github.com/tarruda/zsh-autosuggestions
