@@ -68,3 +68,6 @@ function mkcd
     dir="$*";
     mkdir -p "$dir" && cd "$dir";
 }
+
+
+[[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
