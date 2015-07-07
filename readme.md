@@ -21,3 +21,9 @@
 ### Slate
 
 ### HammerSpoon
+
+- <kbd>Cmd + Shift + H</kbd> Move window to left half of screen
+- <kbd>Cmd + Shift + L</kbd> Move window to right half of screen
+- <kbd>Cmd + Shift + RETURN </kbd> Maximize window
+- <kbd>Cmd + Shift + . </kbd> Toggle window hints
+
