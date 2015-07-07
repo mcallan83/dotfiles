@@ -22,11 +22,11 @@
 
 ### HammerSpoon
 
-(Hammerspoon)[http://www.hammerspoon.org/] OSX Window Manager
+[Hammerspoon](http://www.hammerspoon.org/) OSX Window Manager
 
 <table>
 	<tr>
-		<td width="20%">
+		<td>
 			<kbd>Cmd + Shift + H</kbd>
 		</td>
 		<td>
@@ -34,7 +34,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="20%">
+		<td>
 			<kbd>Cmd + Shift + L</kbd>
 		</td>
 		<td>
@@ -42,7 +42,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="20%">
+		<td>
 			<kbd>Cmd + Shift + RETURN</kbd>
 		</td>
 		<td>
@@ -50,7 +50,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="20%">
+		<td>
 			<kbd>Cmd + Shift + . </kbd>
 		</td>
 		<td>
