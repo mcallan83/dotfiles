@@ -24,7 +24,7 @@
 
 [Hammerspoon](http://www.hammerspoon.org/) OSX Window Manager
 
-<table>
+<table width="100%">
 	<tr>
 		<td>
 			<kbd>Cmd + Shift + H</kbd>
