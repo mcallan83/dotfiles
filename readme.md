@@ -22,12 +22,15 @@
 
 ### HammerSpoon
 
-[Hammerspoon](http://www.hammerspoon.org/) OSX Window Manager
+- OSX Window Manager
+- [http://www.hammerspoon.org/](http://www.hammerspoon.org/)
 
-<table width="100%">
+<table>
 	<tr>
-		<td>
-			<kbd>Cmd + Shift + H</kbd>
+		<td width="40%">
+			<kbd>⌘</kbd> + 
+			<kbd>⇧</kbd> +
+			<kbd>H</kbd>
 		</td>
 		<td>
 			Move window to left half of screen
