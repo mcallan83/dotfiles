@@ -22,8 +22,39 @@
 
 ### HammerSpoon
 
-- <kbd>Cmd + Shift + H</kbd> Move window to left half of screen
-- <kbd>Cmd + Shift + L</kbd> Move window to right half of screen
-- <kbd>Cmd + Shift + RETURN </kbd> Maximize window
-- <kbd>Cmd + Shift + . </kbd> Toggle window hints
+(Hammerspoon)[http://www.hammerspoon.org/] OSX Window Manager
 
+<table>
+	<tr>
+		<td width="20%">
+			<kbd>Cmd + Shift + H</kbd>
+		</td>
+		<td>
+			Move window to left half of screen
+		</td>
+	</tr>
+	<tr>
+		<td width="20%">
+			<kbd>Cmd + Shift + L</kbd>
+		</td>
+		<td>
+			Move window to right half of screen
+		</td>
+	</tr>
+	<tr>
+		<td width="20%">
+			<kbd>Cmd + Shift + RETURN</kbd>
+		</td>
+		<td>
+			Maximize window
+		</td>
+	</tr>
+	<tr>
+		<td width="20%">
+			<kbd>Cmd + Shift + . </kbd>
+		</td>
+		<td>
+			Toggle window hints
+		</td>
+	</tr>
+</table>
