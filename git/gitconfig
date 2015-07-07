@@ -1,12 +1,14 @@
 [user]
-	name = Mike Callan
-	email = mcallan83@gmail.com
+    name = Mike Callan
+    email = mcallan83@gmail.com
 [push]
-	default = matching
+    default = matching
 [alias]
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
     save = !git add -A && git commit -m 'SAVEPOINT'
     undo = reset HEAD~1 --mixed
     amend = commit -a --amend
+    rebase-branch = "!git rebase -i `git merge-base master HEAD`"
+    delete-merged = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 [credential]
     helper = osxkeychain
