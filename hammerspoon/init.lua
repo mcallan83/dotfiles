@@ -7,25 +7,48 @@ hs.grid.MARGINY     = 0
 hs.grid.GRIDWIDTH   = 2
 hs.grid.GRIDHEIGHT  = 2
 
--- disable animation
+-- keyboard modifiers
+local mash = {"cmd", "shift"}
+local mash_app = {"cmd", "ctrl", "alt"}
+local hyper = {"cmd", "ctrl", "alt", "shift"}
+
+-- disable window animations
 hs.window.animationDuration = 0
 
--- keyboard modifiers
-local mash = {"ctrl", "alt"}
-local mash_app = {"cmd", "ctrl", "alt"}
-local super = {"cmd", "ctrl", "alt", "shift"}
+-- size window to left half
+hs.hotkey.bind(mash, "H", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w / 2
+  f.h = max.h
+  win:setFrame(f)
+end)
 
--- reload config
-hs.hotkey.bind(super, "R", function() hs.reload() end)
-hs.notify.new({ title='Hammerspoon', informativeText='Config loaded' }):send():release()
+-- size window to right half
+hs.hotkey.bind(mash, "L", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+  f.x = max.x + (max.w / 2)
+  f.y = max.y
+  f.w = max.w / 2
+  f.h = max.h
+  win:setFrame(f)
+end)
 
--- resize windows
-hs.hotkey.bind(mash , 'H', hs.grid.pushWindowLeft)
-hs.hotkey.bind(mash, 'L', hs.grid.pushWindowRight)
+-- maximize window
+hs.hotkey.bind(mash, 'RETURN', hs.grid.maximizeWindow)
 
 -- toggle window hints
 hs.hotkey.bind(mash, '.', hs.hints.windowHints)
 
--- adjust grid size @todo
--- hs.hotkey.bind(mash, '=', function() hs.grid.adjustWidth( 1) end)
--- hs.hotkey.bind(mash, '-', function() hs.grid.adjustWidth(-1) end)
+-- toggle apps
+hs.hotkey.bind(mash_app, 'C', function() hs.application.launchOrFocus('Google Chrome') end)
+hs.hotkey.bind(mash_app, 'I', function() hs.application.launchOrFocus('iTerm') end)
+hs.hotkey.bind(mash_app, 'S', function() hs.application.launchOrFocus('Sublime Text') end)
+hs.hotkey.bind(mash_app, 'M', function() hs.application.launchOrFocus('Sequel Pro') end)

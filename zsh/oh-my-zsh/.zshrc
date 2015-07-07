@@ -23,7 +23,6 @@ export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # hack to get pure theme working properly
 fpath=( "$HOME/.dotfiles/zsh/pure/" $fpath )
 autoload -U promptinit && promptinit
-#prompt pure
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,8 +39,10 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 #web-search 
 alias amazon='web_search duckduckgo \!az'
 
-# zsh
+# edit configs
 alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+alias hammer="vim ~/.hammerspoon/init.lua"
 
 # zshmarks
 alias g="jump"
