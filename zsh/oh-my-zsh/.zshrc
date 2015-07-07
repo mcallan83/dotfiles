@@ -8,6 +8,7 @@ plugins=(
     composer
     git
     k
+    laravel5
     sublime
     sudo
     web-search
