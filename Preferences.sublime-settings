@@ -15,7 +15,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 21.0,
+	"font_size": 18.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -27,8 +27,8 @@
 	[
 		"draw_active"
 	],
-	"line_padding_bottom": 4,
-	"line_padding_top": 4,
+	"line_padding_bottom": 6,
+	"line_padding_top": 6,
 	"margin": 4,
 	"rulers":
 	[
