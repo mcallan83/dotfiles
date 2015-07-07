@@ -28,7 +28,7 @@
 <table>
 	<tr>
 		<td width="40%">
-			<kbd>⌘ + ⇧ + H</kbd>
+			<kbd>Cmd + Shift + H</kbd>
 		</td>
 		<td>
 			Move window to left half of screen
