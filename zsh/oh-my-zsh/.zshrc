@@ -16,12 +16,17 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+if [ -d $HOME/.rvm/bin ] ; then
+    PATH="$HOME/.rvm/bin"
+fi
+
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# hack to get pure theme working properly
+# pure theme 
 fpath=( "$HOME/.dotfiles/zsh/pure/" $fpath )
 autoload -U promptinit && promptinit
 
@@ -72,3 +77,4 @@ function mkcd
 
 
 [[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
+
