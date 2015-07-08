@@ -48,6 +48,7 @@ alias amazon='web_search duckduckgo \!az'
 # edit configs
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
+alias tmuxconf="vim ~/.tmux.conf"
 alias hammer="vim ~/.hammerspoon/init.lua"
 
 # zshmarks
