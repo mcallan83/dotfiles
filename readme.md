@@ -18,6 +18,30 @@
 
 ### Tmux
 
+<table>
+    <tr>
+        <td>
+            <kbd>Ctrl + a</kbd>
+        </td>
+        <td>
+            prefix
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <kbd></kbd>
+        </td>
+        </td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <kbd></kbd>
+        </td>
+        </td>
+        </td>
+    </tr>
+</table>
 ### Slate
 
 ### HammerSpoon
