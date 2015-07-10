@@ -18,6 +18,10 @@
 
 ### Tmux
 
+##### Installation
+
+    ln -s .dotfiles/tmux/tmux.conf .tmux.conf
+
 ##### Windows
 
 <table>
