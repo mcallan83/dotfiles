@@ -23,6 +23,31 @@
     cd ~ 
     ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 
+##### Prefix
+
+<table>
+    <tr>
+        <td>
+            <kbd>Ctrl + a</kbd>
+        </td>
+        <td>
+            &lt;prefix&gt;
+        </td>
+    </tr>
+</table>
+
+##### Panes
+
+<tr>
+    <td>
+        <kbd>&lt;prefix&gt; + x</kbd>
+    </td>
+    <td>
+        kill pane
+    </td>
+</tr>
+
+
 ##### Windows
 
 <table>
@@ -48,6 +73,22 @@
         </td>
         <td>
             rename window
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <kbd>&lt;prefix&gt; + |</kbd>
+        </td>
+        <td>
+            split window horizontally
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <kbd>&lt;prefix&gt; + -</kbd>
+        </td>
+        <td>
+            split window vertically
         </td>
     </tr>
 </table>
