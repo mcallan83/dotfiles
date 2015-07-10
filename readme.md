@@ -20,7 +20,7 @@
 
 ##### Installation
 
-    ln -s .dotfiles/tmux/tmux.conf .tmux.conf
+    cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 
 ##### Windows
 
