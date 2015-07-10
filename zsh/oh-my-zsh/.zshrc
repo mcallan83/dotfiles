@@ -10,6 +10,7 @@ plugins=(
     k
     laravel5
     sublime
+    tmux
     sudo
     web-search
     zshmarks
