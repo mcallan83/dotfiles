@@ -18,12 +18,12 @@
 
 ### Tmux
 
-#### Windows
+##### Windows
 
 <table>
     <tr>
         <td>
-            <kbd>&larr;prefix&rarr; + c</kbd>
+            <kbd>&lt;prefix&gt; + c</kbd>
         </td>
         <td>
             create new window
@@ -31,7 +31,7 @@
     </tr>
     <tr>
         <td>
-            <kbd>&larr;prefix&rarr; + 0-9</kbd>
+            <kbd>&lt;prefix&gt; + 0-9</kbd>
         </td>
         <td>
             move to window based on index
@@ -39,7 +39,7 @@
     </tr>
     <tr>
         <td>
-            <kbd>&larr;prefix&rarr; + ,</kbd>
+            <kbd>&lt;prefix&gt; + ,</kbd>
         </td>
         <td>
             rename window
