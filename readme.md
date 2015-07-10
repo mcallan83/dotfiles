@@ -18,27 +18,31 @@
 
 ### Tmux
 
+#### Windows
+
 <table>
     <tr>
         <td>
-            <kbd>Ctrl + a</kbd>
+            <kbd>&larr;prefix&rarr; + c</kbd>
         </td>
         <td>
-            prefix
+            create new window
         </td>
     </tr>
     <tr>
         <td>
-            <kbd></kbd>
+            <kbd>&larr;prefix&rarr; + 0-9</kbd>
         </td>
-        </td>
+        <td>
+            move to window based on index
         </td>
     </tr>
     <tr>
         <td>
-            <kbd></kbd>
+            <kbd>&larr;prefix&rarr; + ,</kbd>
         </td>
-        </td>
+        <td>
+            rename window
         </td>
     </tr>
 </table>
