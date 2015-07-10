@@ -83,3 +83,7 @@
 		</td>
 	</tr>
 </table>
+
+## Reference
+
+- [https://github.com/zanshin/dotfiles](https://github.com/zanshin/dotfiles)
