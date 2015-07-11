@@ -1,3 +1,10 @@
+# clean out preloaded path on OSX
+if [ -x /usr/libexec/path_helper ]; then
+    PATH=''
+    echo $PATH
+    eval `/usr/libexec/path_helper -s`
+fi
+
 if [ -d $HOME/.rvm/bin ] ; then
     PATH="$HOME/.rvm/bin"
 fi
