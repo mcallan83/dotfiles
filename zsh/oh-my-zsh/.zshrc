@@ -25,7 +25,13 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+if [ -d "$HOME/.composer/vendor/bin" ] ; then
+    PATH="$PATH:$HOME/.composer/vendor/bin"
+fi
+
+export PATH
 
 # pure theme 
 fpath=( "$HOME/.dotfiles/zsh/pure/" $fpath )
@@ -83,5 +89,9 @@ function colortest
   for x in 0 1 4 5 7 8; do for i in `seq 30 37`; do for a in `seq 40 47`; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo "";
 
 }
-[[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
 
+# remove duplicates in path
+typeset -U PATH
+
+# load local zshrc
+[[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
