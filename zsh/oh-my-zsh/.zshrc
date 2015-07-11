@@ -6,6 +6,7 @@ ZSH_CUSTOM=$HOME/.dotfiles/zsh/oh-my-zsh/custom
 plugins=(
     brew
     composer
+    extract
     git
     k
     laravel5
