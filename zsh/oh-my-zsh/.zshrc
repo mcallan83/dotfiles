@@ -14,6 +14,7 @@ plugins=(
     sudo
     web-search
     zshmarks
+    pure
     zsh-syntax-highlighting
 )
 
@@ -34,8 +35,8 @@ fi
 export PATH
 
 # pure theme 
-fpath=( "$HOME/.dotfiles/zsh/pure/" $fpath )
-autoload -U promptinit && promptinit
+#fpath=( "$HOME/.dotfiles/zsh/pure/" $fpath )
+#autoload -U promptinit && promptinit
 
 source $ZSH/oh-my-zsh.sh
 
