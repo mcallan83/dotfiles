@@ -34,60 +34,39 @@
 
 ##### Panes
 
-<tr>
-    <td>
-        <kbd>&lt;prefix&gt; + x</kbd>
-    </td>
-    <td>
-        kill pane
-    </td>
-</tr>
+<table style="display: table; width: 100%">
+    <tr>
+        <td><kbd>&lt;prefix&gt; + x</kbd></td>
+        <td>kill pane</td>
+    </tr>
+</table>
 
 
 ##### Windows
 
 <table>
     <tr>
-        <td>
-            <kbd>&lt;prefix&gt; + c</kbd>
-        </td>
-        <td>
-            create new window
-        </td>
+        <td><kbd>&lt;prefix&gt; + c</kbd></td>
+        <td>create new window</td>
     </tr>
     <tr>
-        <td>
-            <kbd>&lt;prefix&gt; + 0-9</kbd>
-        </td>
-        <td>
-            move to window based on index
-        </td>
+        <td><kbd>&lt;prefix&gt; + 0-9</kbd></td>
+        <td>move to window based on index</td>
     </tr>
     <tr>
-        <td>
-            <kbd>&lt;prefix&gt; + ,</kbd>
-        </td>
-        <td>
-            rename window
-        </td>
+        <td><kbd>&lt;prefix&gt; + ,</kbd></td>
+        <td>rename window</td>
     </tr>
     <tr>
-        <td>
-            <kbd>&lt;prefix&gt; + |</kbd>
-        </td>
-        <td>
-            split window horizontally
-        </td>
+        <td><kbd>&lt;prefix&gt; + |</kbd></td>
+        <td>split window horizontally</td>
     </tr>
     <tr>
-        <td>
-            <kbd>&lt;prefix&gt; + -</kbd>
-        </td>
-        <td>
-            split window vertically
-        </td>
+        <td><kbd>&lt;prefix&gt; + -</kbd></td>
+        <td>split window vertically</td>
     </tr>
 </table>
+
 ### Slate
 
 ### HammerSpoon
