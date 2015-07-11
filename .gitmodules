@@ -19,3 +19,18 @@
 [submodule "submodules/zsh/z"]
 	path = submodules/zsh/z
 	url = https://github.com/rupa/z
+[submodule "submodules/color/Cobalt2-iterm"]
+	path = submodules/color/Cobalt2-iterm
+	url = https://github.com/wesbos/Cobalt2-iterm
+[submodule "submodules/color/solarized"]
+	path = submodules/color/solarized
+	url = https://github.com/altercation/solarized/
+[submodule "submodules/color/iTerm2-Color-Schemes"]
+	path = submodules/color/iTerm2-Color-Schemes
+	url = https://github.com/mbadolato/iTerm2-Color-Schemes
+[submodule "submodules/color/base16-shell"]
+	path = submodules/color/base16-shell
+	url = https://github.com/chriskempson/base16-shell
+[submodule "submodules/color/dircolors-solarized"]
+	path = submodules/color/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized
