@@ -9,9 +9,13 @@ alias gs="gst"
 
 # k
 alias ka="k -a"
+alias kd="k -d"
 
 # sublime
 alias ss="stt"
+
+# vim
+alias vv="vim -N -u NONE"
 
 #web-search 
 alias amazon='web_search duckduckgo \!az'
