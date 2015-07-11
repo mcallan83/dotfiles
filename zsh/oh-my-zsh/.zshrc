@@ -14,6 +14,7 @@ plugins=(
     tmux
     sudo
     web-search
+    z
     zshmarks
     zsh-syntax-highlighting
 )
