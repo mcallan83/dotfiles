@@ -1,1 +1,0 @@
-../../../submodules/zsh/zshmarks/zshmarks.plugin.zsh
