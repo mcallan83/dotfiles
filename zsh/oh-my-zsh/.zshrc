@@ -9,12 +9,12 @@ plugins=(
     git
     k
     laravel5
+    pure
     sublime
     tmux
     sudo
     web-search
     zshmarks
-    pure
     zsh-syntax-highlighting
 )
 
