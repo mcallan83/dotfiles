@@ -23,6 +23,8 @@ plugins=(
 
 source $DOTFILES/zsh/oh-my-zsh/path.zsh
 source $ZSH/oh-my-zsh.sh
+source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
+source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
