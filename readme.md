@@ -1,3 +1,9 @@
+<style>
+table {
+    display: table;
+    width: 100%;
+}
+</style>
 # Mike Callan's Dotfiles
 
 ## Installation
@@ -25,14 +31,10 @@
 
 ##### Prefix
 
-<table>
+<table style="display: table">
     <tr>
-        <td>
-            <kbd>Ctrl + a</kbd>
-        </td>
-        <td>
-            &lt;prefix&gt;
-        </td>
+        <td><kbd>Ctrl + a</kbd></td>
+        <td>&lt;prefix&gt;</td>
     </tr>
 </table>
 
