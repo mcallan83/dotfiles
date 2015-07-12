@@ -29,5 +29,9 @@ source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 # remove duplicates in path
 typeset -U PATH
 
+# trial vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
 # load local zshrc
 [[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
