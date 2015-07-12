@@ -20,6 +20,9 @@ alias vv="vim -N -u NONE"
 #web-search 
 alias amazon='web_search duckduckgo \!az'
 
+# z
+alias zc="z -c"
+
 # zshmarks
 alias g="jump"
 alias s="bookmark"
