@@ -47,6 +47,7 @@ hs.hotkey.bind(mash_app, 'I', function() hs.application.launchOrFocus('iTerm') e
 hs.hotkey.bind(mash_app, 'S', function() hs.application.launchOrFocus('Sublime Text') end)
 hs.hotkey.bind(mash_app, 'M', function() hs.application.launchOrFocus('Sequel Pro') end)
 hs.hotkey.bind(mash_app, 'F', function() hs.application.launchOrFocus('Finder') end)
+hs.hotkey.bind(mash_app, 'T', function() hs.application.launchOrFocus('iTunes') end)
 
 -- auto reload config
 function reloadConfig(files)
