@@ -17,6 +17,9 @@ alias psa="ps aux"
 # sublime
 alias ss="stt"
 
+# vagrant
+alias vs="vagrant ssh"
+
 # vim
 alias vv="vim -N -u NONE"
 
