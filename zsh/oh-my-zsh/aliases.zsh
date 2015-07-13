@@ -11,6 +11,9 @@ alias gs="gst"
 alias ka="k -a"
 alias kd="k -d"
 
+# ps
+alias psa="ps aux"
+
 # sublime
 alias ss="stt"
 
