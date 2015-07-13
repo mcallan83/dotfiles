@@ -36,8 +36,8 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # auto list dir contents on cd
-auto-ls () { k; }
-chpwd_functions=( auto-ls $chpwd_functions )
+#auto-ls () { k; }
+#chpwd_functions=( auto-ls $chpwd_functions )
 
 # load local zshrc
 [[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
