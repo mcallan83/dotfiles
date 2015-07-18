@@ -34,3 +34,6 @@ alias g="jump"
 alias s="bookmark"
 alias d="deletemark"
 alias l="showmarks"
+
+# capture screen
+alias sc="screencapture -c -W"
