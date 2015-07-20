@@ -1,2 +1,7 @@
 *.swp
 *.DS_Store
+
+# atom
+osx/atom/compile-cache
+osx/atom/.apm/.apmrc
+osx/atom/storage/
