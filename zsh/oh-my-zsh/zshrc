@@ -2,6 +2,7 @@ start_time="$(date +%s)"
 
 export ZSH=$HOME/.oh-my-zsh
 
+
 DOTFILES=$HOME/.dotfiles
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
@@ -17,6 +18,7 @@ plugins=(
     tmux
     sudo
     web-search
+    vi-mode
     z
     zshmarks
     zsh-syntax-highlighting
@@ -30,14 +32,6 @@ source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 
 # remove duplicates in path
 typeset -U PATH
-
-# trial vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
-# auto list dir contents on cd
-#auto-ls () { k; }
-#chpwd_functions=( auto-ls $chpwd_functions )
 
 # load local zshrc
 [[ -r ~/.local.zshrc ]] && . ~/.local.zshrc

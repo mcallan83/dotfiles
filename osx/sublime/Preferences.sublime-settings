@@ -20,6 +20,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Markdown"
 	],
 	"indent_guide_options":
 	[

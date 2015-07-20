@@ -21,7 +21,7 @@ alias ss="stt"
 alias vs="vagrant ssh"
 
 # vim
-alias vv="vim -N -u NONE"
+alias viml="vim -N -u NONE"
 
 #web-search 
 alias amazon='web_search duckduckgo \!az'
