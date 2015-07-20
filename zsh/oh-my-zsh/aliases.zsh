@@ -10,6 +10,9 @@ alias aa="atom ."
 # git
 alias gs="gst"
 
+# grep
+alias -g G='| grep'
+
 # k
 alias ka="k -a"
 alias kd="k -d"
