@@ -4,6 +4,9 @@ alias vimrc="vim ~/.vimrc"
 alias tmuxconf="vim ~/.tmux.conf"
 alias hammer="vim ~/.hammerspoon/init.lua"
 
+# atom
+alias aa="atom ."
+
 # git
 alias gs="gst"
 
