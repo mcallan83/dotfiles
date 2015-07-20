@@ -1,5 +1,5 @@
 {
-	"cmd": ["grunt test --force --file $file"],
+	"cmd": ["grunt test --file $file --no-seed --no-color"],
 	"shell": true,
 	"selector": "source.php",
 	"working_dir": "${project_path:${folder}}"

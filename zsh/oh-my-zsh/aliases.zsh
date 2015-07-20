@@ -7,6 +7,9 @@ alias hammer="vim ~/.hammerspoon/init.lua"
 # atom
 alias aa="atom ."
 
+#
+alias cl="clear"
+
 # git
 alias gs="gst"
 
