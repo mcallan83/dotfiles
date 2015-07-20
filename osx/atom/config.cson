@@ -3,7 +3,12 @@
     userId: "b8e11f25-b2c3-2a5b-4648-ee97e2377f45"
   welcome:
     showOnStartup: false
-  core: {}
+  core:
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
   editor:
     invisibles: {}
     fontSize: 18
+  "one-light-ui": {}

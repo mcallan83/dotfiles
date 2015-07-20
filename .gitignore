@@ -2,6 +2,8 @@
 *.DS_Store
 
 # atom
-osx/atom/compile-cache
-osx/atom/.apm/.apmrc
+osx/atom/compile-cache/
 osx/atom/storage/
+/osx/atom/.apm/
+/osx/atom/.node-gyp/
+/osx/atom/packages/
