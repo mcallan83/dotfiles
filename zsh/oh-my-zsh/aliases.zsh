@@ -20,6 +20,9 @@ alias psa="ps aux"
 # sublime
 alias ss="stt"
 
+# tail
+alias t="tail -f"
+
 # vagrant
 alias vs="vagrant ssh"
 
