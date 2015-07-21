@@ -30,6 +30,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'editorconfig/editorconfig-vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -129,6 +130,9 @@ let g:tagbar_autofocus = 1
 nnoremap <leader>} :TagbarOpenAutoClose<cr>
 nnoremap <leader>] :TagbarToggle<cr>
 
+" editorconfig
+" ============
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " }}}
 " {{{ TODO
