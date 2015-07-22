@@ -7,7 +7,7 @@ alias hammer="vim ~/.hammerspoon/init.lua"
 # atom
 alias aa="atom ."
 
-#
+# clear screen
 alias cl="clear"
 
 # git
@@ -17,8 +17,11 @@ alias gs="gst"
 alias -g G='| grep'
 
 # k
-alias ka="k -a"
-alias kd="k -d"
+alias ka="k -a" # k with hidden files
+alias kd="k -d" # k with directories only
+
+# less
+alias -g L='| less'
 
 # ps
 alias psa="ps aux"
@@ -33,19 +36,21 @@ alias t="tail -f"
 alias vs="vagrant ssh"
 
 # vim
-alias viml="vim -N -u NONE"
+alias viml="vim -N -u NONE" #vim with no plugins
 
-#web-search 
+#web-search
 alias amazon='web_search duckduckgo \!az'
 
 # z
-alias zc="z -c"
+alias zc="z -c" # z in current folder only
 
 # zshmarks
 alias g="jump"
 alias s="bookmark"
 alias d="deletemark"
 alias l="showmarks"
+
+# osx only
 
 # capture screen
 alias sc="screencapture -c -W"
