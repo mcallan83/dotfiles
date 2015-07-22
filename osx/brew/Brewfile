@@ -1,3 +1,6 @@
+# need to set timezone after php56 install:
+#   echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
+
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
