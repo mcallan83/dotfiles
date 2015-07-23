@@ -17,3 +17,8 @@ if [ -d /usr/local/share/adminer ] ; then
             php -S localhost:8888 -t /usr/local/share/adminer > /dev/null
     }
 fi
+
+# search all alises
+function als() {
+    alias | grep $1
+}
