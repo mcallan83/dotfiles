@@ -33,7 +33,9 @@ alias ss="stt"
 alias t="tail -f"
 
 # vagrant
+alias vh="vagrant halt"
 alias vs="vagrant ssh"
+alias vu="vagrant up"
 
 # vim
 alias viml="vim -N -u NONE" #vim with no plugins
