@@ -20,7 +20,7 @@
 
 ##### Installation
 
-    cd ~ 
+    cd ~
     ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 
 ##### Prefix
@@ -75,38 +75,38 @@
 - [http://www.hammerspoon.org/](http://www.hammerspoon.org/)
 
 <table>
-	<tr>
-		<td width="40%">
-			<kbd>Cmd + Shift + H</kbd>
-		</td>
-		<td>
-			Move window to left half of screen
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<kbd>Cmd + Shift + L</kbd>
-		</td>
-		<td>
-			Move window to right half of screen
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<kbd>Cmd + Shift + RETURN</kbd>
-		</td>
-		<td>
-			Maximize window
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<kbd>Cmd + Shift + . </kbd>
-		</td>
-		<td>
-			Toggle window hints
-		</td>
-	</tr>
+    <tr>
+        <td width="40%">
+            <kbd>Cmd + Shift + H</kbd>
+        </td>
+        <td>
+            Move window to left half of screen
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <kbd>Cmd + Shift + L</kbd>
+        </td>
+        <td>
+            Move window to right half of screen
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <kbd>Cmd + Shift + RETURN</kbd>
+        </td>
+        <td>
+            Maximize window
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <kbd>Cmd + Shift + . </kbd>
+        </td>
+        <td>
+            Toggle window hints
+        </td>
+    </tr>
 </table>
 
 ## Reference
