@@ -1,18 +1,33 @@
 # Mike Callan's Dotfiles
 
-## Installation
-
-1. `cd ~`
-2. `git clone https://github.com/mcallan83/dotfiles .dotfiles --recursive`
-3. `ln -s .dotfiles/zsh/.zshrc .zshrc`
-4. `ln -s .dotfiles/vim/.vim .vim`
-5. `ln -s .dotfiles/tmux/tmux.conf .tmux.conf`
-6. `ln -s .dotfiles/slate/slate .slate`
-7. `ln -s .dotfiles/hammerspoon/init.lua .hammerspoon/init.lua`
+My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX and Ubuntu. Work inprogress.
 
 ## Shortcuts\Aliases
 
 ### ZSH
+
+##### Git
+
+`gaa` git add -all
+`gco` git checkout
+`gd` git diff
+`gf` git fetch
+`ggpull` git pull origin [current_branch]
+`ggpush` git push origin [current_branch]
+`gp` git pull
+`gs` git status
+
+##### K
+
+`k` list directories with [k](https://github.com/rimraf/k)
+`ka` k with hidden files
+`kd` k with directories only
+
+##### Vagrant
+
+`vh` vagrant halt
+`vs` vagrant ssh
+`vu` vagrant up
 
 ### Vim
 
