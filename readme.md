@@ -1,6 +1,6 @@
 # Mike Callan's Dotfiles
 
-My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX and Ubuntu. Work inprogress.
+My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX and Ubuntu. Work in progress.
 
 ## Shortcuts\Aliases
 
