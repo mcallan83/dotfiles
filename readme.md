@@ -6,9 +6,21 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 
 ### ZSH
 
+##### Composer
+
+- `c` composer
+- `cdu` composer dump-autoload
+- `cgr` composer global require
+- `cgu` composer global update
+- `ci` composer install
+- `cr` composer require
+- `csu` composer self-update
+- `cu` composer update
+
 ##### Git
 
 - `gaa` git add -all
+- `gcm` git checkout master
 - `gco` git checkout
 - `gd` git diff
 - `gf` git fetch
@@ -16,13 +28,18 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 - `ggpush` git push origin [current_branch]
 - `gp` git pull
 - `gs` git status
-- `gcm` git checkout master
 
 ##### K
 
 - `k` list directories with [k](https://github.com/rimraf/k)
 - `ka` k with hidden files
 - `kd` k with directories only
+
+##### Misc
+
+- `G` append with "| grep"
+- `L` append with "| less"
+- `als $` search all defined aliases for $
 
 ##### Vagrant
 
