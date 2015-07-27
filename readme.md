@@ -29,6 +29,12 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 - `gp` git pull
 - `gs` git status
 
+##### Homebrew
+
+- `brews` brew list -1
+- `bubc` brew upgrade && brew cleanup
+- `bubo` brew update && brew outdated
+
 ##### K
 
 - `k` list directories with [k](https://github.com/rimraf/k)
