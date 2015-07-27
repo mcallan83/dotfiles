@@ -20,6 +20,8 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 ##### Git
 
 - `gaa` git add -all
+- `gb` git branch
+- `gbr` git branch --remote
 - `gcm` git checkout master
 - `gco` git checkout
 - `gd` git diff
