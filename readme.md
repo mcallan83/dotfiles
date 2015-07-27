@@ -8,26 +8,27 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 
 ##### Git
 
-`gaa` git add -all
-`gco` git checkout
-`gd` git diff
-`gf` git fetch
-`ggpull` git pull origin [current_branch]
-`ggpush` git push origin [current_branch]
-`gp` git pull
-`gs` git status
+- `gaa` git add -all
+- `gco` git checkout
+- `gd` git diff
+- `gf` git fetch
+- `ggpull` git pull origin [current_branch]
+- `ggpush` git push origin [current_branch]
+- `gp` git pull
+- `gs` git status
+- `gcm` git checkout master
 
 ##### K
 
-`k` list directories with [k](https://github.com/rimraf/k)
-`ka` k with hidden files
-`kd` k with directories only
+- `k` list directories with [k](https://github.com/rimraf/k)
+- `ka` k with hidden files
+- `kd` k with directories only
 
 ##### Vagrant
 
-`vh` vagrant halt
-`vs` vagrant ssh
-`vu` vagrant up
+- `vh` vagrant halt
+- `vs` vagrant ssh
+- `vu` vagrant up
 
 ### Vim
 
