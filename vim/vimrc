@@ -3,20 +3,20 @@
 " NeoBundle {{{
 
 if has('vim_starting')
-	set nocompatible
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 let vundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 if !filereadable(vundle_readme)
-	echo "Installing NeoBundle..."
-	echo ""
-	silent !mkdir -p ~/.vim/bundle
-	silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
+    echo "Installing NeoBundle..."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" packages 
+" packages
 " =========
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'terryma/vim-expand-region'
@@ -70,8 +70,8 @@ inoremap jj <Esc>
 " disable automatic comment insertion
 " ===================================
 augroup comments
-	au!
-	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    au!
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 augroup END
 
 " }}}
