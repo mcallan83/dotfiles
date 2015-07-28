@@ -46,7 +46,7 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 ##### K
 
 <table>
-    <tr><td><kbd>k</kbd></td><td>list directories with [k](https://github.com/rimraf/k)</td></tr>
+    <tr><td><kbd>k</kbd></td><td>list directories with <a href="https://github.com/rimraf/k">k</a></td></tr>
     <tr><td><kbd>ka</kbd></td><td>k with hidden files</td></tr>
     <tr><td><kbd>kd</kbd></td><td>k with directories only</td></tr>
 </table>
@@ -70,7 +70,7 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 ##### Z
 
 <table>
-    <tr><td><kbd>z</kbd></td><td>just to "frecent" directory with [z](https://github.com/rupa/z)</td></tr>
+    <tr><td><kbd>z</kbd></td><td>just to "frecent" directory with <a href="https://github.com/rupa/z">z</a></td></tr>
     <tr><td><kbd>zc</kbd></td><td>z in current directory</td></tr>
 </table>
 
