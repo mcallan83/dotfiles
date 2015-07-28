@@ -4,6 +4,8 @@
 
 My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX and Ubuntu. Work in progress. Documentation doesn't cover everything; it is mainly a reference for myself :)
 
+There is no magic install script that bootstraps my entire envirnment. Instead, each piece can be manually enabled depending on need.
+
 ## ZSH
 
 - [https://github.com/zanshin/dotfiles](https://github.com/zanshin/dotfiles)
@@ -47,10 +49,18 @@ bubo                    brew update && brew outdated
 
 ### K
 
+[k](https://github.com/rimraf/k) is the new l, yo
+
 ```
 k                       list directories with k
 ka                      k with hidden files
 kd                      k with directories only
+```
+
+### Laravel
+
+```
+la5                     php artisan
 ```
 
 ### Misc
@@ -75,7 +85,26 @@ vu                      vagrant up
 viml                    run naked vim without plugin or config
 ```
 
+### Web Search
+
+Quickly search in a browser...
+
+```
+amazon $                amazon
+bing $                  bing
+github $                github
+google $                google
+image $                 google images
+map $                   google maps
+news $                  goole news
+wiki $                  wikipedia
+yahoo $                 yahoo
+youtube $               youtube
+```
+
 ### Z
+
+[z](https://github.com/rupa/z) is the new j, yo
 
 ```
 z                       jump to "frecent" directory with z
@@ -133,7 +162,6 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 <prefix> p              previous window
 <prefix> w              choose window from menu
 ```
-
 
 ## Slate
 
