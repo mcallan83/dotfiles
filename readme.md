@@ -8,52 +8,71 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 
 ##### Composer
 
-- `c` composer
-- `cdu` composer dump-autoload
-- `cgr` composer global require
-- `cgu` composer global update
-- `ci` composer install
-- `cr` composer require
-- `csu` composer self-update
-- `cu` composer update
+<table>
+    <tr><td>`c`</td><td>composer</td></tr>
+    <tr><td>`cdu`</td><td>composer dump-autoload</td></tr>
+    <tr><td>`cgr`</td><td>composer global require</td></tr>
+    <tr><td>`cgu`</td><td>composer global update</td></tr>
+    <tr><td>`ci`</td><td>composer install</td></tr>
+    <tr><td>`cr`</td><td>composer require</td></tr>
+    <tr><td>`csu`</td><td>composer self-update</td></tr>
+    <tr><td>`cu`</td><td>composer update</td></tr>
+</table>
 
 ##### Git
 
-- `gaa` git add -all
-- `gb` git branch
-- `gbr` git branch --remote
-- `gcm` git checkout master
-- `gco` git checkout
-- `gd` git diff
-- `gf` git fetch
-- `ggpull` git pull origin [current_branch]
-- `ggpush` git push origin [current_branch]
-- `gp` git pull
-- `gs` git status
+<table>
+    <tr><td>`gaa`</td><td>git add -all</td></tr>
+    <tr><td>`gb`</td><td>git branch</td></tr>
+    <tr><td>`gbr`</td><td>git branch --remote</td></tr>
+    <tr><td>`gcm`</td><td>git checkout master</td></tr>
+    <tr><td>`gco`</td><td>git checkout</td></tr>
+    <tr><td>`gd`</td><td>git diff</td></tr>
+    <tr><td>`gf`</td><td>git fetch</td></tr>
+    <tr><td>`ggpull`</td><td>git pull origin [current_branch]</td></tr>
+    <tr><td>`ggpush`</td><td>git push origin [current_branch]</td></tr>
+    <tr><td>`gp`</td><td>git pull</td></tr>
+    <tr><td>`gs`</td><td>git status</td></tr>
+</table>
 
 ##### Homebrew
 
-- `brews` brew list -1
-- `bubc` brew upgrade && brew cleanup
-- `bubo` brew update && brew outdated
+<table>
+    <tr><td>`brews`</td><td>brew list -1</td></tr>
+    <tr><td>`bubc`</td><td>brew upgrade && brew cleanup</td></tr>
+    <tr><td>`bubo`</td><td>brew update && brew outdated</td></tr>
+</table>
 
 ##### K
 
-- `k` list directories with [k](https://github.com/rimraf/k)
-- `ka` k with hidden files
-- `kd` k with directories only
+<table>
+    <tr><td>`k`</td><td>list directories with [k](https://github.com/rimraf/k)</td></tr>
+    <tr><td>`ka`</td><td>k with hidden files</td></tr>
+    <tr><td>`kd`</td><td>k with directories only</td></tr>
+</table>
 
 ##### Misc
 
-- `G` append with "| grep"
-- `L` append with "| less"
-- `als $` search all defined aliases for $
+<table>
+    <tr><td>`G`</td><td>append with "| grep"</td></tr>
+    <tr><td>`L`</td><td>append with "| less"</td></tr>
+    <tr><td>`als $`</td><td>search all defined aliases for $</td></tr>
+</table>
 
 ##### Vagrant
 
-- `vh` vagrant halt
-- `vs` vagrant ssh
-- `vu` vagrant up
+<table>
+    <tr><td>`vh`</td><td>vagrant halt</td></tr>
+    <tr><td>`vs`</td><td>vagrant ssh</td></tr>
+    <tr><td>`vu`</td><td>vagrant up</td></tr>
+</table>
+
+##### Z
+
+<table>
+    <tr><td>`z`</td><td>just to "frecent" directory with [z](https://github.com/rupa/z)</td></tr>
+    <tr><td>`zc`</td><td>z in current directory</td></tr>
+</table>
 
 ### Vim
 
