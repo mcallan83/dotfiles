@@ -8,6 +8,7 @@ There is no magic install script that bootstraps my entire envirnment. Instead, 
 
 ## ZSH
 
+- [oh my zsh](http://ohmyz.sh/)
 - [https://github.com/zanshin/dotfiles](https://github.com/zanshin/dotfiles)
 
 ### Composer
