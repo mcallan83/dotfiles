@@ -116,6 +116,7 @@ zc                      z in current directory
 ## Tmux
 
 - [Painless Tmux](https://leanpub.com/painless_tmux)
+- [A tmux Crash Course](https://robots.thoughtbot.com/a-tmux-crash-course)
 
 ```
 # install
