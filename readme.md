@@ -9,69 +9,69 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 ##### Composer
 
 <table>
-    <tr><td>`c`</td><td>composer</td></tr>
-    <tr><td>`cdu`</td><td>composer dump-autoload</td></tr>
-    <tr><td>`cgr`</td><td>composer global require</td></tr>
-    <tr><td>`cgu`</td><td>composer global update</td></tr>
-    <tr><td>`ci`</td><td>composer install</td></tr>
-    <tr><td>`cr`</td><td>composer require</td></tr>
-    <tr><td>`csu`</td><td>composer self-update</td></tr>
-    <tr><td>`cu`</td><td>composer update</td></tr>
+    <tr><td><kbd>c</kbd></td><td>composer</td></tr>
+    <tr><td><kbd>cdu</kbd></td><td>composer dump-autoload</td></tr>
+    <tr><td><kbd>cgr</kbd></td><td>composer global require</td></tr>
+    <tr><td><kbd>cgu</kbd></td><td>composer global update</td></tr>
+    <tr><td><kbd>ci</kbd></td><td>composer install</td></tr>
+    <tr><td><kbd>cr</kbd></td><td>composer require</td></tr>
+    <tr><td><kbd>csu</kbd></td><td>composer self-update</td></tr>
+    <tr><td><kbd>cu</kbd></td><td>composer update</td></tr>
 </table>
 
 ##### Git
 
 <table>
-    <tr><td>`gaa`</td><td>git add -all</td></tr>
-    <tr><td>`gb`</td><td>git branch</td></tr>
-    <tr><td>`gbr`</td><td>git branch --remote</td></tr>
-    <tr><td>`gcm`</td><td>git checkout master</td></tr>
-    <tr><td>`gco`</td><td>git checkout</td></tr>
-    <tr><td>`gd`</td><td>git diff</td></tr>
-    <tr><td>`gf`</td><td>git fetch</td></tr>
-    <tr><td>`ggpull`</td><td>git pull origin [current_branch]</td></tr>
-    <tr><td>`ggpush`</td><td>git push origin [current_branch]</td></tr>
-    <tr><td>`gp`</td><td>git pull</td></tr>
-    <tr><td>`gs`</td><td>git status</td></tr>
+    <tr><td><kbd>gaa</kbd></td><td>git add -all</td></tr>
+    <tr><td><kbd>gb</kbd></td><td>git branch</td></tr>
+    <tr><td><kbd>gbr</kbd></td><td>git branch --remote</td></tr>
+    <tr><td><kbd>gcm</kbd></td><td>git checkout master</td></tr>
+    <tr><td><kbd>gco</kbd></td><td>git checkout</td></tr>
+    <tr><td><kbd>gd</kbd></td><td>git diff</td></tr>
+    <tr><td><kbd>gf</kbd></td><td>git fetch</td></tr>
+    <tr><td><kbd>ggpull</kbd></td><td>git pull origin [current_branch]</td></tr>
+    <tr><td><kbd>ggpush</kbd></td><td>git push origin [current_branch]</td></tr>
+    <tr><td><kbd>gp</kbd></td><td>git pull</td></tr>
+    <tr><td><kbd>gs</kbd></td><td>git status</td></tr>
 </table>
 
 ##### Homebrew
 
 <table>
-    <tr><td>`brews`</td><td>brew list -1</td></tr>
-    <tr><td>`bubc`</td><td>brew upgrade && brew cleanup</td></tr>
-    <tr><td>`bubo`</td><td>brew update && brew outdated</td></tr>
+    <tr><td><kbd>brews</kbd></td><td>brew list -1</td></tr>
+    <tr><td><kbd>bubc</kbd></td><td>brew upgrade && brew cleanup</td></tr>
+    <tr><td><kbd>bubo</kbd></td><td>brew update && brew outdated</td></tr>
 </table>
 
 ##### K
 
 <table>
-    <tr><td>`k`</td><td>list directories with [k](https://github.com/rimraf/k)</td></tr>
-    <tr><td>`ka`</td><td>k with hidden files</td></tr>
-    <tr><td>`kd`</td><td>k with directories only</td></tr>
+    <tr><td><kbd>k</kbd></td><td>list directories with [k](https://github.com/rimraf/k)</td></tr>
+    <tr><td><kbd>ka</kbd></td><td>k with hidden files</td></tr>
+    <tr><td><kbd>kd</kbd></td><td>k with directories only</td></tr>
 </table>
 
 ##### Misc
 
 <table>
-    <tr><td>`G`</td><td>append with "| grep"</td></tr>
-    <tr><td>`L`</td><td>append with "| less"</td></tr>
-    <tr><td>`als $`</td><td>search all defined aliases for $</td></tr>
+    <tr><td><kbd>G</kbd></td><td>append with "| grep"</td></tr>
+    <tr><td><kbd>L</kbd></td><td>append with "| less"</td></tr>
+    <tr><td><kbd>als $</kbd></td><td>search all defined aliases for $</td></tr>
 </table>
 
 ##### Vagrant
 
 <table>
-    <tr><td>`vh`</td><td>vagrant halt</td></tr>
-    <tr><td>`vs`</td><td>vagrant ssh</td></tr>
-    <tr><td>`vu`</td><td>vagrant up</td></tr>
+    <tr><td><kbd>vh</kbd></td><td>vagrant halt</td></tr>
+    <tr><td><kbd>vs</kbd></td><td>vagrant ssh</td></tr>
+    <tr><td><kbd>vu</kbd></td><td>vagrant up</td></tr>
 </table>
 
 ##### Z
 
 <table>
-    <tr><td>`z`</td><td>just to "frecent" directory with [z](https://github.com/rupa/z)</td></tr>
-    <tr><td>`zc`</td><td>z in current directory</td></tr>
+    <tr><td><kbd>z</kbd></td><td>just to "frecent" directory with [z](https://github.com/rupa/z)</td></tr>
+    <tr><td><kbd>zc</kbd></td><td>z in current directory</td></tr>
 </table>
 
 ### Vim

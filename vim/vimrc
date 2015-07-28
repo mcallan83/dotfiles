@@ -31,6 +31,8 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
 
 call neobundle#end()
 filetype plugin indent on
