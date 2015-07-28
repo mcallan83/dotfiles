@@ -22,3 +22,9 @@ fi
 function als() {
     alias | grep $1
 }
+
+# osx only
+
+pman() {
+    man -t "${1}" | open -f -a /Applications/Preview.app/
+}

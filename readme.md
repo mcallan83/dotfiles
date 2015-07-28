@@ -9,6 +9,8 @@ There is no magic install script that bootstraps my entire envirnment. Instead, 
 ## ZSH
 
 - [oh my zsh](http://ohmyz.sh/)
+- [k is the new l, yo](https://github.com/rimraf/k)
+- [z is the new j, yo](https://github.com/rupa/z)
 - [https://github.com/zanshin/dotfiles](https://github.com/zanshin/dotfiles)
 
 ### Composer
@@ -50,8 +52,6 @@ bubo                    brew update && brew outdated
 
 ### K
 
-[k](https://github.com/rimraf/k) is the new l, yo
-
 ```
 k                       list directories with k
 ka                      k with hidden files
@@ -70,6 +70,7 @@ la5                     php artisan
 G                       append command with "| grep"
 L                       append command with "| less"
 als $                   search all defined aliases for $
+pman $                  open man pages in preview (osx)
 ```
 
 ### Vagrant
@@ -88,7 +89,7 @@ viml                    run naked vim without plugin or config
 
 ### Web Search
 
-Quickly search in a browser...
+Search in browser...
 
 ```
 amazon $                amazon
@@ -104,8 +105,6 @@ youtube $               youtube
 ```
 
 ### Z
-
-[z](https://github.com/rupa/z) is the new j, yo
 
 ```
 z                       jump to "frecent" directory with z
