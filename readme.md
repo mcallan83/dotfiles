@@ -95,7 +95,8 @@ vu                      vagrant up
 ##### Vim
 
 ```
-viml                    run naked vim without plugin or config
+v                       vim
+vl                      vim without plugins or config
 ```
 
 ##### Web Search

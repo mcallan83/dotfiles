@@ -41,7 +41,8 @@ alias vs="vagrant ssh"
 alias vu="vagrant up"
 
 # vim
-alias viml="vim -N -u NONE" #vim with no plugins
+alias v="vim"
+alias vl="vim -N -u NONE" #vim with no plugins
 
 #web-search
 alias amazon='web_search duckduckgo \!az'
