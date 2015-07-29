@@ -189,7 +189,6 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 <prefix> )              next session
 <prefix> d              detach from current session
 <prefix> s              choose session from menu
-
 ```
 
 ##### Copy Mode
