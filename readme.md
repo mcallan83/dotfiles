@@ -88,6 +88,7 @@ ts $                    tmux new-session -s
 
 ```
 vh                      vagrant halt
+vr                      vagrant reload
 vs                      vagrant ssh
 vu                      vagrant up
 ```
