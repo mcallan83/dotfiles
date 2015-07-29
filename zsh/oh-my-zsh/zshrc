@@ -1,14 +1,12 @@
 start_time="$(date +%s)"
 
 export ZSH=$HOME/.oh-my-zsh
+export DOTFILES=$HOME/.dotfiles
 
-
-DOTFILES=$HOME/.dotfiles
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
 plugins=(
     brew
-    colorize
     composer
     extract
     git
@@ -16,10 +14,10 @@ plugins=(
     laravel5
     pure
     sublime
-    tmux
     sudo
-    web-search
+    tmux
     vi-mode
+    web-search
     z
     zshmarks
     zsh-syntax-highlighting

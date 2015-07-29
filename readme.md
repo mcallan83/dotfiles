@@ -73,6 +73,16 @@ als $                   search all defined aliases for $
 pman $                  open man pages in preview (osx)
 ```
 
+### Tmux
+
+```
+ta $                    tmux attach -t $
+tkss $                  tmux kill-session -t
+tksv                    tmux kill-server
+tl                      tmux list-sessions
+ts $                    tmux new-session -s
+```
+
 ### Vagrant
 
 ```
@@ -119,7 +129,6 @@ zc                      z in current directory
 - [A tmux Crash Course](https://robots.thoughtbot.com/a-tmux-crash-course)
 
 ```
-# install
 cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 ```
 
@@ -162,6 +171,17 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 <prefix> n              next window
 <prefix> p              previous window
 <prefix> w              choose window from menu
+```
+
+### Sessions
+
+```
+<prefix> $              rename session
+<prefix> (              previous session
+<prefix> )              next session
+<prefix> d              detach from current session
+<prefix> s              choose session from menu
+
 ```
 
 ## Slate
