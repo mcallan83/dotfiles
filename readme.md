@@ -128,6 +128,7 @@ zc                      z in current directory
 
 - [Painless Tmux](https://leanpub.com/painless_tmux)
 - [A tmux Crash Course](https://robots.thoughtbot.com/a-tmux-crash-course)
+- [https://github.com/PogiNate/dots/blob/master/home/.tmux.conf](https://github.com/PogiNate/dots/blob/master/home/.tmux.conf)
 
 ```
 cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
@@ -145,6 +146,11 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 ```
 <prefix> -              split pane horizontally
 <prefix> |              split pane vertically
+
+<prefix> h              move left a pane
+<prefix> j              move down a pane
+<prefix> k              move up a pane
+<prefix> l              move right a pane
 
 <prefix> H              increase pane width by 3 columns
 <prefix> J              decrease pane height by 3 rows
