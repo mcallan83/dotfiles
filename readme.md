@@ -199,7 +199,8 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 <prefix> =              chose buffer from menu
 <prefix> [              enter copy mode
 <prefix> ]              paste current buffer
-<prefix><ctrl> c        chose buffer from menu and paste
+<prefix><ctrl> c        choose buffer from menu and paste
+<prefix><ctrl> s        save copy of current buffer to ~/buffer.txt
 <space>                 start selection (in copy mode)
 ```
 
