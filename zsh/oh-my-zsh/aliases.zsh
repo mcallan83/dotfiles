@@ -32,6 +32,9 @@ alias ss="stt"
 # tail
 alias t="tail -f"
 
+# tmux
+alias tb="tmux show-buffer"
+
 # vagrant
 alias vh="vagrant halt"
 alias vs="vagrant ssh"

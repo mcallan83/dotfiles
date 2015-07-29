@@ -77,6 +77,7 @@ pman $                  open man pages in preview (osx)
 
 ```
 ta $                    tmux attach -t $
+tb                      tmux show-buffer
 tkss $                  tmux kill-session -t
 tksv                    tmux kill-server
 tl                      tmux list-sessions
@@ -132,10 +133,11 @@ zc                      z in current directory
 cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 ```
 
-### Prefix
+### General
 
 ```
 <ctrl> a                <prefix>
+<prefix> :              enter command mode
 ```
 
 ### Panes
@@ -182,6 +184,17 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 <prefix> d              detach from current session
 <prefix> s              choose session from menu
 
+```
+
+### Copy Mode
+
+```
+<enter>                 exit copy mode, copy selection to buffer (in copy mode)
+<prefix> =              chose buffer from menu
+<prefix> [              enter copy mode
+<prefix> ]              paste current buffer
+<prefix><ctrl> c        chose buffer from menu and paste
+<space>                 start selection (in copy mode)
 ```
 
 ## Slate
