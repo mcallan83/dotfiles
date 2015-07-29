@@ -13,7 +13,7 @@ There is no magic install script that bootstraps my entire envirnment. Instead, 
 - [z is the new j, yo](https://github.com/rupa/z)
 - [https://github.com/zanshin/dotfiles](https://github.com/zanshin/dotfiles)
 
-### Composer
+##### Composer
 
 ```
 c                       composer
@@ -26,7 +26,7 @@ csu                     composer self-update
 cu                      composer update
 ```
 
-### Git
+##### Git
 
 ```
 gaa                     git add -all
@@ -42,7 +42,7 @@ gp                      git pull
 gs                      git status
 ```
 
-### Homebrew
+##### Homebrew
 
 ```
 brews                   brew list -1
@@ -50,7 +50,7 @@ bubc                    brew upgrade && brew cleanup
 bubo                    brew update && brew outdated
 ```
 
-### K
+##### K
 
 ```
 k                       list directories with k
@@ -58,13 +58,13 @@ ka                      k with hidden files
 kd                      k with directories only
 ```
 
-### Laravel
+##### Laravel
 
 ```
 la5                     php artisan
 ```
 
-### Misc
+##### Misc
 
 ```
 G                       append command with "| grep"
@@ -73,7 +73,7 @@ als $                   search all defined aliases for $
 pman $                  open man pages in preview (osx)
 ```
 
-### Tmux
+##### Tmux
 
 ```
 ta $                    tmux attach -t $
@@ -84,7 +84,7 @@ tl                      tmux list-sessions
 ts $                    tmux new-session -s
 ```
 
-### Vagrant
+##### Vagrant
 
 ```
 vh                      vagrant halt
@@ -92,13 +92,13 @@ vs                      vagrant ssh
 vu                      vagrant up
 ```
 
-### Vim
+##### Vim
 
 ```
 viml                    run naked vim without plugin or config
 ```
 
-### Web Search
+##### Web Search
 
 Search in browser...
 
@@ -115,7 +115,7 @@ yahoo $                 yahoo
 youtube $               youtube
 ```
 
-### Z
+##### Z
 
 ```
 z                       jump to "frecent" directory with z
@@ -134,14 +134,14 @@ zc                      z in current directory
 cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 ```
 
-### General
+##### General
 
 ```
 <ctrl> a                <prefix>
 <prefix> :              enter command mode
 ```
 
-### Panes
+##### Panes
 
 ```
 <prefix> -              split pane horizontally
@@ -169,7 +169,7 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 <prefix><space>         rotate though default layouts
 ```
 
-### Windows
+##### Windows
 
 ```
 <prefix> &              kill window
@@ -181,7 +181,7 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 <prefix> w              choose window from menu
 ```
 
-### Sessions
+##### Sessions
 
 ```
 <prefix> $              rename session
@@ -192,7 +192,7 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 
 ```
 
-### Copy Mode
+##### Copy Mode
 
 ```
 <enter>                 exit copy mode, copy selection to buffer (in copy mode)
