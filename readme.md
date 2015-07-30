@@ -129,6 +129,7 @@ zc                      z in current directory
 
 - [Painless Tmux](https://leanpub.com/painless_tmux)
 - [A tmux Crash Course](https://robots.thoughtbot.com/a-tmux-crash-course)
+- [tmux Copy & Paste on OS X: A Better Future](https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future)
 - [https://github.com/PogiNate/dots/blob/master/home/.tmux.conf](https://github.com/PogiNate/dots/blob/master/home/.tmux.conf)
 
 ```
