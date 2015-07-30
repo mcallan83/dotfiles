@@ -16,6 +16,7 @@ plugins=(
     sublime
     sudo
     tmux
+    tmuxinator
     vi-mode
     web-search
     z
@@ -36,4 +37,4 @@ typeset -U PATH
 [[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
 
 end_time="$(date +%s)"
-#echo .zshrc: $((end_time - start_time)) seconds
+echo .zshrc: $((end_time - start_time)) seconds
