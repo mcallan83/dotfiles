@@ -1,5 +1,3 @@
-<!-- left off at painless tmux page 39 -->
-
 # Mike Callan's Dotfiles
 
 My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX and Ubuntu. Work in progress. Documentation doesn't cover everything; it is mainly a reference for myself :)
@@ -76,6 +74,7 @@ pman $                  open man pages in preview (osx)
 ##### Tmux
 
 ```
+mux                     tmuxinator
 ta $                    tmux attach -t $
 tb                      tmux show-buffer
 tkss $                  tmux kill-session -t
@@ -206,6 +205,10 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 ```
 
 ##### Mouse Mode
+
+- enabled by default
+- while in mouse mode, hold `<shift>` while selecting text to copy into tmux buffer
+- in iTerm, hold `<option>` for native text selecting
 
 ```
 <prefix> m              enable mouse mode
