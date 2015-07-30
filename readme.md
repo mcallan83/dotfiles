@@ -205,6 +205,13 @@ cd ~ && ln -s .dotfiles/tmux/tmux.conf .tmux.conf
 <space>                 start selection (in copy mode)
 ```
 
+##### Mouse Mode
+
+```
+<prefix> m              enable mouse mode
+<prefix> M              disable mouse mode
+```
+
 ## Slate
 
 Now using HammerSpoon.
