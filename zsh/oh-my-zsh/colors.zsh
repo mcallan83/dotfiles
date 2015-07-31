@@ -1,0 +1,2 @@
+export PURE_COLOR_GIT=white
+export PURE_COLOR_USERNAME=yellow
