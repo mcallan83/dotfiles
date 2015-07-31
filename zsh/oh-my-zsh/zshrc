@@ -5,6 +5,9 @@ export DOTFILES=$HOME/.dotfiles
 
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
+# set pure prompt colors
+source $DOTFILES/zsh/oh-my-zsh/prompt_colors.zsh
+
 plugins=(
     brew
     composer
