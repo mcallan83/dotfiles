@@ -7,7 +7,6 @@ ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
 # set pure prompt colors and load local colors if they exist
 source $DOTFILES/zsh/oh-my-zsh/colors.zsh
-[[ -r ~/.local.colors.zsh]] && . ~/.local.colors.zsh
 
 plugins=(
     brew
