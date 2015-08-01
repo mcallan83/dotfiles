@@ -1,2 +1,2 @@
-export PURE_COLOR_GIT=yellow
+export PURE_COLOR_GIT=242
 export PURE_COLOR_USERNAME=magenta
