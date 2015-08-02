@@ -12,3 +12,5 @@
     delete-merged = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 [credential]
     helper = osxkeychain
+[fetch]
+    prune = true

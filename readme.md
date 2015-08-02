@@ -38,6 +38,7 @@ ggpull                  git pull origin [current_branch]
 ggpush                  git push origin [current_branch]
 gp                      git pull
 gs                      git status
+gss                     git status -s
 ```
 
 ##### Homebrew
