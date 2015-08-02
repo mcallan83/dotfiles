@@ -2,7 +2,7 @@
     name = Mike Callan
     email = mcallan83@gmail.com
 [push]
-    default = matching
+    default = tracking
 [alias]
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
     save = !git add -A && git commit -m 'SAVEPOINT'
