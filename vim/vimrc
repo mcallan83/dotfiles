@@ -83,7 +83,6 @@ NeoBundleCheck
     set laststatus=2                    " show status bar
     set noshowmode                      " hide current mode
 
-
     " trailing whitespace
     " set list
     " set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
