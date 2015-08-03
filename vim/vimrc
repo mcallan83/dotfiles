@@ -34,6 +34,7 @@ NeoBundleCheck
 " }}}
 " General {{{
 
+    set nocompatible        " who needs vi?
     syntax on               " syntax highligting
     set mouse=a             " enable mouse
     set mousehide           " hide mouse cursor while typing
@@ -67,13 +68,17 @@ NeoBundleCheck
     " let g:solarized_termcolors=256 " use downgraded color scheme
     colorscheme solarized
 
-    " highlight cursorline 
+    " highlight cursorline
     set cursorline              " highlight cursor line
     highlight clear SignColumn  " make signcolumn match background
     highlight clear LineNr      " make current line number have same BG color
 
     set backspace=indent,eol,start      " enable a true backspace
     set number                          " line numbers
+
+    " trailing whitespace
+    set list
+    set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " }}}
 " Formatting {{{
@@ -116,6 +121,7 @@ augroup END
 
     " source vimrc
     map <leader>vimrc :tabe ~/.vim/.vimrc<cr>
+
 " }}}
 " Functions {{{
 
