@@ -24,3 +24,9 @@ filetype plugin indent on
 NeoBundleCheck
 
 " }}}
+" {{{ Temporary Settings
+
+syntax on
+inoremap jj <Esc>
+
+" }}}
