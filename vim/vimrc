@@ -23,11 +23,12 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+" NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 filetype plugin indent on
