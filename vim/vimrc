@@ -18,6 +18,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " packages
 " ========
+NeoBundle 'altercation/vim-colors-solarized'
 
 call neobundle#end()
 filetype plugin indent on
@@ -28,5 +29,7 @@ NeoBundleCheck
 
 syntax on
 inoremap jj <Esc>
-
+set background=light
+colorscheme solarized
+set number
 " }}}
