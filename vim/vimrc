@@ -123,14 +123,15 @@ augroup END
     " exit insert mode with JJ
     inoremap jj <Esc>
 
-    " source vimrc
-    map <leader>vimrc :tabe ~/.vim/.vimrc<cr>
-
     " toggle background
     noremap <leader>bg :call ToggleBg()<CR>
     
     " toggle paste mode
     nmap <leader>p :setlocal paste! paste?<cr>
+
+    " indent code in visual mode without exiting visual mode
+    vnoremap < <gv
+    vnoremap > >gv
 
 " }}}
 " Functions {{{
