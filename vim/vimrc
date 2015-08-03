@@ -89,6 +89,15 @@ NeoBundleCheck
     set wrap            " wrap lines
 
 " }}}
+" Filetype Specific {{{
+
+augroup filetypes 
+    au!
+    " disable automatic comment insertion
+    au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+augroup END
+
+" }}}
 " Functions {{{
 
 " toggle background
