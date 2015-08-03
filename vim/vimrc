@@ -59,6 +59,13 @@ NeoBundleCheck
 " }}}
 " UI {{{
 
+    " solarized
+    let g:solarized_termcolors=256
+    let g:solarized_termtrans=1
+    let g:solarized_contrast="normal"
+    let g:solarized_visibility="normal"
+    color solarized
+
     set backspace=indent,eol,start      " backspace for dummies
 
 " }}}
@@ -70,6 +77,8 @@ NeoBundleCheck
     set shiftwidth=4    " use indents of 4 spaces
     set tabstop=4       " tabs are spaces
     set softtabstop=4   " let backspace delete indent
+
+    set nojoinspaces    " prevents inserting two spaces after punctuation on join (J)
 
     set wrap            " wrap lines
 
@@ -91,10 +100,7 @@ noremap <leader>bg :call ToggleBg()<CR>
 " }}}
 " {{{ Temporary Settings
 
-syntax on
 inoremap jj <Esc>
-set background=light
-colorscheme solarized
 set number
 " }}}
 " Local Vimrc After {{{
@@ -104,3 +110,5 @@ set number
     endif
 
 " }}}
+
+
