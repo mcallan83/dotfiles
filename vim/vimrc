@@ -34,7 +34,6 @@ NeoBundleCheck
 " }}}
 " General {{{
 
-    set background=dark     " assume a dark background
     syntax on               " syntax highligting
     set mouse=a             " enable mouse
     set mousehide           " hide mouse cursor while typing
@@ -59,14 +58,21 @@ NeoBundleCheck
 " }}}
 " UI {{{
 
-    " solarized
-    let g:solarized_termcolors=256
-    let g:solarized_termtrans=1
-    let g:solarized_contrast="normal"
-    let g:solarized_visibility="normal"
-    color solarized
+    set background=dark " assume a dark background
 
-    set backspace=indent,eol,start      " backspace for dummies
+    " solarized
+    let g:solarized_visibility="high"
+    let g:solarized_diffmode="high"
+    let g:solarized_menu=0
+    " let g:solarized_termcolors=256 " use downgraded color scheme
+    colorscheme solarized
+
+    " highlight cursorline 
+    set cursorline              " highlight cursor line
+    highlight clear SignColumn  " make signcolumn match background
+    highlight clear LineNr      " make current line number have same BG color
+
+    set backspace=indent,eol,start      " enable a true backspace
 
 " }}}
 " Formatting {{{
