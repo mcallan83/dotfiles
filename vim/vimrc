@@ -20,6 +20,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " ========
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-airline'
 
 call neobundle#end()
 filetype plugin indent on
@@ -69,6 +70,8 @@ NeoBundleCheck
 
     set backspace=indent,eol,start      " enable a true backspace
     set number                          " line numbers
+    set laststatus=2                    " show status bar
+
 
     " trailing whitespace
     " set list
@@ -144,5 +147,17 @@ augroup END
         
     " vim-gitgutter
     let g:gitgutter_sign_column_always = 1
+
+    " vim-airline
+    let g:airline_theme="powerlineish"
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#fnamemod = ':t'
+    let g:airline#extensions#whitespace#enabled = 0
+    let g:airline#extensions#hunks#enabled = 0
+    let g:airline_detect_paste=1
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
 
 " }}}
