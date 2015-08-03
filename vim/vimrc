@@ -98,6 +98,10 @@ augroup filetypes
 
     " disable automatic comment insertion for all files
     au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+    " enable spellcheck in gitcommit
+    au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+
 augroup END
 
 " }}}
