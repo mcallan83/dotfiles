@@ -33,6 +33,7 @@ gbr                     git branch --remote
 gcm                     git checkout master
 gco                     git checkout
 gd                      git diff
+gdw                     git diff --word-diff
 gf                      git fetch
 ggpull                  git pull origin [current_branch]
 ggpush                  git push origin [current_branch]
