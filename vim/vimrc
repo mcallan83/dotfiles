@@ -22,6 +22,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'terryma/vim-expand-region'
 
 call neobundle#end()
 filetype plugin indent on
@@ -191,5 +192,8 @@ augroup END
     let g:airline_left_alt_sep = ''
     let g:airline_right_sep = ''
     let g:airline_right_alt_sep = ''
+
+    " vim-expand-region
+    vmap v <Plug>(expand_region_expand)
 
 " }}}
