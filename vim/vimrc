@@ -1,6 +1,6 @@
 " vim:fdm=marker
 
-" Local Vimrc {{{
+" Local Vimrc Before {{{
 
 if filereadable(expand("~/.local.vimrc.before"))
     source ~/.local.vimrc.before
@@ -73,4 +73,11 @@ inoremap jj <Esc>
 set background=light
 colorscheme solarized
 set number
+" }}}
+" Local Vimrc After {{{
+
+    if filereadable(expand("~/.local.vimrc.after"))
+        source ~/.local.vimrc.after
+    endif
+
 " }}}
