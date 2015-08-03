@@ -32,6 +32,22 @@ filetype plugin indent on
 NeoBundleCheck
 
 " }}}
+" Functions {{{
+"
+
+" toggle background
+function! ToggleBg()
+    let s:tbg = &background
+    if s:tbg == "dark"
+        set background=light
+    else
+        set background=dark
+    endif
+endfunction
+noremap <leader>bg :call ToggleBg()<CR>
+
+"
+" }}}
 " {{{ Temporary Settings
 
 syntax on
