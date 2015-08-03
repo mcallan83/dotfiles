@@ -23,6 +23,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 call neobundle#end()
 filetype plugin indent on
@@ -144,8 +145,13 @@ augroup END
         let s:tbg = &background
         if s:tbg == "dark"
             set background=light
+            hi IndentGuidesOdd  ctermbg=lightgrey
+            hi IndentGuidesEven ctermbg=lightgrey
+
         else
             set background=dark
+            hi IndentGuidesOdd  ctermbg=black
+            hi IndentGuidesEven ctermbg=black
         endif
     endfunction
 
@@ -157,25 +163,20 @@ augroup END
 
     " automatically insert paste mode
     function! WrapForTmux(s)
-      if !exists('$TMUX')
-        return a:s
-      endif
-
-      let tmux_start = "\<Esc>Ptmux;"
-      let tmux_end = "\<Esc>\\"
-
-      return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+        if !exists('$TMUX')
+            return a:s
+        endif
+        let tmux_start = "\<Esc>Ptmux;"
+        let tmux_end = "\<Esc>\\"
+        return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
     endfunction
-
     let &t_SI .= WrapForTmux("\<Esc>[?2004h")
     let &t_EI .= WrapForTmux("\<Esc>[?2004l")
-
     function! XTermPasteBegin()
-      set pastetoggle=<Esc>[201~
-      set paste
-      return ""
+        set pastetoggle=<Esc>[201~
+        set paste
+        return ""
     endfunction
-
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 "
@@ -199,5 +200,12 @@ augroup END
 
     " vim-expand-region
     vmap v <Plug>(expand_region_expand)
+
+    " vim-indent-guides
+    let g:indent_guides_start_level = 2
+    let g:indent_guides_guide_size = 1
+    let g:indent_guides_enable_on_vim_startup = 1
+    hi IndentGuidesOdd  ctermbg=black
+    hi IndentGuidesEven ctermbg=black
 
 " }}}
