@@ -1,5 +1,12 @@
 " vim:fdm=marker
 
+" Local Vimrc {{{
+
+if filereadable(expand("~/.local.vimrc.before"))
+    source ~/.local.vimrc.before
+endif
+
+" }}}
 " NeoBundle {{{
 
 if has('vim_starting')
