@@ -1,12 +1,5 @@
 " vim:fdm=marker
 
-" Local Vimrc Before {{{
-
-if filereadable(expand("~/.local.vimrc.before"))
-    source ~/.local.vimrc.before
-endif
-
-" }}}
 " NeoBundle {{{
 
 if has('vim_starting')
@@ -26,6 +19,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " packages
 " ========
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'airblade/vim-gitgutter'
 
 call neobundle#end()
 filetype plugin indent on
@@ -77,8 +71,8 @@ NeoBundleCheck
     set number                          " line numbers
 
     " trailing whitespace
-    set list
-    set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+    " set list
+    " set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " }}}
 " Formatting {{{
@@ -122,6 +116,9 @@ augroup END
     " source vimrc
     map <leader>vimrc :tabe ~/.vim/.vimrc<cr>
 
+    " toggle background
+    noremap <leader>bg :call ToggleBg()<CR>
+
 " }}}
 " Functions {{{
 
@@ -134,7 +131,6 @@ augroup END
             set background=dark
         endif
     endfunction
-    noremap <leader>bg :call ToggleBg()<CR>
 
     " autoload vimrc
     augroup reload_vimrc
@@ -144,11 +140,9 @@ augroup END
 
 "
 " }}}
-" Local Vimrc After {{{
-
-    if filereadable(expand("~/.local.vimrc.after"))
-        source ~/.local.vimrc.after
-    endif
+" Plugins {{{
+        
+    " vim-gitgutter
+    let g:gitgutter_sign_column_always = 1
 
 " }}}
-
