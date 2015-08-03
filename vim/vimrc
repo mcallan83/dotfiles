@@ -24,6 +24,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'godlygeek/tabular'
 
 call neobundle#end()
 filetype plugin indent on
@@ -209,4 +210,14 @@ augroup END
     hi IndentGuidesOdd  ctermbg=black
     hi IndentGuidesEven ctermbg=black
 
+    " tabular
+    nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+    vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+    nmap <Leader>a=> :Tabularize /=><CR>
+    vmap <Leader>a=> :Tabularize /=><CR>
+    nmap <Leader>a: :Tabularize /:<CR>
+    vmap <Leader>a: :Tabularize /:<CR> 
+
 " }}}
+
+
