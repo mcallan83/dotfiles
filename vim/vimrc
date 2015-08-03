@@ -111,6 +111,7 @@ augroup filetypes
 
     " enable spellcheck in gitcommit
     au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+    au BufRead,BufNewFile COMMIT_EDITMSG start
 
 augroup END
 
