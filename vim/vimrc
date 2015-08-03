@@ -133,6 +133,9 @@ augroup END
     vnoremap < <gv
     vnoremap > >gv
 
+    " allow using repeat operator with visual selection
+    vnoremap . :normal .<CR>
+
 " }}}
 " Functions {{{
 
