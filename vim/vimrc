@@ -34,24 +34,47 @@ NeoBundleCheck
 " }}}
 " General {{{
 
-    set background=dark "assume a dark background
-    syntax on "syntax highligting
-    set mouse=a "enable mouse
-    set mousehide "hide mouse cursor while typing
+    set background=dark     " assume a dark background
+    syntax on               " syntax highligting
+    set mouse=a             " enable mouse
+    set mousehide           " hide mouse cursor while typing
     scriptencoding utf-8
 
     " clipboard
     if has('clipboard')
-        if has('unnamedplus')  " use + register for copy-paste
+        " use + register for copy-paste
+        if has('unnamedplus')
             set clipboard=unnamed,unnamedplus
-        else         " use * register for copy-paste
+        " use * register for copy-paste
+        else
             set clipboard=unnamed
         endif
     endif
 
+    " disable backups
+    set nobackup
+    set nowb
+    set noswapfile
+
+" }}}
+" UI {{{
+
+    set backspace=indent,eol,start      " backspace for dummies
+
+" }}}
+" Formatting {{{
+
+    set autoindent      " indent to same level as previous line
+    set smartindent     " smart indent
+    set expandtab       " use spaces
+    set shiftwidth=4    " use indents of 4 spaces
+    set tabstop=4       " tabs are spaces
+    set softtabstop=4   " let backspace delete indent
+
+    set wrap            " wrap lines
+
 " }}}
 " Functions {{{
-"
 
 " toggle background
 function! ToggleBg()
