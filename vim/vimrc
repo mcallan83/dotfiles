@@ -32,6 +32,24 @@ filetype plugin indent on
 NeoBundleCheck
 
 " }}}
+" General {{{
+
+    set background=dark "assume a dark background
+    syntax on "syntax highligting
+    set mouse=a "enable mouse
+    set mousehide "hide mouse cursor while typing
+    scriptencoding utf-8
+
+    " clipboard
+    if has('clipboard')
+        if has('unnamedplus')  " use + register for copy-paste
+            set clipboard=unnamed,unnamedplus
+        else         " use * register for copy-paste
+            set clipboard=unnamed
+        endif
+    endif
+
+" }}}
 " Functions {{{
 "
 
