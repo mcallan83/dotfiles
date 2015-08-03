@@ -73,6 +73,7 @@ NeoBundleCheck
     highlight clear LineNr      " make current line number have same BG color
 
     set backspace=indent,eol,start      " enable a true backspace
+    set number                          " line numbers
 
 " }}}
 " Formatting {{{
@@ -87,36 +88,51 @@ NeoBundleCheck
     set nojoinspaces    " prevents inserting two spaces after punctuation on join (J)
 
     set wrap            " wrap lines
+    set showbreak=⇇     " fancy character for line wraps
 
 " }}}
 " Filetype Specific {{{
 
 augroup filetypes 
     au!
-    " disable automatic comment insertion
+
+    " disable automatic comment insertion for all files
     au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 augroup END
 
 " }}}
+" Key Maps {{{
+
+    " leader
+    let mapleader = "\,"
+    let g:mapleader = "\,"
+
+    " exit insert mode with JJ
+    inoremap jj <Esc>
+
+    " source vimrc
+    map <leader>vimrc :tabe ~/.vim/.vimrc<cr>
+" }}}
 " Functions {{{
 
-" toggle background
-function! ToggleBg()
-    let s:tbg = &background
-    if s:tbg == "dark"
-        set background=light
-    else
-        set background=dark
-    endif
-endfunction
-noremap <leader>bg :call ToggleBg()<CR>
+    " toggle background
+    function! ToggleBg()
+        let s:tbg = &background
+        if s:tbg == "dark"
+            set background=light
+        else
+            set background=dark
+        endif
+    endfunction
+    noremap <leader>bg :call ToggleBg()<CR>
+
+    " autoload vimrc
+    augroup reload_vimrc
+        au!
+        au BufWritePost $MYVIMRC source $MYVIMRC
+    augroup END
 
 "
-" }}}
-" {{{ Temporary Settings
-
-inoremap jj <Esc>
-set number
 " }}}
 " Local Vimrc After {{{
 
@@ -125,5 +141,4 @@ set number
     endif
 
 " }}}
-
 
