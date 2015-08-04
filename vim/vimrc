@@ -29,6 +29,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'kien/ctrlp.vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -42,6 +43,7 @@ NeoBundleCheck
     set encoding=utf-8
     scriptencoding utf-8
     set ttyfast
+    set timeoutlen=1000 ttimeoutlen=0 " speed things up @todo research
 
     " mouse
     set mouse=a             " enable mouse
@@ -64,7 +66,7 @@ NeoBundleCheck
     set noswapfile
 
     " disable bells
-     set vb t_vb=
+    set vb t_vb=
     
     " set lazyredraw " ???
 
@@ -248,5 +250,14 @@ augroup END
 
     " scrooloose/nerdtree
     map <leader>[ :NERDTreeToggle<cr>
+
+    " kien/ctrlp.vim
+    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_working_path_mode = 'ra'
+    map <leader>b :CtrlPBuffer<CR>
+
+    if executable('ag') " use silversearcher if installed 
+        set grepprg=ag\ --nogroup\ --nocolor
+    endif
     
 " }}}
