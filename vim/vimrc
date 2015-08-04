@@ -141,6 +141,9 @@ augroup END
     " allow using repeat operator with visual selection
     vnoremap . :normal .<CR>
 
+    " open vimrc
+    nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
 " }}}
 " Functions {{{
 
