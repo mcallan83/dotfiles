@@ -38,10 +38,13 @@ NeoBundleCheck
 
     set nocompatible        " who needs vi?
     syntax on               " syntax highligting
-    set mouse=a             " enable mouse
-    set mousehide           " hide mouse cursor while typing
     set encoding=utf-8
     scriptencoding utf-8
+    set ttyfast
+
+    " mouse
+    set mouse=a             " enable mouse
+    set mousehide           " hide mouse cursor while typing
 
     " clipboard
     if has('clipboard')
@@ -60,7 +63,7 @@ NeoBundleCheck
     set noswapfile
 
     " disable bells
-    set vb t_vb=
+     set vb t_vb=
     
     " set lazyredraw " ???
 
@@ -158,6 +161,16 @@ augroup END
     " clear highlighted seaches
     nnoremap <CR> :noh<CR><CR>
 
+    " create splits
+    nnoremap vs :vsplit<cr>
+    nnoremap sp :split<cr>
+
+    " move splits
+    nnoremap <C-J> <C-W><C-J>
+    nnoremap <C-K> <C-W><C-K>
+    nnoremap <C-L> <C-W><C-L>
+    nnoremap <C-H> <C-W><C-H>
+
 " }}}
 " Functions {{{
 
@@ -230,6 +243,6 @@ augroup END
     vmap <Leader>a: :Tabularize /:<CR> 
 
     " Yggdroot/indentLine
-    let g:indentLine_char = '︙'
+    let g:indentLine_char = '|'
 
 " }}}
