@@ -27,3 +27,6 @@ if [ -d "$HOME/.composer/vendor/bin" ] ; then
 fi
 
 export PATH
+
+# remove duplicates in path
+typeset -U PATH

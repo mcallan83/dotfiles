@@ -34,9 +34,6 @@ source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
 source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 
-# remove duplicates in path
-typeset -U PATH
-
 # load local zshrc
 [[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
 
