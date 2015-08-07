@@ -1,5 +1,7 @@
 " vim:fdm=marker
 
+" http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+
 " NeoBundle {{{
 
 if has('vim_starting')
@@ -30,6 +32,7 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-fugitive'
 
 call neobundle#end()
 filetype plugin indent on
@@ -139,8 +142,8 @@ augroup END
 " Key Maps {{{
 
     " leader
-    let mapleader = "\,"
-    let g:mapleader = "\,"
+    let mapleader = "\<space>"
+    let g:mapleader = "\<space>"
 
     " exit insert mode with JJ
     inoremap jj <Esc>
