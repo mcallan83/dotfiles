@@ -17,7 +17,7 @@ alias gs="gst"
 alias -g G='| grep'
 
 # json pretty print
-alias -g JPP='| python -m json.tool'
+alias -g J='| python -m json.tool'
 
 # k
 alias ka="k -a" # k with hidden files
