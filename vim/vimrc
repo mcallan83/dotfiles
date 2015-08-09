@@ -3,6 +3,7 @@
 " http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 " https://github.com/sheerun/vimrc
 " https://github.com/terryma/dotfiles/blob/master/.vimrc
+" https://github.com/joedicastro/dotfiles/blob/master/vim/README.md
 
 " NeoBundle {{{
 
@@ -74,6 +75,13 @@ NeoBundleCheck
     set vb t_vb=
     
     " set lazyredraw " ???
+
+    " autoload vimrc
+    augroup reload_vimrc
+        au!
+        au BufWritePost $MYVIMRC source $MYVIMRC
+    augroup END
+
 
 
 " }}}
@@ -187,20 +195,10 @@ augroup END
         let s:tbg = &background
         if s:tbg == "dark"
             set background=light
-            hi IndentGuidesOdd  ctermbg=lightgrey
-            hi IndentGuidesEven ctermbg=lightgrey
         else
             set background=dark
-            hi IndentGuidesOdd  ctermbg=black
-            hi IndentGuidesEven ctermbg=black
         endif
     endfunction
-
-    " autoload vimrc
-    augroup reload_vimrc
-        au!
-        au BufWritePost $MYVIMRC source $MYVIMRC
-    augroup END
 
     " automatically insert paste mode
     function! WrapForTmux(s)
