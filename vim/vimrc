@@ -4,6 +4,7 @@
 " https://github.com/sheerun/vimrc
 " https://github.com/terryma/dotfiles/blob/master/.vimrc
 " https://github.com/joedicastro/dotfiles/blob/master/vim/README.md
+" http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html
 
 " NeoBundle {{{
 
@@ -36,6 +37,7 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Shougo/unite.vim'
 
 call neobundle#end()
 filetype plugin indent on
