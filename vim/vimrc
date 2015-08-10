@@ -28,7 +28,6 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
@@ -38,6 +37,9 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/unite.vim'
+
+" @todo: this breaks the _, need to find a fix
+"NeoBundle 'terryma/vim-expand-region'
 
 call neobundle#end()
 filetype plugin indent on
