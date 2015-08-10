@@ -37,6 +37,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'sjl/vitality.vim'
 
 " @todo: this breaks the _, need to find a fix
 "NeoBundle 'terryma/vim-expand-region'
