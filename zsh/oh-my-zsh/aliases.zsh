@@ -19,6 +19,9 @@ alias -g G='| grep'
 # json pretty print
 alias -g J='| python -m json.tool'
 
+# hosts file
+alias hosts="sudo $EDITOR /etc/hosts"
+
 # k
 alias ka="k -a" # k with hidden files
 alias kd="k -d" # k with directories only
