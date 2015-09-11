@@ -94,3 +94,9 @@
         green: 119
         blue: 6
         alpha: 1
+  "linter-phpcs":
+    executablePath: "/usr/local/bin/phpcs"
+    ignore: "*.blade.php"
+    tabWidth: 4
+    warningSeverity: 0
+  linter: {}
