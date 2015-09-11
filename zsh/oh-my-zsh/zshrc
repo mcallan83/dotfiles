@@ -16,7 +16,7 @@ plugins=(
     grunt
     k
     laravel5
-    pure
+    #pure
     sublime
     sudo
     tmux
