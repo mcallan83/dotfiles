@@ -12,6 +12,7 @@ alias cl="clear"
 
 # git
 alias gs="gst"
+alias gsubup="git submodule foreach git pull origin master"
 
 # grep
 alias -g G='| grep'
