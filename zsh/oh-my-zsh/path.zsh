@@ -19,7 +19,7 @@ if [ -d "/usr/local/opt/php56/bin" ] ; then
     PATH="/usr/local/opt/php56/bin:$PATH"
 fi
 
-PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # composer
 if [ -d "$HOME/.composer/vendor/bin" ] ; then
