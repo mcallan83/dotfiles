@@ -59,6 +59,7 @@ brew cask install appcleaner
 brew cask install atom
 brew cask install cakebrew
 brew cask install ccleaner
+brew cask install chrome-remote-desktop-host
 brew cask install cyberduck
 brew cask install dropbox
 brew cask install firefox
@@ -67,6 +68,7 @@ brew cask install font-source-code-pro
 brew cask install forklift
 brew cask install google-chrome # move app to /Applications for 1Password
 brew cask install google-drive
+brew cask install google-hangouts
 brew cask install hammerspoon
 brew cask install handbrake
 brew cask install iterm2
