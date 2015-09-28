@@ -1,3 +1,8 @@
+## TODO: hashbang at top
+# comments
+# rvm
+# python?
+
 sudo -v
 
 ################################################################################
@@ -130,3 +135,10 @@ npm install -g jshint
 npm install -g less
 npm install -g phantomjs
 npm install -g yo
+
+
+################################################################################
+# install rvm
+################################################################################
+
+#curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
