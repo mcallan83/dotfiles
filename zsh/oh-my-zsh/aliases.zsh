@@ -30,6 +30,11 @@ alias kd="k -d" # k with directories only
 # less
 alias -g L='| less'
 
+# npm
+alias n="npm"
+alias ni="npm install"
+alias nr="npm run"
+
 # ps
 alias psa="ps aux"
 
