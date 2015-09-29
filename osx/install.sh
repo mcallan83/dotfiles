@@ -70,7 +70,7 @@ brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
 # install brew casks
-sudo brew cask
+brew cask
 brew cask install adium
 brew cask install alfred
 brew cask install appcleaner
