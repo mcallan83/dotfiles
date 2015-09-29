@@ -1,18 +1,13 @@
 #!/bin/sh
 ################################################################################
-# Filename:     osx/install.sh
-# Author:       Mike Callan
-# URL:          http://github.com/mcallan83/dotfiles
+# Filename: osx/install.sh
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
 ################################################################################
 
-#@todo
-# move chrome to /Applications
-
-
-# ask for sudo password
-sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
+# TODO
+# - test r-gui
+# - check if R works without xquartz
 
 ################################################################################
 # homebrew
@@ -33,13 +28,10 @@ brew tap homebrew/services
 brew tap homebrew/versions
 brew tap thoughtbot/formulae
 
-# install brew cask
-brew install brew-cask
-brew cask
-
 # install homebrew packages
 brew install bash-completion
 brew install boot2docker
+brew install brew-cask
 brew install coreutils
 brew install ctags
 brew install dnsmasq
@@ -53,6 +45,7 @@ brew install jq
 brew install node
 brew install python
 brew install r
+brew install r-gui && brew linkapps r-gui
 brew install reattach-to-user-namespace
 brew install testdisk
 brew install the_silver_searcher
@@ -77,7 +70,7 @@ brew install homebrew/php/php56-mcrypt
 brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
-# install brew casks
+# install casks
 brew cask
 brew cask install adium
 brew cask install alfred
@@ -90,8 +83,6 @@ brew cask install chrome-remote-desktop-host
 brew cask install cyberduck
 brew cask install dropbox
 brew cask install firefox
-brew cask install font-open-sans
-brew cask install font-source-code-pro
 brew cask install forklift
 brew cask install google-chrome
 brew cask install google-drive
@@ -108,6 +99,7 @@ brew cask install libreoffice
 brew cask install numi
 brew cask install qlcolorcode
 brew cask install robomongo
+brew cask install rstudio
 brew cask install seil
 brew cask install sequel-pro
 brew cask install slate
@@ -117,7 +109,12 @@ brew cask install transmission
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
-brew cask install xquartz
+brew cask install xmind
+#brew cask install xquartz
+
+# install fonts
+brew cask install font-open-sans
+brew cask install font-source-code-pro
 
 # move google chrome to ~/Applications for 1Password
 rm -rf ~/Applications/Google\ Chrome.app
@@ -160,19 +157,9 @@ npm install -g yo
 curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
 
 ################################################################################
-# install ohmyzsh
-################################################################################
-
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-################################################################################
 # install dotfiles
 ################################################################################
 
-cd ~
-git clone http://github.com/mcallan83/dotfiles .dotfiles --recursive
+git clone http://github.com/mcallan83/dotfiles ~/.dotfiles --recursive
 
-# zsh
-rm .zshrc
-ln -s ~/.dotfiles/zsh/zshrc .zshrc
 
