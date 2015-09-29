@@ -1,13 +1,23 @@
-## TODO: hashbang at top
-# comments
-# rvm
-# python?
+#!/bin/sh
+################################################################################
+# Filename:     osx/install.sh
+# Author:       Mike Callan
+# URL:          http://github.com/mcallan83/dotfiles
+################################################################################
 
+# ask for sudo password
 sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 
 ################################################################################
-# additional homebrew repos
+# homebrew
 ################################################################################
+
+# install homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# add additional homebrew repos
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap homebrew/bundle
@@ -18,12 +28,10 @@ brew tap homebrew/services
 brew tap homebrew/versions
 brew tap thoughtbot/formulae
 
-################################################################################
-# install brews
-################################################################################
+# install homebrew packages
 brew install bash-completion
 brew install boot2docker
-brew install caskroom/cask/brew-cask
+brew install brew-cask
 brew install coreutils
 brew install ctags
 brew install dnsmasq
@@ -38,6 +46,7 @@ brew install node
 brew install python
 brew install r
 brew install reattach-to-user-namespace
+brew install testdisk
 brew install the_silver_searcher
 brew install theharvester
 brew install tig
@@ -60,15 +69,13 @@ brew install homebrew/php/php56-mcrypt
 brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
-################################################################################
 # install brew casks
-################################################################################
 sudo brew cask
-
 brew cask install adium
 brew cask install alfred
 brew cask install appcleaner
 brew cask install atom
+brew cask install bettertouchtool
 brew cask install cakebrew
 brew cask install ccleaner
 brew cask install chrome-remote-desktop-host
@@ -85,12 +92,15 @@ brew cask install hammerspoon
 brew cask install handbrake
 brew cask install iterm2
 brew cask install kaleidoscope
+brew cask install karabiner
 brew cask install keyboardcleantool
 brew cask install launchcontrol
 brew cask install launchrocket
 brew cask install libreoffice
 brew cask install numi
 brew cask install qlcolorcode
+brew cask install robomongo
+brew cask install seil
 brew cask install sequel-pro
 brew cask install slate
 brew cask install sublime-text3
@@ -101,13 +111,11 @@ brew cask install virtualbox
 brew cask install vlc
 brew cask install xquartz
 
- # move google chrome to ~/Applications for 1Password
+# move google chrome to ~/Applications for 1Password
 rm -rf ~/Applications/Google\ Chrome.app
  mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/ ~/Applications/Google\ Chrome.app/
 
-################################################################################
-# brew cleanup
-################################################################################
+# cleanup
 brew cleanup
 brew upgrade
 brew cleanup
@@ -119,15 +127,16 @@ brew cask cleanup
 ################################################################################
 # install composer globals
 ################################################################################
+
 composer global require "jakub-onderka/php-parallel-lint=0.*"
 composer global require "laravel/homestead=~2.0"
 composer global require "laravel/installer=~1.1"
 composer global require "phpunit/phpunit=4.8.*"
 
-
 ################################################################################
 # install npm globals
 ################################################################################
+
 npm install -g browser-sync
 npm install -g grunt-cli
 npm install -g gulp
@@ -136,9 +145,8 @@ npm install -g less
 npm install -g phantomjs
 npm install -g yo
 
-
 ################################################################################
 # install rvm
 ################################################################################
 
-#curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
+curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
