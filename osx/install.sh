@@ -33,10 +33,13 @@ brew tap homebrew/services
 brew tap homebrew/versions
 brew tap thoughtbot/formulae
 
+# install brew cask
+brew install brew-cask
+brew cask
+
 # install homebrew packages
 brew install bash-completion
 brew install boot2docker
-brew install brew-cask
 brew install coreutils
 brew install ctags
 brew install dnsmasq
@@ -117,8 +120,8 @@ brew cask install vlc
 brew cask install xquartz
 
 # move google chrome to ~/Applications for 1Password
-# rm -rf ~/Applications/Google\ Chrome.app
-#  mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/ ~/Applications/Google\ Chrome.app/
+rm -rf ~/Applications/Google\ Chrome.app
+ mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/ ~/Applications/Google\ Chrome.app/
 
 # cleanup
 brew cleanup
