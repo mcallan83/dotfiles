@@ -71,6 +71,7 @@ brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
 # install casks
+#brew cask install xquartz
 brew cask
 brew cask install adium
 brew cask install alfred
@@ -104,13 +105,13 @@ brew cask install seil
 brew cask install sequel-pro
 brew cask install slate
 brew cask install sublime-text3
+brew cask install teamviewer
 brew cask install the-unarchiver
 brew cask install transmission
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install xmind
-#brew cask install xquartz
 
 # install fonts
 brew cask install font-open-sans
