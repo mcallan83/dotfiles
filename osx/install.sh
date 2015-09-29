@@ -23,6 +23,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # add additional homebrew repos
 brew tap caskroom/cask
+brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap homebrew/bundle
 brew tap homebrew/dupes
