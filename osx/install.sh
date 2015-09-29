@@ -158,3 +158,21 @@ npm install -g yo
 ################################################################################
 
 curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
+
+################################################################################
+# install ohmyzsh
+################################################################################
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+################################################################################
+# install dotfiles
+################################################################################
+
+cd ~
+git clone http://github.com/mcallan83/dotfiles .dotfiles --recursive
+
+# zsh
+rm .zshrc
+ln -s ~/.dotfiles/zsh/zshrc .zshrc
+
