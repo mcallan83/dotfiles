@@ -5,6 +5,10 @@
 # URL:          http://github.com/mcallan83/dotfiles
 ################################################################################
 
+#@todo
+# move chrome to /Applications
+
+
 # ask for sudo password
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -112,8 +116,8 @@ brew cask install vlc
 brew cask install xquartz
 
 # move google chrome to ~/Applications for 1Password
-rm -rf ~/Applications/Google\ Chrome.app
- mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/ ~/Applications/Google\ Chrome.app/
+# rm -rf ~/Applications/Google\ Chrome.app
+#  mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/ ~/Applications/Google\ Chrome.app/
 
 # cleanup
 brew cleanup
