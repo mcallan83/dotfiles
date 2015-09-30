@@ -87,7 +87,6 @@ brew cask install chrome-remote-desktop-host
 brew cask install cyberduck
 brew cask install dropbox
 brew cask install firefox
-brew cask install forklift
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install google-hangouts
