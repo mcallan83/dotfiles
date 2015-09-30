@@ -41,12 +41,15 @@ brew install gcc
 brew install git
 brew install gitsh
 brew install htop-osx
+brew install hub
 brew install jq
 brew install node
 brew install python
 brew install r
 brew install r-gui && brew linkapps r-gui
 brew install reattach-to-user-namespace
+brew install ssh-copy-id
+brew install sshrc
 brew install testdisk
 brew install the_silver_searcher
 brew install theharvester
@@ -98,12 +101,12 @@ brew cask install launchcontrol
 brew cask install launchrocket
 brew cask install libreoffice
 brew cask install numi
-brew cask install qlcolorcode
 brew cask install robomongo
 brew cask install rstudio
 brew cask install seil
 brew cask install sequel-pro
 brew cask install slate
+brew cask install spotify
 brew cask install sublime-text3
 brew cask install teamviewer
 brew cask install the-unarchiver
@@ -113,7 +116,14 @@ brew cask install virtualbox
 brew cask install vlc
 brew cask install xmind
 
-# install fonts
+brew cask insatll quicklook-json
+brew cask install betterzipql
+brew cask install qlcolorcode
+brew cask install qlmarkdown
+brew cask install qlstephen
+brew cask install quicklook-csv
+brew cask install quicklook-json
+
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
@@ -162,5 +172,3 @@ curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
 ################################################################################
 
 git clone http://github.com/mcallan83/dotfiles ~/.dotfiles --recursive
-
-
