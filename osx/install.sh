@@ -115,7 +115,6 @@ brew install homebrew/php/phpmd
 # brew cask install xquartz
 
 # quicklook plugins
-brew cask install quicklook-json
 brew cask install betterzipql
 brew cask install qlcolorcode
 brew cask install qlmarkdown
@@ -141,7 +140,7 @@ brew prune
 brew cask cleanup
 
 ################################################################################
-# install composer globals
+# composer packages
 ################################################################################
 
 composer global require "jakub-onderka/php-parallel-lint=0.*"
@@ -150,7 +149,7 @@ composer global require "laravel/installer=~1.1"
 composer global require "phpunit/phpunit=4.8.*"
 
 ################################################################################
-# install npm globals
+# npm packages
 ################################################################################
 
 npm install -g browser-sync
@@ -163,12 +162,12 @@ npm install -g vtop
 npm install -g yo
 
 ################################################################################
-# install rvm, ruby, and gems
+# rvm, ruby, and gems
 ################################################################################
 
 curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
 
-source $HOME/.rvm/scripts/rvm
+source "$HOME/.rvm/scripts/rvm"
 
 rvm install 2.1.1
 rvm use 2.1.1
