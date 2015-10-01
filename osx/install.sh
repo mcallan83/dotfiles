@@ -5,9 +5,6 @@
 # URL: http://github.com/mcallan83/dotfiles
 ################################################################################
 
-# TODO
-# - test r-gui
-# - check if R works without xquartz
 
 ################################################################################
 # homebrew
@@ -43,10 +40,11 @@ brew install gitsh
 brew install htop-osx
 brew install hub
 brew install jq
+brew install mongo
+brew install mysql
 brew install node
 brew install python
 brew install r
-brew install r-gui && brew linkapps r-gui
 brew install reattach-to-user-namespace
 brew install ssh-copy-id
 brew install sshrc
@@ -60,7 +58,7 @@ brew install vim --override-system-vi
 brew install wget --with-iri
 brew install zsh
 
-# install php56 and add settings
+# install php56 with custom settings settings
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
@@ -70,11 +68,11 @@ brew install homebrew/php/php-code-sniffer
 brew install homebrew/php/php-cs-fixer
 brew install homebrew/php/php56-intl
 brew install homebrew/php/php56-mcrypt
+brew install homebrew/php/php56-mongo
 brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
 # install casks
-#brew cask install xquartz
 brew cask
 brew cask install adium
 brew cask install alfred
@@ -114,8 +112,10 @@ brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install xmind
+brew cask install xquartz
 
-brew cask insatll quicklook-json
+# quicklook plugins
+brew cask install quicklook-json
 brew cask install betterzipql
 brew cask install qlcolorcode
 brew cask install qlmarkdown
@@ -123,6 +123,7 @@ brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install quicklook-json
 
+# fonts
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
@@ -158,13 +159,22 @@ npm install -g gulp
 npm install -g jshint
 npm install -g less
 npm install -g phantomjs
+npm install -g vtop
 npm install -g yo
 
 ################################################################################
-# install rvm
+# install rvm, ruby, and gems
 ################################################################################
 
 curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
+
+source $HOME/.rvm/scripts/rvm
+
+rvm install 2.1.1
+rvm use 2.1.1
+
+gem install jekyll
+gem install tmuxinator
 
 ################################################################################
 # install dotfiles
