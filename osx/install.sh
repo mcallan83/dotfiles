@@ -74,46 +74,46 @@ brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
 # casks
-# brew cask
-# brew cask install adium
-# brew cask install alfred
-# brew cask install appcleaner
-# brew cask install atom
-# brew cask install bettertouchtool
-# brew cask install cakebrew
-# brew cask install ccleaner
-# brew cask install chrome-remote-desktop-host
-# brew cask install cyberduck
-# brew cask install dropbox
-# brew cask install firefox
-# brew cask install google-chrome
-# brew cask install google-drive
-# brew cask install google-hangouts
-# brew cask install hammerspoon
-# brew cask install handbrake
-# brew cask install iterm2
-# brew cask install kaleidoscope
-# brew cask install karabiner
-# brew cask install keyboardcleantool
-# brew cask install launchcontrol
-# brew cask install launchrocket
-# brew cask install libreoffice
-# brew cask install numi
-# brew cask install robomongo
-# brew cask install rstudio
-# brew cask install seil
-# brew cask install sequel-pro
-# brew cask install slate
-# brew cask install spotify
-# brew cask install sublime-text3
-# brew cask install teamviewer
-# brew cask install the-unarchiver
-# brew cask install transmission
-# brew cask install vagrant
-# brew cask install virtualbox
-# brew cask install vlc
-# brew cask install xmind
-# brew cask install xquartz
+brew cask
+brew cask install adium
+brew cask install alfred
+brew cask install appcleaner
+brew cask install atom
+brew cask install bettertouchtool
+brew cask install cakebrew
+brew cask install ccleaner
+brew cask install chrome-remote-desktop-host
+brew cask install cyberduck
+brew cask install dropbox
+brew cask install firefox
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install google-hangouts
+brew cask install hammerspoon
+brew cask install handbrake
+brew cask install iterm2
+brew cask install kaleidoscope
+brew cask install karabiner
+brew cask install keyboardcleantool
+brew cask install launchcontrol
+brew cask install launchrocket
+brew cask install libreoffice
+brew cask install numi
+brew cask install robomongo
+brew cask install rstudio
+brew cask install seil
+brew cask install sequel-pro
+brew cask install slate
+brew cask install spotify
+brew cask install sublime-text3
+brew cask install teamviewer
+brew cask install the-unarchiver
+brew cask install transmission
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install vlc
+brew cask install xmind
+brew cask install xquartz
 
 # quicklook plugins
 brew cask install betterzipql
