@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Seil: Installing"
+echo "Seil: Initializing Settings"
 
 CLI=/Applications/Seil.app/Contents/Library/bin/seil
 

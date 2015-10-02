@@ -1,21 +1,19 @@
 #!/bin/sh
 
-echo "Karabiner: Installing"
-
-SUPPORT="$HOME/Library/Application Support/Karabiner"
+CONFIG="$HOME/Library/Application Support/Karabiner"
 CLI="/Applications/Karabiner.app/Contents/Library/bin/karabiner"
 
 # create config directory
-mkdir -p "$SUPPORT"
+mkdir -p "$CONFIG"
 
 # backup existing private.xml
-if [ -f "$SUPPORT/private.xml" ]; then
-    echo "Karabiner: Backup up private.xml"
-    mv "$SUPPORT/private.xml" "$SUPPORT/private.xml.$(date +%F-%T).bak"
+if [ -f "$CONFIG/private.xml" ]; then
+    echo "Karabiner: Backing up private.xml"
+    mv "$CONFIG/private.xml" "$CONFIG/private.xml.$(date +%F-%T).bak"
 fi
 
 # copy current private.xml to config directory
-cp private.xml "$SUPPORT/private.xml"
+cp private.xml "$CONFIG/private.xml"
 
 # initialize settings
 echo "Karabiner: Initializing Settings"
