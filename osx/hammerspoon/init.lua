@@ -42,12 +42,12 @@ hs.hotkey.bind(mash, 'RETURN', hs.grid.maximizeWindow)
 hs.hotkey.bind(mash, '.', hs.hints.windowHints)
 
 -- toggle apps
-hs.hotkey.bind(mash_app, 'C', function() hs.application.launchOrFocus('Google Chrome') end)
-hs.hotkey.bind(mash_app, 'I', function() hs.application.launchOrFocus('iTerm') end)
-hs.hotkey.bind(mash_app, 'S', function() hs.application.launchOrFocus('Sublime Text') end)
-hs.hotkey.bind(mash_app, 'M', function() hs.application.launchOrFocus('Sequel Pro') end)
-hs.hotkey.bind(mash_app, 'F', function() hs.application.launchOrFocus('Finder') end)
-hs.hotkey.bind(mash_app, 'T', function() hs.application.launchOrFocus('iTunes') end)
+hs.hotkey.bind(hyper, 'C', function() hs.application.launchOrFocus('Google Chrome') end)
+hs.hotkey.bind(hyper, 'F', function() hs.application.launchOrFocus('Finder') end)
+hs.hotkey.bind(hyper, 'I', function() hs.application.launchOrFocus('iTerm') end)
+hs.hotkey.bind(hyper, 'M', function() hs.application.launchOrFocus('Sequel Pro') end)
+hs.hotkey.bind(hyper, 'S', function() hs.application.launchOrFocus('Sublime Text') end)
+hs.hotkey.bind(hyper, 'T', function() hs.application.launchOrFocus('iTunes') end)
 
 -- auto reload config
 function reloadConfig(files)
