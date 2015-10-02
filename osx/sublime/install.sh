@@ -14,6 +14,6 @@ fi
 # symlink settings
 echo "Sublime: Symlinking Settings"
 cd "$CONFIG"
-ln -s "$HOME/.dotfiles/osx/sublime" User
+ln -s "$HOME/.dotfiles/osx/sublime/User" User
 
 echo "Sublime: Done"
