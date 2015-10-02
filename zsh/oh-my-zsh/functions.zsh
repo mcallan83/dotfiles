@@ -28,3 +28,9 @@ function als() {
 pman() {
     man -t "${1}" | open -f -a /Applications/Preview.app/
 }
+
+# fix permissions for homebrew
+brewfix() {
+    sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+}
+
