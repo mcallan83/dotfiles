@@ -37,10 +37,11 @@ brew install docker-compose
 brew install gcc
 brew install git
 brew install gitsh
+brew install gpg
 brew install htop-osx
 brew install hub
 brew install jq
-brew install mongo
+brew install mongodb
 brew install mysql
 brew install node
 brew install python
@@ -121,6 +122,7 @@ brew cask install qlmarkdown
 brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install quicklook-json
+brew cask install webpquicklook
 
 # fonts
 brew cask install font-open-sans
@@ -157,14 +159,17 @@ npm install -g grunt-cli
 npm install -g gulp
 npm install -g jshint
 npm install -g less
+npm install -g node-inspector
 npm install -g phantomjs
 npm install -g vtop
+npm install -g webpack
 npm install -g yo
 
 ################################################################################
 # rvm, ruby, and gems
 ################################################################################
 
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
 
 source "$HOME/.rvm/scripts/rvm"
