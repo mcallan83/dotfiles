@@ -59,6 +59,7 @@ brew install vim --override-system-vi
 brew install wget --with-iri
 brew install zsh
 
+
 # php56 with custom settings settings
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
@@ -155,12 +156,14 @@ composer global require "phpunit/phpunit=4.8.*"
 ################################################################################
 
 npm install -g browser-sync
+npm install -g electron-prebuilt
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g jshint
 npm install -g less
 npm install -g node-inspector
 npm install -g phantomjs
+npm install -g torrentflix
 npm install -g vtop
 npm install -g webpack
 npm install -g yo
