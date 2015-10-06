@@ -4,6 +4,9 @@
 # Filename: osx/atom/install.sh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
+#
+# Installs Atom configuration. After running this script, manually install the
+# "Package Sync" package and run the "Package Sync: Sync" command.
 ################################################################################
 
 CONFIG="$HOME/.atom"
@@ -20,7 +23,5 @@ cd "$HOME"
 ln -s "$HOME/.dotfiles/osx/atom/atom" ".atom"
 
 echo "Atom: Done"
-
 echo ""
-
-echo "Note: To install Atom packages, manually install the \"Package Sync\" package and run sync."
+echo "Atom: To install Atom packages, manually install the \"Package Sync\" package and run the \"Package Sync: Sync\" command."
