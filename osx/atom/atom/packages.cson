@@ -1,3 +1,18 @@
 packages: [
+  "atom-autocomplete-php"
+  "autocomplete-php"
+  "color-picker"
+  "emmet"
+  "language-blade"
+  "linter"
+  "linter-php"
+  "linter-phpcs"
+  "linter-phpmd"
+  "merge-conflicts"
+  "minimap"
   "package-sync"
+  "php-composer-completion"
+  "php-cs-fixer"
+  "phpunit"
+  "term2"
 ]

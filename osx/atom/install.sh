@@ -14,3 +14,7 @@ cd "$HOME"
 ln -s "$HOME/.dotfiles/osx/atom/atom" ".atom"
 
 echo "Atom: Done"
+
+echo ""
+
+echo "Note: To install Atom packages, manually install the \"Package Sync\" package and run sync."

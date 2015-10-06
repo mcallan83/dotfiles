@@ -8,9 +8,6 @@
       "atom-dark-ui"
       "solarized-dark-syntax"
     ]
-    disabledPackages: [
-      "linter-php"
-    ]
   editor:
     invisibles: {}
     fontSize: 18
