@@ -94,6 +94,7 @@ brew cask install google-hangouts
 brew cask install hammerspoon
 brew cask install handbrake
 brew cask install iterm2
+brew cask install jadengeller-helium
 brew cask install kaleidoscope
 brew cask install karabiner
 brew cask install keyboardcleantool
