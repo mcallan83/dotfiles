@@ -1,5 +1,11 @@
 #!/bin/sh
 
+################################################################################
+# Filename: osx/atom/install.sh
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
+################################################################################
+
 CONFIG="$HOME/.atom"
 
 # backup existing settings
