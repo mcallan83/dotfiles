@@ -1,5 +1,8 @@
 #!/bin/sh
 
+open -a Karabiner
+read -rsp $'Karabiner: Make sure Karabiner is running and press any key to continue...\n' -n1 key
+
 CONFIG="$HOME/Library/Application Support/Karabiner"
 CLI="/Applications/Karabiner.app/Contents/Library/bin/karabiner"
 

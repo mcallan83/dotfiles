@@ -1,5 +1,8 @@
 #!/bin/sh
 
+open -a Seil
+read -rsp $'Seil: Make sure Seil is running and press any key to continue...\n' -n1 key
+
 echo "Seil: Initializing Settings"
 
 CLI=/Applications/Seil.app/Contents/Library/bin/seil
