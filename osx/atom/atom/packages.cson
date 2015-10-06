@@ -1,7 +1,7 @@
 packages: [
-  "atom-autocomplete-php"
   "autocomplete-php"
   "color-picker"
+  "cssnano"
   "emmet"
   "language-blade"
   "linter"
