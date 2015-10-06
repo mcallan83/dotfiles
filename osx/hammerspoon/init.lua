@@ -44,6 +44,7 @@ hs.hotkey.bind(mash, '.', hs.hints.windowHints)
 -- toggle apps
 hs.hotkey.bind(hyper, 'C', function() hs.application.launchOrFocus('Google Chrome') end)
 hs.hotkey.bind(hyper, 'F', function() hs.application.launchOrFocus('Finder') end)
+hs.hotkey.bind(hyper, 'H', function() hs.application.launchOrFocus('Helium') end)
 hs.hotkey.bind(hyper, 'I', function() hs.application.launchOrFocus('iTerm') end)
 hs.hotkey.bind(hyper, 'M', function() hs.application.launchOrFocus('Sequel Pro') end)
 hs.hotkey.bind(hyper, 'S', function() hs.application.launchOrFocus('Sublime Text') end)
