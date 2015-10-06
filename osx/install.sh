@@ -102,6 +102,7 @@ brew cask install launchcontrol
 brew cask install launchrocket
 brew cask install libreoffice
 brew cask install numi
+brew cask install nvalt
 brew cask install robomongo
 brew cask install rstudio
 brew cask install seil
