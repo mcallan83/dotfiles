@@ -64,6 +64,7 @@ brew install zsh
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
+
 brew install homebrew/php/adminer
 brew install homebrew/php/composer
 brew install homebrew/php/php-code-sniffer
@@ -130,8 +131,8 @@ brew cask install font-open-sans
 brew cask install font-source-code-pro
 
 # move google chrome to ~/Applications for 1Password
-rm -rf ~/Applications/Google\ Chrome.app
- mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/ ~/Applications/Google\ Chrome.app/
+rm -rf "$HOME/Applications/Google Chrome.app"
+mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/Applications/Google Chrome.app/"
 
 # cleanup
 brew cleanup
@@ -169,7 +170,7 @@ npm install -g webpack
 npm install -g yo
 
 ################################################################################
-# rvm, ruby, and gems
+# ruby, rvm, and gems
 ################################################################################
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -182,6 +183,12 @@ rvm use 2.1.1
 
 gem install jekyll
 gem install tmuxinator
+
+################################################################################
+# python packages
+################################################################################
+
+pip install gsutil
 
 ################################################################################
 # install dotfiles
