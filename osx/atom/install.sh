@@ -12,9 +12,9 @@
 CONFIG="$HOME/.atom"
 
 # backup existing settings
-if [ -d "$CONFIG" ]; then
+if [ -d "$CONFIG" ] || [ -f "$CONFIG" ]; then
     echo "Atom: Backing Up Settings"
-    mv "$CONFIG" "$CONFIG.$(date +%F-%T).bak"
+    mv "$CONFIG" "$CONFIG.$(date +%s).bak"
 fi
 
 # symlink settings
