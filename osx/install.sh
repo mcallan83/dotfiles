@@ -31,6 +31,7 @@ brew install boot2docker
 brew install brew-cask
 brew install coreutils
 brew install ctags
+brew install ddrescue
 brew install dnsmasq
 brew install docker
 brew install docker-compose
@@ -44,6 +45,7 @@ brew install jq
 brew install mongodb
 brew install mysql
 brew install node
+brew install pandoc
 brew install python
 brew install r
 brew install reattach-to-user-namespace
@@ -191,6 +193,7 @@ gem install tmuxinator
 ################################################################################
 
 pip install gsutil
+pip install Pygments
 
 ################################################################################
 # install dotfiles
