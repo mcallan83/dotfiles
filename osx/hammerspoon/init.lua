@@ -44,7 +44,7 @@ hs.hotkey.bind(mash, '.', hs.hints.windowHints)
 -- toggle apps
 hs.hotkey.bind(hyper, 'C', function() toggle_application('Google Chrome') end)
 hs.hotkey.bind(hyper, 'F', function() toggle_application('Finder') end)
-hs.hotkey.bind(hyper, 'H', function() toggle_helium('Helium') end)
+hs.hotkey.bind(hyper, 'H', function() toggle_application('Helium') end)
 hs.hotkey.bind(hyper, 'I', function() toggle_application('iTerm') end)
 hs.hotkey.bind(hyper, 'M', function() toggle_application('Sequel Pro') end)
 hs.hotkey.bind(hyper, 'S', function() toggle_application('Sublime Text') end)
@@ -58,26 +58,12 @@ function toggle_application(_app)
         hs.application.launchOrFocus(_app)
         return
     end
-    local mainwin = app:mainWindow()
-    if mainwin then
-        if mainwin == hs.window.focusedWindow() then
-            mainwin:application():hide()
-        else
-            mainwin:application():activate(true)
-            mainwin:application():unhide()
-            mainwin:focus()
-        end
+    local mainwin
+    if _app == "Helium" then
+        mainwin = app:focusedWindow()
+    else
+        mainwin = app:mainWindow()
     end
-end
-
--- toggle helium application between being the frontmost app and being hidden
-function toggle_helium(_app)
-    local app = hs.appfinder.appFromName(_app)
-    if not app then
-        hs.application.launchOrFocus(_app)
-        return
-    end
-    local mainwin = app:focusedWindow()
     if mainwin then
         if mainwin == hs.window.focusedWindow() then
             mainwin:application():hide()
