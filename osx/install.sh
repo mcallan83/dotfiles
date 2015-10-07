@@ -4,6 +4,10 @@
 # Filename: osx/install.sh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
+#
+# Installs HomeBrew packages, Homebrew Casks (GUI apps, Quicklook
+# plugins, fonts), Composer packages, NPM packages, Ruby gems, Python
+# packages, and clones dotfiles git repo to ~/.dotfiles.
 ################################################################################
 
 ################################################################################
