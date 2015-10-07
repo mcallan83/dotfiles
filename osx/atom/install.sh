@@ -20,7 +20,7 @@ fi
 # symlink settings
 echo "Atom: Symlinking Settings"
 cd "$HOME"
-ln -s "$HOME/.dotfiles/osx/atom/atom" ".atom"
+ln -s "$HOME/.dotfiles/osx/atom/config" ".atom"
 
 echo "Atom: Done"
 echo ""
