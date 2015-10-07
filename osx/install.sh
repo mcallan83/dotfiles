@@ -83,6 +83,7 @@ brew install homebrew/php/phpmd
 
 # casks
 brew cask
+brew cask install arq
 brew cask install adium
 brew cask install alfred
 brew cask install appcleaner
