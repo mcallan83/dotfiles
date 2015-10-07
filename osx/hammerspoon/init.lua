@@ -42,13 +42,52 @@ hs.hotkey.bind(mash, 'RETURN', hs.grid.maximizeWindow)
 hs.hotkey.bind(mash, '.', hs.hints.windowHints)
 
 -- toggle apps
-hs.hotkey.bind(hyper, 'C', function() hs.application.launchOrFocus('Google Chrome') end)
-hs.hotkey.bind(hyper, 'F', function() hs.application.launchOrFocus('Finder') end)
-hs.hotkey.bind(hyper, 'H', function() hs.application.launchOrFocus('Helium') end)
-hs.hotkey.bind(hyper, 'I', function() hs.application.launchOrFocus('iTerm') end)
-hs.hotkey.bind(hyper, 'M', function() hs.application.launchOrFocus('Sequel Pro') end)
-hs.hotkey.bind(hyper, 'S', function() hs.application.launchOrFocus('Sublime Text') end)
-hs.hotkey.bind(hyper, 'T', function() hs.application.launchOrFocus('iTunes') end)
+hs.hotkey.bind(hyper, 'C', function() toggle_application('Google Chrome') end)
+hs.hotkey.bind(hyper, 'F', function() toggle_application('Finder') end)
+hs.hotkey.bind(hyper, 'H', function() toggle_helium('Helium') end)
+hs.hotkey.bind(hyper, 'I', function() toggle_application('iTerm') end)
+hs.hotkey.bind(hyper, 'M', function() toggle_application('Sequel Pro') end)
+hs.hotkey.bind(hyper, 'S', function() toggle_application('Sublime Text') end)
+hs.hotkey.bind(hyper, 'T', function() toggle_application('iTunes') end)
+
+
+-- toggle an application between being the frontmost app and being hidden
+function toggle_application(_app)
+    local app = hs.appfinder.appFromName(_app)
+    if not app then
+        hs.application.launchOrFocus(_app)
+        return
+    end
+    local mainwin = app:mainWindow()
+    if mainwin then
+        if mainwin == hs.window.focusedWindow() then
+            mainwin:application():hide()
+        else
+            mainwin:application():activate(true)
+            mainwin:application():unhide()
+            mainwin:focus()
+        end
+    end
+end
+
+-- toggle helium application between being the frontmost app and being hidden
+function toggle_helium(_app)
+    local app = hs.appfinder.appFromName(_app)
+    if not app then
+        hs.application.launchOrFocus(_app)
+        return
+    end
+    local mainwin = app:focusedWindow()
+    if mainwin then
+        if mainwin == hs.window.focusedWindow() then
+            mainwin:application():hide()
+        else
+            mainwin:application():activate(true)
+            mainwin:application():unhide()
+            mainwin:focus()
+        end
+    end
+end
 
 -- auto reload config
 function reloadConfig(files)
