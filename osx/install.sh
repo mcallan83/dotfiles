@@ -199,7 +199,7 @@ gem install tmuxinator
 ################################################################################
 
 pip install gsutil
-pip install Pygments
+pip install pygments
 
 ################################################################################
 # install dotfiles
