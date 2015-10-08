@@ -165,6 +165,7 @@ composer global require "phpunit/phpunit=4.8.*"
 # npm packages
 ################################################################################
 
+npm install -g bower
 npm install -g browser-sync
 npm install -g electron-prebuilt
 npm install -g grunt-cli
