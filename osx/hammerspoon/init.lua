@@ -16,7 +16,7 @@ hs.grid.GRIDWIDTH = 4
 hs.grid.GRIDHEIGHT = 2
 
 -- toggle GUI grid
-hs.hotkey.bind(hyper, 'G', function() hs.grid.toggleShow() end)
+-- hs.hotkey.bind(hyper, 'G', function() hs.grid.toggleShow() end)
 
 -- move window to left half
 hs.hotkey.bind(mash, "H", function()
@@ -59,7 +59,6 @@ hs.hotkey.bind(hyper, 'M', function() toggle_application('Sequel Pro') end)
 hs.hotkey.bind(hyper, 'S', function() toggle_application('Sublime Text') end)
 hs.hotkey.bind(hyper, 'T', function() toggle_application('iTunes') end)
 
-
 -- toggle an application between being the frontmost app and being hidden
 function toggle_application(_app)
     local app = hs.appfinder.appFromName(_app)
@@ -83,6 +82,23 @@ function toggle_application(_app)
         end
     end
 end
+
+-- load Cannon CaptureOnTouch software when scanner is pluggin in or opened
+local usbWatcher = nil
+function usbDeviceCallback(data)
+    if (string.find(data["productName"],"P-215")) then
+        if (data["eventType"] == "added") then
+            hs.application.launchOrFocus("CaptureOnTouch P-215")
+        elseif (data["eventType"] == "removed") then
+            app = hs.appfinder.appFromName("CaptureOnTouch P-215")
+            if(app) then
+                app:kill()
+            end
+        end
+    end
+end
+usbWatcher = hs.usb.watcher.new(usbDeviceCallback)
+usbWatcher:start()
 
 -- auto reload config
 function reloadConfig(files)
