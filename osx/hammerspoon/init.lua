@@ -9,15 +9,6 @@ local hyper = {"cmd", "ctrl", "alt", "shift"}
 -- disable window animations
 hs.window.animationDuration = 0
 
--- grid
-hs.grid.MARGINX = 0
-hs.grid.MARGINY = 0
-hs.grid.GRIDWIDTH = 4
-hs.grid.GRIDHEIGHT = 2
-
--- toggle GUI grid
--- hs.hotkey.bind(hyper, 'G', function() hs.grid.toggleShow() end)
-
 -- move window to left half
 hs.hotkey.bind(mash, "H", function()
   local win = hs.window.focusedWindow()
