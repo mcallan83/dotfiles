@@ -40,6 +40,7 @@ brew install dnsmasq
 brew install docker
 brew install docker-compose
 brew install gcc
+brew install getmail
 brew install git
 brew install gitsh
 brew install gpg
