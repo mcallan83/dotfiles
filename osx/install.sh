@@ -100,6 +100,7 @@ brew cask install firefox
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install google-hangouts
+brew cask install grandperspective
 brew cask install hammerspoon
 brew cask install handbrake
 brew cask install iterm2
