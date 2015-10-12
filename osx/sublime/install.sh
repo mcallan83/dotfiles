@@ -6,14 +6,14 @@ CONFIG="$HOME/Library/Application Support/Sublime Text 3/Packages"
 mkdir -p "$CONFIG"
 
 # backup existing settings
-if [ -d "$CONFIG/User" ]; then
+if [ -d "$CONFIG" ] || [ -f "$CONFIG" ]; then
     echo "Sublime: Backing Up Settings"
-    mv "$CONFIG/User" "$CONFIG/User.$(date +%F-%T).bak"
+    mv "$CONFIG/User" "$CONFIG/User.$(date +%s).bak"
 fi
 
 # symlink settings
 echo "Sublime: Symlinking Settings"
 cd "$CONFIG"
-ln -s "$HOME/.dotfiles/osx/sublime/User" User
+ln -s "$HOME/.dotfiles/osx/sublime/config" User
 
 echo "Sublime: Done"
