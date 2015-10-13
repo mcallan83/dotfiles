@@ -1,8 +1,14 @@
 # Mike Callan's Dotfiles
 
-My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX and Ubuntu. Work in progress. Documentation doesn't cover everything; it is mainly a reference for myself :)
+My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX and Ubuntu. Work in progress. Documentation doesn't cover everything; it is mainly a reference for myself.
 
-There is no magic install script that bootstraps my entire envirnment. Instead, each piece can be manually enabled depending on need.
+## Installation
+
+### OSX
+
+1.) Run the [installer script](osx/install.sh).
+
+
 
 ## ZSH
 
