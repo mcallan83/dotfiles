@@ -15,7 +15,11 @@
 ################################################################################
 
 # install homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+if test ! $(which brew); then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+brew update
 
 # add additional homebrew repos
 brew tap caskroom/cask
