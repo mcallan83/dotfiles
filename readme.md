@@ -21,7 +21,7 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 - Symlinks [zshrc](zsh/oh-my-zsh) into $HOME @todo
 - Installs Oh My ZSH @todo
 
-`source <(curl -s https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/01_install.sh)`
+`source <(curl -s http://git.io/vC0xZ)`
 
 2.) Run the [OSX Defaults Script](osx/02_defaults.sh), which sets up default OSX settings and is based on: @todo
 
@@ -39,7 +39,6 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 - Seil
 - Slate
 - Sublime
-- ZSH
 
 In all cases, existing settings are backed up by appending `.bak` to directories and files before symlinking or copying from this repo. There are manual steps needed to configure certain application, and the script will pause while they are completed.
 
