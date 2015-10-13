@@ -35,6 +35,7 @@ brew install boot2docker
 brew install brew-cask
 brew install coreutils
 brew install ctags
+brew install dark-mode
 brew install ddrescue
 brew install dnsmasq
 brew install docker
