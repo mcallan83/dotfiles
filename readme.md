@@ -8,14 +8,14 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 
 1.) Run the [installer script](osx/install.sh), which installs the following:
 
-    - Homebrew
-    - Homebrew Packages
-    - Homebrew Casks (GUI Apps, Fonts, Quicklook Plugins)
-    - Composer Packages
-    - NPM Packages
-    - RVM, Ruby, and Gems
-    - Python Packages
-    - Clones this repo to ~/.dotfiles
+- Homebrew
+- Homebrew Packages
+- Homebrew Casks (GUI Apps, Fonts, Quicklook Plugins)
+- Composer Packages
+- NPM Packages
+- RVM, Ruby, and Gems
+- Python Packages
+- Clones this repo to ~/.dotfiles
 
 `source <(curl -s https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/install.sh)`
 
