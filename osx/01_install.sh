@@ -175,6 +175,7 @@ npm install -g less
 npm install -g node-inspector
 npm install -g phantomjs
 npm install -g torrentflix
+npm install -g vmd
 npm install -g vtop
 npm install -g webpack
 npm install -g yo
