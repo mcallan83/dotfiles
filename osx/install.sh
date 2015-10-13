@@ -14,14 +14,11 @@
 # homebrew
 ################################################################################
 
-# install homebrew
-
 if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 brew update
 
-# add additional homebrew repos
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
@@ -33,7 +30,6 @@ brew tap homebrew/services
 brew tap homebrew/versions
 brew tap thoughtbot/formulae
 
-# homebrew packages
 brew install bash-completion
 brew install boot2docker
 brew install brew-cask
@@ -69,7 +65,6 @@ brew install tree
 brew install vim --override-system-vi
 brew install wget --with-iri
 brew install zsh
-
 
 # php56 with custom settings settings
 brew install homebrew/php/php56
@@ -133,7 +128,6 @@ brew cask install vlc
 brew cask install xmind
 brew cask install xquartz
 
-# quicklook plugins
 brew cask install betterzipql
 brew cask install qlcolorcode
 brew cask install qlmarkdown
@@ -142,7 +136,6 @@ brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install webpquicklook
 
-# fonts
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
