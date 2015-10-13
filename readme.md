@@ -6,24 +6,50 @@ My dotfile setup for ZSH, Vim, Tmux, Sublime, Atom, and more. Optimized for OSX 
 
 ### OSX
 
-1.) Run the [installer script](osx/install.sh), which installs the following:
+1.) Run the [Installer Script](osx/01_install.sh), which does the following:
 
-- Homebrew
-- Homebrew Packages
-- Homebrew Casks (GUI Apps, Fonts, Quicklook Plugins)
-- Composer Packages
-- NPM Packages
-- RVM, Ruby, and Gems
-- Python Packages
-- Clones this repo to ~/.dotfiles
+- Installs:
+    - Homebrew
+    - Homebrew Packages
+    - Homebrew Casks (GUI Apps, Fonts, Quicklook Plugins)
+    - Composer Packages
+    - NPM Packages
+    - RVM, Ruby, and Gems
+    - Python Packages
+- Clones this repo to `~/.dotfiles`
+- Backs up existing `~/.zshrc` @todo
+- Symlinks [zshrc](zsh/oh-my-zsh) into $HOME @todo
+- Installs Oh My ZSH @todo
 
-`source <(curl -s https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/install.sh)`
+`source <(curl -s https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/01_install.sh)`
+
+2.) Run the [OSX Defaults Script](osx/02_defaults.sh), which sets up default OSX settings and is based on: @todo
+
+- [osx-for-hackers.sh](https://gist.github.com/brandonb927/3195465)
+- [.osx](https://github.com/mathiasbynens/dotfiles/blob/master/.osx)
+
+3.) Run the [App Config Script](osx/03_app_config.sh), which sets up the following apps by symlinking or copying settings to the proper places: @todo
+
+- Atom
+- Better Touch Tool
+- Git
+- Hammerspoon
+- iTerm
+- Karabiner
+- Seil
+- Slate
+- Sublime
+- ZSH
+
+In all cases, existing settings are backed up by appending `.bak` to directories and files before symlinking or copying from this repo. There are manual steps needed to configure certain application, and the script will pause while they are completed.
 
 ### Ubuntu
 
+@todo
+
 ## ZSH
 
-- [oh my zsh](http://ohmyz.sh/)
+- [Oh My ZSH](http://ohmyz.sh/)
 - [k is the new l, yo](https://github.com/rimraf/k)
 - [z is the new j, yo](https://github.com/rupa/z)
 - [https://github.com/zanshin/dotfiles](https://github.com/zanshin/dotfiles)
