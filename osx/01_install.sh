@@ -207,3 +207,21 @@ pip install pygments
 ################################################################################
 
 git clone http://github.com/mcallan83/dotfiles ~/.dotfiles --recursive
+
+################################################################################
+# install oh my zsh
+################################################################################
+
+# # backup existing zshrc
+# if [ -f "$HOME/.zshrc" ]; then
+#     mv "$HOME/.zshrc" "$HOME/.zshrc.$(date +%s).bak"
+# fi
+
+# # symlink zshrc
+# cd ~
+# ln -s "$HOME/.dotfiles/zsh/oh-my-zsh/zshrc" ".zshrc"
+
+# if [ -d "$HOME/.oh-my-zsh" ]; then
+#     rm -rf "$HOME/.oh-my-zsh"
+# fi
+
