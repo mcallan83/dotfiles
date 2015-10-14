@@ -1,6 +1,9 @@
 # ZSH Config
 
+## Reference Links
+
 - [Oh My ZSH](http://ohmyz.sh/)
+- [Pure Prompt](https://github.com/sindresorhus/pure)
 - [k is the new l, yo](https://github.com/rimraf/k)
 - [z is the new j, yo](https://github.com/rupa/z)
 - [https://github.com/zanshin/dotfiles](https://github.com/zanshin/dotfiles)
@@ -99,8 +102,6 @@ vl                      vim without plugins or config
 ```
 
 ##### Web Search
-
-Search in browser...
 
 ```
 amazon $                amazon
