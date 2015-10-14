@@ -5,9 +5,6 @@ export DOTFILES=$HOME/.dotfiles
 
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
-# set pure prompt colors and load local colors if they exist
-source $DOTFILES/zsh/oh-my-zsh/colors.zsh
-
 plugins=(
     brew
     composer
@@ -16,7 +13,6 @@ plugins=(
     grunt
     k
     laravel5
-    #pure
     sublime
     tmux
     tmuxinator
