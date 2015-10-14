@@ -1,8 +1,6 @@
 # edit configs
-alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
-alias tmuxconf="vim ~/.tmux.conf"
-alias hammer="vim ~/.hammerspoon/init.lua"
+alias zshrc="$EDITOR ~/.zshrc"
+alias vimrc="$EDITOR ~/.vimrc"
 
 # atom
 alias aa="atom ."
