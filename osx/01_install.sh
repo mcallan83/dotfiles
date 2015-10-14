@@ -104,6 +104,7 @@ brew cask install google-hangouts
 brew cask install grandperspective
 brew cask install hammerspoon
 brew cask install handbrake
+brew cask install iconjar
 brew cask install iterm2
 brew cask install jadengeller-helium
 brew cask install kaleidoscope
@@ -118,6 +119,7 @@ brew cask install robomongo
 brew cask install rstudio
 brew cask install seil
 brew cask install sequel-pro
+brew cask install sketch
 brew cask install slate
 brew cask install spotify
 brew cask install sublime-text3
