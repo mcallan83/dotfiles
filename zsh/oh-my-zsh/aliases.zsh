@@ -27,6 +27,12 @@ alias hosts="sudo $EDITOR /etc/hosts"
 alias ka="k -a" # k with hidden files
 alias kd="k -d" # k with directories only
 
+# laravel
+alias la5m="la5 migrate"
+alias la5mb="la5 migrate:rollback"
+alias la5mr="la5 migrate:refresh --seed"
+alias la5r="la5 route:list"
+
 # less
 alias -g L='| less'
 
