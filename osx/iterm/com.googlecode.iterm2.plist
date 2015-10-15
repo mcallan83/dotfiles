@@ -10267,7 +10267,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/osx/iterm/config</string>
+	<string>~/.dotfiles/submodules/color/Cobalt2-iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{916, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -10276,10 +10276,27 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSTableView Columns KeyBingingTable</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATCG
+		</data>
+		<string>198</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATGG
+		</data>
+		<string>302</string>
+	</array>
+	<key>NSTableView Hidden Columns KeyBingingTable</key>
+	<array/>
+	<key>NSTableView Sort Ordering KeyBingingTable</key>
+	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>516 420 924 485 0 0 2560 1417 </string>
+	<string>102 501 924 485 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>795 359 570 451 0 0 2560 1417 </string>
+	<string>5 64 2542 1348 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -11989,7 +12006,7 @@
 				<real>0.44058024883270264</real>
 			</dict>
 			<key>Guid</key>
-			<string>B91B01E5-E7A4-4B29-B1B6-F840B23F6665</string>
+			<string>6427469F-9D01-4529-BE5C-BB3EF37DA481</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -12670,7 +12687,7 @@
 				<real>0.50599193572998047</real>
 			</dict>
 			<key>Bonjour Service Address</key>
-			<string>fd25:ffc1:208b:a30a:ecbd:c7a4:28a7:19a5</string>
+			<string>fd25:ffc1:208b:a30a:94d9:4735:e3c4:5c72</string>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -12678,7 +12695,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>ssh fd25:ffc1:208b:a30a:ecbd:c7a4:28a7:19a5</string>
+			<string>ssh fd25:ffc1:208b:a30a:94d9:4735:e3c4:5c72</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -12725,7 +12742,7 @@
 				<real>0.44058024883270264</real>
 			</dict>
 			<key>Guid</key>
-			<string>628A066E-62C7-4D6C-B2A1-FA68670AB2A4</string>
+			<string>F5DD3B31-4C85-462D-B689-4FF34BD12144</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -13222,7 +13239,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>466315538.34314197</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>466315538.34333497</real>
+	<real>466488339.77466798</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -13289,7 +13306,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-10-12T04:02:29Z</date>
+	<date>2015-10-14T04:02:24Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
