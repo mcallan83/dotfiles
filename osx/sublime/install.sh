@@ -6,7 +6,7 @@ CONFIG="$HOME/Library/Application Support/Sublime Text 3/Packages"
 mkdir -p "$CONFIG"
 
 # backup existing settings
-if [ -d "$CONFIG" ] || [ -f "$CONFIG" ]; then
+if [ -d "$CONFIG/User" ] || [ -f "$CONFIG/User" ]; then
     echo "Sublime: Backing Up Settings"
     mv "$CONFIG/User" "$CONFIG/User.$(date +%s).bak"
 fi
