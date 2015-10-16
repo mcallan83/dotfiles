@@ -196,7 +196,6 @@ source "$HOME/.rvm/scripts/rvm"
 rvm install 2.1.1
 rvm use 2.1.1
 
-gem install desktop
 gem install jekyll
 gem install tmuxinator
 
