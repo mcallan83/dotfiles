@@ -1,3 +1,9 @@
+--------------------------------------------------------------------------------
+-- Filename: osx/hammerspoon/config/init.lua
+-- Author: Mike Callan
+-- URL: http://github.com/mcallan83/dotfiles
+---------------------------------------------1-----------------------------------
+
 -- keyboard modifiers
 local mash = {"cmd", "shift"}
 local mash_app = {"cmd", "ctrl", "alt"}
