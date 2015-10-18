@@ -1,6 +1,3 @@
--- https://github.com/cmsj/hammerspoon-config/blob/master/init.lua
--- https://github.com/BrianGilbert/.hammerspoon/blob/master/init.lua
-
 -- keyboard modifiers
 local mash = {"cmd", "shift"}
 local mash_app = {"cmd", "ctrl", "alt"}

@@ -10,16 +10,5 @@ Follow the [setup guide](docs/setup.md) to install.
 - [Tmux](docs/reference/tmux.md)
 - Vim
 - OSX
-    + Hammerspoon
+    + [Hammerspoon](docs/reference/osx/hammerspoon.md)
     + Slate
-
-## HammerSpoon
-
-- [http://www.hammerspoon.org/](http://www.hammerspoon.org/)
-
-```
-<cmd><shift> H          Move window to left half of screen
-<cmd><shift> L          Move window to right half of screen
-<cmd><shift><return>    Maximize window
-<cmd><shift> .          Toggle window hints
-```
