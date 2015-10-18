@@ -13,7 +13,7 @@ hs.window.animationDuration = 0
 -- resize windows left, right, and full
 hs.hotkey.bind(hyper, '[', function() hs.window.focusedWindow():moveToUnit(hs.layout.left50) end)
 hs.hotkey.bind(hyper, ']', function() hs.window.focusedWindow():moveToUnit(hs.layout.right50) end)
-hs.hotkey.bind(hyper, 'SPACE', hs.grid.maximizeWindow)
+hs.hotkey.bind(hyper, '=', hs.grid.maximizeWindow)
 
 -- toggle apps
 hs.hotkey.bind(hyper, 'C', function() toggle_application('Google Chrome') end)

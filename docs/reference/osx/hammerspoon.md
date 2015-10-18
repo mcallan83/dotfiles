@@ -9,8 +9,9 @@
 ## Shortcuts
 
 ```
-<cmd><shift> H          Move window to left half of screen
-<cmd><shift> L          Move window to right half of screen
-<cmd><shift><return>    Maximize window
-<cmd><shift> .          Toggle window hints
+<hyper>                 <control><option><command><shift>
+
+<hyper> [               Move window to left half of screen
+<hyper> ]               Move window to right half of screen
+<hyper> =               Maximize window
 ```
