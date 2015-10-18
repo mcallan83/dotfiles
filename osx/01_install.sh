@@ -163,6 +163,7 @@ brew cask cleanup
 composer global require "jakub-onderka/php-parallel-lint=0.*"
 composer global require "laravel/homestead=~2.0"
 composer global require "laravel/installer=~1.1"
+composer global require "laravel/lumen-installer=~1.0"
 composer global require "phpunit/phpunit=4.8.*"
 
 ################################################################################
