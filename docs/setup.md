@@ -4,7 +4,7 @@
 
 1.) Run the [installer script](osx/01_install.sh):
 
-`source <(curl -s http://git.io/vC0xZ)`
+`source <(curl -s http://git.io/vC0xZ)` @todo
 
 - Installs:
     - Homebrew
