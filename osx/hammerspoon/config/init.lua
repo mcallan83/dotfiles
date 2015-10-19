@@ -15,6 +15,21 @@ hs.hotkey.bind(hyper, '[', function() hs.window.focusedWindow():moveToUnit(hs.la
 hs.hotkey.bind(hyper, ']', function() hs.window.focusedWindow():moveToUnit(hs.layout.right50) end)
 hs.hotkey.bind(hyper, '=', hs.grid.maximizeWindow)
 
+-- move window to next monitor
+hs.hotkey.bind(hyper, "0", function()
+  local win = hs.window.focusedWindow()
+  local nextScreen = win:screen():next()
+  win:moveToScreen(nextScreen)
+end)
+
+-- move window to previous monitor
+hs.hotkey.bind(hyper, "9", function()
+  local win = hs.window.focusedWindow()
+  local nextScreen = win:screen():previous()
+  win:moveToScreen(nextScreen)
+end)
+
+
 -- toggle apps
 hs.hotkey.bind(hyper, 'C', function() toggle_application('Google Chrome') end)
 hs.hotkey.bind(hyper, 'F', function() toggle_application('Finder') end)

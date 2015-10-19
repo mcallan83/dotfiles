@@ -14,4 +14,7 @@
 <hyper> [               Move window to left half of screen
 <hyper> ]               Move window to right half of screen
 <hyper> =               Maximize window
+
+<hyper> 9               Move window to previous monitor
+<hyper> 0               Move window to next monitor
 ```
