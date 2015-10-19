@@ -2,7 +2,7 @@
 -- Filename: osx/hammerspoon/config/init.lua
 -- Author: Mike Callan
 -- URL: http://github.com/mcallan83/dotfiles
----------------------------------------------1-----------------------------------
+--------------------------------------------------------------------------------
 
 -- keyboard modifiers
 local hyper = {"cmd", "ctrl", "alt", "shift"}
@@ -28,7 +28,6 @@ hs.hotkey.bind(hyper, "9", function()
   local nextScreen = win:screen():previous()
   win:moveToScreen(nextScreen)
 end)
-
 
 -- toggle apps
 hs.hotkey.bind(hyper, 'C', function() toggle_application('Google Chrome') end)
