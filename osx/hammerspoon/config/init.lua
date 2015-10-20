@@ -30,6 +30,7 @@ hs.hotkey.bind(hyper, "9", function()
 end)
 
 -- toggle apps
+hs.hotkey.bind(hyper, 'A', function() toggle_application('Adium') end)
 hs.hotkey.bind(hyper, 'C', function() toggle_application('Google Chrome') end)
 hs.hotkey.bind(hyper, 'F', function() toggle_application('Finder') end)
 hs.hotkey.bind(hyper, 'H', function() toggle_application('Helium') end)
