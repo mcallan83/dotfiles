@@ -226,6 +226,7 @@ gem install tmuxinator
 ################################################################################
 
 pip install gsutil
+pip install httpie
 pip install ohmu
 pip install pygments
 
