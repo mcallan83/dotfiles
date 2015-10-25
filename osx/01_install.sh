@@ -146,19 +146,19 @@ brew cask install font-open-sans
 brew cask install font-source-code-pro
 
 # allow vagrant to mount NFS without password
-TMP=$(mktemp -t vagrant_sudoers)
-cat /etc/sudoers > $TMP
-cat >> $TMP <<EOF
-Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
-Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
-Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
-%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
-EOF
-visudo -c -f $TMP
-if [ $? -eq 0 ]; then
-  cat $TMP > /etc/sudoers
-fi
-rm -f $TMP
+# TMP=$(mktemp -t vagrant_sudoers)
+# cat /etc/sudoers > $TMP
+# cat >> $TMP <<EOF
+# Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+# Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+# Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+# %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+# EOF
+# visudo -c -f $TMP
+# if [ $? -eq 0 ]; then
+#   cat $TMP > /etc/sudoers
+# fi
+# rm -f $TMP
 
 # move google chrome to ~/Applications for 1Password
 rm -rf "$HOME/Applications/Google Chrome.app"
