@@ -5,6 +5,9 @@ alias vimrc="$EDITOR ~/.vimrc"
 # atom
 alias aa="atom ."
 
+# cd
+alias cdb="cd -"
+
 # clear screen
 alias cl="clear"
 
@@ -22,8 +25,8 @@ alias -g J='| python -m json.tool'
 alias hosts="sudo $EDITOR /etc/hosts"
 
 # k
-alias ka="k -a" # k with hidden files
-alias kd="k -d" # k with directories only
+alias ka="clear;k -a" # k with hidden files
+alias kd="clear;k -d" # k with directories only
 
 # laravel
 alias la5m="la5 migrate"
