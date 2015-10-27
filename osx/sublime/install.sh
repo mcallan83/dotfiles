@@ -1,5 +1,15 @@
 #!/bin/sh
 
+################################################################################
+# Filename: osx/sublime/install.sh
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
+#
+# Installs Sublime configuration, including Package Control and various
+# packages. Sublime may need to be restarted two or three times to
+################################################################################
+
+
 CONFIG="$HOME/Library/Application Support/Sublime Text 3"
 
 # create directories
