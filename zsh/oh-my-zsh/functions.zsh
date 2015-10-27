@@ -34,3 +34,31 @@ brewfix() {
     sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
 }
 
+# Updates global packages installed with the following package managers:
+# - Homebrew
+# - Composer
+# - NPM
+# - Ruby Gems
+# - PIP
+update() {
+
+    # fix homebrew permissions in 10.11 and update everything homebrew
+    sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+    brew upgrade
+    brew update
+    brew outdated
+    brew cleanup
+
+    # composer
+    composer self-update
+    composer global update
+
+    # npm
+    npm update -g
+
+    # gems
+    gem update `gem list | cut -d ' ' -f 1`
+
+    # python
+    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+}

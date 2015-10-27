@@ -9,8 +9,13 @@
       "solarized-dark-syntax"
     ]
   editor:
-    invisibles: {}
-    fontSize: 18
+    invisibles:
+      eol: " "
+    fontSize: 16
+    fontFamily: "menlo"
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
   "one-light-ui": {}
   term2:
     colors:
@@ -101,3 +106,6 @@
     warningSeverity: 0
   linter: {}
   "linter-php": {}
+  minimap: {}
+  "atom-beautify":
+    _analyticsUserId: "372dd3b9-c9a6-478d-b291-81b8575a50b4"
