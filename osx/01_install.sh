@@ -192,6 +192,7 @@ npm install -g browser-sync
 npm install -g electron-prebuilt
 npm install -g grunt-cli
 npm install -g gulp
+npm install -g htmlhint
 npm install -g jshint
 npm install -g less
 npm install -g node-inspector
@@ -201,6 +202,7 @@ npm install -g vmd
 npm install -g vtop
 npm install -g webpack
 npm install -g yo
+npm install -g csslint
 
 ################################################################################
 # ruby, rvm, and gems
@@ -220,6 +222,7 @@ rvm use 2.1.1
 
 gem install jekyll
 gem install tmuxinator
+gem install scss-lint
 
 ################################################################################
 # python packages
