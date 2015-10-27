@@ -8,9 +8,12 @@
 # Installs HomeBrew packages, Homebrew Casks (GUI apps, Quicklook
 # plugins, fonts), Composer packages, NPM packages, Ruby gems, Python
 # packages, and clones dotfiles git repo to ~/.dotfiles.
+#
+# Tested on OSX 10.10 and 10.11.
 ################################################################################
 
 sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ################################################################################
 # homebrew
@@ -86,64 +89,64 @@ brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
 # casks
-# brew cask
-# brew cask install adium
-# brew cask install alfred
-# brew cask install anybar
-# brew cask install appcleaner
-# brew cask install arq
-# brew cask install atom
-# brew cask install bettertouchtool
-# brew cask install cakebrew
-# brew cask install ccleaner
-# brew cask install chrome-remote-desktop-host
-# brew cask install cyberduck
-# brew cask install dropbox
-# brew cask install firefox
-# brew cask install google-chrome
-# brew cask install google-drive
-# brew cask install google-hangouts
-# brew cask install grandperspective
-# brew cask install hammerspoon
-# brew cask install handbrake
-# brew cask install iconjar
-# brew cask install iterm2
-# brew cask install jadengeller-helium
-# brew cask install kaleidoscope
-# brew cask install karabiner
-# brew cask install keyboardcleantool
-# brew cask install launchcontrol
-# brew cask install launchrocket
-# brew cask install libreoffice
-# brew cask install numi
-# brew cask install nvalt
-# brew cask install robomongo
-# brew cask install rstudio
-# brew cask install seil
-# brew cask install sequel-pro
-# brew cask install sketch
-# brew cask install slate
-# brew cask install spotify
-# brew cask install sublime-text3
-# brew cask install teamviewer
-# brew cask install the-unarchiver
-# brew cask install transmission
-# brew cask install vagrant
-# brew cask install virtualbox
-# brew cask install vlc
-# brew cask install xmind
-# brew cask install xquartz
-#
-# brew cask install betterzipql
-# brew cask install qlcolorcode
-# brew cask install qlmarkdown
-# brew cask install qlstephen
-# brew cask install quicklook-csv
-# brew cask install quicklook-json
-# brew cask install webpquicklook
-#
-# brew cask install font-open-sans
-# brew cask install font-source-code-pro
+brew cask
+brew cask install adium
+brew cask install alfred
+brew cask install anybar
+brew cask install appcleaner
+brew cask install arq
+brew cask install atom
+brew cask install bettertouchtool
+brew cask install cakebrew
+brew cask install ccleaner
+brew cask install chrome-remote-desktop-host
+brew cask install cyberduck
+brew cask install dropbox
+brew cask install firefox
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install google-hangouts
+brew cask install grandperspective
+brew cask install hammerspoon
+brew cask install handbrake
+brew cask install iconjar
+brew cask install iterm2
+brew cask install jadengeller-helium
+brew cask install kaleidoscope
+brew cask install karabiner
+brew cask install keyboardcleantool
+brew cask install launchcontrol
+brew cask install launchrocket
+brew cask install libreoffice
+brew cask install numi
+brew cask install nvalt
+brew cask install robomongo
+brew cask install rstudio
+brew cask install seil
+brew cask install sequel-pro
+brew cask install sketch
+brew cask install slate
+brew cask install spotify
+brew cask install sublime-text3
+brew cask install teamviewer
+brew cask install the-unarchiver
+brew cask install transmission
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install vlc
+brew cask install xmind
+brew cask install xquartz
+
+brew cask install betterzipql
+brew cask install qlcolorcode
+brew cask install qlmarkdown
+brew cask install qlstephen
+brew cask install quicklook-csv
+brew cask install quicklook-json
+brew cask install webpquicklook
+
+brew cask install font-open-sans
+brew cask install font-source-code-pro
 
 # allow vagrant to mount NFS without password
 # TMP=$(mktemp -t vagrant_sudoers)
@@ -189,6 +192,7 @@ composer global require "phpunit/phpunit=4.8.*"
 
 npm install -g bower
 npm install -g browser-sync
+npm install -g csslint
 npm install -g electron-prebuilt
 npm install -g grunt-cli
 npm install -g gulp
@@ -202,7 +206,6 @@ npm install -g vmd
 npm install -g vtop
 npm install -g webpack
 npm install -g yo
-npm install -g csslint
 
 ################################################################################
 # ruby, rvm, and gems
@@ -211,10 +214,6 @@ npm install -g csslint
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
 
-while : ; do
-    [[ -f "$HOME/.rvm/scripts/rvm" ]] && break
-    sleep 1
-done
 source "$HOME/.rvm/scripts/rvm"
 
 rvm install 2.1.1
