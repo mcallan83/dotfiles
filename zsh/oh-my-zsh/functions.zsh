@@ -42,12 +42,14 @@ brewfix() {
 # - PIP
 update() {
 
-    # fix homebrew permissions in 10.11 and update everything homebrew
-    sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
-    brew upgrade
+    # homebrew
+    sudo chown $(whoami):admin /usr/local
+    sudo chown -R $(whoami):admin /usr/local
     brew update
-    brew outdated
+    brew upgrade --all
     brew cleanup
+    brew cask cleanup
+    brew prune
 
     # composer
     composer self-update
@@ -57,8 +59,11 @@ update() {
     npm update -g
 
     # gems
+    sudo gem update --system;
     gem update `gem list | cut -d ' ' -f 1`
+    gem cleanup;
 
     # python
+    pip install --upgrade pip
     pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 }

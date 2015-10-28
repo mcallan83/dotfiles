@@ -1,15 +1,21 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ################################################################################
-# Filename: osx/install.sh
+# Filename: osx/01_install.sh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
-# Installs HomeBrew packages, Homebrew Casks (GUI apps, Quicklook
-# plugins, fonts), Composer packages, NPM packages, Ruby gems, Python
-# packages, and clones dotfiles git repo to ~/.dotfiles.
+# Installs HomeBrew packages, Homebrew Casks (GUI apps, Quicklook plugins,
+# fonts), Composer packages, NPM packages, Ruby gems, Python packages,
+# on a fresh install of OSX. Tested on OSX 10.11.
 #
-# Tested on OSX 10.10 and 10.11.
+# TODO:
+#
+# - get RVM working
+# - configure vagrant to have nfs access without requiring password
+# - install neovim and macvim
+# - install dotfiles, ohmyzsh, vim config, tmux config, git config
+# - pretty echos during install
 ################################################################################
 
 sudo -v
@@ -73,7 +79,7 @@ brew install vim --override-system-vi
 brew install wget --with-iri
 brew install zsh
 
-# php56 with custom settings settings
+# php56 with custom settings
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
@@ -90,6 +96,8 @@ brew install homebrew/php/phpmd
 
 # casks
 brew cask
+
+# cask gui apps
 brew cask install adium
 brew cask install alfred
 brew cask install anybar
@@ -137,6 +145,7 @@ brew cask install vlc
 brew cask install xmind
 brew cask install xquartz
 
+# cask quicklook plugins
 brew cask install betterzipql
 brew cask install qlcolorcode
 brew cask install qlmarkdown
@@ -145,6 +154,7 @@ brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install webpquicklook
 
+# cask fonts
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
@@ -168,13 +178,11 @@ rm -rf "$HOME/Applications/Google Chrome.app"
 mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/Applications/Google Chrome.app/"
 
 # cleanup
-brew cleanup
-brew upgrade
-brew cleanup
 brew update
-brew outdated
-brew prune
+brew upgrade --all
+brew cleanup
 brew cask cleanup
+brew prune
 
 ################################################################################
 # composer packages
@@ -200,6 +208,7 @@ npm install -g htmlhint
 npm install -g jshint
 npm install -g less
 npm install -g node-inspector
+npm install -g npm-check
 npm install -g phantomjs
 npm install -g torrentflix
 npm install -g vmd
@@ -216,8 +225,7 @@ curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
 
 source "$HOME/.rvm/scripts/rvm"
 
-rvm install 2.1.1
-rvm use 2.1.1
+rvm use 2.1.1 --default --install
 
 gem install jekyll
 gem install tmuxinator
