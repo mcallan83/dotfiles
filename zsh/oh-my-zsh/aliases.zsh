@@ -42,6 +42,7 @@ alias -g L='| less'
 alias n="npm"
 alias ni="npm install"
 alias nr="npm run"
+alias nu="npm update"
 
 # ps
 alias psa="ps aux"
