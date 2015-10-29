@@ -211,6 +211,7 @@ npm install -g less
 npm install -g node-inspector
 npm install -g npm-check
 npm install -g phantomjs
+npm install -g svgo
 npm install -g torrentflix
 npm install -g vmd
 npm install -g vtop
