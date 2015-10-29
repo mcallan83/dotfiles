@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ################################################################################
-# Filename: osx/01_install.sh
+# Filename: osx/install.sh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
@@ -11,10 +11,7 @@
 #
 # TODO:
 #
-# - get RVM working
 # - configure vagrant to have nfs access without requiring password
-# - install neovim and macvim
-# - install dotfiles, ohmyzsh, vim config, tmux config, git config
 # - pretty echos during install
 ################################################################################
 
@@ -40,7 +37,9 @@ brew tap homebrew/science
 brew tap homebrew/services
 brew tap homebrew/versions
 brew tap thoughtbot/formulae
+brew tap neovim/neovim
 
+brew install --HEAD neovim
 brew install bash-completion
 brew install boot2docker
 brew install brew-cask
@@ -59,6 +58,7 @@ brew install gpg
 brew install htop-osx
 brew install hub
 brew install jq
+brew install macvim --override-system-vim
 brew install mongodb
 brew install mysql
 brew install node
