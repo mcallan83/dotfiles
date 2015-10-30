@@ -208,6 +208,7 @@ npm install -g gulp
 npm install -g htmlhint
 npm install -g jshint
 npm install -g less
+npm install -g modernizr
 npm install -g node-inspector
 npm install -g npm-check
 npm install -g phantomjs
