@@ -230,8 +230,9 @@ source "$HOME/.rvm/scripts/rvm"
 rvm use 2.1.1 --default --install
 
 gem install jekyll
-gem install tmuxinator
+gem install sass
 gem install scss-lint
+gem install tmuxinator
 
 ################################################################################
 # python packages
