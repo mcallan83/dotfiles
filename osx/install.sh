@@ -230,6 +230,9 @@ source "$HOME/.rvm/scripts/rvm"
 
 rvm use 2.1.1 --default --install
 
+gem install bundler
+gem install compass
+gem install github-pages
 gem install jekyll
 gem install sass
 gem install scss-lint
