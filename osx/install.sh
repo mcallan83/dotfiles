@@ -99,6 +99,7 @@ brew cask
 
 # cask gui apps
 brew cask install adium
+brew cask install aerial
 brew cask install alfred
 brew cask install anybar
 brew cask install appcleaner
