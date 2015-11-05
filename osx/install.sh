@@ -50,6 +50,7 @@ brew install ddrescue
 brew install dnsmasq
 brew install docker
 brew install docker-compose
+brew install ffmpeg
 brew install gcc
 brew install getmail
 brew install git
@@ -58,6 +59,7 @@ brew install gpg
 brew install htop-osx
 brew install hub
 brew install jq
+brew install libav
 brew install macvim --override-system-vim
 brew install mongodb
 brew install mysql
@@ -77,6 +79,7 @@ brew install tmux
 brew install tree
 brew install vim --override-system-vi
 brew install wget --with-iri
+brew install youtube-dl
 brew install zsh
 
 # php56 with custom settings
