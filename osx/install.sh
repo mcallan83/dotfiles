@@ -13,13 +13,14 @@
 #
 # - configure vagrant to have nfs access without requiring password
 # - pretty echos during install
+# - php linters (phpcs, phpmd, phploc, etc...)
 ################################################################################
 
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ################################################################################
-# homebrew
+# Homebrew
 ################################################################################
 
 if test ! $(which brew); then
@@ -82,7 +83,7 @@ brew install wget --with-iri
 brew install youtube-dl
 brew install zsh
 
-# php56 with custom settings
+# PHP 5.6
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
@@ -97,10 +98,10 @@ brew install homebrew/php/php56-mongo
 brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
-# casks
+# Homebrew Casks
 brew cask
 
-# cask gui apps
+# Homebrew Cask GUI Apps
 brew cask install adium
 brew cask install aerial
 brew cask install alfred
@@ -150,7 +151,7 @@ brew cask install vlc
 brew cask install xmind
 brew cask install xquartz
 
-# cask quicklook plugins
+# Homebrew Cask Quicklook Plugins
 brew cask install betterzipql
 brew cask install qlcolorcode
 brew cask install qlmarkdown
@@ -159,30 +160,39 @@ brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install webpquicklook
 
-# cask fonts
+# Homebrew Cask Fonts
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
-# allow vagrant to mount NFS without password
-# TMP=$(mktemp -t vagrant_sudoers)
-# cat /etc/sudoers > $TMP
-# cat >> $TMP <<EOF
-# Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
-# Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
-# Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
-# %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
-# EOF
-# visudo -c -f $TMP
-# if [ $? -eq 0 ]; then
-#   cat $TMP > /etc/sudoers
-# fi
-# rm -f $TMP
+# Allow Vagrant to boot a VM without a password when using NFS.
+# Modified from: https://gist.github.com/joemaller/6764700
+TMP=$(mktemp -t vagrant_sudoers)
+cat /etc/sudoers > $TMP
+cat >> $TMP <<EOF
 
-# move google chrome to ~/Applications for 1Password
+# VAGRANT NFS START
+Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+# VAGRANT NFS END
+EOF
+
+visudo -c -f $TMP
+if [ $? -eq 0 ]; then
+  echo "Vagrant Sudoers Setup: Success."
+  cat $TMP > /etc/sudoers
+else
+  echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
+fi
+
+rm -f $TMP
+
+# Move google chrome to ~/Applications for 1Password.
 rm -rf "$HOME/Applications/Google Chrome.app"
 mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/Applications/Google Chrome.app/"
 
-# cleanup
+# Homebrew Cleanup
 brew update
 brew upgrade --all
 brew cleanup
@@ -190,7 +200,7 @@ brew cask cleanup
 brew prune
 
 ################################################################################
-# composer packages
+# Composer Packages
 ################################################################################
 
 composer global require "jakub-onderka/php-parallel-lint=0.*"
@@ -200,7 +210,7 @@ composer global require "laravel/lumen-installer=~1.0"
 composer global require "phpunit/phpunit=4.8.*"
 
 ################################################################################
-# npm packages
+# NPM Packages
 ################################################################################
 
 npm install -g bower
@@ -224,7 +234,7 @@ npm install -g webpack
 npm install -g yo
 
 ################################################################################
-# ruby, rvm, and gems
+# Ruby, RVM, and Gems
 ################################################################################
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -243,7 +253,7 @@ gem install scss-lint
 gem install tmuxinator
 
 ################################################################################
-# python packages
+# Python Packages
 ################################################################################
 
 pip install gsutil
@@ -252,10 +262,10 @@ pip install ohmu
 pip install pygments
 
 ################################################################################
-# install dotfiles
+# Install Dotfiles
 ################################################################################
 
-git clone http://github.com/mcallan83/dotfiles ~/.dotfiles --recursive
+# git clone http://github.com/mcallan83/dotfiles ~/.dotfiles --recursive
 
 ################################################################################
 # install oh my zsh
