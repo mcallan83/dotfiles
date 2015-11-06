@@ -36,6 +36,8 @@ hs.hotkey.bind(hyper, 'F', function() toggle_application('Finder') end)
 hs.hotkey.bind(hyper, 'H', function() toggle_application('Helium') end)
 hs.hotkey.bind(hyper, 'I', function() toggle_application('iTerm') end)
 hs.hotkey.bind(hyper, 'M', function() toggle_application('Sequel Pro') end)
+hs.hotkey.bind(hyper, 'N', function() toggle_application('Notes') end)
+hs.hotkey.bind(hyper, 'R', function() toggle_application('Reminders') end)
 hs.hotkey.bind(hyper, 'S', function() toggle_application('Sublime Text') end)
 hs.hotkey.bind(hyper, 'T', function() toggle_application('iTunes') end)
 
