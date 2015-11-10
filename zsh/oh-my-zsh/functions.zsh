@@ -59,6 +59,7 @@ update() {
     npm update -g
 
     # gems
+    rvm requirements
     sudo gem update --system;
     gem update `gem list | cut -d ' ' -f 1`
     gem cleanup;
