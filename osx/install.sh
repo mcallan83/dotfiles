@@ -34,7 +34,8 @@ cyan='\033[0;36m'
 reset=`tput sgr0`
 
 cecho() {
-  echo "${2}${1}${reset}"
+  echo -e "${2}${1}${reset}"
+  printf "%0.s#" {1..80}
   return
 }
 
@@ -44,14 +45,14 @@ cecho() {
 
 # Install Homebrew if not installed
 if test ! $(which brew); then
-  cecho "OSX Installer: Installing Homebrew" $blue
+  cecho "OSX Provision: Installing Homebrew" $blue
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-cecho "OSX Installer: Updating Homebrew" $blue
+cecho "OSX Provision: Updating Homebrew" $blue
 brew update
 
-cecho "OSX Installer: Tapping Additional Homebrew Repos" $blue
+cecho "OSX Provision: Tapping Additional Homebrew Repos" $blue
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
@@ -64,7 +65,7 @@ brew tap homebrew/versions
 brew tap thoughtbot/formulae
 brew tap neovim/neovim
 
-cecho "OSX Installer: Installing Homebrew Packages" $blue
+cecho "OSX Provision: Installing Homebrew Packages" $blue
 brew install --HEAD neovim
 brew install bash-completion
 brew install boot2docker
@@ -111,7 +112,7 @@ brew install youtube-dl
 brew install zsh
 
 # PHP 5.6
-cecho "OSX Installer: Installing PHP 5.6" $blue
+cecho "OSX Provision: Installing PHP 5.6" $blue
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
@@ -127,7 +128,7 @@ brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
 # Homebrew Casks
-cecho "OSX Installer: Installing Homebrew Casks" $blue
+cecho "OSX Provision: Installing Homebrew Casks" $blue
 brew cask
 brew cask install adium
 brew cask install aerial
@@ -218,7 +219,7 @@ rm -rf "$HOME/Applications/Google Chrome.app"
 mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/Applications/Google Chrome.app/"
 
 # Homebrew Cleanup
-cecho "OSX Installer: Homebrew Cleanup" $blue
+cecho "OSX Provision: Homebrew Cleanup" $blue
 brew update
 brew upgrade --all
 brew cleanup
@@ -229,7 +230,7 @@ brew prune
 # Composer Packages
 ################################################################################
 
-cecho "OSX Installer: Installing Composer Packages" $blue
+cecho "OSX Provision: Installing Composer Packages" $blue
 composer global require "jakub-onderka/php-parallel-lint=0.*"
 composer global require "laravel/homestead=~2.0"
 composer global require "laravel/installer=~1.1"
@@ -241,7 +242,7 @@ composer global require "vinkla/climb"
 # NPM Packages
 ################################################################################
 
-cecho "OSX Installer: Installing NPM Packages" $blue
+cecho "OSX Provision: Installing NPM Packages" $blue
 npm install -g babel-cli
 npm install -g bower
 npm install -g browser-sync
@@ -269,18 +270,18 @@ npm install -g yo
 
 # Install RVM if not installed
 if test ! $(which rvm); then
-  cecho "OSX Installer: Installing RVM" $blue
+  cecho "OSX Provision: Installing RVM" $blue
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
   source "$HOME/.rvm/scripts/rvm"
 fi
 
-cecho "OSX Installer: Installing Ruby 2.2.3" $blue
+cecho "OSX Provision: Installing Ruby 2.2.3" $blue
 rvm use 2.2.3 --default --install
 
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
-cecho "OSX Installer: Installing Ruby Gems" $blue
+cecho "OSX Provision: Installing Ruby Gems" $blue
 gem install bundler
 gem install compass
 gem install github-pages
@@ -293,7 +294,7 @@ gem install tmuxinator
 # Python Packages
 ################################################################################
 
-cecho "OSX Installer: Installing Python Packages" $blue
+cecho "OSX Provision: Installing Python Packages" $blue
 pip install gsutil
 pip install httpie
 pip install ohmu
