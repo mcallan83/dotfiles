@@ -192,7 +192,7 @@ brew cask install font-source-code-pro
 # Allow Vagrant to boot a VM without a password when using NFS.
 # Modified from: https://gist.github.com/joemaller/6764700
 TMP=$(mktemp -t vagrant_sudoers)
-cat /etc/sudoers > $TMP
+sudo cat /etc/sudoers > $TMP
 cat >> $TMP <<EOF
 
 # VAGRANT NFS START
@@ -206,7 +206,7 @@ EOF
 visudo -c -f $TMP
 if [ $? -eq 0 ]; then
   echo "Vagrant Sudoers Setup: Success."
-  cat $TMP > /etc/sudoers
+  sudo cat $TMP > /etc/sudoers
 else
   echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
 fi
