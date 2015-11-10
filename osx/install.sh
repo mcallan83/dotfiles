@@ -81,6 +81,7 @@ brew install gcc
 brew install getmail
 brew install git
 brew install gitsh
+brew install go
 brew install gpg
 brew install htop-osx
 brew install hub
@@ -97,6 +98,7 @@ brew install reattach-to-user-namespace
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install sshrc
+brew install terminal-notifier
 brew install testdisk
 brew install the_silver_searcher
 brew install theharvester
