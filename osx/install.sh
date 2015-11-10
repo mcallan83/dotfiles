@@ -44,9 +44,11 @@ if test ! $(which brew); then
 fi
 
 banner "OSX Provision: Updating Homebrew"
+
 brew update
 
 banner "OSX Provision: Tapping Additional Homebrew Repos"
+
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
@@ -60,6 +62,7 @@ brew tap thoughtbot/formulae
 brew tap neovim/neovim
 
 banner "OSX Provision: Installing Homebrew Packages"
+
 brew install --HEAD neovim
 brew install bash-completion
 brew install boot2docker
@@ -106,6 +109,7 @@ brew install zsh
 
 # PHP 5.6
 banner "OSX Provision: Installing PHP 5.6"
+
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
@@ -122,6 +126,7 @@ brew install homebrew/php/phpmd
 
 # Homebrew Casks
 banner "OSX Provision: Installing Homebrew Casks"
+
 brew cask
 brew cask install adium
 brew cask install aerial
@@ -185,27 +190,27 @@ brew cask install font-source-code-pro
 
 # Allow Vagrant to boot a VM without a password when using NFS.
 # Modified from: https://gist.github.com/joemaller/6764700
-TMP=$(mktemp -t vagrant_sudoers)
-sudo cat /etc/sudoers > $TMP
-cat >> $TMP <<EOF
+# TMP=$(mktemp -t vagrant_sudoers)
+# sudo cat /etc/sudoers > $TMP
+# cat >> $TMP <<EOF
 
-# VAGRANT NFS START
-Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
-Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
-Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
-%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
-# VAGRANT NFS END
-EOF
+# # VAGRANT NFS START
+# Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+# Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+# Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+# %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+# # VAGRANT NFS END
+# EOF
 
-visudo -c -f $TMP
-if [ $? -eq 0 ]; then
-    echo "Vagrant Sudoers Setup: Success."
-    sudo cat $TMP > /etc/sudoers
-else
-    echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
-fi
+# visudo -c -f $TMP
+# if [ $? -eq 0 ]; then
+#     echo "Vagrant Sudoers Setup: Success."
+#     sudo cat $TMP > /etc/sudoers
+# else
+#     echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
+# fi
 
-rm -f $TMP
+# rm -f $TMP
 
 # Move google chrome to ~/Applications for 1Password.
 rm -rf "$HOME/Applications/Google Chrome.app"
@@ -213,6 +218,7 @@ mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/
 
 # Homebrew Cleanup
 banner "OSX Provision: Homebrew Cleanup"
+
 brew update
 brew upgrade --all
 brew cleanup
@@ -224,6 +230,7 @@ brew prune
 ################################################################################
 
 banner "OSX Provision: Installing Composer Packages"
+
 composer global require "jakub-onderka/php-parallel-lint=0.*"
 composer global require "laravel/homestead=~2.0"
 composer global require "laravel/installer=~1.1"
@@ -236,6 +243,7 @@ composer global require "vinkla/climb"
 ################################################################################
 
 banner "OSX Provision: Installing NPM Packages"
+
 npm install -g babel-cli
 npm install -g bower
 npm install -g browser-sync
@@ -264,19 +272,22 @@ npm install -g yo
 
 # Install RVM if not installed
 if test ! $(which rvm); then
-  banner "OSX Provision: Installing RVM"
-  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-  curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
+    banner "OSX Provision: Installing RVM"
+
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
 fi
 
 source "$HOME/.rvm/scripts/rvm"
 
 banner "OSX Provision: Installing Ruby 2.2.3"
+
 rvm use 2.2.3 --default --install
 
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 banner "OSX Provision: Installing Ruby Gems"
+
 gem install bundler
 gem install compass
 gem install github-pages
@@ -290,10 +301,44 @@ gem install tmuxinator
 ################################################################################
 
 banner "OSX Provision: Installing Python Packages"
+
 pip install gsutil
 pip install httpie
 pip install ohmu
 pip install pygments
+
+################################################################################
+# Update and Cleanup
+################################################################################
+
+banner "OSX Provision: Update and Cleanup"
+
+# homebrew
+sudo chown $(whoami):admin /usr/local
+sudo chown -R $(whoami):admin /usr/local
+brew update
+brew upgrade --all
+brew cleanup
+brew cask cleanup
+brew prune
+
+# composer
+composer self-update
+composer global update
+
+# npm
+npm update -g
+
+# gems
+rvm requirements
+sudo gem update --system
+gem update `gem list | cut -d ' ' -f 1`
+gem cleanup
+
+# python
+pip install --upgrade pip
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+
 
 ################################################################################
 # Install Dotfiles
