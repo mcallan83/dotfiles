@@ -81,7 +81,6 @@ brew install htop-osx
 brew install hub
 brew install jq
 brew install libav
-brew install macvim --override-system-vim
 brew install mongodb
 brew install mysql
 brew install node
@@ -244,6 +243,7 @@ npm install -g electron-prebuilt
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g htmlhint
+npm install -g imageoptim-cli
 npm install -g jshint
 npm install -g less
 npm install -g modernizr
@@ -280,7 +280,7 @@ gem install compass
 gem install github-pages
 gem install jekyll
 gem install sass
-gem install scss-lint
+gem install scss_int
 gem install tmuxinator
 
 ################################################################################
