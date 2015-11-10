@@ -214,6 +214,7 @@ composer global require "vinkla/climb"
 # NPM Packages
 ################################################################################
 
+npm install -g babel-cli
 npm install -g bower
 npm install -g browser-sync
 npm install -g csslint
