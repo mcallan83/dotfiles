@@ -187,6 +187,9 @@ brew cask install webpquicklook
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
+# sudo sh -c "echo \"group ALL=(user) NOPASSWD: ALL\" >> /etc/sudoers"
+# @url http://stackoverflow.com/questions/323957/how-do-i-edit-etc-sudoers-from-a-script
+
 # Allow Vagrant to boot a VM without a password when using NFS.
 # Modified from: https://gist.github.com/joemaller/6764700
 # TMP=$(mktemp -t vagrant_sudoers)
