@@ -5,18 +5,22 @@
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
-# Installs HomeBrew packages, Homebrew Casks (GUI apps, Quicklook plugins,
-# fonts), Composer packages, NPM packages, Ruby gems, Python packages,
-# on a fresh install of OSX. Tested on OSX 10.11.
+# Provisions a development environment on a clean intall of OSX. Script can
+# safely run at any time to ensure host machine is up to date with this script.
+#
+# Installs and updates HomeBrew packages, Homebrew Casks (GUI apps,
+# Quicklook plugins, fonts), Composer packages, NPM packages, RVM,
+# Ruby gems, and Python packages.
 #
 # TODO:
 #
-# - configure vagrant to have nfs access without requiring password (verify!)
-# - php linters (phpcs, phpmd, phploc, etc...)
-# - make script provisionable, so it can be run at any time and will only
-#   install what is missing
-#   - verify RVM
-#
+# - [ ] configure vagrant to have nfs access without requiring password
+# - [ ] php linters (phpcs, phpmd, phploc, etc...)
+# - [ ] make script provisionable, so it can be run at any time and will only
+#       install what is missing
+#       - [ ] php config
+#       - [ ] vagrant nfs config
+#       - [ ] move chrome to apps folder
 #
 ################################################################################
 
@@ -230,8 +234,11 @@ composer global require "jakub-onderka/php-parallel-lint=0.*"
 composer global require "laravel/homestead=~2.0"
 composer global require "laravel/installer=~1.1"
 composer global require "laravel/lumen-installer=~1.0"
-composer global require "phpunit/phpunit=4.8.*"
+composer global require "phpunit/phpunit=5.0.*"
+composer global require "sebastian/phpcpd=*"
 composer global require "vinkla/climb"
+composer global require 'kherge/box=~2.4'
+composer global require 'sebastian/phpdcd=*'
 
 ################################################################################
 # NPM Packages
