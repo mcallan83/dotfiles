@@ -275,8 +275,8 @@ if test ! $(which rvm); then
   source "$HOME/.rvm/scripts/rvm"
 fi
 
-cecho "OSX Installer: Installing Ruby 2.1.1" $blue
-rvm use 2.1.1 --default --install
+cecho "OSX Installer: Installing Ruby 2.2.3" $blue
+rvm use 2.2.3 --default --install
 
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
