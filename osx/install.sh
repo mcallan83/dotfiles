@@ -278,6 +278,8 @@ fi
 cecho "OSX Installer: Installing Ruby 2.1.1" $blue
 rvm use 2.1.1 --default --install
 
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+
 cecho "OSX Installer: Installing Ruby Gems" $blue
 gem install bundler
 gem install compass
