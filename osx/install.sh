@@ -26,7 +26,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 banner() {
   echo -e "\n\n\033[0;34m"
   printf "%0.s#" {1..80}
-  echo -e"\n# ${1}\n"
+  echo -e "\n# ${1}\n"
   printf "%0.s#" {1..80}
   echo -e "${reset}\n"
   return
