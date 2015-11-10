@@ -24,12 +24,13 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 banner() {
-  echo -e "\n\n\033[0;34m"
-  printf "%0.s#" {1..80}
-  echo -e "\n# ${1}"
-  printf "%0.s#" {1..80}
-  echo -e "${reset}\n"
-  return
+    reset=`tput sgr0`
+    echo -e "\n\n\033[0;34m"
+    printf "%0.s#" {1..80}
+    echo -e "\n# ${1}"
+    printf "%0.s#" {1..80}
+    echo -e "${reset}\n"
+    return
 }
 
 ################################################################################
@@ -38,8 +39,8 @@ banner() {
 
 # Install Homebrew if not installed
 if test ! $(which brew); then
-  banner "OSX Provision: Installing Homebrew"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    banner "OSX Provision: Installing Homebrew"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 banner "OSX Provision: Updating Homebrew"
@@ -198,10 +199,10 @@ EOF
 
 visudo -c -f $TMP
 if [ $? -eq 0 ]; then
-  echo "Vagrant Sudoers Setup: Success."
-  sudo cat $TMP > /etc/sudoers
+    echo "Vagrant Sudoers Setup: Success."
+    sudo cat $TMP > /etc/sudoers
 else
-  echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
+    echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
 fi
 
 rm -f $TMP
@@ -266,8 +267,9 @@ if test ! $(which rvm); then
   banner "OSX Provision: Installing RVM"
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
-  source "$HOME/.rvm/scripts/rvm"
 fi
+
+source "$HOME/.rvm/scripts/rvm"
 
 banner "OSX Provision: Installing Ruby 2.2.3"
 rvm use 2.2.3 --default --install
@@ -280,7 +282,7 @@ gem install compass
 gem install github-pages
 gem install jekyll
 gem install sass
-gem install scss_int
+gem install scss_lint
 gem install tmuxinator
 
 ################################################################################
