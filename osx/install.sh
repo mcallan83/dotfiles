@@ -44,11 +44,9 @@ if test ! $(which brew); then
 fi
 
 banner "OSX Provision: Updating Homebrew"
-
 brew update
 
 banner "OSX Provision: Tapping Additional Homebrew Repos"
-
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
@@ -62,7 +60,6 @@ brew tap thoughtbot/formulae
 brew tap neovim/neovim
 
 banner "OSX Provision: Installing Homebrew Packages"
-
 brew install --HEAD neovim
 brew install bash-completion
 brew install boot2docker
@@ -109,7 +106,6 @@ brew install zsh
 
 # PHP 5.6
 banner "OSX Provision: Installing PHP 5.6"
-
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
@@ -126,7 +122,6 @@ brew install homebrew/php/phpmd
 
 # Homebrew Casks
 banner "OSX Provision: Installing Homebrew Casks"
-
 brew cask
 brew cask install adium
 brew cask install aerial
@@ -273,21 +268,17 @@ npm install -g yo
 # Install RVM if not installed
 if test ! $(which rvm); then
     banner "OSX Provision: Installing RVM"
-
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-    curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew
+    curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew --ignore-dotfiles
 fi
 
 source "$HOME/.rvm/scripts/rvm"
 
 banner "OSX Provision: Installing Ruby 2.2.3"
-
 rvm use 2.2.3 --default --install
 
-echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-
 banner "OSX Provision: Installing Ruby Gems"
-
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 gem install compass
 gem install github-pages
@@ -301,7 +292,6 @@ gem install tmuxinator
 ################################################################################
 
 banner "OSX Provision: Installing Python Packages"
-
 pip install gsutil
 pip install httpie
 pip install ohmu
