@@ -139,6 +139,7 @@ brew cask install bettertouchtool
 brew cask install cakebrew
 brew cask install ccleaner
 brew cask install chrome-remote-desktop-host
+brew cask install clamxav
 brew cask install cyberduck
 brew cask install dropbox
 brew cask install firefox
