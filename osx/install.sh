@@ -31,7 +31,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
-    echo -e "\n# ${1}"
+    echo -e "\n# OSX Provision: ${1}"
     printf "%0.s#" {1..80}
     echo -e "$(tput sgr0)\n"
     return
@@ -47,10 +47,10 @@ if test ! $(which brew); then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-banner "OSX Provision: Updating Homebrew"
+banner "Updating Homebrew"
 brew update
 
-banner "OSX Provision: Tapping Additional Homebrew Repos"
+banner "Tapping Additional Homebrew Repos"
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
@@ -63,7 +63,7 @@ brew tap homebrew/versions
 brew tap thoughtbot/formulae
 brew tap neovim/neovim
 
-banner "OSX Provision: Installing Homebrew Packages"
+banner "Installing Homebrew Packages"
 brew install --HEAD neovim
 brew install bash-completion
 brew install boot2docker
@@ -84,6 +84,7 @@ brew install go
 brew install gpg
 brew install htop-osx
 brew install hub
+brew install imagemagick --with-webp
 brew install jq
 brew install libav
 brew install mongodb
@@ -109,7 +110,7 @@ brew install youtube-dl
 brew install zsh
 
 # PHP 5.6
-banner "OSX Provision: Installing PHP 5.6"
+banner "Installing PHP 5.6"
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
@@ -125,7 +126,7 @@ brew install homebrew/php/phploc
 brew install homebrew/php/phpmd
 
 # Homebrew Casks
-banner "OSX Provision: Installing Homebrew Casks"
+banner "Installing Homebrew Casks"
 brew cask
 brew cask install adium
 brew cask install aerial
@@ -218,20 +219,11 @@ brew cask install font-source-code-pro
 rm -rf "$HOME/Applications/Google Chrome.app"
 mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/Applications/Google Chrome.app/"
 
-# Homebrew Cleanup
-banner "OSX Provision: Homebrew Cleanup"
-
-brew update
-brew upgrade --all
-brew cleanup
-brew cask cleanup
-brew prune
-
 ################################################################################
 # Composer Packages
 ################################################################################
 
-banner "OSX Provision: Installing Composer Packages"
+banner "Installing Composer Packages"
 
 composer global require "jakub-onderka/php-parallel-lint=0.*"
 composer global require "laravel/homestead=~2.0"
@@ -247,7 +239,7 @@ composer global require 'sebastian/phpdcd=*'
 # NPM Packages
 ################################################################################
 
-banner "OSX Provision: Installing NPM Packages"
+banner "Installing NPM Packages"
 
 npm install -g babel-cli
 npm install -g bower
@@ -277,17 +269,17 @@ npm install -g yo
 
 # Install RVM if not installed
 if test ! $(which rvm); then
-    banner "OSX Provision: Installing RVM"
+    banner "Installing RVM"
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
     curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew --ignore-dotfiles
 fi
 
 source "$HOME/.rvm/scripts/rvm"
 
-banner "OSX Provision: Installing Ruby 2.2.3"
+banner "Installing Ruby 2.2.3"
 rvm use 2.2.3 --default --install
 
-banner "OSX Provision: Installing Ruby Gems"
+banner "Installing Ruby Gems"
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 gem install compass
@@ -301,7 +293,7 @@ gem install tmuxinator
 # Python Packages
 ################################################################################
 
-banner "OSX Provision: Installing Python Packages"
+banner "Installing Python Packages"
 pip install gsutil
 pip install httpie
 pip install ohmu
@@ -311,7 +303,7 @@ pip install pygments
 # Update and Cleanup
 ################################################################################
 
-banner "OSX Provision: Update and Cleanup"
+banner "Update and Cleanup"
 
 # homebrew
 sudo chown $(whoami):admin /usr/local
@@ -321,6 +313,7 @@ brew upgrade --all
 brew cleanup
 brew cask cleanup
 brew prune
+brew doctor
 
 # composer
 composer self-update
