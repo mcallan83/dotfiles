@@ -245,6 +245,8 @@ banner "Installing NPM Packages"
 npm install -g babel-cli
 npm install -g bower
 npm install -g browser-sync
+npm install -g browserify
+npm install -g caniuse-cmd
 npm install -g csslint
 npm install -g electron-prebuilt
 npm install -g grunt-cli
@@ -255,8 +257,11 @@ npm install -g jshint
 npm install -g less
 npm install -g modernizr
 npm install -g node-inspector
+npm install -g node-sass
 npm install -g npm-check
 npm install -g phantomjs
+npm install -g psi
+npm install -g stylestats
 npm install -g svgo
 npm install -g torrentflix
 npm install -g vmd
