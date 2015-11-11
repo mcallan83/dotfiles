@@ -43,7 +43,7 @@ banner() {
 
 # Install Homebrew if not installed
 if test ! $(which brew); then
-    banner "OSX Provision: Installing Homebrew"
+    banner "Installing Homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -194,27 +194,27 @@ brew cask install font-source-code-pro
 
 # Allow Vagrant to boot a VM without a password when using NFS.
 # Modified from: https://gist.github.com/joemaller/6764700
-# TMP=$(mktemp -t vagrant_sudoers)
-# sudo cat /etc/sudoers > $TMP
-# cat >> $TMP <<EOF
+TMP=$(mktemp -t vagrant_sudoers)
+sudo cat /etc/sudoers > $TMP
+cat >> $TMP <<EOF
 
-# # VAGRANT NFS START
-# Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
-# Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
-# Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
-# %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
-# # VAGRANT NFS END
-# EOF
+# VAGRANT NFS START
+Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+# VAGRANT NFS END
+EOF
 
-# visudo -c -f $TMP
-# if [ $? -eq 0 ]; then
-#     echo "Vagrant Sudoers Setup: Success."
-#     sudo cat $TMP > /etc/sudoers
-# else
-#     echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
-# fi
+visudo -c -f $TMP
+if [ $? -eq 0 ]; then
+    echo "Vagrant Sudoers Setup: Success."
+    sudo sh -c "cat $TMP > /etc/sudoers"
+else
+    echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
+fi
 
-# rm -f $TMP
+rm -f $TMP
 
 # Move google chrome to ~/Applications for 1Password.
 rm -rf "$HOME/Applications/Google Chrome.app"
