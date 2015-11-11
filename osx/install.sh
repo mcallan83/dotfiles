@@ -27,13 +27,13 @@
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Output pretty text banner
 banner() {
-    reset=`tput sgr0`
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
     echo -e "\n# ${1}"
     printf "%0.s#" {1..80}
-    echo -e "${reset}\n"
+    echo -e "$(tput sgr0)\n"
     return
 }
 
