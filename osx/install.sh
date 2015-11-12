@@ -14,7 +14,6 @@
 #
 # TODO:
 #
-# - [ ] configure vagrant to have nfs access without requiring password
 # - [ ] php linters (phpcs, phpmd, phploc, etc...)
 # - [ ] make script provisionable, so it can be run at any time and will only
 #       install what is missing
@@ -208,10 +207,7 @@ EOF
 
 visudo -c -f $TMP
 if [ $? -eq 0 ]; then
-    echo "Vagrant Sudoers Setup: Success."
     sudo sh -c "cat $TMP > /etc/sudoers"
-else
-    echo "Vagrant Sudoers Setup: Invalid Syntax. Aborting."
 fi
 
 rm -f $TMP
@@ -226,15 +222,15 @@ mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/
 
 banner "Installing Composer Packages"
 
-composer global require "jakub-onderka/php-parallel-lint=0.*"
-composer global require "laravel/homestead=~2.0"
-composer global require "laravel/installer=~1.1"
-composer global require "laravel/lumen-installer=~1.0"
-composer global require "phpunit/phpunit=5.0.*"
-composer global require "sebastian/phpcpd=*"
-composer global require "vinkla/climb"
+composer global require 'codegyre/robo'
+composer global require 'jakub-onderka/php-parallel-lint=0.*'
 composer global require 'kherge/box=~2.4'
-composer global require 'sebastian/phpdcd=*'
+composer global require 'laravel/homestead=~2.0'
+composer global require 'laravel/installer=~1.1'
+composer global require 'laravel/lumen-installer=~1.0'
+composer global require 'phpunit/phpunit=5.0.*'
+composer global require 'sebastian/phpcpd=*'
+composer global require 'vinkla/climb'
 
 ################################################################################
 # NPM Packages
@@ -284,9 +280,11 @@ source "$HOME/.rvm/scripts/rvm"
 
 banner "Installing Ruby 2.2.3"
 rvm use 2.2.3 --default --install
+rvm requirements
+
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 banner "Installing Ruby Gems"
-echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 gem install compass
 gem install github-pages
@@ -337,27 +335,3 @@ gem cleanup
 # python
 pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
-
-
-################################################################################
-# Install Dotfiles
-################################################################################
-
-# git clone http://github.com/mcallan83/dotfiles ~/.dotfiles --recursive
-
-################################################################################
-# install oh my zsh
-################################################################################
-
-# # backup existing zshrc
-# if [ -f "$HOME/.zshrc" ]; then
-#     mv "$HOME/.zshrc" "$HOME/.zshrc.$(date +%s).bak"
-# fi
-
-# # symlink zshrc
-# cd ~
-# ln -s "$HOME/.dotfiles/zsh/oh-my-zsh/zshrc" ".zshrc"
-
-# if [ -d "$HOME/.oh-my-zsh" ]; then
-#     rm -rf "$HOME/.oh-my-zsh"
-# fi
