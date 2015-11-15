@@ -326,8 +326,9 @@ composer global update
 # npm
 npm update -g
 
-# gems
+# rvm and gems
 rvm requirements
+rvm cleanup all
 sudo gem update --system
 gem update `gem list | cut -d ' ' -f 1`
 gem cleanup
