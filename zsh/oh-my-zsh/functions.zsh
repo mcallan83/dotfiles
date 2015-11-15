@@ -13,8 +13,8 @@ function colortest {
 # run adminer as web server if installed
 if [ -d /usr/local/share/adminer ] ; then
     function adminer {
-            open http://localhost:8888
-            php -S localhost:8888 -t /usr/local/share/adminer > /dev/null
+        open http://localhost:8888
+        php -S localhost:8888 -t /usr/local/share/adminer > /dev/null
     }
 fi
 
@@ -58,8 +58,9 @@ update() {
     # npm
     npm update -g
 
-    # gems
+    # rvm and gems
     rvm requirements
+    rvm cleanup all
     sudo gem update --system;
     gem update `gem list | cut -d ' ' -f 1`
     gem cleanup;
