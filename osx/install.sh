@@ -88,7 +88,7 @@ brew install jq
 brew install libav
 brew install mongodb
 brew install mysql
-brew install node
+brew install node4-lts
 brew install pandoc
 brew install python
 brew install r
@@ -188,11 +188,11 @@ brew cask install webpquicklook
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
-# sudo sh -c "echo \"group ALL=(user) NOPASSWD: ALL\" >> /etc/sudoers"
-# @url http://stackoverflow.com/questions/323957/how-do-i-edit-etc-sudoers-from-a-script
+# Sudoless NFS with Vagrant
+banner "Configure: Sudoless NFS with Vagrant"
+# https://gist.github.com/joemaller/6764700
+# http://stackoverflow.com/questions/323957
 
-# Allow Vagrant to boot a VM without a password when using NFS.
-# Modified from: https://gist.github.com/joemaller/6764700
 TMP=$(mktemp -t vagrant_sudoers)
 sudo cat /etc/sudoers > $TMP
 cat >> $TMP <<EOF
@@ -213,6 +213,7 @@ fi
 rm -f $TMP
 
 # Move google chrome to ~/Applications for 1Password.
+banner "Moving Chrome to ~/Applications"
 rm -rf "$HOME/Applications/Google Chrome.app"
 mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/Applications/Google Chrome.app/"
 
