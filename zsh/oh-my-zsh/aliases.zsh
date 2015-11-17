@@ -12,6 +12,7 @@ alias cdb="cd -"
 alias cl="clear"
 
 # git
+alias gi="git init"
 alias gs="gst"
 alias gsub="git submodule foreach git pull origin master"
 
