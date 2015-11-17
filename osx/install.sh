@@ -137,6 +137,7 @@ brew cask install atom
 brew cask install bettertouchtool
 brew cask install cakebrew
 brew cask install ccleaner
+brew cask install cheatsheet
 brew cask install chrome-remote-desktop-host
 brew cask install clamxav
 brew cask install cyberduck
