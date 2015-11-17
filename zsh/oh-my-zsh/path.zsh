@@ -4,6 +4,8 @@ if [ -x /usr/libexec/path_helper ]; then
     eval `/usr/libexec/path_helper -s`
 fi
 
+PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # rvm
 if [ -d $HOME/.rvm/bin ] ; then
     PATH="$HOME/.rvm/bin:$PATH"
@@ -11,22 +13,20 @@ fi
 
 # personal bin folder
 if [ -d "$HOME/.bin" ] ; then
-    PATH="$HOME/.bin:$PATH"
+    PATH="$PATH:$HOME/.bin"
 fi
 
 # homebrew php
 if [ -d "/usr/local/opt/php56/bin" ] ; then
-    PATH="/usr/local/opt/php56/bin:$PATH"
+    PATH="$PATH:/usr/local/opt/php56/bin"
 fi
-
-PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # composer
 if [ -d "$HOME/.composer/vendor/bin" ] ; then
     PATH="$PATH:$HOME/.composer/vendor/bin"
 fi
 
-export PATH
-
-# remove duplicates in path
+# remove duplicates
 typeset -U PATH
+
+export PATH
