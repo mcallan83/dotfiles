@@ -6,9 +6,17 @@ fi
 
 PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+# remove duplicates
+typeset -U PATH
+
 # rvm
 if [ -d $HOME/.rvm/bin ] ; then
     PATH="$HOME/.rvm/bin:$PATH"
+fi
+
+# dotfiles bin folder
+if [ -d "$DOTFILES/zsh/oh-my-zsh/bin" ] ; then
+    PATH="$PATH:$DOTFILES/zsh/oh-my-zsh/bin"
 fi
 
 # personal bin folder
@@ -25,8 +33,5 @@ fi
 if [ -d "$HOME/.composer/vendor/bin" ] ; then
     PATH="$PATH:$HOME/.composer/vendor/bin"
 fi
-
-# remove duplicates
-typeset -U PATH
 
 export PATH
