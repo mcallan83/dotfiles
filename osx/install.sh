@@ -81,11 +81,13 @@ brew install git
 brew install gitsh
 brew install go
 brew install gpg
+brew install highlight
 brew install htop-osx
 brew install hub
 brew install imagemagick --with-webp
 brew install jq
 brew install libav
+brew install lua
 brew install mongodb
 brew install mysql
 brew install node4-lts
