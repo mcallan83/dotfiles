@@ -11,12 +11,13 @@ function colortest {
 }
 
 # run adminer as web server if installed
-if [ -d /usr/local/share/adminer ] ; then
-    function adminer {
+function adminer {
+    if [ -d /usr/local/share/adminer ] ; then
         open http://localhost:8888
         php -S localhost:8888 -t /usr/local/share/adminer > /dev/null
-    }
-fi
+    fi
+}
+
 
 # search all alises
 function als() {
@@ -31,41 +32,6 @@ pman() {
 
 # fix permissions for homebrew
 brewfix() {
-    sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
-}
-
-# Updates global packages installed with the following package managers:
-# - Homebrew
-# - Composer
-# - NPM
-# - Ruby Gems
-# - PIP
-update() {
-
-    # homebrew
     sudo chown $(whoami):admin /usr/local
     sudo chown -R $(whoami):admin /usr/local
-    brew update
-    brew upgrade --all
-    brew cleanup
-    brew cask cleanup
-    brew prune
-
-    # composer
-    composer self-update
-    composer global update
-
-    # npm
-    npm update -g
-
-    # rvm and gems
-    rvm requirements
-    rvm cleanup all
-    sudo gem update --system;
-    gem update `gem list | cut -d ' ' -f 1`
-    gem cleanup;
-
-    # python
-    pip install --upgrade pip
-    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 }
