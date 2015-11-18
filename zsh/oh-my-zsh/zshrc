@@ -1,5 +1,8 @@
 start_time="$(date +%s)"
 
+# load local zshrc after
+[[ -r ~/.zshrc.before ]] && . ~/.zshrc.before
+
 export ZSH=$HOME/.oh-my-zsh
 export DOTFILES=$HOME/.dotfiles
 
@@ -29,8 +32,8 @@ source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
 source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 
-# load local zshrc
-[[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
+# load local zshrc after
+[[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
 
 end_time="$(date +%s)"
 echo .zshrc: $((end_time - start_time)) seconds
