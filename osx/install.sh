@@ -249,6 +249,7 @@ npm install -g browserify
 npm install -g caniuse-cmd
 npm install -g csslint
 npm install -g electron-prebuilt
+npm install -g foundation-cli
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g htmlhint
