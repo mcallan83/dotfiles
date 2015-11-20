@@ -1,6 +1,15 @@
-# edit configs
-alias zshrc="$EDITOR ~/.zshrc"
+################################################################################
+# Filename: zsh/oh-my-zsh/aliases.zsh
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
+#
+# ZSH Aliases.
+################################################################################
+
+# edit config files
+alias hosts="sudo $EDITOR /etc/hosts"
 alias vimrc="$EDITOR ~/.vimrc"
+alias zshrc="$EDITOR ~/.zshrc"
 
 # atom
 alias aa="atom ."
@@ -22,14 +31,12 @@ alias -g G='| grep'
 # json pretty print
 alias -g J='| python -m json.tool'
 
-# hosts file
-alias hosts="sudo $EDITOR /etc/hosts"
-
 # k
+# https://github.com/rimraf/k
 alias ka="clear;k -a" # k with hidden files
 alias kd="clear;k -d" # k with directories only
 
-# laravel
+# laravel artisan`
 alias la5m="la5 migrate"
 alias la5mb="la5 migrate:rollback"
 alias la5mr="la5 migrate:refresh --seed"
@@ -71,9 +78,11 @@ alias vl="vim -N -u NONE" #vim with no plugins
 alias amazon='web_search duckduckgo \!az'
 
 # z
+# https://github.com/rupa/z
 alias zc="z -c" # z in current folder only
 
 # zshmarks
+# https://github.com/jocelynmallon/zshmarks
 alias g="jump"
 alias s="bookmark"
 alias d="deletemark"
