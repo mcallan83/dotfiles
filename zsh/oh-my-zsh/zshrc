@@ -1,10 +1,19 @@
 start_time="$(date +%s)"
 
-# load local zshrc after
+# zshrc before
 [[ -r ~/.zshrc.before ]] && . ~/.zshrc.before
+
+# determine os
+DOTFILES_OS=''
+if [[ $(uname) == 'Linux' ]]; then
+    DOTFILES_OS='LINUX'
+elif [[ $(uname) == 'Darwin' ]]; then
+    DOTFILES_OS='OSX'
+fi
 
 export ZSH=$HOME/.oh-my-zsh
 export DOTFILES=$HOME/.dotfiles
+export DOTFILES_OS
 
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
@@ -32,7 +41,7 @@ source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
 source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 
-# load local zshrc after
+# zshrc after
 [[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
 
 end_time="$(date +%s)"
