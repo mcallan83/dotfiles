@@ -3,17 +3,20 @@ start_time="$(date +%s)"
 # zshrc before
 [[ -r ~/.zshrc.before ]] && . ~/.zshrc.before
 
+# disable oh-my-zsh auto update
+DISABLE_AUTO_UPDATE=true
+
 # determine os
-DOTFILES_OS=''
+DOTFILES_PLATFORM=''
 if [[ $(uname) == 'Linux' ]]; then
-    DOTFILES_OS='LINUX'
+    DOTFILES_PLATFORM='LINUX'
 elif [[ $(uname) == 'Darwin' ]]; then
-    DOTFILES_OS='OSX'
+    DOTFILES_PLATFORM='OSX'
 fi
 
-export ZSH=$HOME/.oh-my-zsh
+export DOTFILES_PLATFORM
 export DOTFILES=$HOME/.dotfiles
-export DOTFILES_OS
+export ZSH=$DOTFILES/submodules/zsh/oh-my-zsh
 
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
