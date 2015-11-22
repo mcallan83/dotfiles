@@ -16,7 +16,7 @@ fi
 
 export DOTFILES_PLATFORM
 export DOTFILES=$HOME/.dotfiles
-export ZSH=$DOTFILES/submodules/zsh/oh-my-zsh
+export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
