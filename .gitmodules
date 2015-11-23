@@ -1,42 +1,39 @@
 [submodule "submodules/zsh/pure"]
-	path = submodules/zsh/pure
-	url = https://github.com/sindresorhus/pure
+    path = submodules/zsh/pure
+    url = https://github.com/sindresorhus/pure
 [submodule "submodules/zsh/k"]
-	path = vendor/zsh/k
-	url = https://github.com/rimraf/k
+    path = vendor/zsh/k
+    url = https://github.com/rimraf/k
 [submodule "submodules/zsh/zshmarks"]
-	path = submodules/zsh/zshmarks
-	url = https://github.com/jocelynmallon/zshmarks
+    path = submodules/zsh/zshmarks
+    url = https://github.com/jocelynmallon/zshmarks
 [submodule "submodules/zsh/zsh-syntax-highlighting"]
-	path = submodules/zsh/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting
+    path = submodules/zsh/zsh-syntax-highlighting
+    url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "submodules/zsh/zsh-autosuggestions"]
-	path = submodules/zsh/zsh-autosuggestions
-	url = https://github.com/tarruda/zsh-autosuggestions
+    path = submodules/zsh/zsh-autosuggestions
+    url = https://github.com/tarruda/zsh-autosuggestions
 [submodule "submodules/zsh/oh-my-zsh"]
-	path = vendor/zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
-[submodule "submodules/zsh/z"]
-	path = submodules/zsh/z
-	url = https://github.com/rupa/z
+    path = vendor/zsh/oh-my-zsh
+    url = https://github.com/robbyrussell/oh-my-zsh
 [submodule "submodules/color/Cobalt2-iterm"]
-	path = submodules/color/Cobalt2-iterm
-	url = https://github.com/wesbos/Cobalt2-iterm
+    path = submodules/color/Cobalt2-iterm
+    url = https://github.com/wesbos/Cobalt2-iterm
 [submodule "submodules/color/solarized"]
-	path = submodules/color/solarized
-	url = https://github.com/altercation/solarized/
+    path = submodules/color/solarized
+    url = https://github.com/altercation/solarized/
 [submodule "submodules/color/iTerm2-Color-Schemes"]
-	path = submodules/color/iTerm2-Color-Schemes
-	url = https://github.com/mbadolato/iTerm2-Color-Schemes
+    path = submodules/color/iTerm2-Color-Schemes
+    url = https://github.com/mbadolato/iTerm2-Color-Schemes
 [submodule "submodules/color/base16-shell"]
-	path = submodules/color/base16-shell
-	url = https://github.com/chriskempson/base16-shell
+    path = submodules/color/base16-shell
+    url = https://github.com/chriskempson/base16-shell
 [submodule "submodules/color/dircolors-solarized"]
-	path = submodules/color/dircolors-solarized
-	url = https://github.com/seebi/dircolors-solarized
+    path = submodules/color/dircolors-solarized
+    url = https://github.com/seebi/dircolors-solarized
 [submodule "submodules/zsh/zsh-brew-services"]
-	path = submodules/zsh/zsh-brew-services
-	url = https://github.com/vasyharan/zsh-brew-services
+    path = submodules/zsh/zsh-brew-services
+    url = https://github.com/vasyharan/zsh-brew-services
 [submodule "submodules/zsh/pure-plus"]
-	path = submodules/zsh/pure-plus
-	url = https://github.com/mcallan83/pure-plus
+    path = submodules/zsh/pure-plus
+    url = https://github.com/mcallan83/pure-plus
