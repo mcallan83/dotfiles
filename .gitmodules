@@ -34,3 +34,6 @@
 [submodule "submodules/zsh/pure-plus"]
     path = submodules/zsh/pure-plus
     url = https://github.com/mcallan83/pure-plus
+[submodule "vendor/zsh/k"]
+	path = vendor/zsh/k
+	url = https://github.com/rimraf/k
