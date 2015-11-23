@@ -1,9 +1,6 @@
 [submodule "submodules/zsh/pure"]
     path = submodules/zsh/pure
     url = https://github.com/sindresorhus/pure
-[submodule "submodules/zsh/k"]
-    path = vendor/zsh/k
-    url = https://github.com/rimraf/k
 [submodule "submodules/zsh/zshmarks"]
     path = submodules/zsh/zshmarks
     url = https://github.com/jocelynmallon/zshmarks
