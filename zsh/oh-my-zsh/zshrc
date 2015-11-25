@@ -7,14 +7,13 @@ start_time="$(date +%s)"
 DISABLE_AUTO_UPDATE=true
 
 # determine os
-DOTFILES_PLATFORM=''
+PLATFORM=''
 if [[ $(uname) == 'Linux' ]]; then
-    DOTFILES_PLATFORM='LINUX'
+    export PLATFORM='LINUX'
 elif [[ $(uname) == 'Darwin' ]]; then
-    DOTFILES_PLATFORM='OSX'
+    export PLATFORM='OSX'
 fi
 
-export DOTFILES_PLATFORM
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 
@@ -48,4 +47,4 @@ source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 [[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
 
 end_time="$(date +%s)"
-echo .zshrc: $((end_time - start_time)) seconds
+# echo .zshrc: $((end_time - start_time)) seconds
