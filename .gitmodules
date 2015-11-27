@@ -34,3 +34,6 @@
 [submodule "vendor/zsh/k"]
 	path = vendor/zsh/k
 	url = https://github.com/rimraf/k
+[submodule "vendor/vagrant/scotch-box"]
+	path = vendor/vagrant/scotch-box
+	url = https://github.com/scotch-io/scotch-box
