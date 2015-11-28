@@ -255,6 +255,7 @@ npm install -g grunt-cli
 npm install -g gulp
 npm install -g htmlhint
 npm install -g imageoptim-cli
+npm install -g iron-node
 npm install -g jshint
 npm install -g less
 npm install -g modernizr
