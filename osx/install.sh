@@ -71,6 +71,7 @@ brew install coreutils
 brew install ctags
 brew install dark-mode
 brew install ddrescue
+brew install devd
 brew install dnsmasq
 brew install docker
 brew install docker-compose
