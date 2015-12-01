@@ -263,6 +263,7 @@ npm install -g less
 npm install -g modernizr
 npm install -g node-inspector
 npm install -g node-sass
+npm install -g nodemon
 npm install -g npm-check
 npm install -g phantomjs
 npm install -g psi
