@@ -194,9 +194,9 @@ brew cask install font-open-sans
 brew cask install font-source-code-pro
 
 # Sudoless NFS with Vagrant
-banner "Configure: Sudoless NFS with Vagrant"
 # https://gist.github.com/joemaller/6764700
 # http://stackoverflow.com/questions/323957
+banner "Configure: Sudoless NFS with Vagrant"
 
 TMP=$(mktemp -t vagrant_sudoers)
 sudo cat /etc/sudoers > $TMP
@@ -217,7 +217,7 @@ fi
 
 rm -f $TMP
 
-# Move google chrome to ~/Applications for 1Password.
+# Move Chrome to ~/Applications for 1Password.
 banner "Moving Chrome to ~/Applications"
 rm -rf "$HOME/Applications/Google Chrome.app"
 mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/Applications/Google Chrome.app/"
