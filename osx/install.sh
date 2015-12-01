@@ -270,6 +270,7 @@ npm install -g psi
 npm install -g stylestats
 npm install -g svgo
 npm install -g torrentflix
+npm install -g uglify-js
 npm install -g updtr
 npm install -g vmd
 npm install -g vtop
