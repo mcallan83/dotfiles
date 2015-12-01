@@ -108,6 +108,7 @@ brew install tmux
 brew install tree
 brew install vim --override-system-vi
 brew install wget --with-iri
+brew install xmlstarlet
 brew install youtube-dl
 brew install zsh
 
