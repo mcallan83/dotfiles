@@ -18,6 +18,12 @@
 # - [ ] make script provisionable, so it can be run at any time and will only
 #       install what is missing
 #       - [ ] php config
+#           - https://github.com/squizlabs/PHP_CodeSniffer
+#           - http://cs.sensiolabs.org/
+#           - http://phpmd.org/
+#           - https://github.com/sebastianbergmann/phpcpd/
+#           - https://github.com/JakubOnderka/PHP-Parallel-Lint
+#           - http://pdepend.org/
 #       - [ ] vagrant nfs config
 #       - [ ] move chrome to apps folder
 #
