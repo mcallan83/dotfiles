@@ -41,6 +41,7 @@ alias la5m="la5 migrate"
 alias la5mb="la5 migrate:rollback"
 alias la5mr="la5 migrate:refresh --seed"
 alias la5r="la5 route:list"
+alias la5s="la5 serve"
 alias la5vc="la5 view:clear"
 
 # less
