@@ -20,6 +20,10 @@ alias cdb="cd -"
 # clear screen
 alias cl="clear"
 
+# dedv
+# https://github.com/cortesi/devd
+alias dv="devd -ol ."
+
 # git
 alias gi="git init"
 alias gs="gst"
