@@ -272,6 +272,7 @@ npm install -g node-sass
 npm install -g nodemon
 npm install -g npm-check
 npm install -g phantomjs
+npm install -g plop
 npm install -g psi
 npm install -g stylestats
 npm install -g svgo
