@@ -256,6 +256,7 @@ npm install -g browser-sync
 npm install -g browserify
 npm install -g caniuse-cmd
 npm install -g csslint
+npm install -g duo
 npm install -g electron-prebuilt
 npm install -g eslint
 npm install -g foundation-cli
