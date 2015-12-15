@@ -32,6 +32,9 @@ alias gsub="git submodule foreach git pull origin master"
 # grep
 alias -g G='| grep'
 
+# hub
+alias hb="hub browse" # open up github repo in browser
+
 # json pretty print
 alias -g J='| python -m json.tool'
 
