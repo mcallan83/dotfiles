@@ -43,7 +43,7 @@ alias -g J='| python -m json.tool'
 alias ka="clear;k -a" # k with hidden files
 alias kd="clear;k -d" # k with directories only
 
-# laravel artisan`
+# laravel artisan
 alias la5m="la5 migrate"
 alias la5mb="la5 migrate:rollback"
 alias la5mr="la5 migrate:refresh --seed"
@@ -82,9 +82,11 @@ alias vu="vagrant up"
 alias v="vim"
 alias vl="vim -N -u NONE" #vim with no plugins
 
-#web-search
+# web-search
 alias amazon='web_search duckduckgo \!az'
 
+# youtube-dl
+alias ytd="youtube-dl"
 # z
 # https://github.com/rupa/z
 alias zc="z -c" # z in current folder only
