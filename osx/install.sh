@@ -259,6 +259,8 @@ npm install -g csslint
 npm install -g duo
 npm install -g electron-prebuilt
 npm install -g eslint
+npm install -g express-generator
+npm install -g forever
 npm install -g foundation-cli
 npm install -g grunt-cli
 npm install -g gulp
@@ -275,6 +277,7 @@ npm install -g nodemon
 npm install -g npm-check
 npm install -g phantomjs
 npm install -g plop
+npm install -g pm2
 npm install -g psi
 npm install -g stylestats
 npm install -g svgo
@@ -307,6 +310,7 @@ rvm requirements
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 banner "Installing Ruby Gems"
+
 gem install bundler
 gem install compass
 gem install github-pages
@@ -320,6 +324,7 @@ gem install tmuxinator
 ################################################################################
 
 banner "Installing Python Packages"
+
 pip install gsutil
 pip install httpie
 pip install ohmu
