@@ -18,7 +18,7 @@ function adminer {
     fi
 }
 
-# run a web server from current folder
+# run a web server from current folder (python)
 function server() {
     local port="${1:-8000}"
     open "http://localhost:${port}/"
@@ -41,4 +41,10 @@ pman() {
 brewfix() {
     sudo chown $(whoami):admin /usr/local
     sudo chown -R $(whoami):admin /usr/local
+}
+
+# google feeling lucky search
+luck() {
+    url=$(echo "http://www.google.com/search?hl=en&q=$@&btnI=I%27m+Feeling+Lucky" | sed 's/ /+/g');
+    open $url;
 }
