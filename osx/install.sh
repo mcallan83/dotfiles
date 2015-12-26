@@ -280,6 +280,7 @@ npm install -g phantomjs
 npm install -g plop
 npm install -g pm2
 npm install -g psi
+npm install -g sloc
 npm install -g stylestats
 npm install -g svgo
 npm install -g torrentflix
