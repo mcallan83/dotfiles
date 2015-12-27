@@ -316,6 +316,7 @@ banner "Installing Ruby Gems"
 gem install bundler
 gem install compass
 gem install github-pages
+gem install gollum
 gem install jekyll
 gem install sass
 gem install scss_lint
