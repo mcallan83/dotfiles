@@ -291,6 +291,7 @@ npm install -g vtop
 npm install -g webpack
 npm install -g webpack-dev-server
 npm install -g yo
+npm install -g tldr
 
 ################################################################################
 # Ruby, RVM, and Gems
