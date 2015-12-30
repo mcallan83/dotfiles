@@ -330,6 +330,7 @@ gem install tmuxinator
 
 banner "Installing Python Packages"
 
+pip install aws-shell
 pip install gsutil
 pip install httpie
 pip install ohmu
