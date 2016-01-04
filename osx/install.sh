@@ -253,6 +253,7 @@ composer global require 'vinkla/climb'
 banner "Installing NPM Packages"
 
 npm install -g babel-cli
+npm install -g babel-eslint
 npm install -g bower
 npm install -g browser-sync
 npm install -g browserify
@@ -270,9 +271,11 @@ npm install -g htmlhint
 npm install -g imageoptim-cli
 npm install -g iron-node
 npm install -g jscs
+npm install -g jsdoc
 npm install -g jshint
 npm install -g less
 npm install -g modernizr
+npm install -g nodal
 npm install -g node-inspector
 npm install -g node-sass
 npm install -g nodemon
@@ -284,7 +287,9 @@ npm install -g psi
 npm install -g sloc
 npm install -g stylestats
 npm install -g svgo
+npm install -g tldr
 npm install -g torrentflix
+npm install -g typescript
 npm install -g uglify-js
 npm install -g updtr
 npm install -g vmd
@@ -292,7 +297,6 @@ npm install -g vtop
 npm install -g webpack
 npm install -g webpack-dev-server
 npm install -g yo
-npm install -g tldr
 
 ################################################################################
 # Ruby, RVM, and Gems
