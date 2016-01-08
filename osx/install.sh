@@ -294,6 +294,7 @@ npm install -g uglify-js
 npm install -g updtr
 npm install -g vmd
 npm install -g vtop
+npm install -g vue-cli
 npm install -g webpack
 npm install -g webpack-dev-server
 npm install -g yo
