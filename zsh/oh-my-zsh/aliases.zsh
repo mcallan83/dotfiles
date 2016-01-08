@@ -58,6 +58,7 @@ alias -g L='| less'
 alias n="npm"
 alias ni="npm install"
 alias nig="npm install -g"
+alias niy="npm init -y"
 alias nr="npm run"
 alias nu="npm update"
 
