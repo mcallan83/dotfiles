@@ -89,6 +89,7 @@ alias amazon='web_search duckduckgo \!az'
 
 # youtube-dl
 alias ytd="youtube-dl"
+
 # z
 # https://github.com/rupa/z
 alias zc="z -c" # z in current folder only
