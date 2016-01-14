@@ -329,6 +329,7 @@ gem install jekyll
 gem install sass
 gem install scss_lint
 gem install tmuxinator
+gem install travis
 
 ################################################################################
 # Python Packages
