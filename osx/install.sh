@@ -70,6 +70,7 @@ brew tap neovim/neovim
 
 banner "Installing Homebrew Packages"
 brew install --HEAD neovim
+brew install autossh
 brew install bash-completion
 brew install boot2docker
 brew install brew-cask
