@@ -46,7 +46,7 @@ banner() {
 # Homebrew
 ################################################################################
 
-# Install Homebrew if not installed
+# Install Homebrew
 if test ! $(which brew); then
     banner "Installing Homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
