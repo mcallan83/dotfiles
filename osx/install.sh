@@ -274,6 +274,7 @@ npm install -g iron-node
 npm install -g jscs
 npm install -g jsdoc
 npm install -g jshint
+npm install -g karma-cli
 npm install -g less
 npm install -g modernizr
 npm install -g nodal
