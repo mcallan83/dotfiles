@@ -42,6 +42,7 @@
 		"SideBarEnhancements",
 		"Solarized Color Scheme",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
 		"SublimeLinter-php",
