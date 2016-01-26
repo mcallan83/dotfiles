@@ -52,7 +52,19 @@
 				"excludes":
 				[
 				]
-			}
+			},
+			"phpcs": {
+                "@disable": false,
+                "args": [
+                    "-n"
+                ],
+                "excludes": [
+                    "*.phtml",
+                    "*.twig",
+					"*.blade.php"
+                ],
+                "standard": "PSR2"
+            }
 		},
 		"mark_style": "outline",
 		"no_column_highlights_line": true,
