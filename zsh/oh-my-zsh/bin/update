@@ -26,8 +26,8 @@ sudo -v
 # homebrew
 if test $(which brew); then
     banner "Homebrew"
-    sudo chown $(whoami):admin /usr/local
-    sudo chown -R $(whoami):admin /usr/local
+    # sudo chown $(whoami):admin /usr/local
+    # sudo chown -R $(whoami):admin /usr/local
     brew update
     brew upgrade --all
     brew cleanup

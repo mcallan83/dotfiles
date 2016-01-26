@@ -270,6 +270,7 @@ npm install -g foundation-cli
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g htmlhint
+npm install -g http-server
 npm install -g imageoptim-cli
 npm install -g iron-node
 npm install -g jade
@@ -353,8 +354,8 @@ pip install pygments
 banner "Update and Cleanup"
 
 # homebrew
-sudo chown $(whoami):admin /usr/local
-sudo chown -R $(whoami):admin /usr/local
+# sudo chown $(whoami):admin /usr/local
+# sudo chown -R $(whoami):admin /usr/local
 brew update
 brew upgrade --all
 brew cleanup
