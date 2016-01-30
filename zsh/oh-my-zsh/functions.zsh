@@ -31,6 +31,11 @@ function als() {
     alias | grep $1
 }
 
+# create backup copy of file with .bak extension appended on end
+function bak() {
+    cp "${1}"{,.bak}
+}
+
 # osx only
 
 pman() {
