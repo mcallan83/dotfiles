@@ -237,16 +237,17 @@ mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/
 
 banner "Installing Composer Packages"
 
-composer global require 'codegyre/robo'
-composer global require 'jakub-onderka/php-parallel-lint'
-composer global require 'johnnyfreeman/artisan-cli'
-composer global require 'kherge/box'
-composer global require 'laravel/homestead'
-composer global require 'laravel/installer'
-composer global require 'laravel/lumen-installer'
-composer global require 'phpunit/phpunit'
-composer global require 'sebastian/phpcpd'
-composer global require 'vinkla/climb'
+composer global require codegyre/robo
+composer global require hirak/prestissimo #composer parallel install plugin
+composer global require jakub-onderka/php-parallel-lint
+composer global require johnnyfreeman/artisan-cli
+composer global require kherge/box
+composer global require laravel/homestead
+composer global require laravel/installer
+composer global require laravel/lumen-installer
+composer global require phpunit/phpunit
+composer global require sebastian/phpcpd
+composer global require vinkla/climb
 
 ################################################################################
 # NPM Packages
