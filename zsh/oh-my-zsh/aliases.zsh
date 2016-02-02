@@ -3,7 +3,6 @@
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
-# ZSH Aliases.
 ################################################################################
 
 # edit config files

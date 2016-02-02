@@ -6,14 +6,6 @@ start_time="$(date +%s)"
 # disable oh-my-zsh auto update
 DISABLE_AUTO_UPDATE=true
 
-# determine os
-PLATFORM=''
-if [[ $(uname) == 'Linux' ]]; then
-    export PLATFORM='LINUX'
-elif [[ $(uname) == 'Darwin' ]]; then
-    export PLATFORM='OSX'
-fi
-
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 
@@ -37,6 +29,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+source $DOTFILES/zsh/oh-my-zsh/platform.zsh
 source $DOTFILES/zsh/oh-my-zsh/path.zsh
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/oh-my-zsh/exports.zsh
