@@ -3,5 +3,5 @@
     "phpcbf_executable_path": ".composer/vendor/bin/phpcbf",
     "phpcs_php_path": ".composer/vendor/bin/phpcs",
     "phpmd_executable_path": ".composer/vendor/bin/phpmd",
-    "phpmd_run": true,
+    "phpmd_run": false,
 }
