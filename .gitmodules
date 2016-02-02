@@ -28,12 +28,9 @@
 [submodule "submodules/color/dircolors-solarized"]
     path = submodules/color/dircolors-solarized
     url = https://github.com/seebi/dircolors-solarized
-[submodule "submodules/zsh/zsh-brew-services"]
-    path = submodules/zsh/zsh-brew-services
-    url = https://github.com/vasyharan/zsh-brew-services
 [submodule "vendor/zsh/k"]
-	path = vendor/zsh/k
-	url = https://github.com/rimraf/k
+    path = vendor/zsh/k
+    url = https://github.com/rimraf/k
 [submodule "vendor/vagrant/scotch-box"]
-	path = vendor/vagrant/scotch-box
-	url = https://github.com/scotch-io/scotch-box
+    path = vendor/vagrant/scotch-box
+    url = https://github.com/scotch-io/scotch-box
