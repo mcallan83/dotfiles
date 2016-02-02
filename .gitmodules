@@ -31,6 +31,3 @@
 [submodule "vendor/vagrant/scotch-box"]
     path = vendor/vagrant/scotch-box
     url = https://github.com/scotch-io/scotch-box
-[submodule "vendor/zsh/oh-my-zsh"]
-	path = vendor/zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
