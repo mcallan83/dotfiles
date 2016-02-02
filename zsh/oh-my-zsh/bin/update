@@ -35,6 +35,10 @@ if test $(which brew); then
     brew prune
 fi
 
+# phpcs stops working in sublime without reinstalling?
+brew remove php-code-sniffer
+brew install php-code-sniffer
+
 # composer
 if test $(which composer); then
     banner "Composer"
