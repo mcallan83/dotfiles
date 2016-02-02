@@ -31,3 +31,6 @@
 [submodule "vendor/zsh/zsh-autosuggestions"]
     path = vendor/zsh/zsh-autosuggestions
     url = https://github.com/tarruda/zsh-autosuggestions
+[submodule "vendor/zsh/zsh-syntax-highlighting"]
+	path = vendor/zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
