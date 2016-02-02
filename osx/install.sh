@@ -14,16 +14,7 @@
 #
 # TODO:
 #
-# - [ ] php linters (phpcs, phpmd, phploc, etc...)
 # - [ ] make script provisionable, so it can be run at any time and will only
-#       install what is missing
-#       - [ ] php config
-#           - https://github.com/squizlabs/PHP_CodeSniffer
-#           - http://cs.sensiolabs.org/
-#           - http://phpmd.org/
-#           - https://github.com/sebastianbergmann/phpcpd/
-#           - https://github.com/JakubOnderka/PHP-Parallel-Lint
-#           - http://pdepend.org/
 #       - [ ] vagrant nfs config
 #       - [ ] move chrome to apps folder
 #
@@ -129,13 +120,13 @@ echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
 
 brew install homebrew/php/adminer
 brew install homebrew/php/composer
-brew install homebrew/php/php-code-sniffer
-brew install homebrew/php/php-cs-fixer
+#brew install homebrew/php/php-code-sniffer
+#brew install homebrew/php/php-cs-fixer
 brew install homebrew/php/php56-intl
 brew install homebrew/php/php56-mcrypt
 brew install homebrew/php/php56-mongo
-brew install homebrew/php/phploc
-brew install homebrew/php/phpmd
+#brew install homebrew/php/phploc
+#brew install homebrew/php/phpmd
 
 # Homebrew Casks
 banner "Installing Homebrew Casks"
@@ -238,15 +229,19 @@ mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/
 banner "Installing Composer Packages"
 
 composer global require codegyre/robo
-composer global require hirak/prestissimo #composer parallel install plugin
+composer global require hirak/prestissimo
 composer global require jakub-onderka/php-parallel-lint
 composer global require johnnyfreeman/artisan-cli
 composer global require kherge/box
 composer global require laravel/homestead
 composer global require laravel/installer
 composer global require laravel/lumen-installer
+composer global require pdepend/pdepend
+composer global require phploc/phploc
+composer global require phpmd/phpmd
 composer global require phpunit/phpunit
 composer global require sebastian/phpcpd
+composer global require squizlabs/php_codesniffer
 composer global require vinkla/climb
 
 ################################################################################
