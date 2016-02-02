@@ -243,6 +243,7 @@ composer global require mayflower/php-codebrowser
 composer global require pdepend/pdepend
 composer global require phploc/phploc
 composer global require phpmd/phpmd
+composer global require phpro/grumphp
 composer global require phpunit/phpunit
 composer global require sebastian/phpcpd
 composer global require squizlabs/php_codesniffer
