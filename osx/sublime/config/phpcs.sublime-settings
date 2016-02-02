@@ -1,4 +1,6 @@
 {
-    "phpcs_php_path": "/usr/local/bin/phpcs",
-    "php_cs_fixer_executable_path": "/usr/local/bin/php-cs-fixer",
+    "phpcs_php_path": ".composer/vendor/bin/phpcs",
+    "php_cs_fixer_executable_path": ".composer/vendor/bin/php-cs-fixer",
+    "phpcbf_executable_path": ".composer/vendor/bin/phpcbf",
+    "phpmd_executable_path": ".composer/vendor/bin/phpmd"
 }
