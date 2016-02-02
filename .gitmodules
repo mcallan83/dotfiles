@@ -10,9 +10,6 @@
 [submodule "submodules/zsh/zsh-autosuggestions"]
     path = submodules/zsh/zsh-autosuggestions
     url = https://github.com/tarruda/zsh-autosuggestions
-[submodule "submodules/zsh/oh-my-zsh"]
-    path = vendor/zsh/oh-my-zsh
-    url = https://github.com/robbyrussell/oh-my-zsh
 [submodule "submodules/color/Cobalt2-iterm"]
     path = submodules/color/Cobalt2-iterm
     url = https://github.com/wesbos/Cobalt2-iterm
