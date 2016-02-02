@@ -202,6 +202,7 @@ banner "Configure: Sudoless NFS with Vagrant"
 
 TMP=$(mktemp -t vagrant_sudoers)
 sudo cat /etc/sudoers > $TMP
+#sed '/# VAGRANT NFS START/,/# VAGRANT NFS END/d' $TMP
 cat >> $TMP <<EOF
 
 # VAGRANT NFS START
