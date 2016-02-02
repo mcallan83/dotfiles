@@ -10,9 +10,6 @@
 [submodule "submodules/zsh/zsh-autosuggestions"]
     path = submodules/zsh/zsh-autosuggestions
     url = https://github.com/tarruda/zsh-autosuggestions
-[submodule "submodules/color/Cobalt2-iterm"]
-    path = submodules/color/Cobalt2-iterm
-    url = https://github.com/wesbos/Cobalt2-iterm
 [submodule "submodules/color/solarized"]
     path = submodules/color/solarized
     url = https://github.com/altercation/solarized/
@@ -32,5 +29,5 @@
     path = vendor/zsh/oh-my-zsh
     url = https://github.com/robbyrussell/oh-my-zsh
 [submodule "vendor/zsh/k"]
-	path = vendor/zsh/k
-	url = https://github.com/rimraf/k
+    path = vendor/zsh/k
+    url = https://github.com/rimraf/k
