@@ -31,3 +31,6 @@
 [submodule "vendor/zsh/pure"]
     path = vendor/zsh/pure
     url = https://github.com/sindresorhus/pure
+[submodule "vendor/zsh/zsh-autosuggestions"]
+	path = vendor/zsh/zsh-autosuggestions
+	url = https://github.com/tarruda/zsh-autosuggestions
