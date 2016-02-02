@@ -17,6 +17,7 @@
 # - [ ] make script provisionable, so it can be run at any time and will only
 #       - [ ] vagrant nfs config
 #       - [ ] move chrome to apps folder
+#       - [ ] php mongo
 #
 ################################################################################
 
@@ -117,6 +118,7 @@ banner "Installing PHP 5.6"
 brew install homebrew/php/php56
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
+#echo "extension=mongo.so" >> /usr/local/etc/php/5.6/php.ini
 
 brew install homebrew/php/adminer
 brew install homebrew/php/composer
@@ -236,6 +238,7 @@ composer global require kherge/box
 composer global require laravel/homestead
 composer global require laravel/installer
 composer global require laravel/lumen-installer
+composer global require mayflower/php-codebrowser
 composer global require pdepend/pdepend
 composer global require phploc/phploc
 composer global require phpmd/phpmd
