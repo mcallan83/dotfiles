@@ -10,9 +10,6 @@
 [submodule "submodules/zsh/zsh-autosuggestions"]
     path = submodules/zsh/zsh-autosuggestions
     url = https://github.com/tarruda/zsh-autosuggestions
-[submodule "submodules/color/solarized"]
-    path = submodules/color/solarized
-    url = https://github.com/altercation/solarized/
 [submodule "vendor/vagrant/scotch-box"]
     path = vendor/vagrant/scotch-box
     url = https://github.com/scotch-io/scotch-box
@@ -32,5 +29,5 @@
     path = vendor/color/dircolors-solarized
     url = https://github.com/seebi/dircolors-solarized
 [submodule "vendor/color/iTerm2-Color-Schemes"]
-	path = vendor/color/iTerm2-Color-Schemes
-	url = https://github.com/mbadolato/iTerm2-Color-Schemes
+    path = vendor/color/iTerm2-Color-Schemes
+    url = https://github.com/mbadolato/iTerm2-Color-Schemes
