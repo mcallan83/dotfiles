@@ -1,1 +1,1 @@
-../../../submodules/zsh/pure/async.zsh
+../../../vendor/zsh/pure/async.zsh
