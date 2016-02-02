@@ -1,9 +1,6 @@
 [submodule "submodules/zsh/zshmarks"]
     path = submodules/zsh/zshmarks
     url = https://github.com/jocelynmallon/zshmarks
-[submodule "submodules/zsh/zsh-syntax-highlighting"]
-    path = submodules/zsh/zsh-syntax-highlighting
-    url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "vendor/vagrant/scotch-box"]
     path = vendor/vagrant/scotch-box
     url = https://github.com/scotch-io/scotch-box
@@ -32,5 +29,5 @@
     path = vendor/zsh/pure
     url = https://github.com/sindresorhus/pure
 [submodule "vendor/zsh/zsh-autosuggestions"]
-	path = vendor/zsh/zsh-autosuggestions
-	url = https://github.com/tarruda/zsh-autosuggestions
+    path = vendor/zsh/zsh-autosuggestions
+    url = https://github.com/tarruda/zsh-autosuggestions
