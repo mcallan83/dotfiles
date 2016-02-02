@@ -31,3 +31,6 @@
 [submodule "vendor/color/dircolors-solarized"]
     path = vendor/color/dircolors-solarized
     url = https://github.com/seebi/dircolors-solarized
+[submodule "vendor/color/iTerm2-Color-Schemes"]
+	path = vendor/color/iTerm2-Color-Schemes
+	url = https://github.com/mbadolato/iTerm2-Color-Schemes
