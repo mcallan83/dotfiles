@@ -31,3 +31,6 @@
 [submodule "vendor/zsh/oh-my-zsh"]
     path = vendor/zsh/oh-my-zsh
     url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "vendor/zsh/k"]
+	path = vendor/zsh/k
+	url = https://github.com/rimraf/k
