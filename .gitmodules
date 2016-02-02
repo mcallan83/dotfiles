@@ -31,3 +31,6 @@
 [submodule "vendor/zsh/zsh-syntax-highlighting"]
     path = vendor/zsh/zsh-syntax-highlighting
     url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "vendor/zsh/zshmarks"]
+	path = vendor/zsh/zshmarks
+	url = https://github.com/jocelynmallon/zshmarks
