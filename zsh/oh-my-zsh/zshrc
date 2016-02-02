@@ -43,4 +43,4 @@ end_time="$(date +%s)"
 # echo .zshrc: $((end_time - start_time)) seconds
 
 # added by travis gem
-[ -f /Users/mcallan/.travis/travis.sh ] && source /Users/mcallan/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
