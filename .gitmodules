@@ -13,9 +13,6 @@
 [submodule "submodules/color/solarized"]
     path = submodules/color/solarized
     url = https://github.com/altercation/solarized/
-[submodule "submodules/color/iTerm2-Color-Schemes"]
-    path = submodules/color/iTerm2-Color-Schemes
-    url = https://github.com/mbadolato/iTerm2-Color-Schemes
 [submodule "vendor/vagrant/scotch-box"]
     path = vendor/vagrant/scotch-box
     url = https://github.com/scotch-io/scotch-box
@@ -32,5 +29,5 @@
     path = vendor/color/base16-shell
     url = https://github.com/chriskempson/base16-shell
 [submodule "vendor/color/dircolors-solarized"]
-	path = vendor/color/dircolors-solarized
-	url = https://github.com/seebi/dircolors-solarized
+    path = vendor/color/dircolors-solarized
+    url = https://github.com/seebi/dircolors-solarized
