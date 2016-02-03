@@ -2,7 +2,6 @@
 # Filename: zsh/oh-my-zsh/aliases.zsh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
-#
 ################################################################################
 
 # edit config files
