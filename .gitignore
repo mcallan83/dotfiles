@@ -2,8 +2,9 @@
 *.DS_Store
 
 # atom
+osx/atom/config/blob-store/
 osx/atom/config/.apm/
 osx/atom/config/.node-gyp/
-osx/atom/config/packages/
 osx/atom/config/compile-cache/
+osx/atom/config/packages/
 osx/atom/config/storage/
