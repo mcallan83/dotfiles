@@ -190,6 +190,7 @@ brew cask install qlmarkdown
 brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install quicklook-json
+brew cask install suspicious-package
 brew cask install webpquicklook
 
 brew cask install font-open-sans
