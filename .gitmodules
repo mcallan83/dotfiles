@@ -34,3 +34,6 @@
 [submodule "vendor/zsh/zshmarks"]
 	path = vendor/zsh/zshmarks
 	url = https://github.com/jocelynmallon/zshmarks
+[submodule "vendor/color/tomorrow-theme"]
+	path = vendor/color/tomorrow-theme
+	url = https://github.com/chriskempson/tomorrow-theme

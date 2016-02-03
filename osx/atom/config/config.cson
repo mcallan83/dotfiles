@@ -1,111 +1,111 @@
 "*":
-  "exception-reporting":
-    userId: "b8e11f25-b2c3-2a5b-4648-ee97e2377f45"
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    _analyticsUserId: "372dd3b9-c9a6-478d-b291-81b8575a50b4"
   core:
     themes: [
       "atom-dark-ui"
       "solarized-dark-syntax"
     ]
   editor:
+    fontFamily: "menlo"
+    fontSize: 16
     invisibles:
       eol: " "
-    fontSize: 16
-    fontFamily: "menlo"
     showIndentGuide: true
     showInvisibles: true
     tabLength: 4
-  "one-light-ui": {}
-  term2:
-    colors:
-      brightBlack:
-        red: 0
-        green: 30
-        blue: 39
-        alpha: 1
-      background:
-        red: 0
-        green: 30
-        blue: 39
-        alpha: 1
-      brightBlue:
-        red: 112
-        green: 130
-        blue: 132
-        alpha: 1
-      brightCyan:
-        red: 129
-        green: 144
-        blue: 144
-        alpha: 1
-      brightGreen:
-        red: 71
-        green: 91
-        blue: 98
-        alpha: 1
-      brightPurple:
-        red: 89
-        green: 86
-        blue: 168
-        alpha: 1
-      brightRed:
-        red: 189
-        green: 54
-        blue: 19
-        alpha: 1
-      brightWhite:
-        red: 252
-        green: 244
-        blue: 220
-        alpha: 1
-      normalBlack:
-        red: 0
-        green: 40
-        blue: 49
-        alpha: 1
-      normalBlue:
-        red: 33
-        green: 118
-        blue: 199
-        alpha: 1
-      normalCyan:
-        red: 47
-        green: 136
-        blue: 134
-        alpha: 1
-      normalGreen:
-        red: 115
-        green: 138
-        blue: 5
-        alpha: 1
-      normalPurple:
-        red: 198
-        green: 28
-        blue: 111
-        alpha: 1
-      normalRed:
-        red: 209
-        green: 28
-        blue: 36
-        alpha: 1
-      normalWhite:
-        red: 234
-        green: 227
-        blue: 203
-        alpha: 1
-      normalYellow:
-        red: 165
-        green: 119
-        blue: 6
-        alpha: 1
+  "exception-reporting":
+    userId: "b8e11f25-b2c3-2a5b-4648-ee97e2377f45"
+  linter: {}
+  "linter-php": {}
   "linter-phpcs":
-    executablePath: "/usr/local/bin/phpcs"
+    executablePath: ".composer/vendor/bin/phpcs"
     ignore: "*.blade.php"
     tabWidth: 4
     warningSeverity: 0
-  linter: {}
-  "linter-php": {}
   minimap: {}
-  "atom-beautify":
-    _analyticsUserId: "372dd3b9-c9a6-478d-b291-81b8575a50b4"
+  "one-light-ui": {}
+  term2:
+    colors:
+      background:
+        alpha: 1
+        blue: 39
+        green: 30
+        red: 0
+      brightBlack:
+        alpha: 1
+        blue: 39
+        green: 30
+        red: 0
+      brightBlue:
+        alpha: 1
+        blue: 132
+        green: 130
+        red: 112
+      brightCyan:
+        alpha: 1
+        blue: 144
+        green: 144
+        red: 129
+      brightGreen:
+        alpha: 1
+        blue: 98
+        green: 91
+        red: 71
+      brightPurple:
+        alpha: 1
+        blue: 168
+        green: 86
+        red: 89
+      brightRed:
+        alpha: 1
+        blue: 19
+        green: 54
+        red: 189
+      brightWhite:
+        alpha: 1
+        blue: 220
+        green: 244
+        red: 252
+      normalBlack:
+        alpha: 1
+        blue: 49
+        green: 40
+        red: 0
+      normalBlue:
+        alpha: 1
+        blue: 199
+        green: 118
+        red: 33
+      normalCyan:
+        alpha: 1
+        blue: 134
+        green: 136
+        red: 47
+      normalGreen:
+        alpha: 1
+        blue: 5
+        green: 138
+        red: 115
+      normalPurple:
+        alpha: 1
+        blue: 111
+        green: 28
+        red: 198
+      normalRed:
+        alpha: 1
+        blue: 36
+        green: 28
+        red: 209
+      normalWhite:
+        alpha: 1
+        blue: 203
+        green: 227
+        red: 234
+      normalYellow:
+        alpha: 1
+        blue: 6
+        green: 119
+        red: 165
+  welcome:
+    showOnStartup: false
