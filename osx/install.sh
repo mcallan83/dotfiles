@@ -97,6 +97,7 @@ brew install python
 brew install r
 brew install reattach-to-user-namespace
 brew install rem
+brew install shellcheck
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install sshrc
