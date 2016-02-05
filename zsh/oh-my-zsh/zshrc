@@ -27,7 +27,7 @@ plugins=(
     z
     zshmarks
     zsh-syntax-highlighting
-    zsh-autosuggestions
+    #zsh-autosuggestions
 )
 
 source $DOTFILES/zsh/oh-my-zsh/platform.zsh
@@ -36,7 +36,7 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
 source $DOTFILES/zsh/oh-my-zsh/functions.zsh
-source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
+#source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
 
 # zshrc after
 [[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
