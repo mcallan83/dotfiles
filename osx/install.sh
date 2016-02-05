@@ -123,13 +123,9 @@ echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
 
 brew install homebrew/php/adminer
 brew install homebrew/php/composer
-#brew install homebrew/php/php-code-sniffer
-#brew install homebrew/php/php-cs-fixer
 brew install homebrew/php/php56-intl
 brew install homebrew/php/php56-mcrypt
 brew install homebrew/php/php56-mongo
-#brew install homebrew/php/phploc
-#brew install homebrew/php/phpmd
 
 # Homebrew Casks
 banner "Installing Homebrew Casks"
