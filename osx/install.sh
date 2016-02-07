@@ -246,6 +246,7 @@ composer global require phpro/grumphp
 composer global require phpunit/phpunit
 composer global require sebastian/phpcpd
 composer global require squizlabs/php_codesniffer
+composer global require theseer/phpdox
 composer global require vinkla/climb
 
 ################################################################################
