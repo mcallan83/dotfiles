@@ -162,6 +162,7 @@ brew cask install keyboardcleantool
 brew cask install launchcontrol
 brew cask install launchrocket
 brew cask install libreoffice
+brew cask install macdown
 brew cask install numi
 brew cask install nvalt
 brew cask install robomongo
