@@ -12,7 +12,7 @@ alias zshrc="$EDITOR ~/.zshrc"
 # atom
 alias aa="atom ."
 
-# cd
+# cd back
 alias cdb="cd -"
 
 # clear screen
@@ -84,6 +84,10 @@ alias vl="vim -N -u NONE" #vim with no plugins
 
 # web-search
 alias amazon='web_search duckduckgo \!az'
+alias kickass='web_search duckduckgo \!kick'
+alias laradoc='web_search duckduckgo \!laravel'
+alias tz='web_search duckduckgo \!trz'
+alias we='web_search duckduckgo \!weatherunderground 60564'
 
 # youtube-dl
 alias ytd="youtube-dl"
