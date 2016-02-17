@@ -8,6 +8,7 @@
 alias hosts="sudo $EDITOR /etc/hosts"
 alias vimrc="$EDITOR ~/.vimrc"
 alias zshrc="$EDITOR ~/.zshrc"
+alias dots="cd ~/.dotfiles && $EDITOR"
 
 # atom
 alias aa="atom ."
@@ -62,6 +63,9 @@ alias nu="npm update"
 
 # ps
 alias psa="ps aux"
+
+# phpunit
+alias pu="phpunit"
 
 # sublime
 alias ss="stt"
