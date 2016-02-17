@@ -64,9 +64,6 @@ alias nu="npm update"
 # ps
 alias psa="ps aux"
 
-# phpunit
-alias pu="phpunit"
-
 # sublime
 alias ss="stt"
 
