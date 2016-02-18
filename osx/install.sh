@@ -18,7 +18,12 @@
 #       - [ ] vagrant nfs config
 #       - [ ] move chrome to apps folder
 #       - [ ] php mongo
-#
+# - [ ] configure dnsmasq to work with wildcard *.dev domains mapped to
+#       homestead
+#       - https://dyrynda.com.au/blog/dead-simple-domain-mapping-in-laravel-homestead
+#       - https://murze.be/2016/01/some-laravel-homestead-tips/
+# - [ ] map local dotfiles to ~/.dotfiles on homestead
+# - [ ] configure local php to work with mongo
 ################################################################################
 
 sudo -v
