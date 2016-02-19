@@ -84,7 +84,7 @@ NeoBundleCheck
     set tabstop=4       " tabs are spaces
     set softtabstop=4   " let backspace delete indent
 
-    set nojoinspaces    " prevents inserting two spaces after punctuation on join (J)
+    set nojoinspaces    " prevents inserting two spaces after punctuation on line join
 
     set wrap            " wrap lines
     set showbreak=⇇     " fancy character for line wraps
