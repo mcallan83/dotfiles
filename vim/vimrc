@@ -109,12 +109,14 @@ set smartcase
 
 " }}}
 " Plugins {{{
-
     " NerdTree {{{
 
             let NERDTreeHijackNetrw=0       " don't hijack netrw
             let NERDTreeMinimalUI=1         " minimal ui
             let g:NERDTreeShowHidden=1      " show hidden files
+
+            " --- ignore files ---
+            let NERDTreeIgnore=['.git', '.DS_Store', '\.swp$', '\.swo$']
 
             " --- toggle NerdTree ---
             nmap <D-1> :NERDTreeToggle<cr>
