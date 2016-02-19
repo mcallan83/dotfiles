@@ -29,6 +29,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'kien/ctrlp.vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -171,6 +172,16 @@ set smartcase
 
         let g:EasyMotion_smartcase = 1                  " map keys by smartcase
         nmap <leader><leader> <Plug>(easymotion-s2)
+
+    " }}}
+    " CtrlP {{{
+
+        let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
+        let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
+
+        nmap <D-p> :CtrlP<cr>
+        nmap <D-r> :CtrlPBufTag<cr>
+        nmap <D-e> :CtrlPMRUFiles<cr>
 
     " }}}
 " }}}
