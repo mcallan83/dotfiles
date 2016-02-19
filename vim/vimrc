@@ -27,6 +27,27 @@ NeoBundleCheck
 " Temporary Work Area {{{
 
 " }}}
+" Search {{{
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" }}}
+" Splits {{{
+
+    " splits open below and to the right
+    set splitbelow
+    set splitright
+
+    " move to splits easily
+    nmap <C-J> <C-W><C-J>
+    nmap <C-K> <C-W><C-K>
+    nmap <C-H> <C-W><C-H>
+    nmap <C-L> <C-W><C-L>
+
+" }}}
 " Mappings {{{
 
     "exit insert mode with JJ
