@@ -25,6 +25,8 @@ NeoBundle 'gosukiwi/vim-atom-dark'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
 
 call neobundle#end()
 filetype plugin indent on
