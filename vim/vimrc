@@ -30,10 +30,11 @@ NeoBundleCheck
 " }}}
 " General {{{
 
-    syntax on " enable syntax highligting
-    set number " enable line numbers
-    set noerrorbells visualbell t_vb= " disable bells
-    set backspace=indent,eol,start " make backspace behave like backspace
+    set number                          " enable line numbers
+    set noerrorbells visualbell t_vb=   " disable bells
+    set backspace=indent,eol,start      " make backspace behave like backspace
+    set laststatus=2                    " always show status bar
+    set noshowmode                      " hide current mode
 
     " --- encoding ---
     set encoding=utf-8
@@ -42,17 +43,18 @@ NeoBundleCheck
 " }}}
 " GUI {{{
 
+    syntax on
     set background=dark
 
     if has("gui_running")
 
         colorscheme atom-dark
-        set cursorline " highlight current line
-	set linespace=12 " line spacing
+        set cursorline          " highlight current line
+        set linespace=12        " line spacing
 
-	" --- disable scroll bars and tabs ---
-	set guioptions-=l
-	set guioptions-=L
+        " --- disable scroll bars and tabs ---
+        set guioptions-=l
+        set guioptions-=L
         set guioptions-=r
         set guioptions-=R
         set guioptions-=e
@@ -65,7 +67,7 @@ NeoBundleCheck
 
     else
 
-        set t_CO=256 " use 256 colors
+        set t_CO=256                    " use 256 colors
         colorscheme base16-solarized
 
     endif
@@ -81,11 +83,11 @@ set smartcase
 " }}}
 " Splits {{{
 
-    " splits open below and to the right
+    " -- open splits below and to the right ---
     set splitbelow
     set splitright
 
-    " move to splits easily
+    " --- navigate splits easily ---
     nmap <C-J> <C-W><C-J>
     nmap <C-K> <C-W><C-K>
     nmap <C-H> <C-W><C-H>
@@ -94,7 +96,7 @@ set smartcase
 " }}}
 " Mappings {{{
 
-    "exit insert mode with JJ
+    " exit insert mode with JJ
     inoremap jj <Esc>
 
     " set leader to ,
