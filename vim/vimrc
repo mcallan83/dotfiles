@@ -22,6 +22,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " ========
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'gosukiwi/vim-atom-dark'
+NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'scrooloose/nerdtree'
 
 call neobundle#end()
 filetype plugin indent on
@@ -105,6 +107,20 @@ set smartcase
     " edit vimrc in new tab
     nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
+" }}}
+" Plugins {{{
+
+    " NerdTree {{{
+
+            let NERDTreeHijackNetrw=0       " don't hijack netrw
+            let NERDTreeMinimalUI=1         " minimal ui
+            let g:NERDTreeShowHidden=1      " show hidden files
+
+            " --- toggle NerdTree ---
+            nmap <D-1> :NERDTreeToggle<cr>
+            nmap <Leader>1 :NERDTreeToggle<cr>
+
+    " }}}
 " }}}
 " Auto-Commands {{{
 
