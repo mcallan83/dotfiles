@@ -19,6 +19,9 @@ alias cdb="cd -"
 # clear screen
 alias cl="clear"
 
+# ctags
+alias tags="ctags -R" # generate ctags index
+
 # dedv
 # https://github.com/cortesi/devd
 alias dv="devd -ol ."
