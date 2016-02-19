@@ -3,7 +3,9 @@
 " NeoBundle {{{
 
 if has('vim_starting')
-    set nocompatible
+    if &compatible
+      set nocompatible
+    endif
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 let vundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
@@ -24,7 +26,10 @@ filetype plugin indent on
 NeoBundleCheck
 
 " }}}
-" Temporary Work Area {{{
+" General {{{
+
+    " enable syntax highligting
+    syntax on
 
 " }}}
 " Search {{{
