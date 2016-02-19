@@ -31,6 +31,8 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 
 call neobundle#end()
 filetype plugin indent on
@@ -60,7 +62,7 @@ NeoBundleCheck
 
         colorscheme atom-dark
         set cursorline          " highlight current line
-        set linespace=12        " line spacing
+        set linespace=10        " line spacing
 
         " --- disable scroll bars and tabs ---
         set guioptions-=l
@@ -185,6 +187,15 @@ set smartcase
         nmap <D-e> :CtrlPMRUFiles<cr>
 
     " }}}
+    " Airline {{{
+
+    let g:airline_theme='light'
+
+    let g:airline_left_sep=''
+    let g:airline_right_sep=''
+    let g:airline#extensions#tabline#enabled = 1
+
+    "}}}
 " }}}
 " Auto-Commands {{{
 
