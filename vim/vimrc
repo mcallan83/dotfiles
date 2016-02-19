@@ -153,11 +153,13 @@ set smartcase
     " }}}
     " Tagbar {{{
 
-        let g:tagbar_autofocus = 1          " auto focus in Tagbar on open
+        let g:tagbar_autofocus = 1          " auto focus on Tagbar on open
 
         " --- toggle Tagbar ---
-        nmap <leader>2 :TagbarToggle<cr>
-        nmap <D-2> :TagbarToggle<cr>
+        nmap <leader>2 :TagbarToggle<cr>                " toggle Tagbar
+        nmap <D-2> :TagbarToggle<cr>                    " toggle Tagbar
+        nmap <leader>3 :TagbarOpenAutoClose<cr>         " toggle Tagbar with auto close
+        nmap <D-3> :TagbarOpenAutoClose<cr>             " toggle Tagbar with auto close
 
     " }}}
     " Git Gutter {{{
@@ -166,9 +168,10 @@ set smartcase
 
     " }}}
     " EasyMotion {{{
-        
+
         let g:EasyMotion_smartcase = 1                  " map keys by smartcase
         nmap <leader><leader> <Plug>(easymotion-s2)
+
     " }}}
 " }}}
 " Auto-Commands {{{
