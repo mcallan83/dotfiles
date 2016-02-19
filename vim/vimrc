@@ -75,6 +75,21 @@ NeoBundleCheck
     endif
 
 " }}}
+" Formatting {{{
+
+    set autoindent      " indent to same level as previous line
+    set smartindent     " smart indent
+    set expandtab       " use spaces
+    set shiftwidth=4    " use indents of 4 spaces
+    set tabstop=4       " tabs are spaces
+    set softtabstop=4   " let backspace delete indent
+
+    set nojoinspaces    " prevents inserting two spaces after punctuation on join (J)
+
+    set wrap            " wrap lines
+    set showbreak=⇇     " fancy character for line wraps
+
+" }}}
 " Search {{{
 
 set incsearch
