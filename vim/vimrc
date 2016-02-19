@@ -20,6 +20,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " packages
 " ========
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'gosukiwi/vim-atom-dark'
 
 call neobundle#end()
 filetype plugin indent on
@@ -28,8 +30,32 @@ NeoBundleCheck
 " }}}
 " General {{{
 
-    " enable syntax highligting
-    syntax on
+    syntax on " enable syntax highligting
+    set number " enable line numbers
+
+" }}}
+" GUI {{{
+
+    set background=dark
+
+    if has("gui_running")
+
+        colorscheme atom-dark
+        set cursorline " highlight current line
+	set linespace=15 " line spacing
+
+        if has("gui_macvim")
+
+            set guifont=Menlo:h17
+
+        endif
+
+    else
+
+        set t_CO=256 " use 256 colors
+        colorscheme base16-solarized
+
+    endif
 
 " }}}
 " Search {{{
