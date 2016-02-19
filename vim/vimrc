@@ -32,6 +32,12 @@ NeoBundleCheck
 
     syntax on " enable syntax highligting
     set number " enable line numbers
+    set noerrorbells visualbell t_vb= " disable bells
+    set backspace=indent,eol,start " make backspace behave like backspace
+
+    " --- encoding ---
+    set encoding=utf-8
+    scriptencoding utf-8
 
 " }}}
 " GUI {{{
@@ -42,7 +48,14 @@ NeoBundleCheck
 
         colorscheme atom-dark
         set cursorline " highlight current line
-	set linespace=15 " line spacing
+	set linespace=12 " line spacing
+
+	" --- disable scroll bars and tabs ---
+	set guioptions-=l
+	set guioptions-=L
+        set guioptions-=r
+        set guioptions-=R
+        set guioptions-=e
 
         if has("gui_macvim")
 
