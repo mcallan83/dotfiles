@@ -1,21 +1,15 @@
 ################################################################################
-# Filename: .editorconfig
+# Filename: zsh/oh-my-zsh/autosuggest.zsh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
+#
+# Enables ZSH autosuggestions.
 ################################################################################
 
-root = true
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
 
-[*]
-indent_style = space
-indent_size = 4
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.cson]
-indent_size = 2
-
-[*.coffee]
-indent_size = 2
+bindkey '^f' vi-forward-word
+bindkey '^x' vi-end-of-line

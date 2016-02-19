@@ -11,20 +11,45 @@ function colortest {
 }
 
 # run adminer as web server if installed
-if [ -d /usr/local/share/adminer ] ; then
-    function adminer {
-            open http://localhost:8888
-            php -S localhost:8888 -t /usr/local/share/adminer > /dev/null
-    }
-fi
+function adminer {
+    if [ -d /usr/local/share/adminer ] ; then
+        open http://localhost:8888
+        php -S localhost:8888 -t /usr/local/share/adminer > /dev/null
+    fi
+}
+
+# run a web server from current folder (python)
+function server() {
+    local port="${1:-8000}"
+    open "http://localhost:${port}/"
+    python -m SimpleHTTPServer "$port"
+}
+
 
 # search all alises
 function als() {
     alias | grep $1
 }
 
+# create backup copy of file with .bak extension appended on end
+function bak() {
+    cp "${1}"{,.bak}
+}
+
 # osx only
 
 pman() {
     man -t "${1}" | open -f -a /Applications/Preview.app/
+}
+
+# fix permissions for homebrew
+brewfix() {
+    sudo chown $(whoami):admin /usr/local
+    sudo chown -R $(whoami):admin /usr/local
+}
+
+# google feeling lucky search
+luck() {
+    url=$(echo "http://www.google.com/search?hl=en&q=$@&btnI=I%27m+Feeling+Lucky" | sed 's/ /+/g');
+    open $url;
 }

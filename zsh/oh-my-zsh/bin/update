@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+################################################################################
+# Filename: zsh/oh-my-zsh/bin/update
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
+#
+# Updates Homebrew, Composer, NPM, RVM, and PIP packages.
+#
+# TODO:
+# - ask for ubuntu update
+# - ask for osx system update
+################################################################################
+
+banner() {
+    echo -e "\n\n\033[0;34m"
+    printf "%0.s#" {1..80}
+    echo -e "\n# Updating: ${1}"
+    printf "%0.s#" {1..80}
+    echo -e "$(tput sgr0)\n"
+    return
+}
+
+sudo -v
+
+# homebrew
+if test $(which brew); then
+    banner "Homebrew"
+    sudo chown $(whoami):admin /usr/local
+    sudo chown -R $(whoami):admin /usr/local
+    brew update
+    brew upgrade --all
+    brew cleanup
+    brew cask cleanup
+    brew prune
+fi
+
+
+
+# composer
+if test $(which composer); then
+    banner "Composer"
+    composer self-update
+    composer global update
+fi
+
+# laravel homestead
+if test $(which homestead); then
+    banner "Laravel Homestead"
+    homestead update
+fi
+
+# npm
+if test $(which npm); then
+    banner "NPM"
+    npm update -g
+fi
+
+# rvm and gems
+if test $(which rvm); then
+    banner "RVM and Gems"
+    rvm requirements
+    rvm cleanup all
+    sudo gem update --system;
+    gem update `gem list | cut -d ' ' -f 1`
+    gem cleanup;
+fi
+
+# pip
+if test $(which pip); then
+    banner "PIP"
+    pip install --upgrade pip
+    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+fi

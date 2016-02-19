@@ -1,0 +1,7 @@
+{
+    "php_cs_fixer_executable_path": ".composer/vendor/bin/php-cs-fixer",
+    "phpcbf_executable_path": ".composer/vendor/bin/phpcbf",
+    "phpcs_php_path": ".composer/vendor/bin/phpcs",
+    "phpmd_executable_path": ".composer/vendor/bin/phpmd",
+    "phpmd_run": false,
+}

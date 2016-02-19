@@ -1,12 +1,15 @@
 start_time="$(date +%s)"
 
-export ZSH=$HOME/.oh-my-zsh
+# zshrc before
+[[ -r ~/.zshrc.before ]] && . ~/.zshrc.before
+
+# disable oh-my-zsh auto update
+DISABLE_AUTO_UPDATE=true
+
 export DOTFILES=$HOME/.dotfiles
+export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
-
-# set pure prompt colors and load local colors if they exist
-source $DOTFILES/zsh/oh-my-zsh/colors.zsh
 
 plugins=(
     brew
@@ -16,9 +19,7 @@ plugins=(
     grunt
     k
     laravel5
-    pure
     sublime
-    sudo
     tmux
     tmuxinator
     vi-mode
@@ -26,19 +27,22 @@ plugins=(
     z
     zshmarks
     zsh-syntax-highlighting
+    #zsh-autosuggestions
 )
 
+source $DOTFILES/zsh/oh-my-zsh/platform.zsh
 source $DOTFILES/zsh/oh-my-zsh/path.zsh
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
 source $DOTFILES/zsh/oh-my-zsh/functions.zsh
+#source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
 
-# remove duplicates in path
-typeset -U PATH
-
-# load local zshrc
-[[ -r ~/.local.zshrc ]] && . ~/.local.zshrc
+# zshrc after
+[[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
 
 end_time="$(date +%s)"
-echo .zshrc: $((end_time - start_time)) seconds
+# echo .zshrc: $((end_time - start_time)) seconds
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh

@@ -1,5 +1,0 @@
-'atom-text-editor.vim-mode.insert-mode':
-  'j': 'custom:wait-key-press'
-
-'.vim-mode.insert-mode:not(.mini)':
-  'j j': 'vim-mode:activate-command-mode'

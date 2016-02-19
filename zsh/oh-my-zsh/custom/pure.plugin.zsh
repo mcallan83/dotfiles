@@ -1,1 +1,1 @@
-../../../submodules/zsh/pure/pure.zsh
+../../../vendor/zsh/pure/pure.plugin.zsh

@@ -1,21 +1,14 @@
 ################################################################################
-# Filename: .editorconfig
+# Filename: zsh/oh-my-zsh/platform.zsh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
+#
+# Determines current platform.
 ################################################################################
 
-root = true
-
-[*]
-indent_style = space
-indent_size = 4
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.cson]
-indent_size = 2
-
-[*.coffee]
-indent_size = 2
+PLATFORM=''
+if [[ $(uname) == 'Linux' ]]; then
+    export PLATFORM='LINUX'
+elif [[ $(uname) == 'Darwin' ]]; then
+    export PLATFORM='OSX'
+fi
