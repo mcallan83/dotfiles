@@ -27,6 +27,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'airblade/vim-gitgutter'
 
 call neobundle#end()
 filetype plugin indent on
@@ -40,6 +41,7 @@ NeoBundleCheck
     set backspace=indent,eol,start      " make backspace behave like backspace
     set laststatus=2                    " always show status bar
     set noshowmode                      " hide current mode
+    set updatetime=750                  " 750 millisecond update time
 
     " --- encoding ---
     set encoding=utf-8
@@ -148,6 +150,11 @@ set smartcase
         " --- toggle Tagbar ---
         nmap <leader>2 :TagbarToggle<cr>
         nmap <D-2> :TagbarToggle<cr>
+
+    " }}}
+    " gitgutter {{{
+
+        let g:gitgutter_sign_column_always = 1      " always show sign column
 
     " }}}
 " }}}
