@@ -24,6 +24,7 @@ NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'gosukiwi/vim-atom-dark'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'majutsushi/tagbar'
 
 call neobundle#end()
 filetype plugin indent on
@@ -136,6 +137,15 @@ set smartcase
             " --- toggle NerdTree ---
             nmap <D-1> :NERDTreeToggle<cr>
             nmap <Leader>1 :NERDTreeToggle<cr>
+
+    " }}}
+    " Tagbar {{{
+        
+        let g:tagbar_autofocus = 1          " auto focus in Tagbar on open
+
+        " --- toggle Tagbar ---
+        nmap <leader>2 :TagbarToggle<cr>
+        nmap <D-2> :TagbarToggle<cr>
 
     " }}}
 " }}}
