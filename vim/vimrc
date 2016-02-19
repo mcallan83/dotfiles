@@ -18,10 +18,33 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " packages
 " ========
-"NeoBundle ''
 
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
+
+" }}}
+" Temporary Work Area {{{
+
+" }}}
+" Mappings {{{
+
+    "exit insert mode with JJ
+    inoremap jj <Esc>
+
+    " set leader to ,
+    let mapleader = ','
+
+    " edit vimrc in new tab
+    nmap <Leader>ev :tabedit $MYVIMRC<cr>
+
+" }}}
+" Auto-Commands {{{
+
+    " automatically source .vimrc on save
+    augroup autosourcing
+        autocmd!
+        autocmd BufWritePost .vimrc source %
+    augroup END
 
 " }}}
