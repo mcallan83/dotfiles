@@ -140,7 +140,7 @@ set smartcase
 
     " }}}
     " Tagbar {{{
-        
+
         let g:tagbar_autofocus = 1          " auto focus in Tagbar on open
 
         " --- toggle Tagbar ---
@@ -155,6 +155,12 @@ set smartcase
     augroup autosourcing
         autocmd!
         autocmd BufWritePost .vimrc source %
+    augroup END
+
+    " disable automatic comment insertion
+    augroup comments
+        au!
+        autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
     augroup END
 
 " }}}
