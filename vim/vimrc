@@ -28,6 +28,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'Lokaltog/vim-easymotion'
 
 call neobundle#end()
 filetype plugin indent on
@@ -152,17 +153,22 @@ set smartcase
         nmap <D-2> :TagbarToggle<cr>
 
     " }}}
-    " gitgutter {{{
+    " Git Gutter {{{
 
         let g:gitgutter_sign_column_always = 1      " always show sign column
 
+    " }}}
+    " EasyMotion {{{
+        
+        let g:EasyMotion_smartcase = 1                  " map keys by smartcase
+        nmap <leader><leader> <Plug>(easymotion-s2)
     " }}}
 " }}}
 " Auto-Commands {{{
 
     " automatically source .vimrc on save
     augroup autosourcing
-        autocmd!
+        au!
         autocmd BufWritePost .vimrc source %
     augroup END
 
