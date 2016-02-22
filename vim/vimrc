@@ -106,10 +106,16 @@ NeoBundleCheck
 " }}}
 " Search {{{
 
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
+    " --- sane search settings ---
+    set incsearch
+    set hlsearch
+    set ignorecase
+    set smartcase
+
+    " --- use the silver searcher (ag) if installed ---
+    if executable('ag')
+        set grepprg=ag\ --nogroup\ --nocolor
+    endif
 
 " }}}
 " Splits {{{
