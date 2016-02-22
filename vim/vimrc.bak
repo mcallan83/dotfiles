@@ -1,0 +1,271 @@
+" vim:fdm=marker
+
+" http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+" https://github.com/sheerun/vimrc
+" https://github.com/terryma/dotfiles/blob/master/.vimrc
+" https://github.com/joedicastro/dotfiles/blob/master/vim/README.md
+" http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html
+
+" NeoBundle {{{
+
+if has('vim_starting')
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+let vundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing NeoBundle..."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" packages
+" ========
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'sjl/vitality.vim'
+
+" @todo: this breaks the _, need to find a fix
+"NeoBundle 'terryma/vim-expand-region'
+
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
+
+" }}}
+" General {{{
+
+    set nocompatible        " who needs vi?
+    syntax on               " syntax highligting
+    set encoding=utf-8
+    scriptencoding utf-8
+    set ttyfast
+    set timeoutlen=1000 ttimeoutlen=0 " speed things up @todo research
+
+    " mouse
+    set mouse=a             " enable mouse
+    set mousehide           " hide mouse cursor while typing
+
+    " clipboard
+    if has('clipboard')
+        " use + register for copy-paste
+        if has('unnamedplus')
+            set clipboard=unnamed,unnamedplus
+        " use * register for copy-paste
+        else
+            set clipboard=unnamed
+        endif
+    endif
+
+    " disable backups
+    set nobackup
+    set nowb
+    set noswapfile
+
+    " disable bells
+    set vb t_vb=
+    
+    " set lazyredraw " ???
+
+    " autoload vimrc
+    augroup reload_vimrc
+        au!
+        au BufWritePost $MYVIMRC source $MYVIMRC
+    augroup END
+
+
+
+" }}}
+" UI {{{
+
+    set background=dark " assume a dark background
+
+    " solarized
+    let g:solarized_visibility="high"
+    let g:solarized_diffmode="high"
+    let g:solarized_menu=0
+    " let g:solarized_termcolors=256      " use downgraded color scheme
+    colorscheme solarized
+
+    " highlight cursorline
+    set cursorline                      " highlight cursor line
+    highlight clear SignColumn          " make signcolumn match background
+    highlight clear LineNr              " make current line number have same BG color
+
+    " search
+    set incsearch                       " find as you type search
+    set hlsearch                        " highlight search terms
+    set ignorecase                      " case insensitive search
+    set smartcase                       " case sensitive when uc present
+
+    set backspace=indent,eol,start      " enable a true backspace
+    set number                          " line numbers
+    set laststatus=2                    " show status bar
+    set noshowmode                      " hide current mode
+
+    " trailing whitespace
+    " set list
+    " set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
+    " set winminheight=0                  " Windows can be 0 line high
+
+" }}}
+" Formatting {{{
+
+    set autoindent      " indent to same level as previous line
+    set smartindent     " smart indent
+    set expandtab       " use spaces
+    set shiftwidth=4    " use indents of 4 spaces
+    set tabstop=4       " tabs are spaces
+    set softtabstop=4   " let backspace delete indent
+
+    set nojoinspaces    " prevents inserting two spaces after punctuation on join (J)
+
+    set wrap            " wrap lines
+    set showbreak=⇇     " fancy character for line wraps
+
+" }}}
+" Filetype Specific {{{
+
+augroup filetypes 
+    au!
+
+    " disable automatic comment insertion for all files
+    au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+    " enable spellcheck in gitcommit and start in insert mode
+    au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+    au BufNewFile,BufRead COMMIT_EDITMSG start
+
+augroup END
+
+" }}}
+" Key Maps {{{
+
+    " leader
+    let mapleader = "\<space>"
+    let g:mapleader = "\<space>"
+
+    " exit insert mode with JJ
+    inoremap jj <Esc>
+
+    " toggle background
+    noremap <leader>bg :call ToggleBg()<CR>
+    
+    " toggle paste mode
+    nmap <leader>p :setlocal paste! paste?<cr>
+
+    " indent code in visual mode without exiting visual mode
+    vnoremap < <gv
+    vnoremap > >gv
+
+    " allow using repeat operator with visual selection
+    vnoremap . :normal .<CR>
+
+    " open vimrc
+    nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+    " clear highlighted seaches
+    nnoremap <CR> :noh<CR><CR>
+
+    " create splits
+    nnoremap vs :vsplit<cr>
+    nnoremap sp :split<cr>
+
+    " move splits
+    nnoremap <C-J> <C-W><C-J>
+    nnoremap <C-K> <C-W><C-K>
+    nnoremap <C-L> <C-W><C-L>
+    nnoremap <C-H> <C-W><C-H>
+
+" }}}
+" Functions {{{
+
+    " toggle background
+    function! ToggleBg()
+        let s:tbg = &background
+        if s:tbg == "dark"
+            set background=light
+        else
+            set background=dark
+        endif
+    endfunction
+
+    " automatically insert paste mode
+    function! WrapForTmux(s)
+        if !exists('$TMUX')
+            return a:s
+        endif
+        let tmux_start = "\<Esc>Ptmux;"
+        let tmux_end = "\<Esc>\\"
+        return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+    endfunction
+    let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+    let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+    function! XTermPasteBegin()
+        set pastetoggle=<Esc>[201~
+        set paste
+        return ""
+    endfunction
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+"
+" }}}
+" Plugins {{{
+
+    " vim-gitgutter
+    let g:gitgutter_sign_column_always = 1
+
+    " vim-airline
+    let g:airline_theme="powerlineish"
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#fnamemod = ':t'
+    let g:airline#extensions#whitespace#enabled = 0
+    let g:airline#extensions#hunks#enabled = 0
+    let g:airline_detect_paste=1
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+
+    " vim-expand-region
+    vmap v <Plug>(expand_region_expand)
+
+    " tabular
+    nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+    vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+    nmap <Leader>a> :Tabularize /=><CR>
+    vmap <Leader>a> :Tabularize /=><CR>
+    nmap <Leader>a: :Tabularize /:<CR>
+    vmap <Leader>a: :Tabularize /:<CR> 
+
+    " Yggdroot/indentLine
+    let g:indentLine_char = '|'
+
+    " scrooloose/nerdtree
+    map <leader>[ :NERDTreeToggle<cr>
+
+    " kien/ctrlp.vim
+    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_working_path_mode = 'ra'
+    map <leader>b :CtrlPBuffer<CR>
+
+    if executable('ag') " use silversearcher if installed 
+        set grepprg=ag\ --nogroup\ --nocolor
+    endif
+    
+" }}}

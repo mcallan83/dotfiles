@@ -3,7 +3,9 @@
 " NeoBundle {{{
 
 if has('vim_starting')
-    set nocompatible
+    if &compatible
+      set nocompatible
+    endif
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 let vundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
@@ -17,154 +19,208 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " packages
-" =========
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'tpope/vim-speeddating'
+" ========
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'gosukiwi/vim-atom-dark'
+NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'tobyS/vmustache'
+NeoBundle 'tobyS/pdv'
 
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
 " }}}
-" Basic Settings {{{
+" General {{{
 
-filetype plugin indent on "detect filetype
-set encoding=utf-8
-syntax on
-set t_Co=256
-set background=light
-colorscheme solarized
-set number
-set laststatus=2
-set noshowmode
-set updatetime=750
-highlight clear SignColumn " fix sign column bg color issue
-set backspace=2
-set tabstop=4
-set shiftwidth=4
-set expandtab
+    set number                          " enable line numbers
+    set noerrorbells visualbell t_vb=   " disable bells
+    set backspace=indent,eol,start      " make backspace behave like backspace
+    set laststatus=2                    " always show status bar
+    set noshowmode                      " hide current mode
+    set updatetime=750                  " 750 millisecond update time
 
-" set leader
-" ==========
-let mapleader = "\<Space>"
-let g:mapleader = "\<Space>"
-
-" remap jj to <Esc> in insert mode
-" ================================
-inoremap jj <Esc>
+    " --- encoding ---
+    set encoding=utf-8
+    scriptencoding utf-8
 
 " }}}
-" Advanced Settings {{{
+" GUI {{{
 
-" disable automatic comment insertion
-" ===================================
-augroup comments
-    au!
-    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-augroup END
+    syntax on
+    set background=dark
 
-" }}}
-" {{{ Plugin Config
+    if has("gui_running")
 
-" solarized
-" =========
-let g:solarized_visibility="high"
-let g:solarized_diffmode="high"
-let g:solarized_menu=0
+        colorscheme atom-dark
+        set cursorline          " highlight current line
+        set linespace=10        " line spacing
 
-" vim-expand-region
-" =================
-vmap v <Plug>(expand_region_expand)
+        " --- disable scroll bars and tabs ---
+        set guioptions-=l
+        set guioptions-=L
+        set guioptions-=r
+        set guioptions-=R
+        set guioptions-=e
 
-" vim-easy-motion
-" ===============
-let g:EasyMotion_smartcase = 1
-nmap <leader><leader> <Plug>(easymotion-s2)
+        if has("gui_macvim")
 
-" vim-airline
-" ===========
-let g:airline_theme="powerlineish"
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#hunks#enabled = 0
-let g:airline_detect_paste=1
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+            set guifont=Menlo:h17
 
-" nerdtree
-" ========
-map <leader>[ :NERDTreeToggle<cr>
+        endif
 
-" ctrl+p
-" ======
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_working_path_mode = 'ra'
-map <leader>b :CtrlPBuffer<CR> "buffer mode
+    else
 
-" use silversearcher if installed
-if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
-endif
+        set t_CO=256                    " use 256 colors
+        colorscheme base16-solarized
 
-" git-gutter
-" ==========
-let g:gitgutter_sign_column_always = 1
-
-" tagbar
-" ======
-let g:tagbar_autofocus = 1
-nnoremap <leader>} :TagbarOpenAutoClose<cr>
-nnoremap <leader>] :TagbarToggle<cr>
-
-" editorconfig
-" ============
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+    endif
 
 " }}}
-" {{{ TODO
+" Formatting {{{
 
+    set autoindent      " indent to same level as previous line
+    set smartindent     " smart indent
+    set expandtab       " use spaces
+    set shiftwidth=4    " use indents of 4 spaces
+    set tabstop=4       " tabs are spaces
+    set softtabstop=4   " let backspace delete indent
 
+    set nojoinspaces    " prevents inserting two spaces after punctuation on line join
 
+    set wrap            " wrap lines
+    set showbreak=⇇     " fancy character for line wraps
 
+" }}}
+" Search {{{
 
-" hashrocket in insert mode
-" imap <c-h> <space>=><space>
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
 
+" }}}
+" Splits {{{
 
-" copy and paste to system clipboard
-" vmap <Leader>y "+y
-"vmap <Leader>d "+d
-"nmap <Leader>p "+p
-"nmap <Leader>P "+P
-"vmap <Leader>p "+p
-"vmap <Leader>P "+P
+    " -- open splits below and to the right ---
+    set splitbelow
+    set splitright
 
+    " --- navigate splits easily ---
+    nmap <C-J> <C-W><C-J>
+    nmap <C-K> <C-W><C-K>
+    nmap <C-H> <C-W><C-H>
+    nmap <C-L> <C-W><C-L>
 
+" }}}
+" Mappings {{{
 
-" jump to end of pasted text
-vnoremap <silent> y y`]
-vnoremap <silent> p p`]
-nnoremap <silent> p p`]
+    " exit insert mode with JJ
+    inoremap jj <Esc>
 
-" select pasted text
-" noremap gV `[v`]
+    " set leader to ,
+    let mapleader = ','
+    let g:mapleader = ","
 
+    " edit vimrc in new tab
+    nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
+    " clear search highlight
+    nmap <Leader><space> :nohlsearch<cr>
+
+    " Quickly browse to any tag/symbol in the project.
+    " tip: run ctags -R to regenerated index.
+    nmap <Leader>f :tag<space>
+
+" }}}
+" Plugins {{{
+    " NerdTree {{{
+
+            let NERDTreeHijackNetrw=0       " don't hijack netrw
+            let NERDTreeMinimalUI=1         " minimal ui
+            let g:NERDTreeShowHidden=1      " show hidden files
+
+            " --- ignore files ---
+            let NERDTreeIgnore=['.git', '.DS_Store', '\.swp$', '\.swo$']
+
+            " --- toggle NerdTree ---
+            nmap <D-1> :NERDTreeToggle<cr>
+            nmap <Leader>1 :NERDTreeToggle<cr>
+
+    " }}}
+    " Tagbar {{{
+
+        let g:tagbar_autofocus = 1          " auto focus on Tagbar on open
+
+        " --- toggle Tagbar ---
+        nmap <leader>2 :TagbarToggle<cr>                " toggle Tagbar
+        nmap <D-2> :TagbarToggle<cr>                    " toggle Tagbar
+        nmap <leader>3 :TagbarOpenAutoClose<cr>         " toggle Tagbar with auto close
+        nmap <D-3> :TagbarOpenAutoClose<cr>             " toggle Tagbar with auto close
+
+    " }}}
+    " Git Gutter {{{
+
+        let g:gitgutter_sign_column_always = 1      " always show sign column
+
+    " }}}
+    " EasyMotion {{{
+
+        let g:EasyMotion_smartcase = 1                  " map keys by smartcase
+        nmap <leader><leader> <Plug>(easymotion-s2)
+
+    " }}}
+    " CtrlP {{{
+
+        let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
+        let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
+
+        nmap <D-p> :CtrlP<cr>
+        nmap <D-r> :CtrlPBufTag<cr>
+        nmap <D-e> :CtrlPMRUFiles<cr>
+
+    " }}}
+    " vim-airline/vim-airline {{{
+
+        let g:airline_theme="powerlineish"
+        let g:airline#extensions#whitespace#enabled = 0
+        let g:airline#extensions#hunks#enabled = 0
+        let g:airline_detect_paste=1
+        let g:airline_left_sep = ''
+        let g:airline_left_alt_sep = ''
+        let g:airline_right_sep = ''
+        let g:airline_right_alt_sep = ''
+
+    "}}}
+    " tobyS/pdv {{{
+
+        let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
+        nnoremap <Leader>pd :call pdv#DocumentCurrentLine()<CR>
+
+    " }}}
+" }}}
+" Auto-Commands {{{
+
+    " automatically source .vimrc on save
+    augroup autosourcing
+        au!
+        autocmd BufWritePost .vimrc source %
+    augroup END
+
+    " disable automatic comment insertion
+    augroup comments
+        au!
+        autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    augroup END
 
 " }}}
