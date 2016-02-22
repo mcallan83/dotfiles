@@ -36,6 +36,7 @@ NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'tobyS/vmustache'
 NeoBundle 'tobyS/pdv'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'editorconfig/editorconfig-vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -175,13 +176,13 @@ set smartcase
         let g:gitgutter_sign_column_always = 1      " always show sign column
 
     " }}}
-    " EasyMotion {{{
+    " easymotion/vim-easymotion {{{
 
         let g:EasyMotion_smartcase = 1                  " map keys by smartcase
         nmap <leader><leader> <Plug>(easymotion-s2)
 
     " }}}
-    " CtrlP {{{
+    " ctrlpvim/ctrlp.vim {{{
 
         let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
         let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
@@ -207,6 +208,11 @@ set smartcase
 
         let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
         nnoremap <Leader>pd :call pdv#DocumentCurrentLine()<CR>
+
+    " }}}
+    " editorconfig/editorconfig-vim {{{
+
+        let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
     " }}}
 " }}}
