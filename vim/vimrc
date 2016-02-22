@@ -52,6 +52,7 @@ NeoBundleCheck
     set laststatus=2                    " always show status bar
     set noshowmode                      " hide current mode
     set updatetime=750                  " 750 millisecond update time
+    set autoread                        " Auto read files changed outside of Vim
 
     " --- encoding ---
     set encoding=utf-8
@@ -147,9 +148,14 @@ NeoBundleCheck
     " clear search highlight
     nmap <Leader><space> :nohlsearch<cr>
 
-    " Quickly browse to any tag/symbol in the project.
-    " tip: run ctags -R to regenerated index.
+    " quickly browse to any tag/symbol in the project using ctags
     nmap <Leader>f :tag<space>
+
+    " change CWD to directory of open buffer
+    map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+    " quick save
+    nmap <leader>w :w!<cr>
 
 " }}}
 " Plugins {{{
