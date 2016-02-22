@@ -37,6 +37,7 @@ NeoBundle 'tobyS/vmustache'
 NeoBundle 'tobyS/pdv'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'tpope/vim-commentary'
 
 call neobundle#end()
 filetype plugin indent on
