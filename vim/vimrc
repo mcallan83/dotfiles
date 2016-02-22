@@ -35,6 +35,7 @@ NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'tobyS/vmustache'
 NeoBundle 'tobyS/pdv'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 
 call neobundle#end()
 filetype plugin indent on
@@ -82,7 +83,7 @@ NeoBundleCheck
     else
 
         set t_CO=256                    " use 256 colors
-        colorscheme base16-solarized
+        colorscheme Tomorrow-Night-Eighties
 
     endif
 
