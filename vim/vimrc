@@ -46,17 +46,15 @@ NeoBundleCheck
 " }}}
 " General {{{
 
-    set number                          " enable line numbers
-    set noerrorbells visualbell t_vb=   " disable bells
-    set backspace=indent,eol,start      " make backspace behave like backspace
-    set laststatus=2                    " always show status bar
-    set noshowmode                      " hide current mode
-    set updatetime=750                  " 750 millisecond update time
     set autoread                        " Auto read files changed outside of Vim
-
-    " --- encoding ---
-    set encoding=utf-8
-    scriptencoding utf-8
+    set backspace=indent,eol,start      " make backspace behave like backspace
+    set hidden                          " allow buffers to be hidden without save
+    set laststatus=2                    " always show status bar
+    set noerrorbells visualbell t_vb=   " disable bells
+    set noshowmode                      " hide current mode
+    set number                          " enable line numbers
+    set updatetime=750                  " 750 millisecond update time
+    set encoding=utf-8                  " utf8 encoding
 
 " }}}
 " GUI {{{
@@ -102,9 +100,9 @@ NeoBundleCheck
 
     set nojoinspaces    " prevents inserting two spaces after punctuation on line join
 
-    set wrap            " wrap lines
-    set showbreak=⇇     " fancy character for line wraps
-
+    "set wrap            " wrap lines
+    "set showbreak=⇇     " fancy character for line wraps
+    set nowrap          " disable wrapping
 " }}}
 " Search {{{
 
@@ -122,10 +120,10 @@ NeoBundleCheck
 " }}}
 " Splits {{{
 
-    " -- open splits below and to the right ---
-    set splitbelow
-    set splitright
-
+    set fcs=vert:│  " vertical split character
+    set splitbelow  " open split below
+    set splitright  " open split to the right
+    
     " --- navigate splits easily ---
     nmap <C-J> <C-W><C-J>
     nmap <C-K> <C-W><C-K>
