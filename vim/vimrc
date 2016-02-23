@@ -2,6 +2,7 @@
 
 " NeoBundle {{{
 
+" --- auto install NeoBundle ---"
 if has('vim_starting')
     if &compatible
       set nocompatible
@@ -18,8 +19,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" packages
-" ========
+" --- packages ---
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'gosukiwi/vim-atom-dark'
 NeoBundle 'tpope/vim-vinegar'
@@ -85,7 +85,7 @@ NeoBundleCheck
 
     else
 
-        set t_CO=256                    " use 256 colors
+        set t_CO=256                            " use 256 colors
         colorscheme Tomorrow-Night-Eighties
 
     endif
@@ -156,6 +156,17 @@ NeoBundleCheck
 
     " quick save
     nmap <leader>w :w!<cr>
+
+    " dont enter command mode when trying to quit
+    map q: :q
+
+    " quickly select pasted test
+    noremap gV `[v`]
+
+    " jump to end of pasted text
+    " vnoremap <silent> y y`]
+    " vnoremap <silent> p p`]
+    " nnoremap <silent> p p`]
 
 " }}}
 " Plugins {{{
