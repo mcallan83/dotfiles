@@ -40,6 +40,7 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'StanAngeloff/php.vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -249,7 +250,6 @@ NeoBundleCheck
     " terryma/vim-expand-region {{{
 
         vmap v <Plug>(expand_region_expand)
-        nmap _ _
 
     " }}}
 " }}}
