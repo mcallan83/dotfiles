@@ -103,6 +103,7 @@ NeoBundleCheck
     "set wrap            " wrap lines
     "set showbreak=⇇     " fancy character for line wraps
     set nowrap          " disable wrapping
+    
 " }}}
 " Search {{{
 
