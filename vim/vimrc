@@ -38,6 +38,8 @@ NeoBundle 'tobyS/pdv'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'tpope/vim-commentary'
 
 call neobundle#end()
 filetype plugin indent on
@@ -103,7 +105,7 @@ NeoBundleCheck
     "set wrap            " wrap lines
     "set showbreak=⇇     " fancy character for line wraps
     set nowrap          " disable wrapping
-    
+
 " }}}
 " Search {{{
 
@@ -124,7 +126,7 @@ NeoBundleCheck
     set fcs=vert:│  " vertical split character
     set splitbelow  " open split below
     set splitright  " open split to the right
-    
+
     " --- navigate splits easily ---
     nmap <C-J> <C-W><C-J>
     nmap <C-K> <C-W><C-K>
@@ -209,7 +211,7 @@ NeoBundleCheck
 
         let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
         let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
-        
+
         " -- use ag if installed ---
         if executable('ag')
             let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -244,6 +246,11 @@ NeoBundleCheck
         let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
     " }}}
+    " terryma/vim-expand-region {{{
+
+        vmap v <Plug>(expand_region_expand)
+
+    " }}}
 " }}}
 " Auto-Commands {{{
 
@@ -260,3 +267,4 @@ NeoBundleCheck
     augroup END
 
 " }}}
+
