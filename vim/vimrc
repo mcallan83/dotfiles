@@ -249,6 +249,7 @@ NeoBundleCheck
     " terryma/vim-expand-region {{{
 
         vmap v <Plug>(expand_region_expand)
+        nmap _ _
 
     " }}}
 " }}}
