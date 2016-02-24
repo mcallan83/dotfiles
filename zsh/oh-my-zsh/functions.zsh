@@ -48,6 +48,11 @@ brewfix() {
     sudo chown -R $(whoami):admin /usr/local
 }
 
+# speed up osx terminal by removing log files
+termspeed() {
+    sudo rm -rf /private/var/log/asl/*.asl
+}
+
 # google feeling lucky search
 luck() {
     url=$(echo "http://www.google.com/search?hl=en&q=$@&btnI=I%27m+Feeling+Lucky" | sed 's/ /+/g');

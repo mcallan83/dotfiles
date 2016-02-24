@@ -218,10 +218,22 @@ NeoBundleCheck
             let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
             let g:ctrlp_use_caching = 0
         endif
-
+        
+        " file mode
         nmap <D-p> :CtrlP<cr>
+        imap <D-p> <Esc>:CtrlP<cr>
+        
+        " tag mode
         nmap <D-r> :CtrlPBufTag<cr>
+        imap <D-r> <Esc>:CtrlPBufTag<cr>
+
+        " mru files mode
         nmap <D-e> :CtrlPMRUFiles<cr>
+        imap <D-e> <Esc>:CtrlPMRUFiles<cr>
+
+        " buffer mode
+        nmap <D-4> :CtrlPBuffer<cr>
+        imap <D-4> <Esc>:CtrlPBuffer<cr>
 
     " }}}
     " vim-airline/vim-airline {{{
