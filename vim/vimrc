@@ -263,6 +263,9 @@ NeoBundleCheck
 
         vmap v <Plug>(expand_region_expand)
 
+        nmap <nop> <Plug>(expand_region_shrink)
+
+
     " }}}
 " }}}
 " Auto-Commands {{{
