@@ -41,6 +41,8 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'skwp/greplace.vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -266,6 +268,12 @@ NeoBundleCheck
         nmap <nop> <Plug>(expand_region_shrink)
 
 
+    " }}}
+    " skwp/greplace.vim {{{
+
+        let g:grep_cmd_opts = '--line-numbers --noheading'
+        
+        
     " }}}
 " }}}
 " Auto-Commands {{{
