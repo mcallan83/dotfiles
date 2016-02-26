@@ -236,6 +236,7 @@ NeoBundleCheck
         " buffer mode
         nmap <D-4> :CtrlPBuffer<cr>
         imap <D-4> <Esc>:CtrlPBuffer<cr>
+        nmap <Leader>4 :CtrlPBuffer<cr>
 
     " }}}
     " vim-airline/vim-airline {{{
@@ -272,7 +273,6 @@ NeoBundleCheck
     " skwp/greplace.vim {{{
 
         let g:grep_cmd_opts = '--line-numbers --noheading'
-        
         
     " }}}
 " }}}
