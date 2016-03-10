@@ -51,7 +51,9 @@ fi
 # npm
 if test $(which npm); then
     banner "NPM"
-    sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+
+    #@todo make sure "npm config get prefix" is not the /usr folder
+    #sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
     npm update -g
 fi
 
