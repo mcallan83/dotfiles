@@ -28,6 +28,7 @@ alias dv="devd -ol ."
 
 # git
 alias gi="git init"
+alias gj="git checkout -"
 alias gs="gst"
 alias gsub="git submodule foreach git pull origin master"
 
