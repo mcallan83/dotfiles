@@ -40,3 +40,6 @@
 [submodule "vendor/color/base16-iterm2"]
 	path = vendor/color/base16-iterm2
 	url = https://github.com/chriskempson/base16-iterm2
+[submodule "vendor/vagrant/homestead"]
+	path = vendor/vagrant/homestead
+	url = https://github.com/laravel/homestead.git
