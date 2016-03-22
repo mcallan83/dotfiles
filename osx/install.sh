@@ -24,6 +24,7 @@
 #       - https://murze.be/2016/01/some-laravel-homestead-tips/
 # - [ ] map local dotfiles to ~/.dotfiles on homestead
 # - [ ] configure local php to work with mongo
+# - [ ] finish homestead function to detect if not inited
 ################################################################################
 
 sudo -v

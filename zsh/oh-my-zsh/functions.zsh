@@ -1,3 +1,11 @@
+################################################################################
+# Filename: zsh/oh-my-zsh/function.zsh
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
+#
+# Functions for ZSH.
+################################################################################
+
 # mkdir and cd to it
 function mkcd {
     dir="$*";
@@ -16,6 +24,38 @@ function adminer {
         open http://localhost:8888
         php -S localhost:8888 -t /usr/local/share/adminer > /dev/null
     fi
+}
+
+# laravel homestead helper
+# https://laravel.com/docs/5.2/homestead
+# https://murze.be/2016/01/some-laravel-homestead-tips/
+#
+# commands:
+#     - homestead init (initialize homestead)
+#     - homestead edit (edit homestead yaml file)
+#     - homestead halt
+#     - homestead provision
+#     - homestead ssh
+#     - homestead up
+
+function homestead() {
+    cd "$DOTFILES/vendor/vagrant/homestead"
+
+    command="$1"
+
+    if [ "$command" = "edit" ]; then
+        $EDITOR ~/.homestead/homestead.yaml
+    elif [ "$command" = "init" ]; then
+        bash init.sh
+    else
+        if [ -z "$command" ]; then
+            command="ssh"
+        fi
+
+        eval "vagrant ${command}"
+    fi
+
+    cd -
 }
 
 # run a web server from current folder (python)
