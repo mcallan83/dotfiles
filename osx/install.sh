@@ -241,7 +241,6 @@ composer global require hirak/prestissimo
 composer global require jakub-onderka/php-parallel-lint
 composer global require johnnyfreeman/artisan-cli
 composer global require kherge/box
-composer global require laravel/homestead
 composer global require laravel/installer
 composer global require laravel/lumen-installer
 composer global require mayflower/php-codebrowser
