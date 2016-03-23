@@ -267,6 +267,7 @@ npm install -g bower
 npm install -g browser-sync
 npm install -g browserify
 npm install -g caniuse-cmd
+npm install -g colorguard
 npm install -g csslint
 npm install -g duo
 npm install -g electron-prebuilt
@@ -299,6 +300,7 @@ npm install -g psi
 npm install -g sloc
 npm install -g stylestats
 npm install -g svgo
+npm install -g textract
 npm install -g tldr
 npm install -g torrentflix
 npm install -g typescript
