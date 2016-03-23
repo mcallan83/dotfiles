@@ -108,6 +108,7 @@ brew install speedtest_cli
 brew install ssh-copy-id
 brew install sshrc
 brew install terminal-notifier
+brew install tesseract
 brew install testdisk
 brew install the_silver_searcher
 brew install theharvester
@@ -119,7 +120,6 @@ brew install wget --with-iri
 brew install xmlstarlet
 brew install youtube-dl
 brew install zsh
-
 # PHP 5.6
 banner "Installing PHP 5.6"
 brew install homebrew/php/php56
