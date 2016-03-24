@@ -43,3 +43,6 @@
 [submodule "vendor/vagrant/homestead"]
 	path = vendor/vagrant/homestead
 	url = https://github.com/laravel/homestead.git
+[submodule "vendor/osx/shpotify"]
+	path = vendor/osx/shpotify
+	url = https://github.com/hnarayanan/shpotify

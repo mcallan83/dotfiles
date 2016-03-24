@@ -70,6 +70,10 @@ alias nu="npm update"
 # ps
 alias psa="ps aux"
 
+# spotify
+alias sp="spotify"
+alias next="spotify next"
+
 # sublime
 alias ss="stt"
 
