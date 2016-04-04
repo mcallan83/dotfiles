@@ -253,6 +253,7 @@ composer global require phpunit/phpunit
 composer global require sebastian/phpcpd
 composer global require squizlabs/php_codesniffer
 composer global require theseer/phpdox
+composer global require tightenco/jigsaw
 composer global require vinkla/climb
 
 ################################################################################
