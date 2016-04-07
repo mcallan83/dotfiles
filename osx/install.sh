@@ -68,6 +68,7 @@ brew tap neovim/neovim
 
 banner "Installing Homebrew Packages"
 brew install --HEAD neovim
+brew install aria2
 brew install autossh
 brew install bash-completion
 brew install boot2docker
