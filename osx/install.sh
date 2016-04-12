@@ -201,6 +201,12 @@ brew cask install webpquicklook
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
+
+# Install Vagrant Hostsupdater Plugin
+# https://github.com/cogitatio/vagrant-hostsupdater
+banner "Install Vagrant Hostsupdater Plugin"
+vagrant plugin install vagrant-hostsupdater
+
 # Sudoless NFS with Vagrant
 # https://gist.github.com/joemaller/6764700
 # http://stackoverflow.com/questions/323957
@@ -210,13 +216,20 @@ TMP=$(mktemp -t vagrant_sudoers)
 sudo cat /etc/sudoers > $TMP
 #sed '/# VAGRANT NFS START/,/# VAGRANT NFS END/d' $TMP
 cat >> $TMP <<EOF
+# VAGRANT START
 
-# VAGRANT NFS START
+# VAGRANT HOSTSUPDATER
+Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
+Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
+%admin ALL=(root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
+
+# NFS
 Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
 Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
 Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
 %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
-# VAGRANT NFS END
+
+# VAGRANT END
 EOF
 
 visudo -c -f $TMP
