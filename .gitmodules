@@ -46,3 +46,6 @@
 [submodule "vendor/osx/shpotify"]
 	path = vendor/osx/shpotify
 	url = https://github.com/hnarayanan/shpotify
+[submodule "vendor/zsh/zsh-completions"]
+	path = vendor/zsh/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
