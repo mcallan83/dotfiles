@@ -367,6 +367,7 @@ gem install travis
 banner "Installing Python Packages"
 
 pip install aws-shell
+pip install git-remote-dropbox
 pip install gsutil
 pip install httpie
 pip install ohmu
@@ -379,8 +380,6 @@ pip install pygments
 banner "Update and Cleanup"
 
 # homebrew
-# sudo chown $(whoami):admin /usr/local
-# sudo chown -R $(whoami):admin /usr/local
 brew update
 brew upgrade --all
 brew cleanup
