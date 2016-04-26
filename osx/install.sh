@@ -370,6 +370,7 @@ pip install aws-shell
 pip install git-remote-dropbox
 pip install gsutil
 pip install httpie
+pip install klaus
 pip install ohmu
 pip install pygments
 
