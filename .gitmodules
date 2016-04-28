@@ -49,3 +49,6 @@
 [submodule "vendor/zsh/zsh-completions"]
 	path = vendor/zsh/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule "vendor/vagrant/Vaprobash"]
+	path = vendor/vagrant/Vaprobash
+	url = https://github.com/fideloper/Vaprobash
