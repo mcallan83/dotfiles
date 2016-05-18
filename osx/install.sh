@@ -242,7 +242,7 @@ rm -f $TMP
 # Move Chrome to ~/Applications for 1Password.
 banner "Moving Chrome to ~/Applications"
 rm -rf "$HOME/Applications/Google Chrome.app"
-mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "$HOME/Applications/Google Chrome.app/"
+mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "/Applications/Google Chrome.app/"
 
 ################################################################################
 # Composer Packages
