@@ -39,6 +39,8 @@ source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 #source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
 # zshrc after
 [[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
 
