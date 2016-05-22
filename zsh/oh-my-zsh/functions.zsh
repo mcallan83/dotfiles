@@ -66,7 +66,7 @@ function server() {
 }
 
 
-# search all alises
+# search all aliases
 function als() {
     alias | grep $1
 }
