@@ -103,3 +103,15 @@ luck() {
     url=$(echo "http://www.google.com/search?hl=en&q=$@&btnI=I%27m+Feeling+Lucky" | sed 's/ /+/g');
     open $url;
 }
+
+
+# Create alias from previous command and place in aliases.zsh file.
+new-alias() {
+  local last_command=$(echo `history |tail -n2 |head -n1` | sed 's/[0-9]* //')
+  echo "" >> "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
+  echo "# added by new-alias()" >> "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
+  echo alias $1="'""$last_command""'" >> "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
+  . "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
+}
+
+
