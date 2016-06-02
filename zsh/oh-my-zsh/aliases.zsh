@@ -10,7 +10,7 @@
 alias hosts="sudo $EDITOR /etc/hosts"
 alias vimrc="$EDITOR ~/.vimrc"
 alias zshrc="$EDITOR ~/.zshrc"
-alias dots="cd ~/.dotfiles && $EDITOR"
+alias dots="cd $DOTFILES && $EDITOR"
 
 # atom
 alias aa="atom ."
@@ -21,8 +21,8 @@ alias cdb="cd -"
 # clear screen
 alias cl="clear"
 
-# ctags
-alias tags="ctags -R" # generate ctags index
+# ctags - generate index
+alias tags="ctags -R"
 
 # dedv
 # https://github.com/cortesi/devd
@@ -45,8 +45,8 @@ alias -g J='| python -m json.tool'
 
 # k
 # https://github.com/rimraf/k
-alias ka="clear;k -a" # k with hidden files
-alias kd="clear;k -d" # k with directories only
+alias ka="clear;k -a" # with hidden files
+alias kd="clear;k -d" # with directories only
 
 # laravel artisan
 alias la5m="la5 migrate"
@@ -118,3 +118,7 @@ alias l="showmarks"
 
 # capture screen
 alias sc="screencapture -c -W"
+
+# hide\show hidden files
+alias hide="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
+alias show="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
