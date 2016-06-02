@@ -17,6 +17,6 @@ fi
 # symlink settings
 echo "Vim: Symlinking Settings"
 cd "$HOME"
-ln -s "$HOME/.dotfiles/vim/vimrc" .vimrc
+ln -s "$DOTFILES/vim/vimrc" .vimrc
 
 echo "Vim: Done"

@@ -6,7 +6,8 @@
 # URL: http://github.com/mcallan83/dotfiles
 #
 # Installs Sublime configuration, including Package Control and various
-# packages. Sublime may need to be restarted two or three times to
+# packages. Sublime may need to be restarted multiple times befores
+# all packages install correctly.
 ################################################################################
 
 
@@ -33,6 +34,6 @@ fi
 # symlink settings
 echo "Sublime: Symlinking Settings"
 cd "$CONFIG/Packages"
-ln -s "$HOME/.dotfiles/osx/sublime/config" User
+ln -s "$DOTFILES/osx/sublime/config" User
 
 echo "Sublime: Done"
