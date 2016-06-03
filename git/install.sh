@@ -18,16 +18,29 @@ EMAIL=${EMAIL:-mcallan83@gmail.com}
 
 # backup existing settings
 if [ -f "$GITCONFIG" ]; then
-    echo "Git: Backing Up Settings (~/.gitconfig)"
+    echo "Git: Backing Up Settings"
     mv "$GITCONFIG" "$GITCONFIG.$(date +%s).bak"
 fi
 
-# build and install .gitconfig
+# build .gitconfig
 echo "Git: Installing Git Configuration"
 git config --global user.name $NAME
 git config --global user.email $EMAIL
 git config --global push.default simple
 
+# osx only
 if [[ $(uname) == 'Darwin' ]]; then
     git config --global credential.helper osxkeychain
 fi
+
+# append git aliases
+tee -a "$GITCONFIG" > /dev/null <<'EOF'
+[alias]
+    amend = commit -a --amend
+    rebase-branch = "!git rebase -i `git merge-base master HEAD`"
+    review = difftool origin/master...
+    save = !git add -A && git commit -m 'SAVEPOINT'
+    undo = reset HEAD~1 --mixed
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+    wc = "!git whatchanged -p --abbrev-commit --pretty=medium"
+EOF

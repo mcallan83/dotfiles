@@ -18,5 +18,6 @@ fi
 echo "Vim: Symlinking Settings"
 cd "$HOME"
 ln -s "$DOTFILES/vim/vimrc" .vimrc
+cd -
 
 echo "Vim: Done"
