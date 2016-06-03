@@ -2,10 +2,10 @@
     name = Mike Callan
     email = mcallan83@gmail.com
 [alias]
-    review = difftool origin/master...
+    amend = commit -a --amend
     rebase-branch = "!git rebase -i `git merge-base master HEAD`"
+    review = difftool origin/master...
+    save = !git add -A && git commit -m 'SAVEPOINT'
+    undo = reset HEAD~1 --mixed
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
     wc = "!git whatchanged -p --abbrev-commit --pretty=medium"
-[credential]
-    helper = osxkeychain
-[push]
-    default = simple
