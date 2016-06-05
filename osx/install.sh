@@ -121,6 +121,7 @@ brew install wget --with-iri
 brew install xmlstarlet
 brew install youtube-dl
 brew install zsh
+
 # PHP 5.6
 banner "Installing PHP 5.6"
 brew install homebrew/php/php56
@@ -151,6 +152,7 @@ brew cask install cheatsheet
 brew cask install chrome-remote-desktop-host
 brew cask install clamxav
 brew cask install cyberduck
+brew cask install disk-inventory-x
 brew cask install dropbox
 brew cask install firefox
 brew cask install go2shell
@@ -180,7 +182,6 @@ brew cask install sketch
 brew cask install slate
 brew cask install spotify
 brew cask install sublime-text3
-brew cask install teamviewer
 brew cask install the-unarchiver
 brew cask install transmission
 brew cask install vagrant
@@ -366,6 +367,9 @@ gem install travis
 ################################################################################
 
 banner "Installing Python Packages"
+
+pip install --upgrade pip
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 
 pip install aws-shell
 pip install git-remote-dropbox
