@@ -1,9 +1,11 @@
-*.swp
 *.DS_Store
-/osx/atom/config/blob-store/
+*.swp
 /osx/atom/config/.apm/
 /osx/atom/config/.node-gyp/
+/osx/atom/config/blob-store/
 /osx/atom/config/compile-cache/
+/osx/atom/config/git-time-machine/
 /osx/atom/config/packages/
+/osx/atom/config/split-diff/
 /osx/atom/config/storage/
 /tags

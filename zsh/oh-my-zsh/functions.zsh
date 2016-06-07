@@ -69,11 +69,30 @@ function als() {
 
 # Save installed Atom packages list to dotfiles repo.
 function apmbak() {
-    apm list --installed --bare > "$DOTFILES/osx/atom/config/packages.txt"
+
+    if ! type "apm" > /dev/null; then
+        echo "Error: Could not find apm."
+        return
+    fi
+
+    local PACKAGES="$DOTFILES/osx/atom/config/packages.txt"
+
+    apm list --installed --bare > $PACKAGES
+    sed -i '' '/^$/d' $PACKAGES
+
+    echo "APM: Saving Atom Package List To:"
+    echo $PACKAGES
+    echo ""
+    cat $PACKAGES
 }
 
 # Install Atom packages from list saved in dotfiles repo.
 function apmi() {
+    if ! type "apm" > /dev/null; then
+        echo "Error: Could not find apm."
+        return
+    fi
+    echo "APM: Installing:"
     apm install --packages-file "$DOTFILES/osx/atom/config/packages.txt"
 }
 
@@ -109,7 +128,6 @@ luck() {
     url=$(echo "http://www.google.com/search?hl=en&q=$@&btnI=I%27m+Feeling+Lucky" | sed 's/ /+/g');
     open $url;
 }
-
 
 # Create alias from previous command and place in aliases.zsh file.
 new-alias() {
