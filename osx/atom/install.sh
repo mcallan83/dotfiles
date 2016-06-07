@@ -19,8 +19,12 @@ fi
 # symlink settings
 echo "Atom: Symlinking Settings"
 cd "$HOME"
-ln -s "$HOME/.dotfiles/osx/atom/config" ".atom"
+ln -s "$DOTFILES/osx/atom/config" ".atom"
+
+# install packages
+if [ -f "$CONFIG/packages.txt" ]; then
+    echo "Atom: Installing Packages"
+    apm install --packages-file "$CONFIG/packages.txt"
+fi
 
 echo "Atom: Done"
-echo ""
-echo "Atom: To install Atom packages, manually install the \"Package Sync\" package and run the \"Package Sync: Sync\" command."

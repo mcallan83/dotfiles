@@ -69,12 +69,12 @@ function als() {
 
 # Save installed Atom packages list to dotfiles repo.
 function apmbak() {
-    apm list --installed --bare > "$DOTFILES/osx/atom/packages.txt"
+    apm list --installed --bare > "$DOTFILES/osx/atom/config/packages.txt"
 }
 
 # Install Atom packages from list saved in dotfiles repo.
 function apmi() {
-    apm install --packages-file "$DOTFILES/osx/atom/packages.txt"
+    apm install --packages-file "$DOTFILES/osx/atom/config/packages.txt"
 }
 
 # create backup copy of file with .bak extension appended on end
