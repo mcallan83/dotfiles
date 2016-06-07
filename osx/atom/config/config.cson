@@ -23,7 +23,10 @@
     ignore: "*.blade.php"
     tabWidth: 4
     warningSeverity: 0
-  minimap: {}
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
   "one-light-ui": {}
   term2:
     colors:
