@@ -40,9 +40,7 @@ function adminer {
 
 function homestead() {
     cd "$DOTFILES/vendor/vagrant/homestead"
-
     command="$1"
-
     if [ "$command" = "edit" ]; then
         $EDITOR ~/.homestead/homestead.yaml
     elif [ "$command" = "init" ]; then
@@ -51,10 +49,8 @@ function homestead() {
         if [ -z "$command" ]; then
             command="ssh"
         fi
-
         eval "vagrant ${command}"
     fi
-
     cd -
 }
 
@@ -69,6 +65,16 @@ function server() {
 # search all aliases
 function als() {
     alias | grep $1
+}
+
+# Save installed Atom packages list to dotfiles repo.
+function apmbak() {
+    apm list --installed --bare > "$DOTFILES/osx/atom/packages.txt"
+}
+
+# Install Atom packages from list saved in dotfiles repo.
+function apmi() {
+    apm install --packages-file "$DOTFILES/osx/atom/packages.txt"
 }
 
 # create backup copy of file with .bak extension appended on end
@@ -113,5 +119,3 @@ new-alias() {
   echo alias $1="'""$last_command""'" >> "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
   . "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
 }
-
-
