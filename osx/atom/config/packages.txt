@@ -15,6 +15,7 @@ git-control@0.7.1
 git-time-machine@1.5.3
 highlight-line@0.11.1
 highlight-selected@0.11.2
+language-blade@0.25.3
 less-than-slash@0.13.0
 linter@1.11.4
 linter-php@1.2.0
