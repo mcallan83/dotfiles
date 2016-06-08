@@ -5,6 +5,7 @@ autocomplete-modules@1.5.1
 autocomplete-paths@1.0.2
 autocomplete-php@0.3.7
 change-case@0.6.0
+cobalt2-syntax@0.3.0
 color-picker@2.1.1
 docblockr@0.7.3
 editorconfig@1.4.1
