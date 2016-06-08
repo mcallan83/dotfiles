@@ -252,25 +252,20 @@ mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "/Appli
 
 banner "Installing Composer Packages"
 
-composer global require anahkiasen/rocketeer
 composer global require codegyre/robo
+composer global require friendsofphp/php-cs-fixer
 composer global require hirak/prestissimo
 composer global require jakub-onderka/php-parallel-lint
-composer global require johnnyfreeman/artisan-cli
-composer global require kherge/box
 composer global require laravel/installer
 composer global require laravel/lumen-installer
 composer global require mayflower/php-codebrowser
 composer global require pdepend/pdepend
 composer global require phploc/phploc
 composer global require phpmd/phpmd
-composer global require phpro/grumphp
 composer global require phpunit/phpunit
 composer global require sebastian/phpcpd
 composer global require squizlabs/php_codesniffer
 composer global require theseer/phpdox
-composer global require tightenco/jigsaw
-composer global require vinkla/climb
 
 ################################################################################
 # NPM Packages
