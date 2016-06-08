@@ -52,3 +52,9 @@
 [submodule "vendor/vagrant/Vaprobash"]
 	path = vendor/vagrant/Vaprobash
 	url = https://github.com/fideloper/Vaprobash
+[submodule "vendor/docs/git-tips"]
+	path = vendor/docs/git-tips
+	url = https://github.com/git-tips/tips
+[submodule "vendor/docs/laravel"]
+	path = vendor/docs/laravel
+	url = https://github.com/laravel/docs
