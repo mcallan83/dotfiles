@@ -5,6 +5,11 @@
     php:
       beautify_on_save: true
   core:
+    disabledPackages: [
+      "atomic-chrome"
+      "change-case"
+      "expose"
+    ]
     themes: [
       "one-dark-ui"
       "base16-tomorrow-dark-theme"
