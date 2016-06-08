@@ -4,6 +4,11 @@
       _analyticsUserId: "698fefe9-3881-4042-9617-202b48894d9c"
     php:
       beautify_on_save: true
+  core:
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
   minimap:
