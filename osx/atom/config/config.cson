@@ -2,6 +2,8 @@
   "atom-beautify":
     general:
       _analyticsUserId: "8b2c0325-f9e2-4d0c-adc3-6622ebe9bf93"
+    php:
+      beautify_on_save: true
   editor:
     fontSize: 17
     showInvisibles: true
@@ -15,6 +17,16 @@
       pigmentsDecorationsZIndex: 0
   welcome:
     showOnStartup: false
+  core:
+    disabledPackages: [
+      "atomic-chrome"
+      "change-case"
+      "expose"
+    ]
+    themes: [
+      "one-dark-ui"
+      "cobalt2-syntax"
+    ]
 ".blade.html.php.text":
   editor:
     commentEnd: " --}}"

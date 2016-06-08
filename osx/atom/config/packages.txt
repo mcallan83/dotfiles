@@ -5,6 +5,7 @@ autocomplete-modules@1.5.1
 autocomplete-paths@1.0.2
 autocomplete-php@0.3.7
 change-case@0.6.0
+cobalt2-syntax@0.3.0
 color-picker@2.1.1
 docblockr@0.7.3
 editorconfig@1.4.1
@@ -15,13 +16,14 @@ git-control@0.7.1
 git-time-machine@1.5.3
 highlight-line@0.11.1
 highlight-selected@0.11.2
+language-babel@2.26.3
 language-blade@0.25.3
 less-than-slash@0.13.0
 linter@1.11.4
 linter-php@1.2.0
 linter-phpcs@1.4.0
 linter-phpmd@1.5.0
-merge-conflicts@1.4.3
+merge-conflicts@1.4.4
 minimap@4.24.3
 minimap-highlight-selected@4.4.0
 minimap-pigments@0.2.1
