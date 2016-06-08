@@ -1,4 +1,10 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "8b2c0325-f9e2-4d0c-adc3-6622ebe9bf93"
+  editor:
+    fontSize: 17
+    showInvisibles: true
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
   minimap:
@@ -9,3 +15,7 @@
       pigmentsDecorationsZIndex: 0
   welcome:
     showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
