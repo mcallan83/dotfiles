@@ -1,9 +1,22 @@
 "*":
+  "advanced-open-file":
+    createDirectories: true
+    createFileInstantly: true
   "atom-beautify":
     general:
       _analyticsUserId: "8b2c0325-f9e2-4d0c-adc3-6622ebe9bf93"
     php:
       beautify_on_save: true
+  core:
+    disabledPackages: [
+      "atomic-chrome"
+      "change-case"
+      "expose"
+    ]
+    themes: [
+      "one-dark-ui"
+      "cobalt2-syntax"
+    ]
   editor:
     fontSize: 17
     showInvisibles: true
@@ -15,18 +28,14 @@
       "highlight-selectedDecorationsZIndex": 0
       pigments: true
       pigmentsDecorationsZIndex: 0
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   welcome:
     showOnStartup: false
-  core:
-    disabledPackages: [
-      "atomic-chrome"
-      "change-case"
-      "expose"
-    ]
-    themes: [
-      "one-dark-ui"
-      "cobalt2-syntax"
-    ]
 ".blade.html.php.text":
   editor:
     commentEnd: " --}}"
