@@ -18,10 +18,10 @@ git-plus@5.14.0
 git-time-machine@1.5.3
 highlight-line@0.11.1
 highlight-selected@0.11.2
-language-babel@2.26.3
+language-babel@2.27.1
 language-blade@0.25.3
 less-than-slash@0.13.0
-linter@1.11.4
+linter@1.11.5
 linter-php@1.2.0
 linter-phpcs@1.4.0
 linter-phpmd@1.5.0
@@ -29,7 +29,7 @@ merge-conflicts@1.4.4
 minimap@4.24.3
 minimap-highlight-selected@4.4.0
 minimap-pigments@0.2.1
-pigments@0.29.1
+pigments@0.29.2
 project-manager@2.9.7
 script@3.7.3
 set-syntax@0.3.0
