@@ -6,6 +6,7 @@
 /osx/atom/config/compile-cache/
 /osx/atom/config/git-time-machine/
 /osx/atom/config/packages/
+/osx/atom/config/projects.cson
 /osx/atom/config/split-diff/
 /osx/atom/config/storage/
 /tags
