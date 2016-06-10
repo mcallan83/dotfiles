@@ -101,6 +101,11 @@ function bak() {
     cp "${1}"{,.bak}
 }
 
+# run a command inside vagrant box via ssh
+function vc() {
+    vagrant ssh -c $*
+}
+
 # osx only
 
 pman() {
