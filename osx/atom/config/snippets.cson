@@ -1,0 +1,14 @@
+
+".source.js":
+  "console.log":
+    "prefix": "log"
+    "body": "aconsole.log(${1:obj});"
+  ".on()":
+    "prefix": "on"
+    "body": ".on(\'${1:click}\'${2:, \'${3:.selector}\'}, function(${4:e}) {\n\t${5:e.preventDefault();}\n\t${6:\n});"
+  "$('')":
+    "prefix": "$"
+    "body": "$(${1:'.selector'})"
+  "alert()":
+    "prefix": "!!"
+    "body": "alert(${1:'alert'})"
