@@ -23,7 +23,7 @@
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
   linter:
-    errorPanelHeight: 115
+    errorPanelHeight: 183
   minimap:
     plugins:
       "highlight-selected": true
