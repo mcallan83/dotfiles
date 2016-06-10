@@ -1,6 +1,6 @@
 start_time="$(date +%s)"
 
-# zshrc before
+# source .zshrc.before if it exists
 [[ -r ~/.zshrc.before ]] && . ~/.zshrc.before
 
 # disable oh-my-zsh auto update
@@ -40,10 +40,14 @@ source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 #source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# zshrc after
+# source .zshrc.after if it exists
 [[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
+
+# source .zshrc.local if it exists after changing paths
+source $DOTFILES/zsh/oh-my-zsh/local.zsh
+
 
 end_time="$(date +%s)"
 # echo .zshrc: $((end_time - start_time)) seconds
