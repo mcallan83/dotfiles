@@ -5,14 +5,14 @@
   "atom-beautify":
     general:
       _analyticsUserId: "8b2c0325-f9e2-4d0c-adc3-6622ebe9bf93"
-    php:
-      beautify_on_save: true
+    php: {}
   core:
     disabledPackages: [
       "atomic-chrome"
       "change-case"
       "expose"
     ]
+    excludeVcsIgnoredPaths: false
     themes: [
       "one-dark-ui"
       "cobalt2-syntax"
@@ -22,6 +22,8 @@
     showInvisibles: true
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
+  linter:
+    errorPanelHeight: 115
   minimap:
     plugins:
       "highlight-selected": true
@@ -34,6 +36,7 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
+  "tool-bar": {}
   welcome:
     showOnStartup: false
 ".blade.html.php.text":

@@ -12,7 +12,7 @@ docblockr@0.7.3
 editorconfig@1.4.1
 emmet@2.4.3
 expose@0.12.0
-file-icons@1.7.13
+file-icons@1.7.14
 git-control@0.7.1
 git-plus@5.14.0
 git-time-machine@1.5.3
@@ -21,12 +21,12 @@ highlight-selected@0.11.2
 language-babel@2.27.1
 language-blade@0.25.3
 less-than-slash@0.13.0
-linter@1.11.5
+linter@1.11.6
 linter-php@1.2.0
 linter-phpcs@1.4.0
 linter-phpmd@1.5.0
 merge-conflicts@1.4.4
-minimap@4.24.3
+minimap@4.24.4
 minimap-highlight-selected@4.4.0
 minimap-pigments@0.2.1
 pigments@0.29.2
@@ -35,4 +35,6 @@ script@3.7.3
 set-syntax@0.3.0
 sort-lines@0.14.0
 term3@0.22.0
+tool-bar@0.4.0
+tool-bar-almighty@0.6.1
 vim-mode@0.65.1
