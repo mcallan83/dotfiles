@@ -45,9 +45,5 @@ source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 # source .zshrc.after if it exists
 [[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
 
-# source .zshrc.local if it exists after changing paths
-source $DOTFILES/zsh/oh-my-zsh/local.zsh
-
-
 end_time="$(date +%s)"
 # echo .zshrc: $((end_time - start_time)) seconds
