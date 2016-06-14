@@ -28,10 +28,11 @@
   "linter-eslint":
     lintHtmlFiles: true
   minimap:
+    absoluteMode: true
+    adjustAbsoluteModeHeight: true
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
-      linter: true
       linterDecorationsZIndex: 0
       pigments: true
       pigmentsDecorationsZIndex: 0
