@@ -11,6 +11,8 @@
       "atomic-chrome"
       "change-case"
       "expose"
+      "autocomplete-php"
+      "php-composer-completion"
     ]
     excludeVcsIgnoredPaths: false
     themes: [
