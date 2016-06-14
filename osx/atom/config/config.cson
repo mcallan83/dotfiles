@@ -34,6 +34,9 @@
       linterDecorationsZIndex: 0
       pigments: true
       pigmentsDecorationsZIndex: 0
+  "project-manager":
+    closeCurrent: true
+    environmentSpecificProjects: true
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
