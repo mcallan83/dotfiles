@@ -21,11 +21,13 @@
     ]
   editor:
     fontSize: 17
+    showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
   linter:
-    errorPanelHeight: 183
+    lintOnFlyInterval: 2000
+    showErrorInline: false
   "linter-eslint":
     lintHtmlFiles: true
   minimap:
