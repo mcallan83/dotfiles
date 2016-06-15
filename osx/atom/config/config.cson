@@ -6,6 +6,9 @@
     general:
       _analyticsUserId: "8b2c0325-f9e2-4d0c-adc3-6622ebe9bf93"
     php: {}
+  build:
+    beepWhenDone: true
+    panelVisibility: "Keep Visible"
   core:
     automaticallyUpdate: false
     disabledPackages: [
@@ -16,6 +19,7 @@
       "php-composer-completion"
     ]
     excludeVcsIgnoredPaths: false
+    packagesWithKeymapsDisabled: []
     themes: [
       "one-dark-ui"
       "cobalt2-syntax"
@@ -37,9 +41,11 @@
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+      linter: true
       linterDecorationsZIndex: 0
       pigments: true
       pigmentsDecorationsZIndex: 0
+    scrollAnimation: true
   "project-manager":
     closeCurrent: true
     environmentSpecificProjects: true

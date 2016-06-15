@@ -1,2 +1,7 @@
 # 'atom-text-editor[data-grammar*="blade"]:not([mini])':
 #   'tab': 'emmet:expand-abbreviation-with-tab'
+
+
+# toggle advanced open file
+'.platform-darwin atom-workspace':
+  'cmd-alt-n': 'advanced-open-file:toggle'
