@@ -7,6 +7,7 @@
       _analyticsUserId: "8b2c0325-f9e2-4d0c-adc3-6622ebe9bf93"
     php: {}
   core:
+    automaticallyUpdate: false
     disabledPackages: [
       "atomic-chrome"
       "change-case"
@@ -31,13 +32,17 @@
   "linter-eslint":
     lintHtmlFiles: true
   minimap:
+    absoluteMode: true
+    adjustAbsoluteModeHeight: true
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
-      linter: true
       linterDecorationsZIndex: 0
       pigments: true
       pigmentsDecorationsZIndex: 0
+  "project-manager":
+    closeCurrent: true
+    environmentSpecificProjects: true
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -45,6 +50,7 @@
     rightEditorColor: "green"
     syncHorizontalScroll: true
   "tool-bar": {}
+  "tool-bar-almighty": {}
   welcome:
     showOnStartup: false
 ".blade.html.php.text":
