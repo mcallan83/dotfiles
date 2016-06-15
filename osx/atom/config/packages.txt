@@ -1,10 +1,14 @@
 advanced-open-file@0.16.3
+atom-autocomplete-php@0.18.9
 atom-beautify@0.29.8
 atomic-chrome@0.3.0
 autocomplete-modules@1.5.1
 autocomplete-paths@1.0.2
 autocomplete-php@0.3.7
 browser-refresh@0.9.0
+build@0.64.0
+build-grunt@0.4.0
+busy@0.5.0
 change-case@0.6.0
 cobalt2-syntax@0.3.0
 color-picker@2.1.1
@@ -21,8 +25,10 @@ highlight-selected@0.11.2
 jumpy@3.0.3
 language-babel@2.28.0
 language-blade@0.25.3
+language-vue@0.14.0
 less-than-slash@0.13.0
 linter@1.11.10
+linter-eslint@7.2.2
 linter-php@1.2.0
 linter-phpcs@1.4.0
 linter-phpmd@1.5.0
@@ -31,6 +37,7 @@ minimap@4.24.6
 minimap-highlight-selected@4.4.0
 minimap-linter@1.1.1
 minimap-pigments@0.2.1
+php-composer-completion@0.3.4
 phpunit@1.2.0
 pigments@0.29.2
 project-manager@2.9.7

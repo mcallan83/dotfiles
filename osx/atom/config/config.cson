@@ -6,20 +6,27 @@
     general:
       _analyticsUserId: "8b2c0325-f9e2-4d0c-adc3-6622ebe9bf93"
     php: {}
+  build:
+    beepWhenDone: true
+    panelVisibility: "Keep Visible"
   core:
     automaticallyUpdate: false
     disabledPackages: [
       "atomic-chrome"
       "change-case"
       "expose"
+      "autocomplete-php"
+      "php-composer-completion"
     ]
     excludeVcsIgnoredPaths: false
+    packagesWithKeymapsDisabled: []
     themes: [
       "one-dark-ui"
       "cobalt2-syntax"
     ]
   editor:
     fontSize: 17
+    showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
@@ -27,7 +34,8 @@
     fontSize: 1
     highContrast: true
   linter:
-    errorPanelHeight: 183
+    lintOnFlyInterval: 2000
+    showErrorInline: false
   "linter-eslint":
     lintHtmlFiles: true
   minimap:
@@ -40,6 +48,7 @@
       linterDecorationsZIndex: 0
       pigments: true
       pigmentsDecorationsZIndex: 0
+    scrollAnimation: true
   "project-manager":
     closeCurrent: true
     environmentSpecificProjects: true
