@@ -1,5 +1,5 @@
 advanced-open-file@0.16.3
-atom-beautify@0.29.7
+atom-beautify@0.29.8
 atomic-chrome@0.3.0
 autocomplete-modules@1.5.1
 autocomplete-paths@1.0.2
@@ -18,15 +18,16 @@ git-plus@5.15.0
 git-time-machine@1.5.3
 highlight-line@0.11.1
 highlight-selected@0.11.2
+jumpy@3.0.3
 language-babel@2.28.0
 language-blade@0.25.3
 less-than-slash@0.13.0
-linter@1.11.8
+linter@1.11.10
 linter-php@1.2.0
 linter-phpcs@1.4.0
 linter-phpmd@1.5.0
 merge-conflicts@1.4.4
-minimap@4.24.4
+minimap@4.24.6
 minimap-highlight-selected@4.4.0
 minimap-linter@1.1.1
 minimap-pigments@0.2.1

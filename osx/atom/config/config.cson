@@ -23,6 +23,9 @@
     showInvisibles: true
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
+  jumpy:
+    fontSize: 1
+    highContrast: true
   linter:
     errorPanelHeight: 183
   "linter-eslint":
@@ -33,6 +36,7 @@
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+      linter: true
       linterDecorationsZIndex: 0
       pigments: true
       pigmentsDecorationsZIndex: 0
