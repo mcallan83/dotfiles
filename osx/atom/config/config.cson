@@ -30,6 +30,9 @@
     showInvisibles: true
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
+  jumpy:
+    fontSize: 1
+    highContrast: true
   linter:
     lintOnFlyInterval: 2000
     showErrorInline: false

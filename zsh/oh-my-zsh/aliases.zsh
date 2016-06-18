@@ -18,6 +18,9 @@ alias aa="atom ."
 # cd back
 alias cdb="cd -"
 
+# colortest
+alias colortest="colortest | sed -n '1!p'"
+
 # clear screen
 alias cl="clear"
 
