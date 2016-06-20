@@ -37,6 +37,7 @@ minimap@4.24.6
 minimap-highlight-selected@4.4.0
 minimap-linter@1.1.1
 minimap-pigments@0.2.1
+multi-wrap-guide@0.24.0
 php-composer-completion@0.3.4
 phpunit@1.2.0
 pigments@0.29.2

@@ -18,6 +18,7 @@
       "autocomplete-php"
       "php-composer-completion"
       "atom-autocomplete-php"
+      "wrap-guide"
     ]
     excludeVcsIgnoredPaths: false
     packagesWithKeymapsDisabled: []
@@ -52,6 +53,13 @@
       pigments: true
       pigmentsDecorationsZIndex: 0
     scrollAnimation: true
+  "multi-wrap-guide":
+    columns: [
+      80
+      120
+    ]
+    locked: true
+    silent: true
   "project-manager":
     closeCurrent: true
     environmentSpecificProjects: true
