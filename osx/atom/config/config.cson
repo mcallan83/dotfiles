@@ -17,6 +17,7 @@
       "expose"
       "autocomplete-php"
       "php-composer-completion"
+      "atom-autocomplete-php"
     ]
     excludeVcsIgnoredPaths: false
     packagesWithKeymapsDisabled: []
@@ -28,8 +29,10 @@
     fontSize: 17
     showIndentGuide: true
     showInvisibles: true
+    tabLength: 4
   "exception-reporting":
     userId: "8adfcc57-bd96-b2ab-bba2-1cc3e1699907"
+  "file-icons": {}
   jumpy:
     fontSize: 1
     highContrast: true
