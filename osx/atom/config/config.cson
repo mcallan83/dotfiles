@@ -71,9 +71,18 @@
     syncHorizontalScroll: true
   "tool-bar": {}
   "tool-bar-almighty": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 ".blade.html.php.text":
   editor:
     commentEnd: " --}}"
     commentStart: "{{-- "
+".html.php.text":
+  editor:
+    preferredLineLength: 80
+  "multi-wrap-guide":
+    columns: [
+      80
+    ]
