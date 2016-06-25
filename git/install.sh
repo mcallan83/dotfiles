@@ -43,4 +43,5 @@ tee -a "$GITCONFIG" > /dev/null <<'EOF'
     undo = reset HEAD~1 --mixed
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
     wc = "!git whatchanged -p --abbrev-commit --pretty=medium"
+    reword = "commit -v --amend"
 EOF
