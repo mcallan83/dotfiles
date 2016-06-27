@@ -36,7 +36,6 @@ fi
 # append git aliases
 tee -a "$GITCONFIG" > /dev/null <<'EOF'
 [alias]
-    amend = commit -a --amend
     rebase-branch = "!git rebase -i `git merge-base master HEAD`"
     review = difftool origin/master...
     save = !git add -A && git commit -m 'SAVEPOINT'
@@ -45,3 +44,5 @@ tee -a "$GITCONFIG" > /dev/null <<'EOF'
     wc = "!git whatchanged -p --abbrev-commit --pretty=medium"
     reword = "commit -v --amend"
 EOF
+
+git config --global alias.amend "commit -a --amend"

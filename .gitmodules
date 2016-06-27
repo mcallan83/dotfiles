@@ -58,3 +58,9 @@
 [submodule "vendor/docs/laravel"]
 	path = vendor/docs/laravel
 	url = https://github.com/laravel/docs
+[submodule "vendor/docs/awesome-osx-command-line"]
+	path = vendor/docs/awesome-osx-command-line
+	url = https://github.com/herrbischoff/awesome-osx-command-line
+[submodule "vendor/osx/osx-for-hackers"]
+	path = vendor/osx/osx-for-hackers
+	url = https://gist.github.com/brandonb927/3195465
