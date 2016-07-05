@@ -9,7 +9,7 @@
         "linters": {
             "eslint": {
                 "@disable": false,
-                "args": ["--ext=js,vue"],
+                "args": [],
                 "excludes": []
             },
             "json": {
@@ -50,8 +50,7 @@
             "php": "html",
             "python django": "python",
             "pythonimproved": "python",
-            "Vue Component": "javascript",
-            "vue": "javascript"
+            "Vue Component": "javascript"
         },
         "warning_color": "DDB700",
         "wrap_find": true
