@@ -24,7 +24,7 @@
     packagesWithKeymapsDisabled: []
     themes: [
       "one-dark-ui"
-      "cobalt2-syntax"
+      "oceanic-next"
     ]
   editor:
     fontSize: 17
