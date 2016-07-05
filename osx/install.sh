@@ -284,6 +284,10 @@ npm install -g csslint
 npm install -g duo
 npm install -g electron-prebuilt
 npm install -g eslint
+npm install -g eslint-config-standard
+npm install -g eslint-plugin-html
+npm install -g eslint-plugin-promise
+npm install -g eslint-plugin-standard
 npm install -g exorcist
 npm install -g express-generator
 npm install -g forever
