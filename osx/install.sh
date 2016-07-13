@@ -78,9 +78,10 @@ brew install ctags
 brew install dark-mode
 brew install ddrescue
 brew install devd
+brew install direnv
 brew install dnsmasq
-brew install docker
-brew install docker-compose
+#brew install docker
+#brew install docker-compose
 brew install ffmpeg
 brew install gcc
 brew install getmail

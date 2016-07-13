@@ -37,6 +37,7 @@ source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
 source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
+source $DOTFILES/zsh/oh-my-zsh/direnv.zsh
 #source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
 
 # rvm
