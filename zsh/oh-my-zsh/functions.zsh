@@ -142,3 +142,33 @@ new-alias() {
   echo alias $1="'""$last_command""'" >> "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
   . "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
 }
+
+
+# encrypt file
+# http://flux242.blogspot.com/2011/03/encrypting-with-openssl-in-bash.html
+function encrypt {
+  if [ -t 0 ]; then
+    # interactive
+    local fname="$1"
+    shift
+    openssl aes-256-cbc -salt -in "$fname" -out "${fname}.enc" $@
+  else
+    # piped
+    perl -e 'use IO::Select; $ready=IO::Select->new(STDIN)->can_read();'
+    openssl aes-256-cbc -salt $@
+  fi
+}
+
+# decrypt file
+# http://flux242.blogspot.com/2011/03/encrypting-with-openssl-in-bash.html
+function decrypt {
+  if [ -t 0 ]; then
+    # interactive
+    local fname="$1"
+    shift
+    openssl aes-256-cbc -d -in "$fname" -out "${fname%\.*}" $@
+  else
+    perl -e 'use IO::Select; $ready=IO::Select->new(STDIN)->can_read();'
+    openssl aes-256-cbc -d $@
+  fi
+}
