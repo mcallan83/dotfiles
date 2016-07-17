@@ -274,6 +274,7 @@ composer global require theseer/phpdox
 
 banner "Installing NPM Packages"
 
+npm install -g atmo
 npm install -g babel-cli
 npm install -g babel-eslint
 npm install -g bower
