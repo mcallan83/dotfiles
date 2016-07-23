@@ -109,6 +109,7 @@ brew install shellcheck
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install sshrc
+brew install stormssh
 brew install terminal-notifier
 brew install tesseract
 brew install testdisk
