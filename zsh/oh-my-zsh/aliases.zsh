@@ -31,6 +31,9 @@ alias tags="ctags -R"
 # https://github.com/cortesi/devd
 alias dv="devd -ol ."
 
+# docker
+alias dcu="docker-compose up"
+
 # git
 alias gi="git init"
 alias gj="git checkout -"
