@@ -39,6 +39,7 @@ alias gi="git init"
 alias gj="git checkout -"
 alias gs="gst"
 alias gsub="git submodule foreach git pull origin master"
+alias gpb="ggpush && hb"
 
 # grep
 alias -g G='| grep'
