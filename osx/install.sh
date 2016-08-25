@@ -309,6 +309,7 @@ npm install -g jshint
 npm install -g karma-cli
 npm install -g less
 npm install -g modernizr
+npm install -g nativefier
 npm install -g nodal
 npm install -g node-inspector
 npm install -g node-sass
