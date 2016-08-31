@@ -103,6 +103,7 @@ brew install node4-lts
 brew install pandoc
 brew install python
 brew install r
+brew install rclone
 brew install reattach-to-user-namespace
 brew install rem
 brew install shellcheck
