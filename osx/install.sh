@@ -52,6 +52,7 @@ fi
 
 banner "Updating Homebrew"
 brew update
+brew analytics off
 
 banner "Tapping Additional Homebrew Repos"
 brew tap caskroom/cask
