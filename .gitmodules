@@ -64,3 +64,9 @@
 [submodule "vendor/osx/osx-for-hackers"]
 	path = vendor/osx/osx-for-hackers
 	url = https://gist.github.com/brandonb927/3195465
+[submodule "vendor/osx/OSX-KVM"]
+	path = vendor/osx/OSX-KVM
+	url = https://github.com/kholia/OSX-KVM
+[submodule "vendor/osx/k2k-OSX-Tools"]
+	path = vendor/osx/k2k-OSX-Tools
+	url = https://github.com/Karlson2k/k2k-OSX-Tools
