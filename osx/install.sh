@@ -123,6 +123,7 @@ brew install tree
 brew install vim --override-system-vi
 brew install wget --with-iri
 brew install xmlstarlet
+brew install you-get
 brew install youtube-dl
 brew install zsh
 
@@ -336,6 +337,7 @@ npm install -g vtop
 npm install -g vue-cli
 npm install -g webpack
 npm install -g webpack-dev-server
+npm install -g yarn
 npm install -g yo
 
 ################################################################################
