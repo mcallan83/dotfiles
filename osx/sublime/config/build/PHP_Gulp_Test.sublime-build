@@ -1,0 +1,6 @@
+{
+    "cmd": ["gulp test --testCase $file"],
+    "shell": true,
+    "selector": "source.php",
+    "working_dir": "${project_path:${folder}}"
+}
