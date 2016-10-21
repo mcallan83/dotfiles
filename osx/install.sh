@@ -100,7 +100,7 @@ brew install libav
 brew install lua
 brew install mongodb
 brew install mysql
-brew install node4-lts
+brew install node
 brew install pandoc
 brew install python
 brew install r
@@ -206,14 +206,19 @@ brew cask install quicklook-json
 brew cask install suspicious-package
 brew cask install webpquicklook
 
+brew cask install font-fira-code
+brew cask install font-fira-mono
+brew cask install font-fira-mono-for-powerline
+brew cask install font-fira-sans
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
 
+
 # Install Vagrant Hostsupdater Plugin
 # https://github.com/cogitatio/vagrant-hostsupdater
-banner "Install Vagrant Hostsupdater Plugin"
-vagrant plugin install vagrant-hostsupdater
+# banner "Install Vagrant Hostsupdater Plugin"
+# vagrant plugin install vagrant-hostsupdater
 
 # Sudoless NFS with Vagrant
 # https://gist.github.com/joemaller/6764700
