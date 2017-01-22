@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[console.log(${1:var});]]></content>
+    <content><![CDATA[console.log(${1:var})]]></content>
     <tabTrigger>log</tabTrigger>
     <scope>source.js,source.js.embedded.html</scope>
     <description>Console Log</description>
