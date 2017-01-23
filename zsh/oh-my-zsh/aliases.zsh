@@ -80,6 +80,7 @@ alias psa="ps aux"
 # spotify
 alias sp="spotify"
 alias next="spotify next"
+alias song="spotify status"
 
 # sublime
 alias ss="stt"
