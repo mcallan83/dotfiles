@@ -100,6 +100,7 @@ brew install libav
 brew install lua
 brew install mongodb
 brew install mysql
+brew install nmap
 brew install node
 brew install pandoc
 brew install python
