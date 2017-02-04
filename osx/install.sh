@@ -72,28 +72,21 @@ brew install --HEAD neovim
 brew install aria2
 brew install autossh
 brew install bash-completion
-brew install boot2docker
 brew install brew-cask
 brew install coreutils
 brew install ctags
-brew install dark-mode
 brew install ddrescue
 brew install devd
-brew install direnv
 brew install dnsmasq
-#brew install docker
-#brew install docker-compose
 brew install ffmpeg
 brew install gcc
 brew install getmail
 brew install git
-brew install gitsh
 brew install go
 brew install gpg
 brew install highlight
 brew install htop-osx
 brew install hub
-brew install hugo
 brew install imagemagick --with-webp
 brew install jq
 brew install libav
@@ -104,10 +97,8 @@ brew install nmap
 brew install node
 brew install pandoc
 brew install python
-brew install r
 brew install rclone
 brew install reattach-to-user-namespace
-brew install rem
 brew install shellcheck
 brew install speedtest_cli
 brew install ssh-copy-id
@@ -124,22 +115,22 @@ brew install tree
 brew install vim --override-system-vi
 brew install wget --with-iri
 brew install xmlstarlet
+brew install yarn
 brew install you-get
 brew install youtube-dl
 brew install zsh
 
 # PHP 5.6
-banner "Installing PHP 5.6"
-brew install homebrew/php/php56
-echo "date.timezone = America/Chicago" >> /usr/local/etc/php/5.6/php.ini
-echo "phar.readonly = Off" >> /usr/local/etc/php/5.6/php.ini
-#echo "extension=mongo.so" >> /usr/local/etc/php/5.6/php.ini
+banner "Installing PHP 7.1"
+brew install homebrew/php/php71
+echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.1/php.ini
+echo "phar.readonly = Off" >> /usr/local/etc/php/7.1/php.ini
 
 brew install homebrew/php/adminer
 brew install homebrew/php/composer
-brew install homebrew/php/php56-intl
-brew install homebrew/php/php56-mcrypt
-brew install homebrew/php/php56-mongo
+brew install homebrew/php/php71-intl
+brew install homebrew/php/php71-mcrypt
+brew install homebrew/php/php71-mongodb
 
 # Homebrew Casks
 banner "Installing Homebrew Casks"
@@ -147,18 +138,17 @@ brew cask
 brew cask install adium
 brew cask install aerial
 brew cask install alfred
-brew cask install anybar
 brew cask install appcleaner
 brew cask install arq
 brew cask install atom
 brew cask install bettertouchtool
 brew cask install cakebrew
 brew cask install ccleaner
-brew cask install cheatsheet
 brew cask install chrome-remote-desktop-host
 brew cask install clamxav
 brew cask install cyberduck
 brew cask install disk-inventory-x
+brew cask install docker
 brew cask install dropbox
 brew cask install firefox
 brew cask install go2shell
@@ -265,7 +255,6 @@ mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "/Appli
 
 banner "Installing Composer Packages"
 
-composer global require codegyre/robo
 composer global require friendsofphp/php-cs-fixer
 composer global require hirak/prestissimo
 composer global require jakub-onderka/php-parallel-lint
@@ -286,14 +275,7 @@ composer global require theseer/phpdox
 
 banner "Installing NPM Packages"
 
-npm install -g atmo
-npm install -g babel-cli
-npm install -g babel-eslint
-npm install -g bower
 npm install -g browser-sync
-npm install -g browserify
-npm install -g caniuse-cmd
-npm install -g colorguard
 npm install -g csslint
 npm install -g duo
 npm install -g electron-prebuilt
@@ -302,7 +284,6 @@ npm install -g eslint-config-standard
 npm install -g eslint-plugin-html
 npm install -g eslint-plugin-promise
 npm install -g eslint-plugin-standard
-npm install -g exorcist
 npm install -g express-generator
 npm install -g forever
 npm install -g foundation-cli
@@ -313,9 +294,7 @@ npm install -g http-server
 npm install -g imageoptim-cli
 npm install -g iron-node
 npm install -g jade
-npm install -g jscs
 npm install -g jsdoc
-npm install -g jshint
 npm install -g karma-cli
 npm install -g less
 npm install -g modernizr
@@ -334,17 +313,10 @@ npm install -g sloc
 npm install -g stylestats
 npm install -g svgo
 npm install -g textract
-npm install -g tldr
 npm install -g torrentflix
 npm install -g typescript
-npm install -g uglify-js
-npm install -g updtr
 npm install -g vmd
-npm install -g vtop
 npm install -g vue-cli
-npm install -g webpack
-npm install -g webpack-dev-server
-npm install -g yarn
 npm install -g yo
 
 ################################################################################
