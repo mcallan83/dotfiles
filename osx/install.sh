@@ -76,7 +76,6 @@ brew install brew-cask
 brew install coreutils
 brew install ctags
 brew install ddrescue
-brew install devd
 brew install dnsmasq
 brew install ffmpeg
 brew install gcc

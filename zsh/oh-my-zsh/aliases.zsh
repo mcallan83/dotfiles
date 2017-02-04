@@ -27,10 +27,6 @@ alias cl="clear"
 # ctags - generate index
 alias tags="ctags -R"
 
-# dedv
-# https://github.com/cortesi/devd
-alias dv="devd -ol ."
-
 # docker
 alias dcu="docker-compose up"
 
