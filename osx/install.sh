@@ -137,6 +137,7 @@ brew cask
 brew cask install adium
 brew cask install aerial
 brew cask install alfred
+brew cask install angry-ip-scanner
 brew cask install appcleaner
 brew cask install arq
 brew cask install atom
