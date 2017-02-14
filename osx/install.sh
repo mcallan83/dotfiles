@@ -150,6 +150,7 @@ brew cask install cyberduck
 brew cask install disk-inventory-x
 brew cask install docker
 brew cask install dropbox
+brew cask install etcher
 brew cask install firefox
 brew cask install go2shell
 brew cask install google-chrome
