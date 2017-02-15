@@ -172,3 +172,16 @@ function decrypt {
     openssl aes-256-cbc -d $@
   fi
 }
+
+
+# export git repo as zip to desktop
+function gexp {
+    TIMESTAMP=$(date +%s)
+
+    BRANCH="master"
+    vared -p "Branch [master]:" -c $BRANCH
+
+    OUTPUT="$HOME/Desktop/$TIMESTAMP-archive.zip"
+
+    git archive --format zip --output $OUTPUT $BRANCH
+}

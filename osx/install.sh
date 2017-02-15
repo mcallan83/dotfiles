@@ -137,6 +137,7 @@ brew cask
 brew cask install adium
 brew cask install aerial
 brew cask install alfred
+brew cask install angry-ip-scanner
 brew cask install appcleaner
 brew cask install arq
 brew cask install atom
@@ -149,6 +150,7 @@ brew cask install cyberduck
 brew cask install disk-inventory-x
 brew cask install docker
 brew cask install dropbox
+brew cask install etcher
 brew cask install firefox
 brew cask install go2shell
 brew cask install google-chrome
