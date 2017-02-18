@@ -35,6 +35,7 @@
 		"Phpcs",
 		"PhpDoc",
 		"PhpNamespace",
+		"Pug",
 		"Riot Tag",
 		"rsub",
 		"Sass",
