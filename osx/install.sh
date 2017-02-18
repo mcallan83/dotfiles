@@ -377,7 +377,7 @@ banner "Update and Cleanup"
 
 # homebrew
 brew update
-brew upgrade --all
+brew upgrade
 brew cleanup
 brew cask cleanup
 brew prune
