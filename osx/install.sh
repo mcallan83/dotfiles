@@ -286,6 +286,7 @@ npm install -g eslint-plugin-html
 npm install -g eslint-plugin-promise
 npm install -g eslint-plugin-standard
 npm install -g express-generator
+npm install -g fkill-cli
 npm install -g forever
 npm install -g foundation-cli
 npm install -g grunt-cli
