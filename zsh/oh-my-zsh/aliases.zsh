@@ -70,6 +70,9 @@ alias niy="npm init -y"
 alias nr="npm run"
 alias nu="npm update"
 
+# portainer
+alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer"
+
 # ps
 alias psa="ps aux"
 
