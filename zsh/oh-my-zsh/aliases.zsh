@@ -71,7 +71,7 @@ alias nr="npm run"
 alias nu="npm update"
 
 # portainer
-alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer"
+alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
 
 # ps
 alias psa="ps aux"
