@@ -30,6 +30,8 @@ alias tags="ctags -R"
 # docker
 alias dcu="docker-compose up"
 
+alias ethe="curl -s https://coinmarketcap-nexuist.rhcloud.com/api/eth | python -c \"import json, sys; print(json.load(sys.stdin)['price']['usd'])\""
+
 # git
 alias gi="git init"
 alias gj="git checkout -"
