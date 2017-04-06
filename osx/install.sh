@@ -91,6 +91,7 @@ brew install imagemagick --with-webp
 brew install jq
 brew install libav
 brew install lua
+brew install mas
 brew install mongodb
 brew install mysql
 brew install nmap
@@ -120,7 +121,7 @@ brew install you-get
 brew install youtube-dl
 brew install zsh
 
-# PHP 5.6
+# PHP 7.1
 banner "Installing PHP 7.1"
 brew install homebrew/php/php71
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.1/php.ini
@@ -170,6 +171,7 @@ brew cask install launchcontrol
 brew cask install launchrocket
 brew cask install libreoffice
 brew cask install macdown
+brew cask install ndm
 brew cask install numi
 brew cask install nvalt
 brew cask install robomongo
