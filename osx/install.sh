@@ -86,6 +86,7 @@ brew install gpg
 brew install highlight
 brew install htop-osx
 brew install hub
+brew install icdiff
 brew install imagemagick --with-webp
 brew install jq
 brew install libav
