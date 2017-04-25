@@ -42,6 +42,7 @@
         "show_errors_on_save": false,
         "show_marks_in_minimap": true,
         "syntax_map": {
+            "Vue Component": "javascript",
             "html (django)": "html",
             "html (rails)": "html",
             "html 5": "html",
@@ -49,9 +50,12 @@
             "magicpython": "python",
             "php": "html",
             "python django": "python",
-            "pythonimproved": "python",
-            "Vue Component": "javascript"
+            "pythonimproved": "python"
         },
+        "tooltip_fontsize": "1rem",
+        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
+        "tooltip_theme_excludes": [],
+        "tooltips": true,
         "warning_color": "DDB700",
         "wrap_find": true
     }

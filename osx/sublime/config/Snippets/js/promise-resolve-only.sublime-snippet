@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[return new Promise(resolve => {
+  ${1}
+})]]></content>
+    <tabTrigger>promr</tabTrigger>
+    <scope>source.js,source.js.embedded.html</scope>
+    <description>new promise</description>
+</snippet>
