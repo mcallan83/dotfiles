@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[${1:this.}\$router.push({name: '${2:name}'})]]></content>
-    <tabTrigger>vpush</tabTrigger>
-    <scope>text.html.vue source.js</scope>
-    <description>Vue.js Router Push</description>
-</snippet>
