@@ -29,6 +29,7 @@ alias tags="ctags -R"
 
 # docker
 alias dcu="docker-compose up"
+alias dcub="docker-compose up --build"
 
 alias ethe="curl -s https://coinmarketcap-nexuist.rhcloud.com/api/eth | python -c \"import json, sys; print(json.load(sys.stdin)['price']['usd'])\""
 
@@ -126,5 +127,5 @@ alias l="showmarks"
 alias sc="screencapture -c -W"
 
 # hide\show hidden files
-alias hide="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
-alias show="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
+alias show="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
