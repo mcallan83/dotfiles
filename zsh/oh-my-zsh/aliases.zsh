@@ -14,6 +14,7 @@ alias dots="cd $DOTFILES && $EDITOR"
 
 # atom
 alias aa="atom ."
+alias aab="apm list --installed --bare > $DOTFILES/osx/atom/config/packages.txt"
 
 # cd back
 alias cdb="cd -"
@@ -30,8 +31,8 @@ alias tags="ctags -R"
 # docker
 alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
-
-alias ethe="curl -s https://coinmarketcap-nexuist.rhcloud.com/api/eth | python -c \"import json, sys; print(json.load(sys.stdin)['price']['usd'])\""
+alias dcl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
+alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
 
 # git
 alias gi="git init"
@@ -65,17 +66,6 @@ alias la5vc="la5 view:clear"
 # less
 alias -g L='| less'
 
-# npm
-alias n="npm"
-alias ni="npm install"
-alias nig="npm install -g"
-alias niy="npm init -y"
-alias nr="npm run"
-alias nu="npm update"
-
-# portainer
-alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
-
 # ps
 alias psa="ps aux"
 
@@ -102,10 +92,6 @@ alias vu="vagrant up"
 # vim
 alias v="vim"
 alias vl="vim -N -u NONE" #vim with no plugins
-
-# web-search
-alias amazon='web_search duckduckgo \!az'
-alias laradoc='web_search duckduckgo \!laravel'
 
 # youtube-dl
 alias ytd="youtube-dl"
