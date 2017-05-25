@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[${1:actionName} ({commit}, ${2:payload}) {
+  ${3:commit('', \{\})}
+}
+]]></content>
+    <tabTrigger>vxa</tabTrigger>
+    <scope>source.js,source.js.embedded.html</scope>
+    <description>[vuex] action method</description>
+</snippet>

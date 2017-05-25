@@ -13,5 +13,5 @@ export default {
 ]]></content>
     <tabTrigger>vcom</tabTrigger>
     <scope>text.html.vue</scope>
-    <description>Vue.js Component</description>
+    <description>[vue] component</description>
 </snippet>
