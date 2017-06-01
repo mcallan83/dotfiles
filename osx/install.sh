@@ -75,6 +75,7 @@ brew install bash-completion
 brew install brew-cask
 brew install coreutils
 brew install ctags
+brew install ctop
 brew install ddrescue
 brew install dnsmasq
 brew install ffmpeg
