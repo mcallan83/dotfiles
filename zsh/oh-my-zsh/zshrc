@@ -44,6 +44,9 @@ source $DOTFILES/zsh/oh-my-zsh/iterm.zsh
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # source .zshrc.after if it exists
 [[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
 
