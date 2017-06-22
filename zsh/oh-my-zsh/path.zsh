@@ -25,8 +25,8 @@ if [ -d "$HOME/.bin" ] ; then
 fi
 
 # homebrew php
-if [ -d "/usr/local/opt/php56/bin" ] ; then
-    PATH="$PATH:/usr/local/opt/php56/bin"
+if [ -d "/usr/local/opt/php70/bin" ] ; then
+    PATH="$PATH:/usr/local/opt/php70/bin"
 fi
 
 # composer
