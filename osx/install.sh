@@ -79,6 +79,7 @@ brew install ctop
 brew install ddrescue
 brew install dnsmasq
 brew install ffmpeg
+brew install fzf
 brew install gcc
 brew install getmail
 brew install git
