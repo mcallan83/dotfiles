@@ -250,6 +250,9 @@ fi
 
 rm -f $TMP
 
+# iTerm 2 Shell Utilities
+curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+
 # Move Chrome to ~/Applications for 1Password.
 banner "Moving Chrome to ~/Applications"
 rm -rf "$HOME/Applications/Google Chrome.app"
