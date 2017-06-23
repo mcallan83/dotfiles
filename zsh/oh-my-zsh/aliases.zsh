@@ -50,6 +50,7 @@ alias -g G='| grep'
 
 # hub
 alias hb="hub browse" # open up github repo in browser
+alias hpr="hub pull-request" # create pull request on github
 
 # json pretty print
 alias -g J='| python -m json.tool'
@@ -75,8 +76,8 @@ alias psa="ps aux"
 
 # spotify
 alias sp="spotify"
-alias next="spotify next"
-alias song="spotify status"
+alias spn="spotify next"
+alias sps="spotify status"
 
 # sublime
 alias ss="stt"

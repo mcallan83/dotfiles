@@ -1,8 +1,5 @@
 start_time="$(date +%s)"
 
-# source .zshrc.before if it exists
-[[ -r ~/.zshrc.before ]] && . ~/.zshrc.before
-
 # disable oh-my-zsh auto update
 DISABLE_AUTO_UPDATE=true
 
@@ -24,6 +21,7 @@ plugins=(
     tmuxinator
     vi-mode
     web-search
+    yarn
     z
     zshmarks
     zsh-syntax-highlighting

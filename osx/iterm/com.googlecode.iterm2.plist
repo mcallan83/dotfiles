@@ -2062,6 +2062,8 @@
 	<integer>73</integer>
 	<key>HotkeyCode</key>
 	<integer>34</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>1966379</integer>
 	<key>IRMemory</key>
@@ -2079,7 +2081,7 @@
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/osx/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{916, 448}</string>
+	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -2105,10 +2107,31 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>1277 387 606 456 0 0 2560 1417 </string>
+	<string>665 700 606 456 0 0 1920 1177 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>726 1089 400 129 0 0 2560 1417 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>970 769 620 392 0 0 2560 1417 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>-1121 653 796 473 -2560 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>284 72 1366 777 0 0 2560 1417 </string>
+	<string>-1927 264 1834 1070 -2560 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>-1671 236 970 777 -2560 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>-2183 189 970 651 -2560 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>-1864 374 1486 801 -2560 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>419 143 985 651 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 5</key>
+	<string>440 120 985 651 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2883,16 +2906,37 @@
 			<string>/Users/mcallan</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
-	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
+	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>2CD96797-61A0-4692-91D3-9C7A7DA625F0</string>
+	<key>NoSyncLastTipTime</key>
+	<real>488204153.10508502</real>
+	<key>NoSyncNeverRemindPrefsChangesLost</key>
+	<true/>
+	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>477778929.03075802</real>
+	<real>487105352.92519599</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>477556798.72162801</real>
+	<real>477803846.30204701</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>477726610.29939002</real>
+	<real>487105169.34715199</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -2959,11 +3003,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing3.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=83</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-02-22T01:35:18Z</date>
+	<date>2017-06-22T12:15:54Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -3014,7 +3058,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160206</string>
+	<string>3.1.beta.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

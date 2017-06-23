@@ -79,6 +79,7 @@ brew install ctop
 brew install ddrescue
 brew install dnsmasq
 brew install ffmpeg
+brew install fzf
 brew install gcc
 brew install getmail
 brew install git
@@ -248,6 +249,9 @@ if [ $? -eq 0 ]; then
 fi
 
 rm -f $TMP
+
+# iTerm 2 Shell Utilities
+curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 
 # Move Chrome to ~/Applications for 1Password.
 banner "Moving Chrome to ~/Applications"
