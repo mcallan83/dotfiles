@@ -2121,7 +2121,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>-1121 653 796 473 -2560 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1927 264 1834 1070 -2560 0 2560 1417 </string>
+	<string>-1358 504 982 800 -2560 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-1671 236 970 777 -2560 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2920,6 +2920,10 @@
 	<real>488204153.10508502</real>
 	<key>NoSyncNeverRemindPrefsChangesLost</key>
 	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -3007,7 +3011,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-22T12:15:54Z</date>
+	<date>2017-06-25T04:12:05Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -3018,6 +3022,8 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.10000000000000001</real>
+	<key>SuppressShellIntegrationUpgradeAnnouncementForHost_mcallan@SN0399.local</key>
+	<true/>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
