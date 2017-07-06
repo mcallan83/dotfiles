@@ -64,3 +64,6 @@
 [submodule "vendor/osx/macOS-Security-and-Privacy-Guide"]
     path = vendor/osx/macOS-Security-and-Privacy-Guide
     url = https://github.com/drduh/macOS-Security-and-Privacy-Guide
+[submodule "vendor/osx/keyboard"]
+	path = vendor/osx/keyboard
+	url = https://github.com/jasonrudolph/keyboard
