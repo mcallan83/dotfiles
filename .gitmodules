@@ -32,35 +32,38 @@
     path = vendor/zsh/zsh-syntax-highlighting
     url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "vendor/zsh/zshmarks"]
-	path = vendor/zsh/zshmarks
-	url = https://github.com/jocelynmallon/zshmarks
+    path = vendor/zsh/zshmarks
+    url = https://github.com/jocelynmallon/zshmarks
 [submodule "vendor/color/tomorrow-theme"]
-	path = vendor/color/tomorrow-theme
-	url = https://github.com/chriskempson/tomorrow-theme
+    path = vendor/color/tomorrow-theme
+    url = https://github.com/chriskempson/tomorrow-theme
 [submodule "vendor/color/base16-iterm2"]
-	path = vendor/color/base16-iterm2
-	url = https://github.com/chriskempson/base16-iterm2
+    path = vendor/color/base16-iterm2
+    url = https://github.com/chriskempson/base16-iterm2
 [submodule "vendor/vagrant/homestead"]
-	path = vendor/vagrant/homestead
-	url = https://github.com/laravel/homestead.git
+    path = vendor/vagrant/homestead
+    url = https://github.com/laravel/homestead.git
 [submodule "vendor/osx/shpotify"]
-	path = vendor/osx/shpotify
-	url = https://github.com/hnarayanan/shpotify
+    path = vendor/osx/shpotify
+    url = https://github.com/hnarayanan/shpotify
 [submodule "vendor/zsh/zsh-completions"]
-	path = vendor/zsh/zsh-completions
-	url = https://github.com/zsh-users/zsh-completions
+    path = vendor/zsh/zsh-completions
+    url = https://github.com/zsh-users/zsh-completions
 [submodule "vendor/vagrant/Vaprobash"]
-	path = vendor/vagrant/Vaprobash
-	url = https://github.com/fideloper/Vaprobash
+    path = vendor/vagrant/Vaprobash
+    url = https://github.com/fideloper/Vaprobash
 [submodule "vendor/docs/git-tips"]
-	path = vendor/docs/git-tips
-	url = https://github.com/git-tips/tips
+    path = vendor/docs/git-tips
+    url = https://github.com/git-tips/tips
 [submodule "vendor/docs/awesome-osx-command-line"]
-	path = vendor/docs/awesome-osx-command-line
-	url = https://github.com/herrbischoff/awesome-osx-command-line
+    path = vendor/docs/awesome-osx-command-line
+    url = https://github.com/herrbischoff/awesome-osx-command-line
 [submodule "vendor/osx/osx-for-hackers"]
-	path = vendor/osx/osx-for-hackers
-	url = https://gist.github.com/brandonb927/3195465
+    path = vendor/osx/osx-for-hackers
+    url = https://gist.github.com/brandonb927/3195465
 [submodule "vendor/osx/macOS-Security-and-Privacy-Guide"]
-	path = vendor/osx/macOS-Security-and-Privacy-Guide
-	url = https://github.com/drduh/macOS-Security-and-Privacy-Guide
+    path = vendor/osx/macOS-Security-and-Privacy-Guide
+    url = https://github.com/drduh/macOS-Security-and-Privacy-Guide
+[submodule "vendor/osx/keyboard"]
+    path = vendor/osx/keyboard
+    url = https://github.com/jasonrudolph/keyboard
