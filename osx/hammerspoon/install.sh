@@ -18,7 +18,11 @@ fi
 
 # symlink settings
 echo "Hammerspoon: Symlinking Settings"
-cd "$HOME"
-ln -s "$HOME/.dotfiles/osx/hammerspoon/config" ".hammerspoon"
+
+mkdir -p "$CONFIG"
+cd "$CONFIG"
+ln -s "$DOTFILES/vendor/osx/keyboard/hammerspoon" "keyboard"
+
+echo "require('keyboard')" > ~/.hammerspoon/init.lua
 
 echo "Hammerspoon: Done"
