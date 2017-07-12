@@ -49,11 +49,16 @@ if test $(which homestead); then
     homestead update
 fi
 
-# npm
+# node
 if test $(which npm); then
-    banner "NPM"
+    banner "Node (NPM)"
     npm install -g npm
     npm update -g
+fi
+
+if test $(which yarn); then
+    banner "Node (Yarn)"
+    yarn global upgrade
 fi
 
 # rvm and gems

@@ -280,56 +280,36 @@ composer global require squizlabs/php_codesniffer
 composer global require theseer/phpdox
 
 ################################################################################
-# NPM Packages
+# Yarn
 ################################################################################
 
-banner "Installing NPM Packages"
+yarn config set prefix ~/.yarn
 
-npm install -g browser-sync
-npm install -g csslint
-npm install -g duo
-npm install -g electron-prebuilt
-npm install -g eslint
-npm install -g eslint-config-standard
-npm install -g eslint-plugin-html
-npm install -g eslint-plugin-promise
-npm install -g eslint-plugin-standard
-npm install -g express-generator
-npm install -g fkill-cli
-npm install -g forever
-npm install -g foundation-cli
-npm install -g gitbook-cli
-npm install -g grunt-cli
-npm install -g gulp
-npm install -g htmlhint
-npm install -g http-server
-npm install -g imageoptim-cli
-npm install -g iron-node
-npm install -g jade
-npm install -g jsdoc
-npm install -g karma-cli
-npm install -g less
-npm install -g modernizr
-npm install -g nativefier
-npm install -g nodal
-npm install -g node-inspector
-npm install -g node-sass
-npm install -g nodemon
-npm install -g npm-check
-npm install -g phantomjs
-npm install -g plop
-npm install -g pm2
-npm install -g psi
-npm install -g rollup
-npm install -g sloc
-npm install -g stylestats
-npm install -g svgo
-npm install -g textract
-npm install -g torrentflix
-npm install -g typescript
-npm install -g vmd
-npm install -g vue-cli
-npm install -g yo
+banner "Installing Yarn Packages"
+
+yarn global add browser-sync
+yarn global add express-generator
+yarn global add fkill-cli
+yarn global add foundation-cli
+yarn global add gitbook-cli
+yarn global add grunt-cli
+yarn global add http-server
+yarn global add imageoptim-cli
+yarn global add karma-cli
+yarn global add nodal
+yarn global add nodemon
+yarn global add phantomjs
+yarn global add pm2
+# yarn global add rollup
+# yarn global add sloc
+# yarn global add stylestats
+# yarn global add svgo
+# yarn global add textract
+# yarn global add torrentflix
+# yarn global add typescript
+yarn global add vmd
+yarn global add vue-cli
+yarn global add yo
 
 ################################################################################
 # Ruby, RVM, and Gems
@@ -398,8 +378,10 @@ brew doctor
 composer self-update
 composer global update
 
-# npm
+# npm/yarn
+npm install -g npm
 npm update -g
+yarn global upgrade
 
 # rvm and gems
 rvm requirements
