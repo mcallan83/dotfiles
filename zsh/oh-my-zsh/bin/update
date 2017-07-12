@@ -52,9 +52,7 @@ fi
 # npm
 if test $(which npm); then
     banner "NPM"
-
-    #@todo make sure "npm config get prefix" is not the /usr folder
-    #sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+    npm install -g npm
     npm update -g
 fi
 
