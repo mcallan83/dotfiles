@@ -298,6 +298,7 @@ npm install -g express-generator
 npm install -g fkill-cli
 npm install -g forever
 npm install -g foundation-cli
+npm install -g gitbook-cli
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g htmlhint
