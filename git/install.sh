@@ -34,15 +34,4 @@ if [[ $(uname) == 'Darwin' ]]; then
 fi
 
 # append git aliases
-tee -a "$GITCONFIG" > /dev/null <<'EOF'
-[alias]
-    rebase-branch = "!git rebase -i `git merge-base master HEAD`"
-    review = difftool origin/master...
-    save = !git add -A && git commit -m 'SAVEPOINT'
-    undo = reset HEAD~1 --mixed
-    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-    wc = "!git whatchanged -p --abbrev-commit --pretty=medium"
-    reword = "commit -v --amend"
-EOF
-
-git config --global alias.amend "commit -a --amend"
+git config --global alias.up "!git pull --rebase --prune $@ && git submodule update --init --recursive"
