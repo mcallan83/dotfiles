@@ -67,3 +67,6 @@
 [submodule "vendor/osx/keyboard"]
 	path = vendor/osx/keyboard
 	url = https://github.com/jasonrudolph/keyboard
+[submodule "vendor/zsh/zsh-nvm"]
+	path = vendor/zsh/zsh-nvm
+	url = https://github.com/lukechilds/zsh-nvm
