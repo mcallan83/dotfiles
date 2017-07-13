@@ -42,6 +42,7 @@ if test $(which brew); then
     sudo chown -R $(whoami):admin /usr/local
     brew update
     brew upgrade
+    # brew cask list | xargs brew cask install --force
     brew cleanup
     brew cask cleanup
     brew prune
