@@ -23,6 +23,14 @@ banner() {
 
 sudo -v
 
+# mac app store
+if test $(which mas); then
+    mas signout
+    mas signin mcallan83@gmail.com
+    mas upgrade
+    mas signout
+fi
+
 # homebrew
 if test $(which brew); then
     banner "Homebrew"

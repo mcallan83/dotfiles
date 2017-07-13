@@ -260,6 +260,27 @@ rm -rf "$HOME/Applications/Google Chrome.app"
 mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "/Applications/Google Chrome.app/"
 
 ################################################################################
+# Mac App Store
+################################################################################
+
+mas signout
+mas signin mcallan83@gmail.com
+
+mas install 407963104   # Pixelmator (3.6)
+mas install 412448059   # ForkLift (2.6.6)
+mas install 413965349   # Soulver (2.6.2)
+mas install 414209656   # Better Rename 9 (9.52)
+mas install 443987910   # 1Password (6.7)
+mas install 463362050   # PhotoSweeper (3.0.3)
+mas install 512617038   # SnappyApp (1.4.7)
+mas install 530458789   # Frank DeLoupe (1.2.1)
+mas install 873245660   # Spillo (2.0)
+mas install 880001334   # Reeder (3.0.5)
+mas install 1176895641  # Spark (1.2.3)
+
+mas signout
+
+################################################################################
 # Composer Packages
 ################################################################################
 
@@ -305,7 +326,7 @@ yarn global add pm2
 # yarn global add stylestats
 # yarn global add svgo
 # yarn global add textract
-# yarn global add torrentflix
+yarn global add torrentflix
 # yarn global add typescript
 yarn global add vmd
 yarn global add vue-cli
