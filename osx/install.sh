@@ -321,13 +321,10 @@ yarn global add nodal
 yarn global add nodemon
 yarn global add phantomjs
 yarn global add pm2
-# yarn global add rollup
-# yarn global add sloc
-# yarn global add stylestats
-# yarn global add svgo
-# yarn global add textract
+yarn global add svgo
+yarn global add textract
 yarn global add torrentflix
-# yarn global add typescript
+yarn global add typescript
 yarn global add vmd
 yarn global add vue-cli
 yarn global add yo
