@@ -26,7 +26,7 @@ plugins=(
     zshmarks
     zsh-syntax-highlighting
     #zsh-autosuggestions
-    zsh-nvm
+    #zsh-nvm
 )
 
 source $DOTFILES/zsh/oh-my-zsh/platform.zsh
