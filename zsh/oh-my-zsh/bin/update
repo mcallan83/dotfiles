@@ -63,6 +63,12 @@ if test $(which homestead); then
 fi
 
 # node
+
+if test $(which nvm); then
+    banner "Node Verson Manager (NVM)"
+    nvm install node
+fi
+
 if test $(which npm); then
     banner "Node (NPM)"
     npm install -g npm
