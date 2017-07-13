@@ -23,8 +23,12 @@ banner() {
 
 sudo -v
 
+# mac software update
+# sudo softwareupdate -i -a
+
 # mac app store
 if test $(which mas); then
+    banner "Mac App Store"
     mas signout
     mas signin mcallan83@gmail.com
     mas upgrade
