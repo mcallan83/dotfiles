@@ -35,3 +35,4 @@ fi
 
 # append git aliases
 git config --global alias.up "!git pull --rebase --prune $@ && git submodule update --init --recursive"
+git config --global alias.sub "!git submodule foreach git pull origin master"
