@@ -12,6 +12,9 @@ alias vimrc="$EDITOR ~/.vimrc"
 alias zshrc="$EDITOR ~/.zshrc"
 alias dots="cd $DOTFILES && $EDITOR"
 
+# tmuxinator
+alias mux="tmuxinator"
+
 # atom
 alias aa="atom ."
 alias aab="apm list --installed --bare > $DOTFILES/osx/atom/config/packages.txt"
