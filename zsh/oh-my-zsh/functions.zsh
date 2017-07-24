@@ -186,6 +186,14 @@ function gexp {
     git archive --format zip --output $OUTPUT $BRANCH
 }
 
+# init a git repo
+function ginit {
+    touch readme.md
+    git init
+    git add --all
+    git commit -m 'initial commit'
+}
+
 # use fzf with z
 unalias z 2> /dev/null
 z() {
