@@ -189,6 +189,7 @@ brew cask install the-unarchiver
 brew cask install transmission
 brew cask install unetbootin
 brew cask install vagrant
+brew cask install vagrant-manager
 brew cask install veracrypt
 brew cask install virtualbox
 brew cask install visual-studio-code
