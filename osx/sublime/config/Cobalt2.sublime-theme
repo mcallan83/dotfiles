@@ -1,24 +1,11 @@
-[ 
+[
     {
         "class": "sidebar_label",
-        "color": [125, 125, 125],
-        "shadow_color": [0, 0, 0],
-        "shadow_offset": [0, -1],
-        "font.size": 13
+        "color": [175, 175, 175],
+        "font.size": 14
     },
     {
         "class": "sidebar_tree",
-        "row_padding": [10, 4],
-        "indent": 10,
-        "indent_offset": 10,
-        "indent_top_level": false,
-        "dark_content": true
-    },
-    {
-        "class": "sidebar_heading",
-        "color": [210, 210, 210],
-        "font.bold": true,
-        "shadow_color": [0, 0, 0],
-        "shadow_offset": [0, -1]
-    },
+        "row_padding": [10, 5],
+    }
 ]
