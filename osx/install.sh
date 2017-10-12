@@ -78,6 +78,7 @@ brew install ctags
 brew install ctop
 brew install ddrescue
 brew install dnsmasq
+brew install fd
 brew install ffmpeg
 brew install fzf
 brew install gcc

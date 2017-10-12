@@ -2,5 +2,5 @@
     "tab_size": 4,
     "translate_tabs_to_spaces": true,
     "detect_indentation": false,
-    "color_scheme": "Packages/User/SublimeLinter/Laravel 5 Docs Light (SL).tmTheme",
+    // "color_scheme": "Packages/User/SublimeLinter/Laravel 5 Docs Light (SL).tmTheme",
 }
