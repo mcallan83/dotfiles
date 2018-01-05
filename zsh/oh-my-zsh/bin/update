@@ -26,20 +26,9 @@ sudo -v
 # mac software update
 # sudo softwareupdate -i -a
 
-# mac app store
-if test $(which mas); then
-    banner "Mac App Store"
-    mas signout
-    mas signin mcallan83@gmail.com
-    mas upgrade
-    mas signout
-fi
-
 # homebrew
 if test $(which brew); then
     banner "Homebrew"
-    sudo chown $(whoami):admin /usr/local
-    sudo chown -R $(whoami):admin /usr/local
     brew update
     brew upgrade
     # brew cask list | xargs brew cask install --force
