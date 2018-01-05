@@ -169,7 +169,7 @@ brew cask install iconjar
 brew cask install iterm2
 brew cask install jadengeller-helium
 brew cask install kaleidoscope
-brew cask install karabiner
+brew cask install karabiner-elements
 brew cask install keyboardcleantool
 brew cask install launchcontrol
 brew cask install launchrocket
@@ -180,7 +180,6 @@ brew cask install numi
 brew cask install nvalt
 brew cask install robomongo
 brew cask install rstudio
-brew cask install seil
 brew cask install sequel-pro
 brew cask install sketch
 brew cask install slate
@@ -378,8 +377,8 @@ composer self-update
 composer global update
 
 # npm/yarn
-npm install -g npm
-npm update -g
+# npm install -g npm
+# npm update -g
 yarn global upgrade
 
 # rvm and gems
