@@ -95,7 +95,6 @@ brew install imagemagick --with-webp
 brew install jq
 brew install libav
 brew install lua
-brew install mas
 brew install mongodb
 brew install mysql
 brew install nmap
@@ -263,27 +262,6 @@ rm -rf "$HOME/Applications/Google Chrome.app"
 mv "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/" "/Applications/Google Chrome.app/"
 
 ################################################################################
-# Mac App Store
-################################################################################
-
-mas signout
-mas signin mcallan83@gmail.com
-
-mas install 407963104   # Pixelmator (3.6)
-mas install 412448059   # ForkLift (2.6.6)
-mas install 413965349   # Soulver (2.6.2)
-mas install 414209656   # Better Rename 9 (9.52)
-mas install 443987910   # 1Password (6.7)
-mas install 463362050   # PhotoSweeper (3.0.3)
-mas install 512617038   # SnappyApp (1.4.7)
-mas install 530458789   # Frank DeLoupe (1.2.1)
-mas install 873245660   # Spillo (2.0)
-mas install 880001334   # Reeder (3.0.5)
-mas install 1176895641  # Spark (1.2.3)
-
-mas signout
-
-################################################################################
 # Composer Packages
 ################################################################################
 
@@ -311,26 +289,26 @@ yarn config set prefix ~/.yarn
 
 banner "Installing Yarn Packages"
 
-yarn global add browser-sync
-yarn global add express-generator
 yarn global add fkill-cli
-yarn global add foundation-cli
 yarn global add gitbook-cli
 yarn global add grunt-cli
-yarn global add http-server
-yarn global add imageoptim-cli
-yarn global add karma-cli
-yarn global add nodal
-yarn global add nodemon
-yarn global add phantomjs
-yarn global add pm2
-yarn global add svgo
-yarn global add textract
-yarn global add torrentflix
-yarn global add typescript
+yarn global add gulp
 yarn global add vmd
 yarn global add vue-cli
 yarn global add yo
+# yarn global add browser-sync
+# yarn global add eslint
+# yarn global add express-generator
+# yarn global add foundation-cli
+# yarn global add http-server
+# yarn global add imageoptim-cli
+# yarn global add karma-cli
+# yarn global add nodal
+# yarn global add nodemon
+# yarn global add phantomjs
+# yarn global add textract
+# yarn global add torrentflix
+# yarn global add typescript
 
 ################################################################################
 # Ruby, RVM, and Gems
