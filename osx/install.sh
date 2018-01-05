@@ -85,6 +85,7 @@ brew install gcc
 brew install getmail
 brew install git
 brew install go
+brew install gobuster
 brew install gpg
 brew install highlight
 brew install htop-osx
