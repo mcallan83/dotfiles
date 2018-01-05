@@ -5,16 +5,13 @@ CONFIG="$HOME/.config/karabiner"
 # create config directory
 mkdir -p "$CONFIG"
 
-# backup existing private.xml
+# backup existing config
 if [ -f "$CONFIG/karabiner.json" ]; then
     echo "Karabiner Elements: Backing Up Config"
     mv "$CONFIG/karabiner.json" "$CONFIG/karabiner.json.$(date +%F-%T).bak"
 fi
 
-# copy current private.xml to config directory
-cp "$DOTFILES/vendor/osx/keyboard/karabiner/karabiner.json" "$CONFIG/karabiner.json"
-
-# initialize settings
-echo "Karabiner Elements: Initializing Settings"
-
-echo "Karabiner Elements: Done"
+# symlink settings
+echo "Karabiner Elements: Copying Settings"
+cd "$CONFIG"
+cp -r "$DOTFILES/osx/karabiner-elements/config/karabiner.json" "karabiner.json"
