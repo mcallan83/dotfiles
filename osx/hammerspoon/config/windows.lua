@@ -218,7 +218,7 @@ function windowLayoutMode.bindWithAutomaticExit(mode, modifiers, key, fn)
   end)
 end
 
-local status, windowMappings = pcall(require, 'windows-bindings')
+local status, windowMappings = pcall(require, '_windows-bindings')
 
 local modifiers = windowMappings.modifiers
 local trigger   = windowMappings.trigger
