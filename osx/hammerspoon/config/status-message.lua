@@ -18,7 +18,7 @@ statusmessage.new = function(messageText)
       font = { name = 'Monaco', size = 24 },
     }
 
-    local styledText = styledtext.new('🔨 ' .. messageText, styledTextAttributes)
+    local styledText = styledtext.new(messageText, styledTextAttributes)
 
     local styledTextSize = drawing.getTextDrawingSize(styledText)
     local textRect = {

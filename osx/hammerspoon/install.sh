@@ -1,28 +1,14 @@
 #!/bin/sh
 
-################################################################################
-# Filename: osx/hammerspoon/install.sh
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
-# Installs Hammerspoon configuration.
-################################################################################
-
-CONFIG="$HOME/.hammerspoon"
+CONFIG_PATH="$HOME/.hammerspoon"
 
 # backup existing settings
-if [ -d "$CONFIG" ] || [ -f "$CONFIG" ]; then
+if [ -d "$CONFIG_PATH" ] || [ -f "$CONFIG_PATH" ]; then
     echo "Hammerspoon: Backing Up Settings"
-    mv "$CONFIG" "$CONFIG.$(date +%s).bak"
+    mv "$CONFIG_PATH" "$CONFIG_PATH.$(date +%s).bak"
 fi
 
 # symlink settings
-echo "Hammerspoon: Symlinking Settings"
-
-mkdir -p "$CONFIG"
-cd "$CONFIG"
-ln -s "$DOTFILES/vendor/osx/keyboard/hammerspoon" "keyboard"
-
-echo "require('keyboard')" > ~/.hammerspoon/init.lua
-
-echo "Hammerspoon: Done"
+echso "Hammerspoon: Symlinking Settings"
+cd "$HOME"
+ln -s "$HOME/.dotfiles/osx/hammerspoon/config" ".hammerspoon"

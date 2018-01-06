@@ -8,7 +8,7 @@ local message = require('status-message')
 local MAX_TIME_BETWEEN_SIMULTANEOUS_KEY_PRESSES = 0.04 -- 40 milliseconds
 
 local superDuperMode = {
-  statusMessage = message.new('(S)uper (D)uper Mode'),
+  statusMessage = message.new('Super Duper'),
   enter = function(self)
     if not self.active then self.statusMessage:show() end
     self.active = true

@@ -1,11 +1,4 @@
--- Default keybindings for WindowLayout Mode
---
--- To customize the key bindings for WindowLayout Mode, create a copy of this
--- file, save it as `windows-bindings.lua`, and edit the table below to
--- configure your preferred shortcuts.
-
---------------------------------------------------------------------------------
--- Define WindowLayout Mode
+-- Keybindings for WindowLayout Mode
 --
 -- WindowLayout Mode allows you to manage window layout using keyboard shortcuts
 -- that are on the home row, or very close to it. Use Control+s to turn
@@ -26,7 +19,6 @@
 
 return {
   modifiers = {'ctrl'},
-  showHelp  = false,
   trigger   = 's',
   mappings  = {
     { {},         'return', 'maximize' },
