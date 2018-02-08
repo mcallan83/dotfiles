@@ -4,4 +4,5 @@
     "phpcs_php_path": ".composer/vendor/bin/phpcs",
     "phpmd_executable_path": ".composer/vendor/bin/phpmd",
     "phpmd_run": false,
+    "php_cs_fixer_additional_args": { "--fixers": "-psr0" },
 }
