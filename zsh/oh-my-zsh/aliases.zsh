@@ -125,4 +125,5 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Find
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
 
 
+alias mkpasswd="docker run -it --rm egray/mkpasswd"
 alias wpscan="docker run -it --rm wpscanteam/wpscan"
