@@ -24,9 +24,14 @@ if [ -d "$HOME/.bin" ] ; then
     PATH="$PATH:$HOME/.bin"
 fi
 
-# homebrew php
+# php 7.0
 if [ -d "/usr/local/opt/php70/bin" ] ; then
     PATH="$PATH:/usr/local/opt/php70/bin"
+fi
+
+# php 7.1
+if [ -d "/usr/local/opt/php@7.1" ] ; then
+PATH="$PATH:/usr/local/opt/php@7.1/bin:/usr/local/opt/php@7.1/sbin"
 fi
 
 # composer

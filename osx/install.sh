@@ -59,13 +59,9 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap homebrew/bundle
-brew tap homebrew/dupes
-brew tap homebrew/php
-brew tap homebrew/science
 brew tap homebrew/services
-brew tap homebrew/versions
-brew tap thoughtbot/formulae
 brew tap neovim/neovim
+brew tap thoughtbot/formulae
 
 banner "Installing Homebrew Packages"
 brew install --HEAD neovim
@@ -124,17 +120,12 @@ brew install you-get
 brew install youtube-dl
 brew install zsh
 
-# PHP 7.1
 banner "Installing PHP 7.1"
-brew install homebrew/php/php71
+brew install php@7.1
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.1/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/7.1/php.ini
-
 brew install homebrew/php/adminer
 brew install homebrew/php/composer
-brew install homebrew/php/php71-intl
-brew install homebrew/php/php71-mcrypt
-brew install homebrew/php/php71-mongodb
 
 # Homebrew Casks
 banner "Installing Homebrew Casks"
