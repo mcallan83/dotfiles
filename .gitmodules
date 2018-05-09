@@ -1,6 +1,3 @@
-[submodule "vendor/vagrant/scotch-box"]
-    path = vendor/vagrant/scotch-box
-    url = https://github.com/scotch-io/scotch-box
 [submodule "vendor/zsh/oh-my-zsh"]
     path = vendor/zsh/oh-my-zsh
     url = https://github.com/robbyrussell/oh-my-zsh
@@ -40,24 +37,12 @@
 [submodule "vendor/color/base16-iterm2"]
     path = vendor/color/base16-iterm2
     url = https://github.com/chriskempson/base16-iterm2
-[submodule "vendor/vagrant/homestead"]
-    path = vendor/vagrant/homestead
-    url = https://github.com/laravel/homestead.git
 [submodule "vendor/osx/shpotify"]
     path = vendor/osx/shpotify
     url = https://github.com/hnarayanan/shpotify
 [submodule "vendor/zsh/zsh-completions"]
     path = vendor/zsh/zsh-completions
     url = https://github.com/zsh-users/zsh-completions
-[submodule "vendor/vagrant/Vaprobash"]
-    path = vendor/vagrant/Vaprobash
-    url = https://github.com/fideloper/Vaprobash
-[submodule "vendor/docs/git-tips"]
-    path = vendor/docs/git-tips
-    url = https://github.com/git-tips/tips
-[submodule "vendor/docs/awesome-osx-command-line"]
-    path = vendor/docs/awesome-osx-command-line
-    url = https://github.com/herrbischoff/awesome-osx-command-line
 [submodule "vendor/osx/osx-for-hackers"]
     path = vendor/osx/osx-for-hackers
     url = https://gist.github.com/brandonb927/3195465
