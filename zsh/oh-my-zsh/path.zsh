@@ -9,6 +9,11 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # remove duplicates
 typeset -U PATH
 
+# php 7.1
+if [ -d "/usr/local/opt/php@7.1" ] ; then
+    PATH="/usr/local/opt/php@7.1/bin:/usr/local/opt/php@7.1/sbin:$PATH"
+fi
+
 # rvm
 if [ -d $HOME/.rvm/bin ] ; then
     PATH="$HOME/.rvm/bin:$PATH"
@@ -22,16 +27,6 @@ fi
 # personal bin folder
 if [ -d "$HOME/.bin" ] ; then
     PATH="$PATH:$HOME/.bin"
-fi
-
-# php 7.0
-if [ -d "/usr/local/opt/php70/bin" ] ; then
-    PATH="$PATH:/usr/local/opt/php70/bin"
-fi
-
-# php 7.1
-if [ -d "/usr/local/opt/php@7.1" ] ; then
-PATH="$PATH:/usr/local/opt/php@7.1/bin:/usr/local/opt/php@7.1/sbin"
 fi
 
 # composer

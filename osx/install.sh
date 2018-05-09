@@ -94,6 +94,7 @@ brew install lua
 brew install mongodb
 brew install mysql
 brew install nmap
+brew install nvm
 brew install node
 brew install pandoc
 brew install python
@@ -115,7 +116,6 @@ brew install tree
 brew install vim --override-system-vi
 brew install wget --with-iri
 brew install xmlstarlet
-brew install yarn
 brew install you-get
 brew install youtube-dl
 brew install zsh
@@ -270,30 +270,21 @@ composer global require theseer/phpdox
 # Yarn
 ################################################################################
 
+banner "Installing Yarn"
+
+brew install yarn --without-node
+
 yarn config set prefix ~/.yarn
 
-banner "Installing Yarn Packages"
-
+yarn global add eslint
 yarn global add fkill-cli
 yarn global add gitbook-cli
 yarn global add grunt-cli
 yarn global add gulp
+yarn global add http-server
 yarn global add vmd
 yarn global add vue-cli
 yarn global add yo
-# yarn global add browser-sync
-# yarn global add eslint
-# yarn global add express-generator
-# yarn global add foundation-cli
-# yarn global add http-server
-# yarn global add imageoptim-cli
-# yarn global add karma-cli
-# yarn global add nodal
-# yarn global add nodemon
-# yarn global add phantomjs
-# yarn global add textract
-# yarn global add torrentflix
-# yarn global add typescript
 
 ################################################################################
 # Ruby, RVM, and Gems
