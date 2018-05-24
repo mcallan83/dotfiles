@@ -44,7 +44,6 @@ alias ethe="curl -s https://api.coinbase.com/v2/prices/ETH-USD/spot | python -c 
 # git
 alias gi="git init"
 alias gj="git checkout -"
-alias gs="gst"
 alias gsub="git submodule foreach git pull origin master"
 alias gpb="ggpush && hb"
 
