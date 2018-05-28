@@ -1,6 +1,8 @@
 {
-    "cmd": ["gulp test --testCase $file"],
+    "cmd": ["gulp test --testCase $file --color"],
     "shell": true,
     "selector": "source.php",
-    "working_dir": "${project_path:${folder}}"
+    "working_dir": "${project_path:${folder}}",
+    "target": "ansi_color_build",
+    "syntax": "Packages/ANSIescape/ANSI.tmLanguage"
 }
