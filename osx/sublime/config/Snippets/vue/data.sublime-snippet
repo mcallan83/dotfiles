@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[data () {
+  return {
+    ${1:}
+  }
+}
+]]></content>
+    <tabTrigger>vdata</tabTrigger>
+    <scope>text.html.vue</scope>
+    <description>[vue] component</description>
+</snippet>

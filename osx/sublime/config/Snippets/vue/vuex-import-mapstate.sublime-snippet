@@ -1,6 +1,6 @@
 <snippet>
-    <content><![CDATA[import {mapState} from 'vuex']]></content>
-    <tabTrigger>vxim</tabTrigger>
+    <content><![CDATA[import { mapState } from 'vuex']]></content>
+    <tabTrigger>mapstate</tabTrigger>
     <scope>text.html.vue</scope>
-    <description>[vuex] mapState() import</description>
+    <description>import { mapState } from 'vuex'</description>
 </snippet>
