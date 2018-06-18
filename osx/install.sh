@@ -244,19 +244,15 @@ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utili
 
 banner "Installing Composer Packages"
 
-composer global require friendsofphp/php-cs-fixer
-composer global require hirak/prestissimo
-composer global require jakub-onderka/php-parallel-lint
-composer global require laravel/installer
-composer global require laravel/lumen-installer
-composer global require mayflower/php-codebrowser
-composer global require pdepend/pdepend
-composer global require phploc/phploc
-composer global require phpmd/phpmd
-composer global require phpunit/phpunit
-composer global require sebastian/phpcpd
-composer global require squizlabs/php_codesniffer
-composer global require theseer/phpdox
+composer global require consolidation/cgr
+
+cgr deployer/deployer
+cgr friendsofphp/php-cs-fixer:^1.11
+cgr hirak/prestissimo
+cgr laravel/envoy
+cgr laravel/installer
+cgr laravel/lumen-installer
+cgr phpmd/phpmd
 
 ################################################################################
 # Yarn
