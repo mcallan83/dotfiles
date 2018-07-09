@@ -9,7 +9,6 @@ plugins=(
     composer
     extract
     git
-    grunt
     k
     laravel5
     sublime
@@ -42,9 +41,3 @@ source $DOTFILES/zsh/oh-my-zsh/iterm.zsh
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
-
-# source .zshrc.after if it exists
-[[ -r ~/.zshrc.after ]] && . ~/.zshrc.after
-
-end_time="$(date +%s)"
-# echo .zshrc: $((end_time - start_time)) seconds

@@ -37,6 +37,7 @@ alias dcub="docker-compose up --build"
 alias dcl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
 alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
 alias dclean="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/docker-clean"
+alias dry="docker run -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry"
 
 # ethe price
 alias ethe="curl -s https://api.coinbase.com/v2/prices/ETH-USD/spot | python -c \"import json, sys; print(json.load(sys.stdin)['data']['amount'])\""
