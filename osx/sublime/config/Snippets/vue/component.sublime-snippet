@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[<template>
+  ${1:<div/>}
+</template>
+
+<script>
+export default {
+  ${2:data () {
+    return {
+
+    \}
+  \}}
+}
+</script>
+
+<style lang="${3:scss}"${4: scoped}>${5:}</style>
+
+]]></content>
+    <tabTrigger>vcom</tabTrigger>
+    <scope>text.html.vue</scope>
+    <description>vue component</description>
+</snippet>
