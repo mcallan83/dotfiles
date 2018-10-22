@@ -55,3 +55,6 @@
 [submodule "vendor/tmux/tpm"]
 	path = vendor/tmux/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "vendor/chrome/bypass-paywalls"]
+	path = vendor/chrome/bypass-paywalls
+	url = https://github.com/iamadamdev/bypass-paywalls-chrome
