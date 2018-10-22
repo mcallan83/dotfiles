@@ -15,6 +15,11 @@ alias dots="cd $DOTFILES && $EDITOR"
 # tmuxinator
 alias mux="tmuxinator"
 
+# ansible
+alias anvd="ansible-vault decrypt"
+alias anve="ansible-vault encrypt"
+alias anpb="ansible-playbook"
+
 # atom
 alias aa="atom ."
 alias aab="apm list --installed --bare > $DOTFILES/osx/atom/config/packages.txt"
@@ -100,6 +105,9 @@ alias vu="vagrant up"
 # vim
 alias v="vim"
 alias vl="vim -N -u NONE" #vim with no plugins
+
+# yarn
+alias yw="yarn watch"
 
 # youtube-dl
 alias ytd="youtube-dl"
