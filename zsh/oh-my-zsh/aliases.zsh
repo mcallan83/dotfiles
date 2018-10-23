@@ -30,9 +30,6 @@ alias cdb="cd -"
 # colortest
 alias colortest="colortest | sed -n '1!p'"
 
-# clear screen
-alias cl="clear"
-
 # ctags - generate index
 alias tags="ctags -R"
 
@@ -40,7 +37,6 @@ alias tags="ctags -R"
 alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
 alias dcl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
-alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
 alias dclean="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/docker-clean"
 alias dry="docker run -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry"
 
@@ -51,7 +47,6 @@ alias ethe="curl -s https://api.coinbase.com/v2/prices/ETH-USD/spot | python -c 
 alias gi="git init"
 alias gj="git checkout -"
 alias gsub="git submodule foreach git pull origin master"
-alias gpb="ggpush && hb"
 
 # grep
 alias -g G='| grep'
@@ -67,14 +62,6 @@ alias -g J='| python -m json.tool'
 # https://github.com/rimraf/k
 alias ka="clear;k -a" # with hidden files
 alias kd="clear;k -d" # with directories only
-
-# laravel artisan
-alias la5m="la5 migrate"
-alias la5mb="la5 migrate:rollback"
-alias la5mr="la5 migrate:refresh --seed"
-alias la5r="la5 route:list"
-alias la5s="la5 serve"
-alias la5vc="la5 view:clear"
 
 # less
 alias -g L='| less'
@@ -116,22 +103,21 @@ alias ytd="youtube-dl"
 # https://github.com/rupa/z
 alias zc="z -c" # z in current folder only
 
-# zshmarks
-# https://github.com/jocelynmallon/zshmarks
-alias g="jump"
-alias s="bookmark"
-alias d="deletemark"
-alias l="showmarks"
-
 # osx only
 
 # capture screen
 alias sc="screencapture -c -W"
 
 # hide\show hidden files
-alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
-alias show="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
+alias show="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
 
+################################################################################
+# Misc Tools Run Via Docker
+################################################################################
 
 alias mkpasswd="docker run -it --rm egray/mkpasswd"
+
+alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
+
 alias wpscan="docker run -it --rm wpscanteam/wpscan"

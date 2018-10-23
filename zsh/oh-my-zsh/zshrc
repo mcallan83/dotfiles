@@ -15,10 +15,8 @@ plugins=(
     tmux
     tmuxinator
     vi-mode
-    web-search
     yarn
     z
-    zshmarks
     zsh-syntax-highlighting
     #zsh-autosuggestions
     #zsh-nvm
