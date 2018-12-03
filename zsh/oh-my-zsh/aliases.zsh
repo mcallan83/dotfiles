@@ -121,3 +121,6 @@ alias mkpasswd="docker run -it --rm egray/mkpasswd"
 alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
 
 alias wpscan="docker run -it --rm wpscanteam/wpscan"
+
+
+alias zipdocs="zip -r docs.zip /Volumes/docs -x *.git*"
