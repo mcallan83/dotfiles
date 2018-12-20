@@ -16,8 +16,8 @@ alias dots="cd $DOTFILES && $EDITOR"
 alias mux="tmuxinator"
 
 # ansible
-alias anvd="ansible-vault decrypt"
-alias anve="ansible-vault encrypt"
+alias avd="ansible-vault decrypt"
+alias ave="ansible-vault encrypt"
 alias anpb="ansible-playbook"
 
 # atom
