@@ -30,7 +30,6 @@ source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
 source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 source $DOTFILES/zsh/oh-my-zsh/direnv.zsh
-source $DOTFILES/zsh/oh-my-zsh/iterm.zsh
 #source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
 
 # rvm
@@ -39,3 +38,6 @@ source $DOTFILES/zsh/oh-my-zsh/iterm.zsh
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
+
+# iterm2 shell integration
+[[ -s "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
