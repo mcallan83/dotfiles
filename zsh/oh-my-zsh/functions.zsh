@@ -200,3 +200,13 @@ z() {
   [ $# -gt 0 ] && _z "$*" && return
   cd "$(_z -l 2>&1 | fzf --height 40% --reverse --inline-info +s --tac --query "$*" | sed 's/^[0-9,.]* *//')"
 }
+
+# bfc repo cleaner
+bfg()
+{
+docker run -it --rm \
+  --volume "$PWD":/data \
+  --workdir /data \
+  soodesune/bfg-repo-cleaner --delete-files $1
+}
+
