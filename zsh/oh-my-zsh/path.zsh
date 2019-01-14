@@ -4,15 +4,15 @@ if [ -x /usr/libexec/path_helper ]; then
     eval `/usr/libexec/path_helper -s`
 fi
 
-# rvm - compains if not first
-if [ -d $HOME/.rvm/bin ] ; then
-    PATH="$HOME/.rvm/bin:$PATH"
-fi
-
 PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # remove duplicates
 typeset -U PATH
+
+# node 10
+if [ -d "/usr/local/opt/node@10" ] ; then
+    PATH="/usr/local/opt/node@10/bin:$PATH"
+fi
 
 # php 7.2
 if [ -d "/usr/local/opt/php@7.2" ] ; then
@@ -37,6 +37,16 @@ fi
 # yarn
 if test $(which yarn); then
     PATH="$PATH:$(yarn global bin)"
+fi
+
+# icu4c
+if [ -d "/usr/local/opt/icu4c" ] ; then
+    PATH="/usr/local/opt/icu4c/bin:$PATH"
+fi
+
+# rvm - compains if not first
+if [ -d $HOME/.rvm/bin ] ; then
+    PATH="$HOME/.rvm/bin:$PATH"
 fi
 
 export PATH

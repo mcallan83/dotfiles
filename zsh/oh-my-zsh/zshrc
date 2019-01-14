@@ -10,10 +10,7 @@ plugins=(
     extract
     git
     k
-    laravel5
     sublime
-    tmux
-    tmuxinator
     vi-mode
     yarn
     z
