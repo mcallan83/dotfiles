@@ -153,6 +153,7 @@ brew cask install iterm2
 brew cask install jadengeller-helium
 brew cask install kaleidoscope
 brew cask install karabiner-elements
+brew cask install keepassxc
 brew cask install keyboardcleantool
 brew cask install launchcontrol
 brew cask install launchrocket
