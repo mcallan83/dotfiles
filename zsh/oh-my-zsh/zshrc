@@ -17,7 +17,6 @@ plugins=(
     z
     zsh-syntax-highlighting
     #zsh-autosuggestions
-    #zsh-nvm
 )
 
 source $DOTFILES/zsh/oh-my-zsh/platform.zsh
@@ -30,12 +29,12 @@ source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 source $DOTFILES/zsh/oh-my-zsh/direnv.zsh
 #source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
 
+#nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
 
 # iterm2 shell integration
 [[ -s "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"

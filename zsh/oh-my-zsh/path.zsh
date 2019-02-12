@@ -9,9 +9,9 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # remove duplicates
 typeset -U PATH
 
-# node 10
-if [ -d "/usr/local/opt/node@10" ] ; then
-    PATH="/usr/local/opt/node@10/bin:$PATH"
+# node 8
+if [ -d "/usr/local/opt/node@8" ] ; then
+    PATH="/usr/local/opt/node@8/bin:$PATH"
 fi
 
 # php 7.2
@@ -37,11 +37,6 @@ fi
 # yarn
 if test $(which yarn); then
     PATH="$PATH:$(yarn global bin)"
-fi
-
-# icu4c
-if [ -d "/usr/local/opt/icu4c" ] ; then
-    PATH="/usr/local/opt/icu4c/bin:$PATH"
 fi
 
 # rvm - compains if not first
