@@ -18,42 +18,6 @@ function mkcd {
 #     for x in 0 1 4 5 7 8; do for i in `seq 30 37`; do for a in `seq 40 47`; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo "";
 # }
 
-# run adminer as web server if installed
-function adminer {
-    if [ -d /usr/local/share/adminer ] ; then
-        open http://localhost:8888
-        php -S localhost:8888 -t /usr/local/share/adminer > /dev/null
-    fi
-}
-
-# laravel homestead helper
-# https://laravel.com/docs/5.2/homestead
-# https://murze.be/2016/01/some-laravel-homestead-tips/
-#
-# commands:
-#     - homestead init (initialize homestead)
-#     - homestead edit (edit homestead yaml file)
-#     - homestead halt
-#     - homestead provision
-#     - homestead ssh
-#     - homestead up
-
-function homestead() {
-    cd "$DOTFILES/vendor/vagrant/homestead"
-    command="$1"
-    if [ "$command" = "edit" ]; then
-        $EDITOR ~/.homestead/homestead.yaml
-    elif [ "$command" = "init" ]; then
-        bash init.sh
-    else
-        if [ -z "$command" ]; then
-            command="ssh"
-        fi
-        eval "vagrant ${command}"
-    fi
-    cd -
-}
-
 # run a web server from current folder (python)
 function server() {
     local port="${1:-8000}"
@@ -107,15 +71,8 @@ function vc() {
 }
 
 # osx only
-
 pman() {
     man -t "${1}" | open -f -a /Applications/Preview.app/
-}
-
-# fix permissions for homebrew
-brewfix() {
-    sudo chown $(whoami):admin /usr/local
-    sudo chown -R $(whoami):admin /usr/local
 }
 
 # speed up osx terminal by removing log files
@@ -127,22 +84,6 @@ termspeed() {
 function scrape() {
     wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
 }
-
-# google feeling lucky search
-luck() {
-    url=$(echo "http://www.google.com/search?hl=en&q=$@&btnI=I%27m+Feeling+Lucky" | sed 's/ /+/g');
-    open $url;
-}
-
-# Create alias from previous command and place in aliases.zsh file.
-new-alias() {
-  local last_command=$(echo `history |tail -n2 |head -n1` | sed 's/[0-9]* //')
-  echo "" >> "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
-  echo "# added by new-alias()" >> "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
-  echo alias $1="'""$last_command""'" >> "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
-  . "$DOTFILES/zsh/oh-my-zsh/aliases.zsh"
-}
-
 
 # encrypt file
 # http://flux242.blogspot.com/2011/03/encrypting-with-openssl-in-bash.html
@@ -173,16 +114,12 @@ function decrypt {
   fi
 }
 
-
 # export git repo as zip to desktop
-function gexp {
+function gitzip {
     TIMESTAMP=$(date +%s)
-
     BRANCH="master"
     vared -p "Branch [master]:" -c $BRANCH
-
     OUTPUT="$HOME/Desktop/$TIMESTAMP-archive.zip"
-
     git archive --format zip --output $OUTPUT $BRANCH
 }
 
@@ -201,12 +138,17 @@ z() {
   cd "$(_z -l 2>&1 | fzf --height 40% --reverse --inline-info +s --tac --query "$*" | sed 's/^[0-9,.]* *//')"
 }
 
-# bfc repo cleaner
-bfg()
-{
-docker run -it --rm \
-  --volume "$PWD":/data \
-  --workdir /data \
-  soodesune/bfg-repo-cleaner --delete-files $1
+# use fzf with ssh (and bind to ^ + s)
+# https://gist.github.com/dohq/1dc702cc0b46eb62884515ea52330d60
+function zs () {
+  local selected_host=$(grep "Host " ~/.ssh/config | grep -v '*' | cut -b 6- | fzf --query "$LBUFFER")
+
+  if [ -n "$selected_host" ]; then
+    BUFFER="ssh ${selected_host}"
+    zle accept-line
+  fi
+  zle reset-prompt
 }
 
+zle -N zs
+bindkey '^s' zs
