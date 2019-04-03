@@ -48,6 +48,7 @@ alias gi="git init"
 alias gj="git checkout -"
 alias gsub="git submodule foreach git pull origin master"
 alias ggpff='git push origin "$(git_current_branch)" --force'
+alias gt="cd \$(git rev-parse --show-toplevel)"
 
 # grep
 alias -g G='| grep'
