@@ -6,6 +6,17 @@
 # Functions for ZSH.
 ################################################################################
 
+# use for knockd port knocking
+# knock IP_ADDRESS port port port
+function knock {
+    HOST=$1
+    shift
+    for ARG in "$@"
+    do
+            nmap -Pn --host-timeout 100 --max-retries 0 -p $ARG $HOST
+    done
+}
+
 # mkdir and cd to it
 function mkcd {
     dir="$*";
