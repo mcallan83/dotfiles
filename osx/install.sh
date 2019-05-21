@@ -112,11 +112,11 @@ brew install you-get
 brew install youtube-dl
 brew install zsh
 
-banner "Installing PHP 7.1"
-brew install php@7.1
-echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.1/php.ini
-echo "phar.readonly = Off" >> /usr/local/etc/php/7.1/php.ini
-brew install homebrew/php/adminer
+banner "Installing PHP 7.3"
+brew install php@7.3
+echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.3/php.ini
+echo "phar.readonly = Off" >> /usr/local/etc/php/7.3/php.ini
+echo "pcre.jit = 0" >> /usr/local/etc/php/7.3/php.ini
 brew install homebrew/php/composer
 
 # Homebrew Casks

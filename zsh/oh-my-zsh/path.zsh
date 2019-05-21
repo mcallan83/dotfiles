@@ -14,9 +14,9 @@ if [ -d "/usr/local/opt/node@8" ] ; then
     PATH="/usr/local/opt/node@8/bin:$PATH"
 fi
 
-# php 7.2
-if [ -d "/usr/local/opt/php@7.2" ] ; then
-    PATH="/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.2/sbin:$PATH"
+# php 7.3
+if [ -d "/usr/local/opt/php@7.3" ] ; then
+    PATH="/usr/local/opt/php@7.3/bin:/usr/local/opt/php@7.3/sbin:$PATH"
 fi
 
 # dotfiles bin folder
