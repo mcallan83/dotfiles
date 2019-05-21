@@ -122,18 +122,13 @@ brew install homebrew/php/composer
 # Homebrew Casks
 banner "Installing Homebrew Casks"
 brew cask
-brew cask install adium
-brew cask install aerial
 brew cask install alfred
 brew cask install angry-ip-scanner
-brew cask install appcleaner
 brew cask install arq
 brew cask install atom
 brew cask install bettertouchtool
 brew cask install cakebrew
-brew cask install captain
 brew cask install ccleaner
-brew cask install chrome-remote-desktop-host
 brew cask install clamxav
 brew cask install cyberduck
 brew cask install disk-inventory-x
@@ -141,45 +136,30 @@ brew cask install docker
 brew cask install dropbox
 brew cask install etcher
 brew cask install firefox
-brew cask install go2shell
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install google-hangouts
-brew cask install grandperspective
 brew cask install hammerspoon
 brew cask install handbrake
-brew cask install iconjar
 brew cask install iterm2
-brew cask install jadengeller-helium
 brew cask install kaleidoscope
 brew cask install karabiner-elements
 brew cask install keepassxc
 brew cask install keyboardcleantool
 brew cask install launchcontrol
-brew cask install launchrocket
 brew cask install libreoffice
-brew cask install macdown
-brew cask install ndm
 brew cask install numi
 brew cask install nvalt
-brew cask install robomongo
-brew cask install rstudio
 brew cask install sequel-pro
-brew cask install sketch
-brew cask install slate
 brew cask install spotify
 brew cask install sublime-text3
 brew cask install the-unarchiver
 brew cask install transmission
-brew cask install unetbootin
 brew cask install vagrant
 brew cask install vagrant-manager
-brew cask install veracrypt
 brew cask install virtualbox
 brew cask install visual-studio-code
 brew cask install vlc
-brew cask install xmind
-brew cask install xquartz
 
 brew cask install betterzipql
 brew cask install qlcolorcode
@@ -201,8 +181,8 @@ brew cask install font-source-code-pro
 
 # Install Vagrant Hostsupdater Plugin
 # https://github.com/cogitatio/vagrant-hostsupdater
-# banner "Install Vagrant Hostsupdater Plugin"
-# vagrant plugin install vagrant-hostsupdater
+banner "Install Vagrant Hostsupdater Plugin"
+vagrant plugin install vagrant-hostsupdater
 
 # Sudoless NFS with Vagrant
 # https://gist.github.com/joemaller/6764700
@@ -247,13 +227,11 @@ banner "Installing Composer Packages"
 
 composer global require consolidation/cgr
 
-cgr deployer/deployer
 cgr friendsofphp/php-cs-fixer:^1.11
 cgr hirak/prestissimo
 cgr laravel/envoy
 cgr laravel/installer
 cgr laravel/lumen-installer
-cgr phpmd/phpmd
 
 ################################################################################
 # Yarn
@@ -265,15 +243,8 @@ brew install yarn --without-node
 
 yarn config set prefix ~/.yarn
 
-yarn global add eslint
-yarn global add fkill-cli
-yarn global add gitbook-cli
-yarn global add grunt-cli
-yarn global add gulp
-yarn global add http-server
 yarn global add vmd
 yarn global add vue-cli
-yarn global add yo
 
 ################################################################################
 # Ruby, RVM, and Gems
@@ -297,14 +268,9 @@ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 banner "Installing Ruby Gems"
 
 gem install bundler
-gem install compass
 gem install github-pages
-gem install gollum
 gem install jekyll
-gem install sass
-gem install scss_lint
 gem install tmuxinator
-gem install travis
 
 ################################################################################
 # Python Packages
