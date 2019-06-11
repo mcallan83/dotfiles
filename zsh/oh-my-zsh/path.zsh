@@ -9,14 +9,14 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # remove duplicates
 typeset -U PATH
 
-# node 8
-if [ -d "/usr/local/opt/node@8" ] ; then
-    PATH="/usr/local/opt/node@8/bin:$PATH"
+# node
+if [ -d "/usr/local/opt/node@$DOTFILES_NODE_VERSION" ] ; then
+    PATH="/usr/local/opt/node@$DOTFILES_NODE_VERSION/bin:$PATH"
 fi
 
-# php 7.3
-if [ -d "/usr/local/opt/php@7.3" ] ; then
-    PATH="/usr/local/opt/php@7.3/bin:/usr/local/opt/php@7.3/sbin:$PATH"
+# php
+if [ -d "/usr/local/opt/php@$DOTFILES_PHP_VERSION" ] ; then
+    PATH="/usr/local/opt/php@$DOTFILES_PHP_VERSION/bin:/usr/local/opt/php@$DOTFILES_PHP_VERSION/sbin:$PATH"
 fi
 
 # dotfiles bin folder

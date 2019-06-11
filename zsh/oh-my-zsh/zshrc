@@ -4,6 +4,9 @@ export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 DISABLE_AUTO_UPDATE=true
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
+DOTFILES_NODE_VERSION=10
+DOTFILES_PHP_VERSION=7.3
+
 plugins=(
     brew
     composer
