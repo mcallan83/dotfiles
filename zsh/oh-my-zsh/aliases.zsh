@@ -16,13 +16,9 @@ alias dots="cd $DOTFILES && $EDITOR"
 alias mux="tmuxinator"
 
 # ansible
+alias anp="ansible-playbook"
 alias avd="ansible-vault decrypt"
 alias ave="ansible-vault encrypt"
-alias anpb="ansible-playbook"
-
-# atom
-alias aa="atom ."
-alias aab="apm list --installed --bare > $DOTFILES/osx/atom/config/packages.txt"
 
 # cd back
 alias cdb="cd -"
@@ -36,8 +32,8 @@ alias tags="ctags -R"
 # docker
 alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
-alias dcl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
-alias dclean="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/docker-clean"
+alias dcgc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
+alias dccl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/docker-clean"
 alias dry="docker run -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry"
 
 # ethe price
@@ -86,6 +82,7 @@ alias t="tail -f"
 alias tb="tmux show-buffer"
 
 # vagrant
+alias vc="vagrant ssh -c"
 alias vh="vagrant halt"
 alias vr="vagrant reload"
 alias vs="vagrant ssh"
@@ -97,9 +94,6 @@ alias vl="vim -N -u NONE" #vim with no plugins
 
 # yarn
 alias yw="yarn watch"
-
-# youtube-dl
-alias ytd="youtube-dl"
 
 # z
 # https://github.com/rupa/z
