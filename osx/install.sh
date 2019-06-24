@@ -58,8 +58,6 @@ brew tap thoughtbot/formulae
 banner "Installing Homebrew Packages"
 brew install --HEAD neovim
 brew install aria2
-brew install autossh
-brew install bash-completion
 brew install brew-cask
 brew install coreutils
 brew install ctags
@@ -70,7 +68,6 @@ brew install fd
 brew install ffmpeg
 brew install fzf
 brew install gcc
-brew install getmail
 brew install git
 brew install go
 brew install gobuster
@@ -79,11 +76,9 @@ brew install highlight
 brew install htop-osx
 brew install hub
 brew install icdiff
-brew install imagemagick --with-webp
 brew install jq
 brew install libav
 brew install lua
-brew install mongodb
 brew install mysql
 brew install nmap
 brew install nvm
@@ -97,12 +92,9 @@ brew install speedtest_cli
 brew install ssh-copy-id
 brew install sshrc
 brew install stormssh
-brew install terminal-notifier
-brew install tesseract
 brew install testdisk
 brew install the_silver_searcher
 brew install theharvester
-brew install tig
 brew install tmux
 brew install tree
 brew install vim --override-system-vi
