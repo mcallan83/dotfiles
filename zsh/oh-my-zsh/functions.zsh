@@ -1,5 +1,5 @@
 ################################################################################
-# Filename: zsh/oh-my-zsh/function.zsh
+# Filename: zsh/oh-my-zsh/functions.zsh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
@@ -46,7 +46,7 @@ function encrypt {
 }
 
 # init a git repo
-function ginit {
+function gitinit {
     touch readme.md
     git init
     git add --all
@@ -82,21 +82,6 @@ function server() {
 # Unsorted
 ###
 
-# osx only
-pman() {
-    man -t "${1}" | open -f -a /Applications/Preview.app/
-}
 
-# speed up osx terminal by removing log files
-termspeed() {
-    sudo rm -rf /private/var/log/asl/*.asl
-}
 
-# export git repo as zip to desktop
-function gitzip {
-    TIMESTAMP=$(date +%s)
-    BRANCH="master"
-    vared -p "Branch [master]:" -c $BRANCH
-    OUTPUT="$HOME/Desktop/$TIMESTAMP-archive.zip"
-    git archive --format zip --output $OUTPUT $BRANCH
-}
+

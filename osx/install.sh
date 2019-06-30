@@ -169,7 +169,9 @@ brew cask install font-fira-sans
 brew cask install font-open-sans
 brew cask install font-source-code-pro
 
-
+################################################################################
+# Vagrant
+################################################################################
 
 # Install Vagrant Hostsupdater Plugin
 # https://github.com/cogitatio/vagrant-hostsupdater
@@ -219,9 +221,7 @@ banner "Installing Composer Packages"
 
 composer global require consolidation/cgr
 
-cgr friendsofphp/php-cs-fixer:^1.11
 cgr hirak/prestissimo
-cgr laravel/envoy
 cgr laravel/installer
 cgr laravel/lumen-installer
 

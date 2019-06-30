@@ -6,17 +6,8 @@
 # Aliases for ZSH.
 ################################################################################
 
-# edit config files
-alias hosts="sudo $EDITOR /etc/hosts"
-alias vimrc="$EDITOR ~/.vimrc"
-alias zshrc="$EDITOR ~/.zshrc"
-alias dots="cd $DOTFILES && $EDITOR"
-
-# tmuxinator
-alias mux="tmuxinator"
-
 # ansible
-alias anp="ansible-playbook"
+alias ap="ansible-playbook"
 alias avd="ansible-vault decrypt"
 alias ave="ansible-vault encrypt"
 
@@ -32,12 +23,6 @@ alias tags="ctags -R"
 # docker
 alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
-alias dcgc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
-alias dccl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/docker-clean"
-alias dry="docker run -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry"
-
-# ethe price
-alias ethe="curl -s https://api.coinbase.com/v2/prices/ETH-USD/spot | python -c \"import json, sys; print(json.load(sys.stdin)['data']['amount'])\""
 
 # git
 alias gi="git init"
@@ -49,17 +34,15 @@ alias gt="cd \$(git rev-parse --show-toplevel)"
 # grep
 alias -g G='| grep'
 
+# open hosts file in editor
+alias hosts="sudo $EDITOR /etc/hosts"
+
 # hub
 alias hb="hub browse" # open up github repo in browser
 alias hpr="hub pull-request" # create pull request on github
 
 # json pretty print
 alias -g J='| python -m json.tool'
-
-# k
-# https://github.com/rimraf/k
-alias ka="clear;k -a" # with hidden files
-alias kd="clear;k -d" # with directories only
 
 # less
 alias -g L='| less'
@@ -80,6 +63,7 @@ alias t="tail -f"
 
 # tmux
 alias tb="tmux show-buffer"
+alias mux="tmuxinator"
 
 # vagrant
 alias vc="vagrant ssh -c"
@@ -92,31 +76,31 @@ alias vu="vagrant up"
 alias v="vim"
 alias vl="vim -N -u NONE" #vim with no plugins
 
-# yarn
-alias yw="yarn watch"
-
 # z
 # https://github.com/rupa/z
 alias zc="z -c" # z in current folder only
 
-# osx only
-
-# capture screen
-alias sc="screencapture -c -W"
-
-# hide\show hidden files
-alias hide="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
-alias show="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
+# zip docs volume
+alias zipdocs="zip -r docs.zip /Volumes/docs -x *.git*"
 
 ################################################################################
-# Misc Tools Run Via Docker
+# CLI Tools Run Via Docker
 ################################################################################
 
+# docker clean
+alias dccl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/docker-clean"
+
+# docker garbage collection
+alias dcgc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
+
+# terminal based docker manager
+alias dry="docker run -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry"
+
+# generate password hashes via mkpasswd
 alias mkpasswd="docker run -it --rm egray/mkpasswd"
 
+# web based docker manager
 alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
 
+# wordpress security tool
 alias wpscan="docker run -it --rm wpscanteam/wpscan"
-
-
-alias zipdocs="zip -r docs.zip /Volumes/docs -x *.git*"
