@@ -18,7 +18,7 @@ plugins=(
     vi-mode
     yarn
     z
-    zsh-interactive-cd
+    #zsh-interactive-cd
     zsh-syntax-highlighting
     #zsh-autosuggestions
 )
