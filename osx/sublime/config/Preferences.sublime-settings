@@ -6,6 +6,7 @@
 	"caret_extra_top": 1,
 	"caret_extra_width": 2,
 	"caret_style": "smooth",
+	"color_scheme": "Packages/Oceanic Next Color Scheme/Oceanic Next.tmTheme",
 	"convert_tabspaces_on_save": true,
 	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
