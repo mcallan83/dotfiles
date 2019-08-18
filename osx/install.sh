@@ -218,7 +218,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 nvm install 8
-npm install -g vmd vue@cli yarn
+npm install -g vmd @vue/cli yarn
 nvm install 10 --reinstall-packages-from=8
 nvm install 12 --reinstall-packages-from=8
 
