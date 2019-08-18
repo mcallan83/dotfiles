@@ -47,42 +47,30 @@ brew update
 brew analytics off
 
 banner "Tapping Additional Homebrew Repos"
-brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
-brew tap homebrew/bundle
-brew tap homebrew/services
-brew tap neovim/neovim
-brew tap thoughtbot/formulae
+# brew tap homebrew/bundle
+# brew tap homebrew/services
 
 banner "Installing Homebrew Packages"
-brew install --HEAD neovim
 brew install aria2
-brew install brew-cask
 brew install coreutils
 brew install ctags
 brew install ctop
 brew install ddrescue
-brew install dnsmasq
 brew install fd
 brew install ffmpeg
 brew install fzf
 brew install gcc
 brew install git
 brew install go
-brew install gobuster
 brew install gpg
-brew install highlight
 brew install htop-osx
 brew install hub
-brew install icdiff
 brew install jq
 brew install libav
-brew install lua
-brew install mysql
 brew install nmap
 brew install nvm
-brew install node
 brew install pandoc
 brew install python
 brew install rclone
@@ -90,15 +78,12 @@ brew install reattach-to-user-namespace
 brew install shellcheck
 brew install speedtest_cli
 brew install ssh-copy-id
-brew install sshrc
-brew install stormssh
 brew install testdisk
 brew install the_silver_searcher
-brew install theharvester
 brew install tmux
 brew install tree
-brew install vim --override-system-vi
-brew install wget --with-iri
+brew install vim
+brew install wget
 brew install xmlstarlet
 brew install you-get
 brew install youtube-dl
@@ -109,7 +94,7 @@ brew install php@7.3
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.3/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/7.3/php.ini
 echo "pcre.jit = 0" >> /usr/local/etc/php/7.3/php.ini
-brew install homebrew/php/composer
+brew install composer
 
 # Homebrew Casks
 banner "Installing Homebrew Casks"
@@ -118,8 +103,7 @@ brew cask install alfred
 brew cask install angry-ip-scanner
 brew cask install arq
 brew cask install atom
-brew cask install bettertouchtool
-brew cask install cakebrew
+brew cask install betterzip
 brew cask install ccleaner
 brew cask install clamxav
 brew cask install cyberduck
@@ -128,8 +112,8 @@ brew cask install docker
 brew cask install dropbox
 brew cask install etcher
 brew cask install firefox
+brew cask install google-backup-and-sync
 brew cask install google-chrome
-brew cask install google-drive
 brew cask install google-hangouts
 brew cask install hammerspoon
 brew cask install handbrake
@@ -141,22 +125,21 @@ brew cask install keyboardcleantool
 brew cask install launchcontrol
 brew cask install libreoffice
 brew cask install numi
-brew cask install nvalt
+brew cask install robo-3t
 brew cask install sequel-pro
 brew cask install spotify
-brew cask install sublime-text3
+brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install transmission
 brew cask install vagrant
-brew cask install vagrant-manager
 brew cask install virtualbox
 brew cask install visual-studio-code
 brew cask install vlc
 
-brew cask install betterzipql
 brew cask install qlcolorcode
 brew cask install qlmarkdown
 brew cask install qlstephen
+brew cask install qlvideo
 brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install suspicious-package
@@ -226,17 +209,21 @@ cgr laravel/installer
 cgr laravel/lumen-installer
 
 ################################################################################
-# Yarn
+# Node Version Manager
 ################################################################################
 
-banner "Installing Yarn"
+mkdir "$HOME/.nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
-brew install yarn --without-node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-yarn config set prefix ~/.yarn
+nvm install 8
+npm install -g vmd vue@cli yarn
+nvm install 10 --reinstall-packages-from=8
+nvm install 12 --reinstall-packages-from=8
 
-yarn global add vmd
-yarn global add vue-cli
+nvm alias default 12
 
 ################################################################################
 # Ruby, RVM, and Gems
