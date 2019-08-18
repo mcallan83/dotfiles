@@ -4,7 +4,6 @@ export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 DISABLE_AUTO_UPDATE=true
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
-DOTFILES_NODE_VERSION=10
 DOTFILES_PHP_VERSION=7.3
 
 plugins=(
@@ -19,6 +18,7 @@ plugins=(
     yarn
     z
     #zsh-interactive-cd
+    #zsh-nvm
     zsh-syntax-highlighting
     #zsh-autosuggestions
 )
@@ -44,7 +44,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# iterm2 shell integration
-[[ -s "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
+[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
