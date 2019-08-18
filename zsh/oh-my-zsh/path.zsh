@@ -19,11 +19,6 @@ if [ -d "$DOTFILES/zsh/oh-my-zsh/bin" ] ; then
     PATH="$PATH:$DOTFILES/zsh/oh-my-zsh/bin"
 fi
 
-# personal bin folder
-if [ -d "$HOME/.bin" ] ; then
-    PATH="$PATH:$HOME/.bin"
-fi
-
 # composer
 if [ -d "$HOME/.composer/vendor/bin" ] ; then
     PATH="$PATH:$HOME/.composer/vendor/bin"

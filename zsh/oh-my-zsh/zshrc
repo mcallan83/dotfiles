@@ -37,11 +37,8 @@ source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 source $DOTFILES/zsh/oh-my-zsh/fzf.zsh
 source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 source $DOTFILES/zsh/oh-my-zsh/direnv.zsh
+source $DOTFILES/zsh/oh-my-zsh/nvm.zsh
 #source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
 # rvm
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"

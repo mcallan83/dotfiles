@@ -70,7 +70,6 @@ brew install hub
 brew install jq
 brew install libav
 brew install nmap
-brew install nvm
 brew install pandoc
 brew install python
 brew install rclone
