@@ -34,11 +34,6 @@ if [ -d "$HOME/.composer/vendor/bin" ] ; then
     PATH="$PATH:$HOME/.composer/vendor/bin"
 fi
 
-# yarn
-if test $(which yarn); then
-    PATH="$PATH:$(yarn global bin)"
-fi
-
 # rvm - compains if not first
 if [ -d $HOME/.rvm/bin ] ; then
     PATH="$HOME/.rvm/bin:$PATH"
