@@ -237,16 +237,19 @@ fi
 
 source "$HOME/.rvm/scripts/rvm"
 
-banner "Installing Ruby 2.2.3"
-rvm use 2.2.3 --default --install
+banner "Installing Ruby 2.3"
+rvm use 2.3 --default --install
 rvm requirements
 
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
+if [ ! -f /usr/local/lib/libgcc_s.10.4.dylib ]; then
+    sudo ln -s /usr/lib/libSystem.B.dylib /usr/local/lib/libgcc_s.10.4.dylib
+fi
+
 banner "Installing Ruby Gems"
 
 gem install bundler
-gem install jekyll -v 2.5.3
 
 ################################################################################
 # Python Packages
