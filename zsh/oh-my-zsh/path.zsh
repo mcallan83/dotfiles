@@ -9,11 +9,6 @@ PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # remove duplicates
 typeset -U PATH
 
-# node
-if [ -d "/usr/local/opt/node@$DOTFILES_NODE_VERSION" ] ; then
-    PATH="/usr/local/opt/node@$DOTFILES_NODE_VERSION/bin:$PATH"
-fi
-
 # php
 if [ -d "/usr/local/opt/php@$DOTFILES_PHP_VERSION" ] ; then
     PATH="/usr/local/opt/php@$DOTFILES_PHP_VERSION/bin:/usr/local/opt/php@$DOTFILES_PHP_VERSION/sbin:$PATH"
