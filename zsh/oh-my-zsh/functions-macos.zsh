@@ -24,3 +24,14 @@ pman() {
 termspeed() {
     sudo rm -rf /private/var/log/asl/*.asl
 }
+
+# exclude `node_modules` and `vendor` folders from time machine
+tm_exclude_vendors() {
+    find `pwd` -maxdepth 3 -type d -name 'node_modules' | xargs -n 1 tmutil addexclusion
+    find `pwd` -maxdepth 3 -type d -name 'vendor' | xargs -n 1 tmutil addexclusion
+}
+
+# list excluded time machine files
+tm_list_excluded() {
+    sudo mdfind "com_apple_backup_excludeItem = 'com.apple.backupd'"
+}
