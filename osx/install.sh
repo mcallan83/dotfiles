@@ -67,6 +67,7 @@ brew install go
 brew install gpg
 brew install htop-osx
 brew install hub
+brew install hudochenkov/sshpass/sshpass
 brew install jq
 brew install libav
 brew install nmap
