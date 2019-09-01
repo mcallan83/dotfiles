@@ -3,14 +3,14 @@
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
-# MAcOS aliases for ZSH.
+# MacOS aliases for ZSH.
 ################################################################################
 
 # copy to clipboard
 alias -g C='| pbcopy'
 
 # flish dns
-alias dnsflush="sudo killall -HUP mDNSResponder;sleep 2;"
+alias flushdns="sudo killall -HUP mDNSResponder;sleep 2;"
 
 # capture screen
 alias sc="screencapture -c -W"

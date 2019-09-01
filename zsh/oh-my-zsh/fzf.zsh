@@ -6,7 +6,7 @@
 # Fzf config (a command-line fuzzy finder, config).
 # https://github.com/junegunn/fzf
 ################################################################################
-#
+
 
 # use fzf with z
 unalias z 2> /dev/null

@@ -1,8 +1,14 @@
-# nvm
-export NVM_DIR="$HOME/.nvm"
-
+################################################################################
+# Filename: zsh/oh-my-zsh/nvm.zsh
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
+#
+# Load NVM and automatically change Node versions when changing into a diretory
+# that contains an .nvmrc file.
+################################################################################
+#
 if [ -s "$NVM_DIR/nvm.sh" ]; then
-  # load nvm
+
   source "$NVM_DIR/nvm.sh"
 
   # automatically change node versions when .nvmrc found

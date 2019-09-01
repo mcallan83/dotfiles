@@ -50,7 +50,7 @@ function gitinit {
     touch readme.md
     git init
     git add --all
-    git commit -m 'initial commit'
+    git commit -m 'Initial commit'
 }
 
 # use for knockd port knocking
