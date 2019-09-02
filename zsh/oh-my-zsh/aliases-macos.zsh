@@ -9,6 +9,9 @@
 # copy to clipboard
 alias -g C='| pbcopy'
 
+# copy current path
+alias cpwd="pwd | tr -d '\n' | pbcopy"
+
 # flish dns
 alias flushdns="sudo killall -HUP mDNSResponder;sleep 2;"
 
@@ -20,4 +23,4 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Find
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
 
 # zip docs volume
-alias zipdocs="zip -r docs.zip /Volumes/docs -x *.git*"
+alias zipdocs="zip -r docs.zip /Volumes/docs -x '*.git*'"
