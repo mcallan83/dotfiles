@@ -18,3 +18,6 @@ alias sc="screencapture -c -W"
 # hide\show hidden files
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
+
+# zip docs volume
+alias zipdocs="zip -r docs.zip /Volumes/docs -x *.git*"

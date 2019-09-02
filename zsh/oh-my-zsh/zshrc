@@ -27,13 +27,14 @@ source $DOTFILES/zsh/oh-my-zsh/path.zsh
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 
+source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
+source $DOTFILES/zsh/oh-my-zsh/functions.zsh
+
 if [[ $(uname) == 'Darwin' ]]; then
     source $DOTFILES/zsh/oh-my-zsh/aliases-macos.zsh
     source $DOTFILES/zsh/oh-my-zsh/functions-macos.zsh
 fi
 
-source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
-source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 source $DOTFILES/zsh/oh-my-zsh/fzf.zsh
 source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 source $DOTFILES/zsh/oh-my-zsh/direnv.zsh

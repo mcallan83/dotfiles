@@ -80,9 +80,6 @@ alias vl="vim -N -u NONE" #vim with no plugins
 # https://github.com/rupa/z
 alias zc="z -c" # z in current folder only
 
-# zip docs volume
-alias zipdocs="zip -r docs.zip /Volumes/docs -x *.git*"
-
 ################################################################################
 # CLI Tools Run Via Docker
 ################################################################################

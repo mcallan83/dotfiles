@@ -29,3 +29,12 @@ function zs () {
 
 zle -N zs
 bindkey '^s' zs
+
+
+# use fzf with npm scripts
+function znpm () {
+    cat package.json | \
+      jq -r '.scripts | keys[]' | \
+      fzf --height 30% --reverse -1 -0 -d ',' --with-nth=1 --header 'Select npm script to run' | \
+      xargs npm run
+}
