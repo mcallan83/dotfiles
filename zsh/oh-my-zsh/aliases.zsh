@@ -76,6 +76,9 @@ alias vu="vagrant up"
 alias v="vim"
 alias vl="vim -N -u NONE" #vim with no plugins
 
+# yarn
+alias yw="yarn watch"
+
 # z
 # https://github.com/rupa/z
 alias zc="z -c" # z in current folder only
