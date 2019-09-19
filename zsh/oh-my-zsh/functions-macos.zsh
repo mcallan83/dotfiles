@@ -20,18 +20,23 @@ pman() {
     man -t "${1}" | open -f -a /Applications/Preview.app/
 }
 
+# recursively remove .DS_Store files
+dsstoreclean() {
+    find "${@:-.}" -type f -name .DS_Store -delete
+}
+
 # speed up osx terminal by removing log files
 termspeed() {
     sudo rm -rf /private/var/log/asl/*.asl
 }
 
 # exclude `node_modules` and `vendor` folders from time machine
-tm_exclude_vendors() {
+tmexcludevendors() {
     find `pwd` -maxdepth 3 -type d -name 'node_modules' | xargs -n 1 tmutil addexclusion
     find `pwd` -maxdepth 3 -type d -name 'vendor' | xargs -n 1 tmutil addexclusion
 }
 
 # list excluded time machine files
-tm_list_excluded() {
+tmlistexcluded() {
     sudo mdfind "com_apple_backup_excludeItem = 'com.apple.backupd'"
 }
