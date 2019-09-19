@@ -24,7 +24,7 @@ if [ -d "$HOME/.composer/vendor/bin" ] ; then
     PATH="$PATH:$HOME/.composer/vendor/bin"
 fi
 
-# rvm - compains if not first
+# rvm - complains if not first
 if [ -d $HOME/.rvm/bin ] ; then
     PATH="$HOME/.rvm/bin:$PATH"
 fi
