@@ -32,9 +32,17 @@ bindkey '^s' zs
 
 
 # use fzf with npm scripts
-function znpm () {
+function npms () {
     cat package.json | \
       jq -r '.scripts | keys[]' | \
-      fzf --height 30% --reverse -1 -0 -d ',' --with-nth=1 --header 'Select npm script to run' | \
+      fzf --height 50% --reverse -1 -0 -d ',' --with-nth=1 --header 'Run NPM script:' | \
       xargs npm run
+}
+
+# use fzf with composer scripts
+function coms () {
+    cat composer.json | \
+      jq -r '.scripts | keys[]' | \
+      fzf --height 50% --reverse -1 -0 -d ',' --with-nth=1 --header 'Run Composer script:' | \
+      xargs composer
 }
