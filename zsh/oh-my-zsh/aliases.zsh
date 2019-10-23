@@ -34,7 +34,7 @@ alias gt="cd \$(git rev-parse --show-toplevel)"
 # grep
 alias -g G='| grep'
 
-# open hosts file in editor
+# edit hosts file in editor
 alias hosts="sudo $EDITOR /etc/hosts"
 
 # hub
@@ -43,6 +43,9 @@ alias hpr="hub pull-request" # create pull request on github
 
 # json pretty print
 alias -g J='| python -m json.tool'
+
+# edit known_hosts file in editor
+alias known_hosts="$EDITOR ~/.ssh/known_hosts"
 
 # less
 alias -g L='| less'
