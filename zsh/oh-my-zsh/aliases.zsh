@@ -45,7 +45,7 @@ alias hpr="hub pull-request" # create pull request on github
 alias -g J='| python -m json.tool'
 
 # edit known_hosts file in editor
-alias known_hosts="$EDITOR ~/.ssh/known_hosts"
+alias known="$EDITOR ~/.ssh/known_hosts"
 
 # less
 alias -g L='| less'
