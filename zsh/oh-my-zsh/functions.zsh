@@ -70,6 +70,12 @@ function mkcd {
     mkdir -p "$dir" && cd "$dir";
 }
 
+# output a random password 32 characters in length
+function randpass ()
+{
+    openssl rand -base64 24 | cut -c-32
+}
+
 # run a web server from current folder (python)
 function server() {
     local port="${1:-8000}"
