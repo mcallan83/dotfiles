@@ -6,6 +6,20 @@
 # MacOS functions for ZSH.
 ################################################################################
 
+# switch php versions
+phpv() {
+    brew unlink php@7.1 php@7.2 php@7.3
+    brew link --force --overwrite $1
+    brew services stop php > /dev/null 2>&1 || true
+    brew services stop php@7.1 > /dev/null 2>&1 || true
+    brew services stop php@7.2 > /dev/null 2>&1 || true
+    brew services stop php@7.3 > /dev/null 2>&1 || true
+    brew services start $1
+    composer global update
+}
+
+
+
 # export git repo as zip file to desktop
 function gitzip {
     TIMESTAMP=$(date +%s)

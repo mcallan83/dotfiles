@@ -12,6 +12,9 @@ alias -g C='| pbcopy'
 # copy current path
 alias cpwd="pwd | tr -d '\n' | pbcopy"
 
+# empty all trashes and clear system logs
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
 # flush dns
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;sleep 2"
 

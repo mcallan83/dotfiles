@@ -11,7 +11,8 @@ function als() {
     alias | grep $1
 }
 
-# create backup copy of file, appending .bak extension to end
+# create backup copy of file, appending the `.bak` extension to the end of
+# the file
 function bak() {
     cp "${1}"{,.bak}
 }
@@ -73,7 +74,12 @@ function mkcd {
 # output a random password 32 characters in length
 function randpass ()
 {
-    openssl rand -base64 24 | cut -c-32
+    shuf -zer -n32  {A..Z} {a..z} {0..9}
+}
+
+# scrape a webpage and its asserts
+function scrape() {
+    wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
 }
 
 # run a web server from current folder (python)
