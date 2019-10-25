@@ -12,14 +12,21 @@ alias -g C='| pbcopy'
 # copy current path
 alias cpwd="pwd | tr -d '\n' | pbcopy"
 
-# flish dns
-alias flushdns="sudo killall -HUP mDNSResponder;sleep 2;"
+# flush dns
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;sleep 2"
+
+# hide hidden files
+alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
+
+# switch php versions
+alias php71="phpv php@7.1"
+alias php72="phpv php@7.2"
+alias php73="phpv php@7.3"
 
 # capture screen
 alias sc="screencapture -c -W"
 
-# hide\show hidden files
-alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
+# show hidden files
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
 
 # zip docs volume
