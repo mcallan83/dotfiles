@@ -7,7 +7,7 @@
 ################################################################################
 
 # ansible
-alias ap="ansible-playbook"
+# alias ap="ansible-playbook"
 alias avd="ansible-vault decrypt"
 alias ave="ansible-vault encrypt"
 
