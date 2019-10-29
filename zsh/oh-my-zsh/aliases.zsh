@@ -1,5 +1,4 @@
 ################################################################################
-# Filename: zsh/oh-my-zsh/aliases.zsh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
@@ -50,6 +49,9 @@ alias known="$EDITOR ~/.ssh/known_hosts"
 # less
 alias -g L='| less'
 
+# global node_modules cleanup
+alias npk="npx npkill"
+
 # ps
 alias psa="ps aux"
 
@@ -77,14 +79,9 @@ alias vu="vagrant up"
 
 # vim
 alias v="vim"
-alias vl="vim -N -u NONE" #vim with no plugins
 
 # yarn
 alias yw="yarn watch"
-
-# z
-# https://github.com/rupa/z
-alias zc="z -c" # z in current folder only
 
 ################################################################################
 # CLI Tools Run Via Docker
@@ -103,7 +100,7 @@ alias dry="docker run -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dr
 alias mkpasswd="docker run -it --rm egray/mkpasswd"
 
 # web based docker manager
-alias portainer="docker run -v \"/var/run/docker.sock:/var/run/docker.sock\" -d -p 9000:9000 portainer/portainer --no-auth"
+alias portainer="docker run -v /var/run/docker.sock:/var/run/docker.sock -d -p 9000:9000 portainer/portainer --no-auth"
 
 # wordpress security tool
 alias wpscan="docker run -it --rm wpscanteam/wpscan"
