@@ -1,3 +1,10 @@
+################################################################################
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
+#
+# Configure $PATH.
+################################################################################
+
 # clean out preloaded path on OSX
 if [ -x /usr/libexec/path_helper ]; then
     PATH=''

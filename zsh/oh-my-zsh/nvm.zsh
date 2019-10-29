@@ -1,5 +1,4 @@
 ################################################################################
-# Filename: zsh/oh-my-zsh/nvm.zsh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #

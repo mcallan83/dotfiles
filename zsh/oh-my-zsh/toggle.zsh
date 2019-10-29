@@ -1,4 +1,9 @@
-# use ctrl+z to toggle between fg app and commandline
+################################################################################
+# Author: Mike Callan
+# URL: http://github.com/mcallan83/dotfiles
+#
+# Use ^Z to toggle between foreground app and commandline.
+################################################################################
 
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then

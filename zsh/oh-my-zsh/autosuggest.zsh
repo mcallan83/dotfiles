@@ -1,5 +1,4 @@
 ################################################################################
-# Filename: zsh/oh-my-zsh/autosuggest.zsh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
