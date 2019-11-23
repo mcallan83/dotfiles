@@ -43,6 +43,6 @@ function pks () {
 
 # List all Ansible Playbooks and run which ever is selected.
 
-function ap () {
+function aapp () {
     ls -1 | grep .yml$ | sed -e '/requirements/d;s/\.yml$//' | sort | fzf --reverse -1 -0 -d ',' --with-nth=1 --header 'Select Playbook:' | sed -e 's/^/ansible-playbook /;s/$/\.yml/' | xargs -L 1 -I {} sh -c "{}"
 }
