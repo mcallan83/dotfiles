@@ -1,7 +1,7 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.emptySelectionClipboard": false,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Menlo",
     "editor.fontSize": 18,
     "editor.formatOnPaste": true,
     "editor.letterSpacing": 0,
