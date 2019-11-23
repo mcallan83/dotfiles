@@ -5,6 +5,11 @@
 # MacOS functions for ZSH.
 ################################################################################
 
+# export list of installed vscode extentions to config folder for syncing
+function codebak {
+    code --list-extensions --show-versions > "$DOTFILES/osx/code/config/extensions.txt"
+}
+
 # recursively remove .DS_Store files
 function dsstoreclean {
     find "${@:-.}" -type f -name .DS_Store -delete

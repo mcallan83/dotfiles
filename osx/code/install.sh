@@ -30,9 +30,19 @@ fi
 
 # symlink settings
 echo "Code: Symlinking Settings"
+
 cd "$CONFIG"
+
 ln -s "$DOTFILES/osx/code/config/snippets" snippets
 ln -s "$DOTFILES/osx/code/config/keybindings.json" keybindings.json
 ln -s "$DOTFILES/osx/code/config/settings.json" settings.json
+
+# install extensions
+echo "Code: Installing Extensions"
+
+cat "$DOTFILES/osx/code/config/extensions.txt" | while read line
+do
+    code --install-extension $line
+done
 
 echo "Code: Done"
