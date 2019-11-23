@@ -1,3 +1,25 @@
 {
-    "editor.minimap.enabled": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.emptySelectionClipboard": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 18,
+    "editor.formatOnPaste": true,
+    "editor.letterSpacing": 0,
+    "editor.lineHeight": 40,
+    "editor.minimap.enabled": false,
+    "editor.quickSuggestionsDelay": 0,
+    "editor.renderWhitespace": "all",
+    "editor.suggestFontSize": 16,
+    "editor.suggestLineHeight": 28,
+    "explorer.openEditors.visible": 0,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.lineHeight": 1.5,
+    "window.title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
+    "workbench.fontAliasing": "antialiased",
+    "workbench.sideBar.location": "right"
 }
