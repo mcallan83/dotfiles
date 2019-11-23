@@ -1,5 +1,7 @@
-// Place your key bindings in this file to override the defaults
 [
+    //
+    // Terminal
+    //
     {
         "key": "cmd+t",
         "command": "workbench.action.terminal.toggleTerminal"
@@ -9,6 +11,24 @@
         "command": "workbench.action.terminal.focus",
         "when": "!terminalFocus"
     },
+    {
+        "key": "alt+cmd+right",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+left",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    //
+    // Workbench
+    //
     {
         "key": "cmd+k cmd+k",
         "command": "workbench.action.toggleZenMode"

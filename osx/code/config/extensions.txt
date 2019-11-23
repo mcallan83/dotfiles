@@ -1,1 +1,2 @@
 ms-vscode.sublime-keybindings@4.0.3
+wmaurer.change-case@1.0.0
