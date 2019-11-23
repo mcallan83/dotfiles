@@ -15,6 +15,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
     "terminal.integrated.cursorBlinking": false,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.fontSize": 15,
