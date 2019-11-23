@@ -1,4 +1,5 @@
 alefragnani.project-manager@10.9.1
 CoenraadS.bracket-pair-colorizer-2@0.0.28
+eamodio.gitlens@10.2.0
 ms-vscode.sublime-keybindings@4.0.3
 wmaurer.change-case@1.0.0
