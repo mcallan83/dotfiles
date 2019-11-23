@@ -1,4 +1,5 @@
 {
+    "breadcrumbs.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.emptySelectionClipboard": false,
     "editor.fontFamily": "Menlo",
