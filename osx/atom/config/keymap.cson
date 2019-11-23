@@ -1,3 +1,0 @@
-# toggle advanced open file
-'.platform-darwin atom-workspace':
-  'cmd-alt-n': 'advanced-open-file:toggle'
