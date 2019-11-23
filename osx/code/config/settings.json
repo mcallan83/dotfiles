@@ -22,5 +22,7 @@
     "terminal.integrated.lineHeight": 1.5,
     "window.title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
     "workbench.fontAliasing": "antialiased",
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false
 }
