@@ -52,5 +52,10 @@
     {
         "key": "cmd+e cmd+e",
         "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "workbench.action.toggleFullScreen",
+        "when": "!sideBarFocus"
     }
 ]
