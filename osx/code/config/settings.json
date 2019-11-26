@@ -1,6 +1,7 @@
 {
     "breadcrumbs.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
+    "editor.fontLigatures": true,
     "editor.fontFamily": "FiraCode-Regular",
     "editor.fontSize": 20,
     "editor.formatOnPaste": true,
@@ -9,7 +10,7 @@
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.quickSuggestionsDelay": 0,
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
     "explorer.openEditors.visible": 0,
     "files.insertFinalNewline": true,
