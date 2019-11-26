@@ -1,7 +1,6 @@
 {
     "breadcrumbs.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.emptySelectionClipboard": false,
     "editor.fontFamily": "FiraCode-Regular",
     "editor.fontSize": 20,
     "editor.formatOnPaste": true,
@@ -25,6 +24,42 @@
     "terminal.integrated.cursorStyle": "block",
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.lineHeight": 1.5,
+    "window.title": "${activeEditorShort}${separator}${rootName} ${dirty}",
+    "workbench.colorCustomizations": {
+        "editorWhitespace.foreground": "#FFFFFF22",
+        "terminal.ansiBlack": "#000000",
+        "terminal.ansiBlue": "#77aad5",
+        "terminal.ansiBrightBlack": "#000000",
+        "terminal.ansiBrightBlue": "#77aad5",
+        "terminal.ansiBrightCyan": "#75d4d5",
+        "terminal.ansiBrightGreen": "#a7d3a9",
+        "terminal.ansiBrightMagenta": "#d6acd5",
+        "terminal.ansiBrightRed": "#f68d8c",
+        "terminal.ansiBrightWhite": "#fefefe",
+        "terminal.ansiBrightYellow": "#ffd478",
+        "terminal.ansiCyan": "#75d4d5",
+        "terminal.ansiGreen": "#a7d3a9",
+        "terminal.ansiMagenta": "#d6acd5",
+        "terminal.ansiRed": "#f68d8c",
+        "terminal.ansiWhite": "#fefefe",
+        "terminal.ansiYellow": "#ffd478",
+        "terminal.background": "#3b3b3b",
+        "terminal.foreground": "#d5d5d5",
+        "terminalCursor.background": "#3b3b3b",
+        "terminalCursor.foreground": "#ffffff"
+    },
+    "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+    "workbench.fontAliasing": "antialiased",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "right",
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always",
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    //
+    // Vim
+    //
+    "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
         {
             "before": [
@@ -35,14 +70,5 @@
                 "<Esc>"
             ]
         }
-    ],
-    "window.title": "${activeEditorShort}${separator}${rootName} ${dirty}",
-    "workbench.colorTheme": "Oceanic Next (dimmed bg)",
-    "workbench.fontAliasing": "antialiased",
-    "workbench.sideBar.location": "right",
-    "workbench.tree.indent": 20,
-    "workbench.tree.renderIndentGuides": "always",
-    "zenMode.centerLayout": false,
-    "zenMode.fullScreen": false,
-    "workbench.iconTheme": "material-icon-theme"
+    ]
 }

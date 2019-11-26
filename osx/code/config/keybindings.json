@@ -62,13 +62,5 @@
         "key": "cmd+enter",
         "command": "workbench.action.toggleFullScreen",
         "when": "!sideBarFocus"
-    },
-    //
-    // Macros
-    //
-    {
-        "key": "cmd+x",
-        "command": "macros.cutLine",
-        "when": "!editorHasSelection"
     }
 ]
