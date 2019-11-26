@@ -1,5 +1,4 @@
 {
-    "ansible.autocompletion": false,
     "breadcrumbs.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.emptySelectionClipboard": false,
@@ -44,5 +43,6 @@
     "workbench.tree.indent": 20,
     "workbench.tree.renderIndentGuides": "always",
     "zenMode.centerLayout": false,
-    "zenMode.fullScreen": false
+    "zenMode.fullScreen": false,
+    "workbench.iconTheme": "material-icon-theme"
 }
