@@ -12,8 +12,13 @@
         "when": "!terminalFocus"
     },
     {
-        "key": "alt+cmd+right",
-        "command": "workbench.action.terminal.focusNext",
+        "key": "cmd+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
     },
     {
@@ -22,8 +27,8 @@
         "when": "terminalFocus"
     },
     {
-        "key": "cmd+n",
-        "command": "workbench.action.terminal.new",
+        "key": "alt+cmd+right",
+        "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus"
     },
     //
@@ -57,5 +62,13 @@
         "key": "cmd+enter",
         "command": "workbench.action.toggleFullScreen",
         "when": "!sideBarFocus"
+    },
+    //
+    // Macros
+    //
+    {
+        "key": "cmd+x",
+        "command": "macros.cutLine",
+        "when": "!editorHasSelection"
     }
 ]
