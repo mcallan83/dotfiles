@@ -17,9 +17,6 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.enabled": false,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "block",
@@ -58,7 +55,25 @@
     "zenMode.centerLayout": false,
     "zenMode.fullScreen": false,
     //
-    // Vim
+    // Plugin Eslint
+    //
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "vue",
+            "autoFix": true
+        }
+    ],
+    //
+    // Plugin: GitLens
+    //
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.enabled": false,
+    //
+    // Plugin: Vim
     //
     "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
@@ -71,5 +86,11 @@
                 "<Esc>"
             ]
         }
-    ]
+    ],
+    //
+    // Plugin: Vetur
+    //
+    "vetur.dev.vlsPath": "/Users/mcallan/.config/yarn/global/node_modules/vue-language-server",
+    "vetur.format.defaultFormatter.html": "none",
+    "vetur.format.defaultFormatter.js": "none"
 }
