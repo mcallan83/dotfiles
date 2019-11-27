@@ -3,11 +3,11 @@
     // Terminal
     //
     {
-        "key": "cmd+t",
+        "key": "shift+cmd+t",
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "cmd+t",
+        "key": "shift+cmd+t",
         "command": "workbench.action.terminal.focus",
         "when": "!terminalFocus"
     },

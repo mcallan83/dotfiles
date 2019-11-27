@@ -12,6 +12,12 @@
     "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
     "explorer.openEditors.visible": 0,
+    "files.associations": {
+        ".php_cs.dist": "php",
+        ".php_cs": "php",
+        "*.php": "php",
+        "zshrc": "shellscript"
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
