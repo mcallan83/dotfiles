@@ -8,7 +8,6 @@
     "editor.letterSpacing": 0,
     "editor.lineHeight": 40,
     "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
     "editor.quickSuggestionsDelay": 0,
     "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
@@ -87,6 +86,7 @@
             ]
         }
     ],
+    "vim.sneak": true,
     //
     // Plugin: Vetur
     //
