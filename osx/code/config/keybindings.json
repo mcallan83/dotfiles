@@ -8,6 +8,13 @@
         "when": "filesExplorerFocus"
     },
     //
+    // Plugin: Quick File Actions
+    //
+    {
+        "key": "alt+cmd+n",
+        "command": "extension.quick-file-actions.new"
+    },
+    //
     // Terminal
     //
     {
