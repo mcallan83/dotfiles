@@ -3,6 +3,7 @@ dbaeumer.vscode-eslint@1.9.1
 eamodio.gitlens@10.2.0
 EditorConfig.EditorConfig@0.14.2
 mikestead.dotenv@1.0.1
+mrmlnc.vscode-duplicate@1.2.1
 naumovs.theme-oceanicnext@0.0.4
 octref.vetur@0.22.6
 PKief.material-icon-theme@3.9.2

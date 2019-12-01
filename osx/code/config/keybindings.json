@@ -1,5 +1,13 @@
 [
     //
+    // Plugin: Duplicate Action
+    //
+    {
+        "key": "cmd+d",
+        "command": "duplicate.execute",
+        "when": "filesExplorerFocus"
+    },
+    //
     // Terminal
     //
     {
@@ -62,5 +70,5 @@
         "key": "cmd+enter",
         "command": "workbench.action.toggleFullScreen",
         "when": "!sideBarFocus"
-    }
+    },
 ]
