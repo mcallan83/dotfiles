@@ -7,8 +7,10 @@ mikestead.dotenv@1.0.1
 mrmlnc.vscode-duplicate@1.2.1
 naumovs.theme-oceanicnext@0.0.4
 octref.vetur@0.22.6
+osam023.pwgenerator@0.0.1
 PKief.material-icon-theme@3.9.2
 pnp.polacode@0.3.4
 vscode-icons-team.vscode-icons@9.6.0
 vscodevim.vim@1.11.3
 wmaurer.change-case@1.0.0
+wolfmah.ansible-vault-inline@0.3.0
