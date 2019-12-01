@@ -70,5 +70,5 @@
         "key": "cmd+enter",
         "command": "workbench.action.toggleFullScreen",
         "when": "!sideBarFocus"
-    },
+    }
 ]
