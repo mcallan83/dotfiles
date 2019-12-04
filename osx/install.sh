@@ -91,11 +91,6 @@ brew install zsh
 
 banner "Installing PHP"
 
-brew install php@7.1
-echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.1/php.ini
-echo "phar.readonly = Off" >> /usr/local/etc/php/7.1/php.ini
-echo "pcre.jit = 0" >> /usr/local/etc/php/7.1/php.ini
-
 brew install php@7.2
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.2/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/7.2/php.ini
@@ -106,8 +101,16 @@ echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.3/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/7.3/php.ini
 echo "pcre.jit = 0" >> /usr/local/etc/php/7.3/php.ini
 
-brew unlink php@7.1 php@7.2 php@7.3
-brew link --force --overwrite php@7.3
+brew install php@7.4
+echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.4/php.ini
+echo "phar.readonly = Off" >> /usr/local/etc/php/7.4/php.ini
+
+brew unlink php || true
+brew unlink php@7.2 || true
+brew unlink php@7.3 || true
+brew unlink php@7.4 || true
+
+brew link --force --overwrite php@7.4
 
 brew install composer
 
