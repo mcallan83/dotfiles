@@ -9,6 +9,6 @@ if [ -d "$CONFIG_PATH" ] || [ -f "$CONFIG_PATH" ]; then
 fi
 
 # symlink settings
-echso "Hammerspoon: Symlinking Settings"
+echo "Hammerspoon: Symlinking Settings"
 cd "$HOME"
 ln -s "$HOME/.dotfiles/osx/hammerspoon/config" ".hammerspoon"

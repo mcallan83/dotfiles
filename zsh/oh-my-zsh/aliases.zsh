@@ -5,6 +5,11 @@
 # Aliases for ZSH.
 ################################################################################
 
+
+# edit config files in editor
+alias hosts="sudo $EDITOR /etc/hosts"
+alias sshconfig="$EDITOR ~/.ssh/config"
+
 # ansible
 alias ap="ansible-playbook"
 alias avd="ansible-vault decrypt"
@@ -33,8 +38,7 @@ alias gt="cd \$(git rev-parse --show-toplevel)"
 # grep
 alias -g G='| grep'
 
-# edit hosts file in editor
-alias hosts="sudo $EDITOR /etc/hosts"
+
 
 # hub
 alias hb="hub browse" # open up github repo in browser
