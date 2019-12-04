@@ -21,9 +21,9 @@ alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;sl
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
 
 # switch php versions
-alias php71="phpv php@7.1"
 alias php72="phpv php@7.2"
 alias php73="phpv php@7.3"
+alias php74="phpv php@7.4"
 
 # capture screen
 alias sc="screencapture -c -W"
