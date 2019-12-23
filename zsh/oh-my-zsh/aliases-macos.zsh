@@ -20,6 +20,10 @@ alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;sl
 # hide hidden files
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
 
+# start a local webserver with either http or https
+alias http="npx local-web-server"
+alias https='npx local-web-server --https'
+
 # switch php versions
 alias php72="phpv php@7.2"
 alias php73="phpv php@7.3"
