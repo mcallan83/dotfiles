@@ -2138,7 +2138,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 25 1920 1152 0 0 1920 1177 </string>
+	<string>348 198 890 850 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 350 890 827 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2900,7 +2900,7 @@
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -2935,7 +2935,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>EC5563B5-8981-481F-AC9B-084A2A542EFD</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>56</integer>
+	<integer>60</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>587672374.28106105</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
