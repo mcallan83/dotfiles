@@ -1,9 +1,3 @@
---------------------------------------------------------------------------------
--- Filename: osx/hammerspoon/config/init.lua
--- Author: Mike Callan
--- URL: http://github.com/mcallan83/dotfiles
---------------------------------------------------------------------------------
-
 local drawing = require 'hs.drawing'
 local geometry = require 'hs.geometry'
 local screen = require 'hs.screen'

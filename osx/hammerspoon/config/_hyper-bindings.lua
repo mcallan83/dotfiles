@@ -1,5 +1,3 @@
--- Keybindings for launching apps in Hyper Mode
-
 return {
   { 'c', 'Google Chrome' },
   { 'f', 'Finder' },
