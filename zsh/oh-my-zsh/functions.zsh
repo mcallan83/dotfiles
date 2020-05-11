@@ -76,7 +76,7 @@ function randpass ()
     shuf -zer -n32  {A..Z} {a..z} {0..9}
 }
 
-# scrape a webpage and its asserts
+# scrape a webpage and its assets
 function scrape() {
     wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
 }
