@@ -11,7 +11,7 @@ function codebak {
 }
 
 # recursively remove .DS_Store files
-function dsstoreclean {
+function dsclean {
     find "${@:-.}" -type f -name .DS_Store -delete
 }
 

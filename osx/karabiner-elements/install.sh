@@ -15,3 +15,8 @@ fi
 echo "Karabiner Elements: Copying Settings"
 cd "$CONFIG"
 cp -r "$DOTFILES/osx/karabiner-elements/config/karabiner.json" "karabiner.json"
+
+
+echo ""
+echo ""
+echo "Warning: This config has two conflicting caps lock rules. Manually ensure that only one rule is loaded inside of Karabiner."

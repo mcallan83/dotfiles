@@ -38,8 +38,6 @@ alias gt="cd \$(git rev-parse --show-toplevel)"
 # grep
 alias -g G='| grep'
 
-
-
 # hub
 alias hb="hub browse" # open up github repo in browser
 alias hpr="hub pull-request" # create pull request on github
@@ -52,9 +50,6 @@ alias known="$EDITOR ~/.ssh/known_hosts"
 
 # less
 alias -g L='| less'
-
-# global node_modules cleanup
-alias npk="npx npkill"
 
 # ps
 alias psa="ps aux"
