@@ -24,6 +24,9 @@ alias colortest="colortest | sed -n '1!p'"
 # ctags - generate index
 alias tags="ctags -R"
 
+# composer update with no memory limits
+alias cu="COMPOSER_MEMORY_LIMIT=-1 composer update"
+
 # docker
 alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
