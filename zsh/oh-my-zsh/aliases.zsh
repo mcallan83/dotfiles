@@ -25,6 +25,7 @@ alias colortest="colortest | sed -n '1!p'"
 alias tags="ctags -R"
 
 # composer update with no memory limits
+alias cr="COMPOSER_MEMORY_LIMIT=-1 composer require"
 alias cu="COMPOSER_MEMORY_LIMIT=-1 composer update"
 
 # docker
