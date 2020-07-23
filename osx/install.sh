@@ -121,6 +121,7 @@ brew cask install alfred
 brew cask install angry-ip-scanner
 brew cask install arq
 brew cask install atom
+brew cask install barrier
 brew cask install betterzip
 brew cask install ccleaner
 brew cask install clamxav
