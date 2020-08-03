@@ -49,8 +49,6 @@ brew analytics off
 banner "Tapping Additional Homebrew Repos"
 brew tap caskroom/fonts
 brew tap caskroom/versions
-# brew tap homebrew/bundle
-# brew tap homebrew/services
 
 banner "Installing Homebrew Packages"
 brew install aria2
@@ -78,6 +76,7 @@ brew install reattach-to-user-namespace
 brew install shellcheck
 brew install speedtest_cli
 brew install ssh-copy-id
+brew install starship
 brew install testdisk
 brew install the_silver_searcher
 brew install tmux
@@ -212,9 +211,6 @@ fi
 
 rm -f $TMP
 
-# iTerm 2 Shell Utilities
-curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
-
 ################################################################################
 # Composer Packages
 ################################################################################
@@ -232,7 +228,7 @@ cgr laravel/lumen-installer
 ################################################################################
 
 mkdir "$HOME/.nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

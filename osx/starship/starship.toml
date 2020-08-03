@@ -1,0 +1,8 @@
+[git_branch]
+symbol = ""
+
+[nodejs]
+symbol = "JS "
+
+[php]
+symbol = "PHP "

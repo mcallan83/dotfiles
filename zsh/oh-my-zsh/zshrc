@@ -4,8 +4,6 @@ export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 DISABLE_AUTO_UPDATE=true
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
-DOTFILES_PHP_VERSION=7.3
-
 plugins=(
     brew
     composer
@@ -43,7 +41,4 @@ source $DOTFILES/zsh/oh-my-zsh/nvm.zsh
 # rvm
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
 
-# pure prompt colors
-zstyle :prompt:pure:git:branch color yellow
-zstyle :prompt:pure:git:dirty color 196
-zstyle :prompt:pure:prompt:error color 196
+source $DOTFILES/zsh/oh-my-zsh/prompt.zsh

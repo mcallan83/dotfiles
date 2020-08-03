@@ -1,1 +1,0 @@
-../../../vendor/zsh/pure/pure.plugin.zsh
