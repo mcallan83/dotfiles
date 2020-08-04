@@ -1,8 +1,25 @@
+[character]
+style_success = 'bold green'
+style_error = 'bold red'
+
+[directory]
+style = "blue"
+prefix = "@"
+
 [git_branch]
 symbol = ""
+style = "yellow"
+
+[git_status]
+style = "bold 196"
+prefix = ""
+suffix = ""
 
 [nodejs]
 symbol = "JS "
 
 [php]
 symbol = "PHP "
+
+[username]
+style_user = "purple bold"
