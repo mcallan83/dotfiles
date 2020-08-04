@@ -87,3 +87,8 @@ function server() {
     open "http://localhost:${port}/"
     python -m SimpleHTTPServer "$port"
 }
+
+# fancy tree
+function ftree() {
+  tree -aC -I '.git|node_modules|vendor' --dirsfirst "$@" | less -FRNX
+}
