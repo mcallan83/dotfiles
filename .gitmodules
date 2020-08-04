@@ -37,9 +37,6 @@
 [submodule "vendor/color/base16-iterm2"]
     path = vendor/color/base16-iterm2
     url = https://github.com/chriskempson/base16-iterm2
-[submodule "vendor/osx/shpotify"]
-    path = vendor/osx/shpotify
-    url = https://github.com/hnarayanan/shpotify
 [submodule "vendor/zsh/zsh-completions"]
     path = vendor/zsh/zsh-completions
     url = https://github.com/zsh-users/zsh-completions
@@ -47,17 +44,17 @@
     path = vendor/osx/osx-for-hackers
     url = https://gist.github.com/brandonb927/3195465
 [submodule "vendor/osx/keyboard"]
-	path = vendor/osx/keyboard
-	url = https://github.com/jasonrudolph/keyboard
+    path = vendor/osx/keyboard
+    url = https://github.com/jasonrudolph/keyboard
 [submodule "vendor/zsh/zsh-nvm"]
-	path = vendor/zsh/zsh-nvm
-	url = https://github.com/lukechilds/zsh-nvm
+    path = vendor/zsh/zsh-nvm
+    url = https://github.com/lukechilds/zsh-nvm
 [submodule "vendor/tmux/tpm"]
-	path = vendor/tmux/tpm
-	url = https://github.com/tmux-plugins/tpm
+    path = vendor/tmux/tpm
+    url = https://github.com/tmux-plugins/tpm
 [submodule "vendor/chrome/bypass-paywalls"]
-	path = vendor/chrome/bypass-paywalls
-	url = https://github.com/iamadamdev/bypass-paywalls-chrome
+    path = vendor/chrome/bypass-paywalls
+    url = https://github.com/iamadamdev/bypass-paywalls-chrome
 [submodule "vendor/zsh/zsh-interactive-cd"]
-	path = vendor/zsh/zsh-interactive-cd
-	url = https://github.com/changyuheng/zsh-interactive-cd
+    path = vendor/zsh/zsh-interactive-cd
+    url = https://github.com/changyuheng/zsh-interactive-cd

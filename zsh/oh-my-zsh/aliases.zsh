@@ -33,10 +33,10 @@ alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
 
 # git
-alias gi="git init"
-alias gj="git checkout -"
-alias gsub="git submodule foreach git pull origin master"
 alias ggpff='git push origin "$(git_current_branch)" --force'
+alias gj="git checkout -"
+alias gpr="gh pr create"
+alias gsub="git submodule foreach git pull origin master"
 alias gt="cd \$(git rev-parse --show-toplevel)"
 
 # grep
@@ -57,11 +57,6 @@ alias -g L='| less'
 
 # ps
 alias psa="ps aux"
-
-# spotify
-alias sp="spotify"
-alias spn="spotify next"
-alias sps="spotify status"
 
 # sublime
 alias ss="stt"
