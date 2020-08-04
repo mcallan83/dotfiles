@@ -13,7 +13,7 @@ style = "yellow"
 [git_status]
 style = "bold 196"
 prefix = ""
-suffix = ""
+suffix = " "
 
 [nodejs]
 symbol = "JS "

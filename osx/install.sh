@@ -69,7 +69,6 @@ brew install hudochenkov/sshpass/sshpass
 brew install jq
 brew install libav
 brew install nmap
-brew install pandoc
 brew install python
 brew install rclone
 brew install reattach-to-user-namespace
@@ -84,7 +83,6 @@ brew install tree
 brew install vim
 brew install wget
 brew install xmlstarlet
-brew install you-get
 brew install youtube-dl
 brew install zsh
 
@@ -241,51 +239,6 @@ nvm install 12 --reinstall-packages-from=8
 nvm alias default 12
 
 ################################################################################
-# Ruby, RVM, and Gems
-################################################################################
-
-# Install RVM if not installed
-if test ! $(which rvm); then
-    banner "Installing RVM"
-    gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-    curl -sSL https://get.rvm.io | bash -s stable --autolibs=homebrew --ignore-dotfiles
-fi
-
-source "$HOME/.rvm/scripts/rvm"
-
-banner "Installing Ruby 2.3"
-rvm use 2.3 --default --install
-rvm requirements
-
-echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-
-if [ ! -f /usr/local/lib/libgcc_s.10.4.dylib ]; then
-    sudo ln -s /usr/lib/libSystem.B.dylib /usr/local/lib/libgcc_s.10.4.dylib
-fi
-
-banner "Installing Ruby Gems"
-
-gem install bundler
-
-################################################################################
-# Python Packages
-################################################################################
-
-banner "Installing Python Packages"
-
-pip install --upgrade pip
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
-
-pip install aws-shell
-pip install flexget
-pip install git-remote-dropbox
-pip install gsutil
-pip install httpie
-pip install klaus
-pip install ohmu
-pip install pygments
-
-################################################################################
 # Update and Cleanup
 ################################################################################
 
@@ -307,14 +260,3 @@ composer global update
 # npm install -g npm
 # npm update -g
 yarn global upgrade
-
-# rvm and gems
-rvm requirements
-rvm cleanup all
-sudo gem update --system
-gem update `gem list | cut -d ' ' -f 1`
-gem cleanup
-
-# python
-pip install --upgrade pip
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U

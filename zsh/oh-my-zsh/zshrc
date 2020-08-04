@@ -21,7 +21,8 @@ plugins=(
     #zsh-autosuggestions
 )
 
-source $DOTFILES/zsh/oh-my-zsh/path.zsh
+PATH="$PATH:$DOTFILES/zsh/oh-my-zsh/bin"
+
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 
@@ -37,8 +38,4 @@ source $DOTFILES/zsh/oh-my-zsh/fzf.zsh
 source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 source $DOTFILES/zsh/oh-my-zsh/nvm.zsh
 #source $DOTFILES/zsh/oh-my-zsh/autosuggest.zsh
-
-# rvm
-[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
-
 source $DOTFILES/zsh/oh-my-zsh/prompt.zsh

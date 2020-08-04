@@ -1,15 +1,5 @@
 *.DS_Store
 *.swp
-/osx/atom/config/.apm/
-/osx/atom/config/.node-gyp/
-/osx/atom/config/blob-store/
-/osx/atom/config/compile-cache/
-/osx/atom/config/git-time-machine/
-/osx/atom/config/packages/
-/osx/atom/config/projects.*.cson
-/osx/atom/config/projects.cson
-/osx/atom/config/split-diff/
-/osx/atom/config/storage/
 /osx/sublime/config/ANSIescape/
 /osx/sublime/config/oscrypto-ca-bundle.crt
 /tags
