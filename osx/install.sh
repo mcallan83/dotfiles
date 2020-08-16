@@ -73,7 +73,6 @@ brew install python
 brew install rclone
 brew install reattach-to-user-namespace
 brew install shellcheck
-brew install speedtest_cli
 brew install ssh-copy-id
 brew install starship
 brew install testdisk
@@ -113,7 +112,6 @@ brew install composer
 
 # Homebrew Casks
 banner "Installing Homebrew Casks"
-brew cask
 brew cask install alfred
 brew cask install angry-ip-scanner
 brew cask install arq
@@ -231,10 +229,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-nvm install 8
+nvm install 10
 npm install -g vmd @vue/cli yarn
-nvm install 10 --reinstall-packages-from=8
-nvm install 12 --reinstall-packages-from=8
+nvm install 12 --reinstall-packages-from=10
 
 nvm alias default 12
 
