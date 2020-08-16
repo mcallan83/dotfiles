@@ -15,6 +15,7 @@ local windowMappings = {
 hs.window.animationDuration = 0
 
 function hs.window.left(win)
+  win:setFullScreen(false)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -27,6 +28,7 @@ function hs.window.left(win)
 end
 
 function hs.window.right(win)
+  win:setFullScreen(false)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -64,7 +66,6 @@ windowLayoutMode.exited = function()
   windowLayoutMode.statusMessage:hide()
 end
 
--- Bind the given key to call the given function and exit WindowLayout mode
 function windowLayoutMode.bindWithAutomaticExit(mode, modifiers, key, fn)
   mode:bind(modifiers, key, function()
     mode:exit()
