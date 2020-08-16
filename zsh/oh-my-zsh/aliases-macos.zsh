@@ -8,9 +8,6 @@
 # copy to clipboard
 alias -g C='| pbcopy'
 
-# open chrome plugins directory
-alias chromeplug="open $DOTFILES/vendor/chrome"
-
 # speed up osx terminal by removing log files
 alias cleanlog="sudo rm -rf /private/var/log/asl/*.asl"
 

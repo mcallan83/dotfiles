@@ -46,3 +46,9 @@ function tmexcludevendors {
 function tmlistexcluded {
     sudo mdfind "com_apple_backup_excludeItem = 'com.apple.backupd'"
 }
+
+# open google chrome with bypass paywalls extension loaded
+function chromebypass {
+    osascript -e 'quit app "Google Chrome"'
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --load-extension=/$DOTFILES/vendor/chrome/bypass-paywalls &
+}

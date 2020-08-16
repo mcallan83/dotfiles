@@ -81,9 +81,6 @@ alias v="vim"
 # yarn
 alias yw="yarn watch"
 
-# weather forecast
-alias weather="curl http://wttr.in/naperville,il"
-
 ################################################################################
 # CLI Tools Run Via Docker
 ################################################################################
