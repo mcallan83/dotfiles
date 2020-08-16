@@ -1,10 +1,19 @@
+local windowMappings = {
+  modifiers = {'shift', 'ctrl', 'alt', 'cmd'},
+  trigger   = 'w',
+  mappings  = {
+    { {},         'return', 'maximize' },
+    { {},         'h',      'left' },
+    { {},         'l',      'right' },
+    { {},         'f',      'toggleFullScreen' },
+    { {},         'n',      'nextScreen' },
+    { {},         'right',  'moveOneScreenEast' },
+    { {},         'left',   'moveOneScreenWest' },
+  }
+}
+
 hs.window.animationDuration = 0
 
--- +-----------------+
--- |        |        |
--- |  HERE  |        |
--- |        |        |
--- +-----------------+
 function hs.window.left(win)
   local f = win:frame()
   local screen = win:screen()
@@ -17,11 +26,6 @@ function hs.window.left(win)
   win:setFrame(f)
 end
 
--- +-----------------+
--- |        |        |
--- |        |  HERE  |
--- |        |        |
--- +-----------------+
 function hs.window.right(win)
   local f = win:frame()
   local screen = win:screen()
@@ -34,89 +38,8 @@ function hs.window.right(win)
   win:setFrame(f)
 end
 
--- +-----------------+
--- |      HERE       |
--- +-----------------+
--- |                 |
--- +-----------------+
-function hs.window.up(win)
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.w = max.w
-  f.y = max.y
-  f.h = max.h / 2
-  win:setFrame(f)
-end
-
--- +-----------------+
--- |                 |
--- +-----------------+
--- |      HERE       |
--- +-----------------+
-function hs.window.down(win)
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.w = max.w
-  f.y = max.y + (max.h / 2)
-  f.h = max.h / 2
-  win:setFrame(f)
-end
-
--- +--------------+
--- |  |        |  |
--- |  |  HERE  |  |
--- |  |        |  |
--- +---------------+
-function hs.window.centerWithFullHeight(win)
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:fullFrame()
-
-  f.x = max.x + (max.w / 5)
-  f.w = max.w * 3/5
-  f.y = max.y
-  f.h = max.h
-  win:setFrame(f)
-end
-
--- +-----------------+
--- |      |          |
--- | HERE |          |
--- |      |          |
--- +-----------------+
-function hs.window.left40(win)
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w * 0.4
-  f.h = max.h
-  win:setFrame(f)
-end
-
--- +-----------------+
--- |      |          |
--- |      |   HERE   |
--- |      |          |
--- +-----------------+
-function hs.window.right60(win)
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x + (max.w * 0.4)
-  f.y = max.y
-  f.w = max.w * 0.6
-  f.h = max.h
-  win:setFrame(f)
+function hs.window.toggleFullScreen(win)
+    win:setFullScreen(not win:isFullScreen())
 end
 
 function hs.window.nextScreen(win)
@@ -149,53 +72,21 @@ function windowLayoutMode.bindWithAutomaticExit(mode, modifiers, key, fn)
   end)
 end
 
-local status, windowMappings = pcall(require, '_windows-bindings')
-
-local modifiers = windowMappings.modifiers
-local showHelp  = windowMappings.showHelp
-local trigger   = windowMappings.trigger
-local mappings  = windowMappings.mappings
-
-function getModifiersStr(modifiers)
-  local modMap = { shift = '⇧', ctrl = '⌃', alt = '⌥', cmd = '⌘' }
-  local retVal = ''
-
-  for i, v in ipairs(modifiers) do
-    retVal = retVal .. modMap[v]
-  end
-
-  return retVal
-end
-
-local msgStr = getModifiersStr(modifiers)
-msgStr = 'Window Layout Mode (' .. msgStr .. (string.len(msgStr) > 0 and '+' or '') .. trigger .. ')'
-
-for i, mapping in ipairs(mappings) do
+for i, mapping in ipairs(windowMappings.mappings) do
   local modifiers, trigger, winFunction = table.unpack(mapping)
-  local hotKeyStr = getModifiersStr(modifiers)
-
-  if showHelp == true then
-    if string.len(hotKeyStr) > 0 then
-      msgStr = msgStr .. (string.format('\n%10s+%s => %s', hotKeyStr, trigger, winFunction))
-    else
-      msgStr = msgStr .. (string.format('\n%11s => %s', trigger, winFunction))
-    end
-  end
 
   windowLayoutMode:bindWithAutomaticExit(modifiers, trigger, function()
-    --example: hs.window.focusedWindow():upRight()
     local fw = hs.window.focusedWindow()
     fw[winFunction](fw)
   end)
 end
 
 local message = require('status-message')
-windowLayoutMode.statusMessage = message.new(msgStr)
+windowLayoutMode.statusMessage = message.new('Window Layout Mode')
 
--- Use modifiers+trigger to toggle WindowLayout Mode
-hs.hotkey.bind(modifiers, trigger, function()
+hs.hotkey.bind(windowMappings.modifiers, windowMappings.trigger, function()
   windowLayoutMode:enter()
 end)
-windowLayoutMode:bind(modifiers, trigger, function()
+windowLayoutMode:bind(windowMappings.modifiers, windowMappings.trigger, function()
   windowLayoutMode:exit()
 end)
