@@ -24,11 +24,6 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Find
 alias http="npx local-web-server"
 alias https='npx local-web-server --https'
 
-# switch php versions
-alias php72="phpv php@7.2"
-alias php73="phpv php@7.3"
-alias php74="phpv php@7.4"
-
 # capture screen
 alias sc="screencapture -c -W"
 

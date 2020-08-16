@@ -81,13 +81,6 @@ function scrape() {
     wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
 }
 
-# run a web server from current folder (python)
-function server() {
-    local port="${1:-8000}"
-    open "http://localhost:${port}/"
-    python -m SimpleHTTPServer "$port"
-}
-
 # fancy tree
 function ftree() {
   tree -aC -I '.git|node_modules|vendor' --dirsfirst "$@" | less -FRNX

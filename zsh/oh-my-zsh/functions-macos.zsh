@@ -24,11 +24,10 @@ function gitzip {
     git archive --format zip --output $OUTPUT $BRANCH
 }
 
-# switch php versions
+# switch php version
 function phpv {
-    brew unlink php@7.1 php@7.2 php@7.3 php@7.4
-    brew link --force --overwrite $1
-    composer global update
+    brew list | grep php | xargs -L1 brew unlink
+    brew link --force --overwrite "php@$1"
 }
 
 # open man pages in preview.app
