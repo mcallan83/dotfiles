@@ -14,8 +14,11 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
+[*.coffee]
+indent_size = 2
+
 [*.cson]
 indent_size = 2
 
-[*.coffee]
+[*.lua]
 indent_size = 2

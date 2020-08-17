@@ -1,16 +1,18 @@
+local hyper = {'shift', 'ctrl', 'alt', 'cmd'}
+
 local bindings = {
   { 'c', 'Google Chrome' },
   { 'f', 'Finder' },
-  { 'm', 'Sequel Pro' },
-  { 's', 'Slack' },
-  { 's', 'Sublime Text' },
   { 'i', 'iTerm2' },
+  { 'l', 'Slack' },
+  { 'm', 'Sequel Pro' },
+  { 'p', 'Spotify' },
+  { 's', 'Sublime Text' },
 }
 
 for i, binding in ipairs(bindings) do
-  hs.hotkey.bind({'shift', 'ctrl', 'alt', 'cmd'}, binding[1], function()
-    local appName = binding[2]
-    local app = hs.application.get(appName)
+  hs.hotkey.bind(hyper, binding[1], function()
+    local app = hs.application.get(binding[2])
     if app then
       if app:isFrontmost() then
         app:hide()
@@ -18,7 +20,7 @@ for i, binding in ipairs(bindings) do
         app:activate()
       end
     else
-      hs.application.launchOrFocus(appName)
+      hs.application.launchOrFocus(binding[2])
     end
   end)
 end
