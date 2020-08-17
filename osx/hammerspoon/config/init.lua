@@ -3,6 +3,6 @@ hs.hotkey.bind({'ctrl'}, '`', nil, function()
 end)
 
 require('windows')
-require('hyper')
+require('applications')
 
 hs.notify.new({title='Hammerspoon', informativeText='Config Loaded'}):send()
