@@ -4,7 +4,7 @@ local bindings = {
   { 'm', 'Sequel Pro' },
   { 's', 'Slack' },
   { 's', 'Sublime Text' },
-  -- { 'i', 'iTerm' },
+  { 'i', 'iTerm2' },
 }
 
 for i, binding in ipairs(bindings) do
@@ -22,4 +22,3 @@ for i, binding in ipairs(bindings) do
     end
   end)
 end
-
