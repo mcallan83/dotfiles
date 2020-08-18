@@ -52,8 +52,8 @@ windowActions.toggleMaximize = function (win)
      win:setFrame(windowFrameCache[win:id()])
      windowFrameCache[win:id()] = nil
   else
-     windowFrameCache[win:id()] = win:frame()
-     win:maximize()
+    windowFrameCache[win:id()] = win:frame()
+    win:maximize()
   end
 end
 

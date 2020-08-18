@@ -48,6 +48,7 @@ function tmlistexcluded {
 
 # open google chrome with bypass paywalls extension loaded
 function chromebypass {
-    osascript -e 'quit app "Google Chrome"'
-    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --load-extension=/$DOTFILES/vendor/chrome/bypass-paywalls &
+    osascript -e 'tell application "Google Chrome" to quit'
+    sleep 1s
+    open -a '/Applications/Google Chrome.app' --args --load-extension=/$DOTFILES/vendor/chrome/bypass-paywalls
 }
