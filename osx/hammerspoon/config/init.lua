@@ -8,6 +8,7 @@ appBindings = {
   {hyper, 'i', 'iTerm'},
   {hyper, 'l', 'Slack'},
   {hyper, 'm', 'Sequel Pro'},
+  {hyper, 'e', 'Microsoft Outlook'},
   {hyper, 'p', 'Spotify'},
   {hyper, 's', 'Sublime Text'},
 }
@@ -26,8 +27,25 @@ hs.hotkey.bind(hyper, "h", hs.hints.windowHints)
 for i, binding in ipairs(appBindings) do
   local modifier, trigger, appName = table.unpack(binding)
   hs.hotkey.bind(modifier, trigger, function()
-    local app = hs.application.get(appName)
-    if (app and app:isFrontmost()) then
+    local app
+
+    if appName == 'iTerm' then
+      app = hs.application.get('iTerm2')
+    else
+      app = hs.application.get(appName)
+    end
+
+    if not app then
+      hs.application.launchOrFocus(appName)
+      return
+    end
+
+    if appName == 'iTerm' and not app:mainWindow() then
+      app:selectMenuItem('New Window')
+      return
+    end
+
+    if (app:isFrontmost()) then
       app:hide()
     else
       hs.application.launchOrFocus(appName)
