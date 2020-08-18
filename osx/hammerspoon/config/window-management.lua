@@ -1,18 +1,23 @@
 local windowMappings = {
-  modifiers = {'shift', 'ctrl', 'alt', 'cmd'},
+  modifiers = hyper,
   trigger   = 'w',
   mappings  = {
-    { {},         'return', 'maximize' },
-    { {},         'h',      'left' },
-    { {},         'l',      'right' },
-    { {},         'f',      'toggleFullScreen' },
-    { {},         'n',      'nextScreen' },
-    { {},         'right',  'moveOneScreenEast' },
-    { {},         'left',   'moveOneScreenWest' },
+    { {}, 'return', 'max' },
+    { {}, 'h',      'left' },
+    { {}, 'l',      'right' },
+    { {}, 'f',      'toggleFullScreen' },
+    { {}, 'n',      'nextScreen' },
+    { {}, 'right',  'moveOneScreenEast' },
+    { {}, 'left',   'moveOneScreenWest' },
   }
 }
 
 hs.window.animationDuration = 0
+
+function hs.window.max(win)
+  win:setFullScreen(false)
+  hs.window.maximize(win)
+end
 
 function hs.window.left(win)
   win:setFullScreen(false)
