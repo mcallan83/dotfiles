@@ -7,7 +7,7 @@ appBindings = {
   {hyper, 'e', 'Microsoft Outlook'},
   {hyper, 'f', 'Finder'},
   {hyper, 'i', 'iTerm'},
-  {hyper, 'l', 'Slack'},
+  {hyper, 'k', 'Slack'},
   {hyper, 'm', 'Sequel Pro'},
   {hyper, 'p', 'Spotify'},
   {hyper, 's', 'Sublime Text'},
@@ -19,10 +19,14 @@ windowBindings = {
   {hyper, 'return', 'toggleMaximize'},
   {hyper, 'right',  'rightHalf'},
   {hyper, 'up',     'toggleFullScreen'},
+  {hyper, 'h',      'focusLeft'},
+  {hyper, 'l',      'focusRight'},
+  -- {hyper, 'k',      'focusUp'},
+  -- {hyper, 'j',      'focusDown'},
 }
 
 -- window hints
-hs.hotkey.bind(hyper, "h", hs.hints.windowHints)
+hs.hotkey.bind(hyper, "space", hs.hints.windowHints)
 
 -- focus\hide active app
 
@@ -91,6 +95,22 @@ end
 windowActions.rightHalf = function (win)
   win:setFullScreen(false)
   win:move(hs.layout.right50)
+end
+
+windowActions.focusLeft = function (win)
+  win:focusWindowWest()
+end
+
+windowActions.focusRight = function (win)
+  win:focusWindowEast()
+end
+
+windowActions.focusUp = function (win)
+  win:focusWindowNorth()
+end
+
+windowActions.focusDown = function (win)
+  win:focusWindowSouth()
 end
 
 for i, mapping in ipairs(windowBindings) do
