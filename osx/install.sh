@@ -42,7 +42,6 @@ if test ! $(which brew); then
     mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
 
-banner "Updating Homebrew"
 brew analytics off
 
 banner "Tapping Additional Homebrew Repos"
@@ -81,22 +80,6 @@ brew install zsh
 banner "Fixing ZSH File Permissions"
 chmod go-w /usr/local/share/zsh
 chmod go-w /usr/local/share/zsh/site-functions
-
-banner "Installing PHP"
-
-brew install php@7.3
-echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.3/php.ini
-echo "phar.readonly = Off" >> /usr/local/etc/php/7.3/php.ini
-echo "pcre.jit = 0" >> /usr/local/etc/php/7.3/php.ini
-
-brew install php@7.4
-echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.4/php.ini
-echo "phar.readonly = Off" >> /usr/local/etc/php/7.4/php.ini
-
-brew list | grep php | xargs -L1 brew unlink
-brew link --force --overwrite php@7.4
-
-brew install composer
 
 # Homebrew Casks
 banner "Installing Homebrew Casks"
@@ -147,6 +130,32 @@ brew cask install font-fira-code
 brew cask install font-source-code-pro
 
 ################################################################################
+# PHP\Composer
+################################################################################
+
+banner "Installing PHP"
+
+brew install php@7.3
+echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.3/php.ini
+echo "phar.readonly = Off" >> /usr/local/etc/php/7.3/php.ini
+echo "pcre.jit = 0" >> /usr/local/etc/php/7.3/php.ini
+
+brew install php@7.4
+echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.4/php.ini
+echo "phar.readonly = Off" >> /usr/local/etc/php/7.4/php.ini
+
+brew list | grep php | xargs -L1 brew unlink
+brew link --force --overwrite php@7.4
+
+brew install composer
+
+composer global require consolidation/cgr
+
+cgr hirak/prestissimo
+cgr laravel/installer
+cgr laravel/lumen-installer
+
+################################################################################
 # Vagrant
 ################################################################################
 
@@ -188,18 +197,6 @@ fi
 rm -f $TMP
 
 ################################################################################
-# Composer Packages
-################################################################################
-
-banner "Installing Composer Packages"
-
-composer global require consolidation/cgr
-
-cgr hirak/prestissimo
-cgr laravel/installer
-cgr laravel/lumen-installer
-
-################################################################################
 # Node Version Manager
 ################################################################################
 
@@ -209,11 +206,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-nvm install 10
+nvm install 12
 npm install -g vmd @vue/cli yarn
-nvm install 12 --reinstall-packages-from=10
+nvm install 10 --reinstall-packages-from=12
 
 nvm alias default 12
+nvm use default
 
 ################################################################################
 # Update and Cleanup
