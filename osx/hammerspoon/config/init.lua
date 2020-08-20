@@ -16,22 +16,19 @@ appBindings = {
 }
 
 windowBindings = {
-  {hyper, 'down',     'center'},
+  {hyper, 'down',   'center'},
   {hyper, 'h',      'focusLeft'},
   {hyper, 'l',      'focusRight'},
-  {hyper, 'left',      'leftHalf'},
+  {hyper, 'left',   'leftHalf'},
   {hyper, 'return', 'toggleMaximize'},
-  {hyper, 'right',      'rightHalf'},
+  {hyper, 'right',  'rightHalf'},
   {hyper, 'up',     'toggleFullScreen'},
-  -- {hyper, 'k',      'focusUp'},
-  -- {hyper, 'j',      'focusDown'},
 }
 
 -- window hints
 hs.hotkey.bind(hyper, "space", hs.hints.windowHints)
 
 -- focus\hide active app
-
 for i, binding in ipairs(appBindings) do
   local modifier, trigger, appName = table.unpack(binding)
   hs.hotkey.bind(modifier, trigger, function()
@@ -118,8 +115,8 @@ windowActions.toggleMaximize = function (win)
   end
 end
 
-for i, mapping in ipairs(windowBindings) do
-  local modifier, trigger, winFunction = table.unpack(mapping)
+for i, binding in ipairs(windowBindings) do
+  local modifier, trigger, winFunction = table.unpack(binding)
   hs.hotkey.bind(modifier, trigger, nil, function()
     windowActions[winFunction](hs.window.focusedWindow())
   end)
