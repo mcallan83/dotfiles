@@ -10,6 +10,7 @@ appBindings = {
   {hyper, 'i', 'iTerm'},
   {hyper, 'k', 'Slack'},
   {hyper, 'm', 'Sequel Pro'},
+  {hyper, 'n', 'Notes'},
   {hyper, 'p', 'Spotify'},
   {hyper, 'r', 'Reminders'},
   {hyper, 's', 'Sublime Text'},
