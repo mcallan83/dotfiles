@@ -2,6 +2,7 @@ hyper = {'shift', 'ctrl', 'alt', 'cmd'}
 hyperLite = {'ctrl', 'alt', 'cmd'}
 
 appBindings = {
+  {hyper, '3', 'Spark'},
   {hyper, 'a', 'Safari'},
   {hyper, 'c', 'Google Chrome'},
   {hyper, 'e', 'Microsoft Outlook'},
