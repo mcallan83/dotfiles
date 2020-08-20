@@ -10,6 +10,7 @@ appBindings = {
   {hyper, 'k', 'Slack'},
   {hyper, 'm', 'Sequel Pro'},
   {hyper, 'p', 'Spotify'},
+  {hyper, 'r', 'Reminders'},
   {hyper, 's', 'Sublime Text'},
   {hyper, 'z', 'Messages'},
 }
@@ -29,8 +30,6 @@ windowBindings = {
 hs.hotkey.bind(hyper, "space", hs.hints.windowHints)
 
 -- focus\hide active app
-
-hs.application.enableSpotlightForNameSearches(true)
 
 for i, binding in ipairs(appBindings) do
   local modifier, trigger, appName = table.unpack(binding)
