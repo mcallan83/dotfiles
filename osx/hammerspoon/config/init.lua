@@ -4,13 +4,14 @@ hyperLite = {'ctrl', 'alt', 'cmd'}
 appBindings = {
   {hyper, 'a', 'Safari'},
   {hyper, 'c', 'Google Chrome'},
+  {hyper, 'e', 'Microsoft Outlook'},
   {hyper, 'f', 'Finder'},
   {hyper, 'i', 'iTerm'},
   {hyper, 'l', 'Slack'},
   {hyper, 'm', 'Sequel Pro'},
-  {hyper, 'e', 'Microsoft Outlook'},
   {hyper, 'p', 'Spotify'},
   {hyper, 's', 'Sublime Text'},
+  {hyper, 'z', 'Messages'},
 }
 
 windowBindings = {
@@ -24,6 +25,9 @@ windowBindings = {
 hs.hotkey.bind(hyper, "h", hs.hints.windowHints)
 
 -- focus\hide active app
+
+hs.application.enableSpotlightForNameSearches(true)
+
 for i, binding in ipairs(appBindings) do
   local modifier, trigger, appName = table.unpack(binding)
   hs.hotkey.bind(modifier, trigger, function()
