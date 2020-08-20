@@ -25,6 +25,8 @@ windowBindings = {
   {hyper, 'up',     'toggleFullScreen'},
 }
 
+airPodsName = 'Mike’s Airpods Pro'
+
 -- window hints
 hs.hotkey.bind(hyper, "space", hs.hints.windowHints)
 
@@ -124,7 +126,7 @@ end
 
 hs.notify.new({title='Hammerspoon', informativeText='Config Loaded'}):send()
 
--- connect to airpods
+-- connect\disconnect airpods
 function airPods(deviceName)
   local s = [[
     activate application "SystemUIServer"
@@ -133,11 +135,7 @@ function airPods(deviceName)
         set btMenu to (menu bar item 1 of menu bar 1 whose description contains "bluetooth")
         tell btMenu
           click
-  ]]
-  ..
-          'tell (menu item "' .. deviceName .. '" of menu 1)\n'
-  ..
-  [[
+  ]] .. 'tell (menu item "' .. deviceName .. '" of menu 1)\n'.. [[
             click
             if exists menu item "Connect" of menu 1 then
               click menu item "Connect" of menu 1
@@ -151,15 +149,14 @@ function airPods(deviceName)
       end tell
     end tell
   ]]
-
   return hs.osascript.applescript(s)
 end
 
 hs.hotkey.bind(hyper, "\\", function()
-  local ok, output = airPods('Mike’s Airpods Pro')
+  local ok, output = airPods(airPodsName)
   if ok then
     hs.alert.show(output)
   else
-    hs.alert.show("Couldn't connect to AirPods!")
+    hs.alert.show("Could not connect to AirPods.")
   end
 end)
