@@ -39,37 +39,30 @@ banner() {
 # Install Homebrew
 if test ! $(which brew); then
     banner "Installing Homebrew"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
 
 banner "Updating Homebrew"
-brew update
 brew analytics off
 
 banner "Tapping Additional Homebrew Repos"
-brew tap caskroom/fonts
-brew tap caskroom/versions
+brew tap homebrew/cask-fonts
 
 banner "Installing Homebrew Packages"
-brew install aria2
 brew install coreutils
-brew install ctags
 brew install ctop
 brew install ddrescue
 brew install fd
 brew install ffmpeg
 brew install fzf
-brew install gcc
 brew install git
+brew install github/gh/gh
 brew install go
 brew install gpg
 brew install htop-osx
-brew install hub
 brew install hudochenkov/sshpass/sshpass
 brew install jq
-brew install libav
 brew install nmap
-brew install python
 brew install rclone
 brew install reattach-to-user-namespace
 brew install shellcheck
@@ -87,11 +80,6 @@ brew install zsh
 
 banner "Installing PHP"
 
-brew install php@7.2
-echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.2/php.ini
-echo "phar.readonly = Off" >> /usr/local/etc/php/7.2/php.ini
-echo "pcre.jit = 0" >> /usr/local/etc/php/7.2/php.ini
-
 brew install php@7.3
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.3/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/7.3/php.ini
@@ -101,11 +89,7 @@ brew install php@7.4
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.4/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/7.4/php.ini
 
-brew unlink php || true
-brew unlink php@7.2 || true
-brew unlink php@7.3 || true
-brew unlink php@7.4 || true
-
+brew list | grep php | xargs -L1 brew unlink
 brew link --force --overwrite php@7.4
 
 brew install composer
@@ -115,20 +99,15 @@ banner "Installing Homebrew Casks"
 brew cask install alfred
 brew cask install angry-ip-scanner
 brew cask install arq
-brew cask install atom
+brew cask install balenaetcher
 brew cask install barrier
 brew cask install betterzip
 brew cask install ccleaner
-brew cask install clamxav
 brew cask install cyberduck
 brew cask install disk-inventory-x
 brew cask install docker
-brew cask install dropbox
-brew cask install etcher
-brew cask install firefox
 brew cask install google-backup-and-sync
 brew cask install google-chrome
-brew cask install google-hangouts
 brew cask install hammerspoon
 brew cask install handbrake
 brew cask install iterm2
@@ -139,7 +118,6 @@ brew cask install keyboardcleantool
 brew cask install launchcontrol
 brew cask install libreoffice
 brew cask install numi
-brew cask install robo-3t
 brew cask install sequel-pro
 brew cask install spotify
 brew cask install sublime-text
@@ -152,6 +130,7 @@ brew cask install vlc
 
 brew cask install qlcolorcode
 brew cask install qlmarkdown
+brew cask install qlprettypatch
 brew cask install qlstephen
 brew cask install qlvideo
 brew cask install quicklook-csv
@@ -160,10 +139,6 @@ brew cask install suspicious-package
 brew cask install webpquicklook
 
 brew cask install font-fira-code
-brew cask install font-fira-mono
-brew cask install font-fira-mono-for-powerline
-brew cask install font-fira-sans
-brew cask install font-open-sans
 brew cask install font-source-code-pro
 
 ################################################################################
@@ -245,15 +220,13 @@ banner "Update and Cleanup"
 brew update
 brew upgrade
 brew cleanup
-brew cask cleanup
-brew prune
 brew doctor
+brew cask doctor
 
 # composer
 composer self-update
 composer global update
 
 # npm/yarn
-# npm install -g npm
-# npm update -g
-yarn global upgrade
+npm install -g npm
+npm update -g
