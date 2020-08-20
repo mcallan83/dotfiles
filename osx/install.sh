@@ -78,6 +78,10 @@ brew install xmlstarlet
 brew install youtube-dl
 brew install zsh
 
+banner "Fixing ZSH File Permissions"
+chmod go-w /usr/local/share/zsh
+chmod go-w /usr/local/share/zsh/site-functions
+
 banner "Installing PHP"
 
 brew install php@7.3
