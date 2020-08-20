@@ -16,12 +16,13 @@ appBindings = {
 }
 
 windowBindings = {
-  {hyper, 'left',   'leftHalf'},
-  {hyper, 'return', 'toggleMaximize'},
-  {hyper, 'right',  'rightHalf'},
-  {hyper, 'up',     'toggleFullScreen'},
+  {hyper, 'down',     'center'},
   {hyper, 'h',      'focusLeft'},
   {hyper, 'l',      'focusRight'},
+  {hyper, 'left',      'leftHalf'},
+  {hyper, 'return', 'toggleMaximize'},
+  {hyper, 'right',      'rightHalf'},
+  {hyper, 'up',     'toggleFullScreen'},
   -- {hyper, 'k',      'focusUp'},
   -- {hyper, 'j',      'focusDown'},
 }
@@ -71,29 +72,13 @@ hs.window.animationDuration = 0
 local windowFrameCache = {}
 local windowActions = {}
 
-windowActions.toggleMaximize = function (win)
+windowActions.center = function (win)
   win:setFullScreen(false)
-  if windowFrameCache[win:id()] then
-     win:setFrame(windowFrameCache[win:id()])
-     windowFrameCache[win:id()] = nil
-  else
-    windowFrameCache[win:id()] = win:frame()
-    win:maximize()
-  end
+  win:centerOnScreen()
 end
 
-windowActions.toggleFullScreen = function (win)
-  win:setFullScreen(not win:isFullScreen())
-end
-
-windowActions.leftHalf = function (win)
-  win:setFullScreen(false)
-  win:move(hs.layout.left50)
-end
-
-windowActions.rightHalf = function (win)
-  win:setFullScreen(false)
-  win:move(hs.layout.right50)
+windowActions.focusDown = function (win)
+  win:focusWindowSouth()
 end
 
 windowActions.focusLeft = function (win)
@@ -108,8 +93,29 @@ windowActions.focusUp = function (win)
   win:focusWindowNorth()
 end
 
-windowActions.focusDown = function (win)
-  win:focusWindowSouth()
+windowActions.leftHalf = function (win)
+  win:setFullScreen(false)
+  win:move(hs.layout.left50)
+end
+
+windowActions.rightHalf = function (win)
+  win:setFullScreen(false)
+  win:move(hs.layout.right50)
+end
+
+windowActions.toggleFullScreen = function (win)
+  win:setFullScreen(not win:isFullScreen())
+end
+
+windowActions.toggleMaximize = function (win)
+  win:setFullScreen(false)
+  if windowFrameCache[win:id()] then
+     win:setFrame(windowFrameCache[win:id()])
+     windowFrameCache[win:id()] = nil
+  else
+    windowFrameCache[win:id()] = win:frame()
+    win:maximize()
+  end
 end
 
 for i, mapping in ipairs(windowBindings) do
