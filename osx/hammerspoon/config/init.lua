@@ -5,7 +5,11 @@ local airpods = require('airpods')
 local app = require('app')
 local window = require('window')
 
-hs.hotkey.bind(hyper, '`', hs.reload)
+hs.hotkey.bind(hyper, '`', function()
+  hs.console.clearConsole()
+  hs.openConsole(true)
+  hs.reload()
+end)
 
 airpods({hyper, '\\', 'Mike’s Airpods Pro'})
 
