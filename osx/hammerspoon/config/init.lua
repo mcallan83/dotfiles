@@ -1,11 +1,15 @@
 hyper = {'shift', 'ctrl', 'alt', 'cmd'}
 hyperLite = {'ctrl', 'alt', 'cmd'}
 
-require('airpods')(
-  {hyper, '\\', 'Mike’s Airpods Pro'}
-)
+local airpods = require('airpods')
+local app = require('app')
+local window = require('window')
 
-require('app')({
+hs.hotkey.bind(hyper, '`', hs.reload)
+
+airpods({hyper, '\\', 'Mike’s Airpods Pro'})
+
+app({
   {hyper, '3', 'Spark'},
   {hyper, 'a', 'Safari'},
   {hyper, 'c', 'Google Chrome'},
@@ -21,7 +25,7 @@ require('app')({
   {hyper, 'z', 'Messages'},
 })
 
-require('window')({
+window({
   {hyper, '[',      'focusLeft'},
   {hyper, ']',      'focusRight'},
   {hyper, 'down',   'center'},
@@ -32,9 +36,7 @@ require('window')({
   {hyper, 'up',     'toggleFullScreen'},
 })
 
--- reload config
-hs.hotkey.bind(hyper, '`', nil, function()
-  hs.reload()
-end)
-
-hs.notify.new({title='Hammerspoon', informativeText='Initialized'}):send()
+hs.notify.new({
+  title='Hammerspoon',
+  informativeText='Configuration Initialized'
+}):send()

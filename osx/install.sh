@@ -109,6 +109,7 @@ brew cask install sequel-pro
 brew cask install slack
 brew cask install spotify
 brew cask install sublime-text
+brew cask install suspicious-package
 brew cask install the-unarchiver
 brew cask install transmission
 brew cask install vagrant
@@ -123,7 +124,6 @@ brew cask install qlstephen
 brew cask install qlvideo
 brew cask install quicklook-csv
 brew cask install quicklook-json
-brew cask install suspicious-package
 brew cask install webpquicklook
 
 brew cask install font-fira-code

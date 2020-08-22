@@ -28,9 +28,15 @@ return function (binding)
   hs.hotkey.bind(modifier, trigger, function()
     local ok, output = airPods(airPodsName)
     if ok then
-      hs.alert.show(output)
+      hs.notify.new({
+        title='Hammerspoon',
+        informativeText=output
+      }):send()
     else
-      hs.alert.show("Could not connect to AirPods.")
+      hs.notify.new({
+        title='Hammerspoon',
+        informativeText='Could not connect to AirPods.'
+      }):send()
     end
   end)
 end
