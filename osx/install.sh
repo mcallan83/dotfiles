@@ -42,9 +42,16 @@ if test ! $(which brew); then
     mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
 
+BREWFILE="$(dirname "$0")/Brewfile"
+
+if [ ! -f "$BREWFILE" ]; then
+    echo "Brewfile is missing."
+    exit 1
+fi
+
 brew analytics off
-brew bundle install --no-lock --file=$(dirname "$0")/Brewfile
-brew bundle cleanup -f
+brew bundle install --no-lock --file="$BREWFILE"
+brew bundle cleanup -f --file="$BREWFILE"
 brew doctor
 brew cask doctor
 
