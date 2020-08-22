@@ -33,18 +33,16 @@ alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
 
 # git
-alias ggpff='git push origin "$(git_current_branch)" --force'
 alias gj="git checkout -"
-alias gpr="gh pr create"
 alias gsub="git submodule foreach git pull origin master"
 alias gt="cd \$(git rev-parse --show-toplevel)"
 
+# github
+alias ghb="gh repo view --web"
+alias ghpr="gh pr create"
+
 # grep
 alias -g G='| grep'
-
-# hub
-alias hb="hub browse" # open up github repo in browser
-alias hpr="hub pull-request" # create pull request on github
 
 # json pretty print
 alias -g J='| python -m json.tool'
