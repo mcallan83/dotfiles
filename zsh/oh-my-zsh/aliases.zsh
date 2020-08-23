@@ -21,12 +21,9 @@ alias cdb="cd -"
 # colortest
 alias colortest="colortest | sed -n '1!p'"
 
-# ctags - generate index
-alias tags="ctags -R"
-
 # composer update with no memory limits
-alias cr="COMPOSER_MEMORY_LIMIT=-1 composer require"
-alias cu="COMPOSER_MEMORY_LIMIT=-1 composer update"
+alias cr="composer require"
+alias cu="composer update"
 
 # docker
 alias dcu="docker-compose up"
@@ -83,6 +80,10 @@ alias yw="yarn watch"
 # CLI Tools Run Via Docker
 ################################################################################
 
+# ansible 2.8
+alias ansible-playbook='docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa --workdir=/ansible willhallonline/ansible:2.8-alpine ansible-playbook'
+alias ansible-vault='docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa --workdir=/ansible willhallonline/ansible:2.8-alpine ansible-vault'
+
 # docker clean
 alias dccl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/docker-clean"
 
@@ -100,3 +101,5 @@ alias portainer="docker run -v /var/run/docker.sock:/var/run/docker.sock -d -p 9
 
 # wordpress security tool
 alias wpscan="docker run -it --rm wpscanteam/wpscan"
+
+
