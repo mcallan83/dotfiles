@@ -30,14 +30,16 @@ app({
 })
 
 window({
-  {hyper, '[',      'focusLeft'},
-  {hyper, ']',      'focusRight'},
-  {hyper, 'down',   'center'},
-  {hyper, 'h',      'showHints'},
-  {hyper, 'left',   'leftHalf'},
-  {hyper, 'return', 'toggleMaximize'},
-  {hyper, 'right',  'rightHalf'},
-  {hyper, 'up',     'toggleFullScreen'},
+  {hyper,     '[',      'focusLeft'},
+  {hyper,     ']',      'focusRight'},
+  {hyper,     'down',   'moveCenter'},
+  {hyper,     'h',      'showHints'},
+  {hyper,     'left',   'moveHalfLeft'},
+  {hyper,     'return', 'toggleMaximize'},
+  {hyper,     'right',  'moveHalfRight'},
+  {hyper,     'up',     'toggleFullScreen'},
+  {hyperLite, 'left',   'moveScreenLeft'},
+  {hyperLite, 'right',  'moveScreenRight'},
 })
 
 hs.notify.new({
