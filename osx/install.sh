@@ -45,8 +45,7 @@ fi
 BREWFILE="$(dirname "$0")/Brewfile"
 
 if [ ! -f "$BREWFILE" ]; then
-    echo "Brewfile is missing."
-    exit 1
+    curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/Brewfile --output $BREWFILE
 fi
 
 brew analytics off

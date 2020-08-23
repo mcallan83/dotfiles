@@ -1,5 +1,5 @@
-hyper = {'shift', 'ctrl', 'alt', 'cmd'}
-hyperLite = {'ctrl', 'alt', 'cmd'}
+local hyper = {'shift', 'ctrl', 'alt', 'cmd'}
+local hyperLite = {'ctrl', 'alt', 'cmd'}
 
 local airpods = require('airpods')
 local app = require('app')
