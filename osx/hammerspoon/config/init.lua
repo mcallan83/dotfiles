@@ -42,6 +42,8 @@ window({
   {hyperLite, 'right',  'moveScreenRight'},
 })
 
+hs.loadSpoon("SpoonInstall")
+
 hs.notify.new({
   title='Hammerspoon',
   informativeText='Configuration Initialized'

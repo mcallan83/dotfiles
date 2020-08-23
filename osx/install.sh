@@ -22,7 +22,6 @@
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Output pretty text banner
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
@@ -39,7 +38,8 @@ banner() {
 # Install Homebrew
 if test ! $(which brew); then
     banner "Installing Homebrew"
-    mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+    mkdir homebrew
+    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
 
 BREWFILE="$(dirname "$0")/Brewfile"

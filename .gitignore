@@ -1,8 +1,6 @@
 *.DS_Store
 *.swp
+/osx/hammerspoon/config/Spoons/
 /osx/sublime/config/ANSIescape/
 /osx/sublime/config/oscrypto-ca-bundle.crt
 /tags
-!/osx/hammerspoon/config/Spoons/SpoonInstall.spoon
-/osx/hammerspoon/config/Spoons/
-
