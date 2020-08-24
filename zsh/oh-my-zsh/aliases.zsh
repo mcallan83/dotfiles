@@ -81,17 +81,14 @@ alias yw="yarn watch"
 ################################################################################
 
 # ansible 2.8
-alias ansible-playbook='docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa --workdir=/ansible willhallonline/ansible:2.8-alpine ansible-playbook'
-alias ansible-vault='docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa --workdir=/ansible willhallonline/ansible:2.8-alpine ansible-vault'
+alias ansible-playbook='docker run --rm -it -v "$(pwd)":/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa --workdir=/ansible willhallonline/ansible:2.8-alpine ansible-playbook'
+alias ansible-vault='docker run --rm -it -v "$(pwd)":/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa --workdir=/ansible willhallonline/ansible:2.8-alpine ansible-vault'
 
 # docker clean
 alias dccl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/docker-clean"
 
 # docker garbage collection
 alias dcgc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
-
-# terminal based docker manager
-alias dry="docker run -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry"
 
 # generate password hashes via mkpasswd
 alias mkpasswd="docker run -it --rm egray/mkpasswd"
@@ -101,5 +98,3 @@ alias portainer="docker run -v /var/run/docker.sock:/var/run/docker.sock -d -p 9
 
 # wordpress security tool
 alias wpscan="docker run -it --rm wpscanteam/wpscan"
-
-

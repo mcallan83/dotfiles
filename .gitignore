@@ -2,5 +2,5 @@
 *.swp
 /osx/hammerspoon/config/Spoons/
 /osx/sublime/config/ANSIescape/
+/osx/sublime/config/Emmet.sublime-settings
 /osx/sublime/config/oscrypto-ca-bundle.crt
-/tags
