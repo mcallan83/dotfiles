@@ -35,22 +35,25 @@ banner() {
 # Homebrew
 ################################################################################
 
-# Install Homebrew
 if test ! $(which brew); then
     banner "Installing Homebrew"
     mkdir homebrew
     curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
 
-BREWFILE="$(dirname "$0")/Brewfile"
+brew analytics off
 
-if [ ! -f "$BREWFILE" ]; then
-    curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/Brewfile --output $BREWFILE
+BREWFILE_PATH="$(dirname "$0")/Brewfile"
+
+if [ -f "$BREWFILE_PATH" ]; then
+    brew bundle install --no-lock --file="$BREWFILE_PATH"
+    brew bundle cleanup -f --file="$BREWFILE_PATH"
+else
+    BREWFILE=$(curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/Brewfile)
+    echo "$BREWFILE" | brew bundle install --no-lock --file=-
+    echo "$BREWFILE" | brew bundle cleanup -f --file=-
 fi
 
-brew analytics off
-brew bundle install --no-lock --file="$BREWFILE"
-brew bundle cleanup -f --file="$BREWFILE"
 brew doctor
 brew cask doctor
 
@@ -60,9 +63,13 @@ brew cask doctor
 
 banner "Fixing Permissions"
 
+echo "/usr/local/share/zsh"
 chmod go-w /usr/local/share/zsh
+
+echo "/usr/local/share/zsh/site-functions"
 chmod go-w /usr/local/share/zsh/site-functions
 
+exit 1
 ################################################################################
 # PHP
 ################################################################################
@@ -71,7 +78,6 @@ banner "Configuring PHP"
 
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.3/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/7.3/php.ini
-echo "pcre.jit = 0" >> /usr/local/etc/php/7.3/php.ini
 
 echo "date.timezone = America/Chicago" >> /usr/local/etc/php/7.4/php.ini
 echo "phar.readonly = Off" >> /usr/local/etc/php/7.4/php.ini
@@ -92,13 +98,16 @@ composer global update
 # Node Version Manager
 ################################################################################
 
-banner "Install Node Version Manager"
-
-mkdir "$HOME/.nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+if [[ ! -d "$HOME/.nvm" ]]; then
+    banner "Install Node Version Manager"
+    mkdir "$HOME/.nvm"
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+banner "Configuring Node"
 
 nvm install 12
 npm install -g vmd @vue/cli yarn
