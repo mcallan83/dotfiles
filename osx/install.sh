@@ -50,8 +50,8 @@ if [ -f "$BREWFILE_PATH" ]; then
     brew bundle cleanup -f --file="$BREWFILE_PATH"
 else
     BREWFILE=$(curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/Brewfile)
-    echo "$BREWFILE" | brew bundle install --no-lock --file=-
-    echo "$BREWFILE" | brew bundle cleanup -f --file=-
+    echo "$BREWFILE" | brew bundle install --file=- --no-lock
+    echo "$BREWFILE" | brew bundle cleanup --file=- -f
 fi
 
 brew doctor
@@ -69,7 +69,6 @@ chmod go-w /usr/local/share/zsh
 echo "/usr/local/share/zsh/site-functions"
 chmod go-w /usr/local/share/zsh/site-functions
 
-exit 1
 ################################################################################
 # PHP
 ################################################################################
