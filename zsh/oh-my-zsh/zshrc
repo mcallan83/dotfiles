@@ -21,6 +21,7 @@ plugins=(
     #zsh-autosuggestions
 )
 
+PATH="/usr/local/sbin:$PATH"
 PATH="$PATH:$DOTFILES/zsh/oh-my-zsh/bin"
 
 source $ZSH/oh-my-zsh.sh
