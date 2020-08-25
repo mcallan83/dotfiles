@@ -58,6 +58,58 @@ local actions = {
   showHints = function()
     hs.hints.windowHints()
   end,
+  -- move window to the left and toggle with of 70/60/40/30%
+  moveVariableLeft = function(win)
+    win:setFullScreen(false)
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+    local width
+
+    if (f.w == max.w * 0.7) then
+      width = max.w * 0.6
+    elseif (f.w == max.w * 0.6) then
+      width = max.w * 0.4
+    elseif (f.w == max.w * 0.4) then
+      width = max.w * 0.3
+    else
+      width = max.w * 0.7
+    end
+
+    f.x = max.x
+    f.y = max.y
+    f.w = width
+    f.h = max.h
+    win:setFrame(f)
+  end,
+  -- move window to the right and toggle with of 30/40/60/70%
+  moveVariableRight = function(win)
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+    local width
+    local offset = 0
+
+    if (f.w == max.w * 0.3) then
+      width = max.w * 0.4
+      offset = max.w * 0.6
+    elseif (f.w == max.w * 0.4) then
+      width = max.w * 0.6
+      offset = max.w * 0.4
+    elseif (f.w == max.w * 0.6) then
+      width = max.w * 0.7
+      offset = max.w * 0.3
+    else
+      width = max.w * 0.3
+      offset = max.w * 0.7
+    end
+
+    f.x = offset
+    f.y = max.y
+    f.w = width
+    f.h = max.h
+    win:setFrame(f)
+  end,
   -- toggle full screen on/off
   toggleFullScreen = function(win)
     win:setFullScreen(not win:isFullScreen())
