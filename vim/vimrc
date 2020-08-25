@@ -1,294 +1,62 @@
-" vim:fdm=marker
-
-" NeoBundle {{{
-
-" --- auto install NeoBundle ---"
-if has('vim_starting')
-    if &compatible
-      set nocompatible
-    endif
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-let vundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
-if !filereadable(vundle_readme)
-    echo "Installing NeoBundle..."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
+
+call plug#begin('~/.vim/plugged')
+Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
+
+if has("gui_running")
+    set cursorline          " highlight current line
+    set linespace=10        " line spacing
+
+    " --- disable scroll bars and tabs ---
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=e
+
+    if has("gui_macvim")
+        set guifont=Menlo:h18
+    endif
 endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
 
-" --- packages ---
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'gosukiwi/vim-atom-dark'
-NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'tobyS/vmustache'
-NeoBundle 'tobyS/pdv'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'StanAngeloff/php.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'skwp/greplace.vim'
-
-call neobundle#end()
-filetype plugin indent on
-NeoBundleCheck
-
-" }}}
-" General {{{
-
-    set autoread                        " Auto read files changed outside of Vim
-    set backspace=indent,eol,start      " make backspace behave like backspace
-    set hidden                          " allow buffers to be hidden without save
-    set laststatus=2                    " always show status bar
-    set noerrorbells visualbell t_vb=   " disable bells
-    set noshowmode                      " hide current mode
-    set number                          " enable line numbers
-    set updatetime=750                  " 750 millisecond update time
-    set encoding=utf-8                  " utf8 encoding
-
-" }}}
-" GUI {{{
-
-    syntax on
-    set background=dark
-
-    if has("gui_running")
-
-        colorscheme atom-dark
-        set cursorline          " highlight current line
-        set linespace=10        " line spacing
-
-        " --- disable scroll bars and tabs ---
-        set guioptions-=l
-        set guioptions-=L
-        set guioptions-=r
-        set guioptions-=R
-        set guioptions-=e
-
-        if has("gui_macvim")
-
-            set guifont=Menlo:h17
-
-        endif
-
-    else
-
-        set t_CO=256                            " use 256 colors
-        colorscheme Tomorrow-Night-Eighties
-
-    endif
-
-" }}}
-" Formatting {{{
-
-    set autoindent      " indent to same level as previous line
-    set smartindent     " smart indent
-    set expandtab       " use spaces
-    set shiftwidth=4    " use indents of 4 spaces
-    set tabstop=4       " tabs are spaces
-    set softtabstop=4   " let backspace delete indent
-
-    set nojoinspaces    " prevents inserting two spaces after punctuation on line join
-
-    "set wrap            " wrap lines
-    "set showbreak=⇇     " fancy character for line wraps
-    set nowrap          " disable wrapping
-
-" }}}
-" Search {{{
-
-    " --- sane search settings ---
-    set incsearch
-    set hlsearch
-    set ignorecase
-    set smartcase
-
-    " --- use the silver searcher (ag) if installed ---
-    if executable('ag')
-        set grepprg=ag\ --nogroup\ --nocolor
-    endif
-
-" }}}
-" Splits {{{
-
-    set fcs=vert:│  " vertical split character
-    set splitbelow  " open split below
-    set splitright  " open split to the right
-
-    " --- navigate splits easily ---
-    nmap <C-J> <C-W><C-J>
-    nmap <C-K> <C-W><C-K>
-    nmap <C-H> <C-W><C-H>
-    nmap <C-L> <C-W><C-L>
-
-" }}}
-" Mappings {{{
-
-    " exit insert mode with JJ
-    inoremap jj <Esc>
-
-    " set leader to ,
-    let mapleader = ','
-    let g:mapleader = ","
-
-    " edit vimrc in new tab
-    nmap <Leader>ev :tabedit $MYVIMRC<cr>
-
-    " clear search highlight
-    nmap <Leader><space> :nohlsearch<cr>
-
-    " quickly browse to any tag/symbol in the project using ctags
-    nmap <Leader>f :tag<space>
-
-    " change CWD to directory of open buffer
-    map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-    " quick save
-    nmap <leader>w :w!<cr>
-
-    " dont enter command mode when trying to quit
-    map q: :q<cr>
-
-    " quickly select pasted test
-    noremap gV `[v`]
-
-    " jump to end of pasted text
-    " vnoremap <silent> y y`]
-    " vnoremap <silent> p p`]
-    " nnoremap <silent> p p`]
-
-" }}}
-" Plugins {{{
-    " NerdTree {{{
-
-            let NERDTreeHijackNetrw=0       " don't hijack netrw
-            let NERDTreeMinimalUI=1         " minimal ui
-            let g:NERDTreeShowHidden=1      " show hidden files
-
-            " --- ignore files ---
-            let NERDTreeIgnore=['.git', '.DS_Store', '\.swp$', '\.swo$']
-
-            " --- toggle NerdTree ---
-            nmap <D-1> :NERDTreeToggle<cr>
-            nmap <Leader>1 :NERDTreeToggle<cr>
-
-    " }}}
-    " Tagbar {{{
-
-        let g:tagbar_autofocus = 1          " auto focus on Tagbar on open
-
-        " --- toggle Tagbar ---
-        nmap <leader>2 :TagbarToggle<cr>                " toggle Tagbar
-        nmap <D-2> :TagbarToggle<cr>                    " toggle Tagbar
-        nmap <leader>3 :TagbarOpenAutoClose<cr>         " toggle Tagbar with auto close
-        nmap <D-3> :TagbarOpenAutoClose<cr>             " toggle Tagbar with auto close
-
-    " }}}
-    " Git Gutter {{{
-
-        let g:gitgutter_sign_column_always = 1      " always show sign column
-
-    " }}}
-    " easymotion/vim-easymotion {{{
-
-        let g:EasyMotion_smartcase = 1                  " map keys by smartcase
-        nmap <leader><leader> <Plug>(easymotion-s2)
-
-    " }}}
-    " ctrlpvim/ctrlp.vim {{{
-
-        let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
-        let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
-
-        " use ag if installed
-        if executable('ag')
-            let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-            let g:ctrlp_use_caching = 0
-        endif
-        
-        " file mode
-        nmap <D-p> :CtrlP<cr>
-        imap <D-p> <Esc>:CtrlP<cr>
-        
-        " tag mode
-        nmap <D-r> :CtrlPBufTag<cr>
-        imap <D-r> <Esc>:CtrlPBufTag<cr>
-
-        " mru files mode
-        nmap <D-e> :CtrlPMRUFiles<cr>
-        imap <D-e> <Esc>:CtrlPMRUFiles<cr>
-
-        " buffer mode
-        nmap <D-4> :CtrlPBuffer<cr>
-        imap <D-4> <Esc>:CtrlPBuffer<cr>
-        nmap <Leader>4 :CtrlPBuffer<cr>
-
-    " }}}
-    " vim-airline/vim-airline {{{
-
-        let g:airline_theme="powerlineish"
-        let g:airline#extensions#whitespace#enabled = 0
-        let g:airline#extensions#hunks#enabled = 0
-        let g:airline_detect_paste=1
-        let g:airline_left_sep = ''
-        let g:airline_left_alt_sep = ''
-        let g:airline_right_sep = ''
-        let g:airline_right_alt_sep = ''
-
-    "}}}
-    " tobyS/pdv {{{
-
-        let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
-        nnoremap <Leader>pd :call pdv#DocumentCurrentLine()<CR>
-
-    " }}}
-    " editorconfig/editorconfig-vim {{{
-
-        let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
-
-    " }}}
-    " terryma/vim-expand-region {{{
-
-        vmap v <Plug>(expand_region_expand)
-
-        nmap <nop> <Plug>(expand_region_shrink)
-
-
-    " }}}
-    " skwp/greplace.vim {{{
-
-        let g:grep_cmd_opts = '--line-numbers --noheading'
-        
-    " }}}
-" }}}
-" Auto-Commands {{{
-
-    " automatically source .vimrc on save
-    augroup autosourcing
-        au!
-        autocmd BufWritePost .vimrc source %
-    augroup END
-
-    " disable automatic comment insertion
-    augroup comments
-        au!
-        autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-    augroup END
-
-" }}}
-
+set t_CO=256
+colorscheme Tomorrow-Night-Eighties
+
+" exit insert mode with JJ
+inoremap jj <Esc>
+
+" set leader to ,
+let mapleader = ','
+let g:mapleader = ","
+
+" vim-airline/vim-airline
+let g:airline_theme="powerlineish"
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
+let g:airline_detect_paste=1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
+" editorconfig/editorconfig-vim
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" junegunn/fzf
+nmap <Leader>f :FZF<cr>
+
+" airblade/vim-gitgutter
+let g:gitgutter_sign_column_always = 1      " always show sign column
