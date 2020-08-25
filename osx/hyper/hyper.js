@@ -51,7 +51,7 @@ module.exports = {
     webGLRenderer: true,
   },
 
-  plugins: [],
+  plugins: ["hyper-tabs-enhanced"],
 
   localPlugins: [],
 
