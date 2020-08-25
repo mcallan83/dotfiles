@@ -19,7 +19,7 @@ app({
   {hyper, 'c', 'Google Chrome'},
   {hyper, 'e', 'Microsoft Outlook'},
   {hyper, 'f', 'Finder'},
-  {hyper, 'i', 'iTerm'},
+  {hyper, 'i', 'Hyper'},
   {hyper, 'k', 'Slack'},
   {hyper, 'm', 'Sequel Pro'},
   {hyper, 'n', 'Notes'},
