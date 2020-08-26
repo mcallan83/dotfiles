@@ -64,44 +64,45 @@ local actions = {
     local f = win:frame()
     local screen = win:screen()
     local max = screen:frame()
-    local width
+    local width = max.w * 0.7
 
-    if (f.w == max.w * 0.7) then
-      width = max.w * 0.6
-    elseif (f.w == max.w * 0.6) then
-      width = max.w * 0.4
-    elseif (f.w == max.w * 0.4) then
-      width = max.w * 0.3
-    else
-      width = max.w * 0.7
+    if (f.x == 0) then
+      if (f.w == max.w * 0.7) then
+        width = max.w * 0.6
+      elseif (f.w == max.w * 0.6) then
+        width = max.w * 0.4
+      elseif (f.w == max.w * 0.4) then
+        width = max.w * 0.3
+      end
     end
 
     f.x = max.x
     f.y = max.y
     f.w = width
     f.h = max.h
+
     win:setFrame(f)
   end,
   -- move window to the right and toggle with of 30/40/60/70%
   moveVariableRight = function(win)
+    win:setFullScreen(false)
     local f = win:frame()
     local screen = win:screen()
     local max = screen:frame()
-    local width
-    local offset = 0
+    local width = max.w * 0.3
+    local offset = max.w * 0.7
 
-    if (f.w == max.w * 0.3) then
-      width = max.w * 0.4
-      offset = max.w * 0.6
-    elseif (f.w == max.w * 0.4) then
-      width = max.w * 0.6
-      offset = max.w * 0.4
-    elseif (f.w == max.w * 0.6) then
-      width = max.w * 0.7
-      offset = max.w * 0.3
-    else
-      width = max.w * 0.3
-      offset = max.w * 0.7
+    if ((f.x + f.w) == max.w) then
+      if (f.w == max.w * 0.3) then
+        width = max.w * 0.4
+        offset = max.w * 0.6
+      elseif (f.w == max.w * 0.4) then
+        width = max.w * 0.6
+        offset = max.w * 0.4
+      elseif (f.w == max.w * 0.6) then
+        width = max.w * 0.7
+        offset = max.w * 0.3
+      end
     end
 
     f.x = offset
