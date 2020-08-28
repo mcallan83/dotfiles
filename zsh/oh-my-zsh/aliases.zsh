@@ -53,6 +53,9 @@ alias -g L='| less'
 # ps
 alias psa="ps aux"
 
+# reload shell
+alias reload!='exec "$SHELL" -l'
+
 # sublime
 alias ss="stt"
 
@@ -89,6 +92,9 @@ alias dccl="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock zzrot/d
 
 # docker garbage collection
 alias dcgc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
+
+# gtop
+alias gtop="docker run --rm -it --name gtop --net=host --pid=host aksakalli/gtop"
 
 # generate password hashes via mkpasswd
 alias mkpasswd="docker run -it --rm egray/mkpasswd"
