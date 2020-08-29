@@ -97,6 +97,8 @@ composer global update
 # Node Version Manager
 ################################################################################
 
+banner "Installing Node Version Manager"
+
 if [[ ! -d "$HOME/.nvm" ]]; then
     banner "Install Node Version Manager"
     mkdir "$HOME/.nvm"
@@ -106,13 +108,15 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-banner "Configuring Node"
+cat << 'EOF' >> "$NVM_DIR/default-packages"
+@vue/cli
+fkill-cli
+vmd
+yarn
+EOF
 
+nvm install 14
 nvm install 12
-npm install -g vmd @vue/cli yarn
-npm update -g
-nvm install 10 --reinstall-packages-from=12
-npm update -g
 
 nvm alias default 12
 nvm use default
