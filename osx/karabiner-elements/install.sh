@@ -1,21 +1,20 @@
 #!/bin/sh
 
-CONFIG="$HOME/.config/karabiner"
+DESTINATION="$HOME/.config/karabiner"
 
 # create config directory
-mkdir -p "$CONFIG"
+mkdir -p "$DESTINATION"
 
 # backup existing config
-if [ -f "$CONFIG/karabiner.json" ]; then
+if [ -f "$DESTINATION/karabiner.json" ]; then
     echo "Karabiner Elements: Backing Up Config"
-    mv "$CONFIG/karabiner.json" "$CONFIG/karabiner.json.$(date +%F-%T).bak"
+    mv "$DESTINATION/karabiner.json" "$DESTINATION/karabiner.json.$(date +%F-%T).bak"
 fi
 
 # symlink settings
 echo "Karabiner Elements: Copying Settings"
-cd "$CONFIG"
-cp -r "$DOTFILES/osx/karabiner-elements/config/karabiner.json" "karabiner.json"
-
+cd "$DESTINATION"
+cp -r "$DOTFILES/osx/karabiner-elements/karabiner.json" "karabiner.json"
 
 echo ""
 echo ""
