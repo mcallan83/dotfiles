@@ -18,6 +18,7 @@ brew "gnupg"
 brew "go"
 brew "htop"
 brew "jq"
+brew "mas"
 brew "nmap"
 brew "php@7.3"
 brew "php@7.4"
@@ -66,6 +67,7 @@ cask "qlstephen"
 cask "qlvideo"
 cask "quicklook-csv"
 cask "quicklook-json"
+cask "sequel-ace"
 cask "sequel-pro"
 cask "slack"
 cask "spotify"
@@ -78,3 +80,8 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
 cask "webpquicklook"
+mas "Pixelmator", id: 407963104
+mas "Snappy", id: 512617038
+mas "Soulver", id: 413965349
+mas "Spark", id: 1176895641
+mas "WireGuard", id: 1451685025
