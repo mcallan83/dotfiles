@@ -18,9 +18,6 @@
 #       - [ ] vagrant nfs config
 ################################################################################
 
-sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
@@ -43,7 +40,6 @@ fi
 brew analytics off
 
 BREWFILE_PATH="$(dirname "$0")/Brewfile"
-
 if [ -f "$BREWFILE_PATH" ]; then
     BREWFILE=$(<$BREWFILE_PATH)
 else

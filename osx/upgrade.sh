@@ -16,7 +16,7 @@
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
-    echo -e "\n# Updating: ${1}"
+    echo -e "\n# Upgrading: ${1}"
     printf "%0.s#" {1..80}
     echo -e "$(tput sgr0)\n"
     return
@@ -41,6 +41,13 @@ if test $(which brew); then
     brew cask doctor
 fi
 
+# fix permissions
+banner "Fixing Permissions"
+echo "/usr/local/share/zsh"
+chmod go-w /usr/local/share/zsh
+echo "/usr/local/share/zsh/site-functions"
+chmod go-w /usr/local/share/zsh/site-functions
+
 # vagrant plugins
 if test $(which vagrant); then
     banner "Vagrant Plugins"
@@ -64,8 +71,9 @@ if [ -d "$NVM_DIR" ]; then
       git fetch --tags origin
       git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
     ) && \. "$NVM_DIR/nvm.sh"
-    # reinstall all installed versions of node and update global packages
-    nvm list | awk '/default/ {exit} {print}' | sed 's/.*v//' | sed 's/\..*//' | while IFS= read -r version; do
+    # reinstall all installed Node versions and update global NPM packages
+    NODE_VERSIONS=$(nvm list | awk '/default/ {exit} {print}' | sed 's/.*v//' | sed 's/\..*//')
+    echo $NODE_VERSIONS |while IFS= read -r version; do
       nvm install "$version"
       nvm use "$version"
       npm -g update
