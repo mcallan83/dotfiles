@@ -16,7 +16,6 @@
 #
 # - [ ] make script provisionable, so it can be run at any time and will only
 #       - [ ] vagrant nfs config
-
 ################################################################################
 
 sudo -v
@@ -46,13 +45,13 @@ brew analytics off
 BREWFILE_PATH="$(dirname "$0")/Brewfile"
 
 if [ -f "$BREWFILE_PATH" ]; then
-    brew bundle install --no-lock --file="$BREWFILE_PATH"
-    brew bundle cleanup -f --file="$BREWFILE_PATH"
+    BREWFILE=$(<$BREWFILE_PATH)
 else
     BREWFILE=$(curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/Brewfile)
-    echo "$BREWFILE" | brew bundle install --file=- --no-lock
-    echo "$BREWFILE" | brew bundle cleanup --file=- -f
 fi
+
+echo "$BREWFILE" | brew bundle install --file=- --no-lock
+echo "$BREWFILE" | brew bundle cleanup --file=- -f
 
 brew doctor
 brew cask doctor
