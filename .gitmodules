@@ -1,9 +1,6 @@
 [submodule "vendor/zsh/oh-my-zsh"]
     path = vendor/zsh/oh-my-zsh
     url = https://github.com/robbyrussell/oh-my-zsh
-[submodule "vendor/zsh/k"]
-    path = vendor/zsh/k
-    url = https://github.com/rimraf/k
 [submodule "vendor/color/Colbalt2-iterm"]
     path = vendor/color/Colbalt2-iterm
     url = https://github.com/wesbos/Cobalt2-iterm

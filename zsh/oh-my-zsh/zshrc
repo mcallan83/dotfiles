@@ -9,7 +9,6 @@ plugins=(
     composer
     extract
     git
-    k
     laravel5
     sublime
     vi-mode
