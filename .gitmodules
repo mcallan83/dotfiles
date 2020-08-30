@@ -1,48 +1,15 @@
 [submodule "vendor/zsh/oh-my-zsh"]
     path = vendor/zsh/oh-my-zsh
     url = https://github.com/robbyrussell/oh-my-zsh
-[submodule "vendor/color/Colbalt2-iterm"]
-    path = vendor/color/Colbalt2-iterm
-    url = https://github.com/wesbos/Cobalt2-iterm
-[submodule "vendor/color/base16-shell"]
-    path = vendor/color/base16-shell
-    url = https://github.com/chriskempson/base16-shell
-[submodule "vendor/color/dircolors-solarized"]
-    path = vendor/color/dircolors-solarized
-    url = https://github.com/seebi/dircolors-solarized
-[submodule "vendor/color/iTerm2-Color-Schemes"]
-    path = vendor/color/iTerm2-Color-Schemes
-    url = https://github.com/mbadolato/iTerm2-Color-Schemes
-[submodule "vendor/color/solarized"]
-    path = vendor/color/solarized
-    url = https://github.com/altercation/solarized
 [submodule "vendor/zsh/pure"]
     path = vendor/zsh/pure
     url = https://github.com/sindresorhus/pure
-[submodule "vendor/zsh/zsh-autosuggestions"]
-    path = vendor/zsh/zsh-autosuggestions
-    url = https://github.com/tarruda/zsh-autosuggestions
 [submodule "vendor/zsh/zsh-syntax-highlighting"]
     path = vendor/zsh/zsh-syntax-highlighting
     url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule "vendor/zsh/zshmarks"]
-    path = vendor/zsh/zshmarks
-    url = https://github.com/jocelynmallon/zshmarks
-[submodule "vendor/color/tomorrow-theme"]
-    path = vendor/color/tomorrow-theme
-    url = https://github.com/chriskempson/tomorrow-theme
-[submodule "vendor/color/base16-iterm2"]
-    path = vendor/color/base16-iterm2
-    url = https://github.com/chriskempson/base16-iterm2
 [submodule "vendor/zsh/zsh-completions"]
     path = vendor/zsh/zsh-completions
     url = https://github.com/zsh-users/zsh-completions
-[submodule "vendor/zsh/zsh-nvm"]
-    path = vendor/zsh/zsh-nvm
-    url = https://github.com/lukechilds/zsh-nvm
-[submodule "vendor/tmux/tpm"]
-    path = vendor/tmux/tpm
-    url = https://github.com/tmux-plugins/tpm
 [submodule "vendor/chrome/bypass-paywalls"]
     path = vendor/chrome/bypass-paywalls
     url = https://github.com/iamadamdev/bypass-paywalls-chrome
