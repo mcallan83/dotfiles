@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 DESTINATION_PATH="$HOME"
 
@@ -10,5 +10,4 @@ fi
 
 # symlink settings
 echo "Hyper: Symlinking Settings"
-cd "$DESTINATION_PATH"
-ln -s "$DOTFILES/osx/hyper/hyper.js" .hyper.js
+ln -s "$DOTFILES/macos/hyper/hyper.js" "$DESTINATION_PATH/.hyper.js"
