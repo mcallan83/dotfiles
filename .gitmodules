@@ -55,6 +55,3 @@
 [submodule "vendor/chrome/bypass-paywalls"]
     path = vendor/chrome/bypass-paywalls
     url = https://github.com/iamadamdev/bypass-paywalls-chrome
-[submodule "vendor/zsh/zsh-interactive-cd"]
-    path = vendor/zsh/zsh-interactive-cd
-    url = https://github.com/changyuheng/zsh-interactive-cd
