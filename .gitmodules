@@ -37,12 +37,6 @@
 [submodule "vendor/zsh/zsh-completions"]
     path = vendor/zsh/zsh-completions
     url = https://github.com/zsh-users/zsh-completions
-[submodule "vendor/osx/osx-for-hackers"]
-    path = vendor/osx/osx-for-hackers
-    url = https://gist.github.com/brandonb927/3195465
-[submodule "vendor/osx/keyboard"]
-    path = vendor/osx/keyboard
-    url = https://github.com/jasonrudolph/keyboard
 [submodule "vendor/zsh/zsh-nvm"]
     path = vendor/zsh/zsh-nvm
     url = https://github.com/lukechilds/zsh-nvm
