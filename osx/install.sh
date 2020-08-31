@@ -84,6 +84,7 @@ composer global require consolidation/cgr
 cgr hirak/prestissimo
 cgr laravel/installer
 cgr laravel/lumen-installer
+cgr tightenco/takeout
 
 composer self-update
 composer global update
