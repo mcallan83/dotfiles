@@ -31,7 +31,7 @@ banner() {
 # Homebrew
 ################################################################################
 
-if test ! $(which brew); then
+if test ! "$(which brew)"; then
     banner "Installing Homebrew"
     mkdir homebrew
     curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
@@ -41,7 +41,7 @@ brew analytics off
 
 BREWFILE_PATH="$(dirname "$0")/Brewfile"
 if [ -f "$BREWFILE_PATH" ]; then
-    BREWFILE=$(<$BREWFILE_PATH)
+    BREWFILE=$(<"$BREWFILE_PATH")
 else
     BREWFILE=$(curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/Brewfile)
 fi
@@ -100,7 +100,8 @@ if [[ ! -d "$HOME/.nvm" ]]; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 fi
 
-export NVM_DIR="$HOME/.nvm"
+NVM_DIR="$HOME/.nvm"
+# shellcheck disable=SC1090
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 cat << 'EOF' >> "$NVM_DIR/default-packages"
@@ -122,7 +123,7 @@ nvm use default
 
 # Install Vagrant Hostsupdater Plugin
 # https://github.com/cogitatio/vagrant-hostsupdater
-banner "Install Vagrant Hostsupdater Plugin"
+banner "Install Vagrant Plugins"
 vagrant plugin install vagrant-hostsupdater
 
 # Sudoless NFS with Vagrant
@@ -131,28 +132,23 @@ vagrant plugin install vagrant-hostsupdater
 banner "Configure: Sudoless NFS with Vagrant"
 
 TMP=$(mktemp -t vagrant_sudoers)
-sudo cat /etc/sudoers > $TMP
+sudo cat /etc/sudoers > "$TMP"
 #sed '/# VAGRANT NFS START/,/# VAGRANT NFS END/d' $TMP
-cat >> $TMP <<EOF
-# VAGRANT START
-
-# VAGRANT HOSTSUPDATER
+cat >> "$TMP" <<EOF
+# VAGRANTSTART
 Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
 Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 %admin ALL=(root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
-
-# NFS
 Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
 Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
 Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
 %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
-
-# VAGRANT END
+# VAGRANTEND
 EOF
 
-visudo -c -f $TMP
+visudo -c -f "$TMP"
 if [ $? -eq 0 ]; then
-    sudo sh -c "cat $TMP > /etc/sudoers"
+    sudo sh -c "cat \"$TMP\" > /etc/sudoers"
 fi
 
-rm -f $TMP
+rm -f "$TMP"
