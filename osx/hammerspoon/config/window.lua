@@ -38,18 +38,6 @@ local actions = {
   moveScreenLeft = function(win)
     win:moveOneScreenWest()
   end,
-  -- move window to the next screen
-  moveScreenNext = function (win)
-    local currentScreen = win:screen()
-    local allScreens = hs.screen.allScreens()
-    currentScreenIndex = hs.fnutils.indexOf(allScreens, currentScreen)
-    nextScreenIndex = currentScreenIndex + 1
-    if allScreens[nextScreenIndex] then
-      win:moveToScreen(allScreens[nextScreenIndex])
-    else
-      win:moveToScreen(allScreens[1])
-    end
-  end,
   -- move window one screen to the right
   moveScreenRight = function(win)
     win:moveOneScreenEast()

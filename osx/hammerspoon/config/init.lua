@@ -30,8 +30,8 @@ app({
 })
 
 window({
-  {hyper,     '[',      'focusLeft'},
-  {hyper,     ']',      'focusRight'},
+  {hyper,     '[',      'moveScreenLeft'},
+  {hyper,     ']',      'moveScreenRight'},
   {hyper,     'down',   'moveCenter'},
   {hyper,     'h',      'showHints'},
   {hyper,     'left',   'moveHalfLeft'},
