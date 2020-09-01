@@ -105,7 +105,7 @@ NVM_DIR="$HOME/.nvm"
 # shellcheck disable=SC1090
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-cat << 'EOF' >> "$NVM_DIR/default-packages"
+cat << 'EOF' > "$NVM_DIR/default-packages"
 @vue/cli
 fkill-cli
 vmd
@@ -123,8 +123,9 @@ nvm use default
 ################################################################################
 
 # Install Vagrant Hostsupdater Plugin
-# https://github.com/cogitatio/vagrant-hostsupdater
 banner "Install Vagrant Plugins"
+vagrant plugin repair
+# https://github.com/cogitatio/vagrant-hostsupdater
 vagrant plugin install vagrant-hostsupdater
 
 # Sudoless NFS with Vagrant
@@ -133,10 +134,11 @@ vagrant plugin install vagrant-hostsupdater
 banner "Configure: Sudoless NFS with Vagrant"
 
 TMP=$(mktemp -t vagrant_sudoers)
+# shellcheck disable=SC2024
 sudo cat /etc/sudoers > "$TMP"
-#sed '/# VAGRANT NFS START/,/# VAGRANT NFS END/d' $TMP
+sed -i '' '/# VAGRANT-START/,/# VAGRANT-END/d' "$TMP"
 cat >> "$TMP" <<EOF
-# VAGRANTSTART
+# VAGRANT-START
 Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
 Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 %admin ALL=(root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
@@ -144,12 +146,12 @@ Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
 Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
 Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
 %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
-# VAGRANTEND
+# VAGRANT-END
 EOF
 
-visudo -c -f "$TMP"
-if [ $? -eq 0 ]; then
-    sudo sh -c "cat \"$TMP\" > /etc/sudoers"
+if visudo -c -f "$TMP"; then
+    # shellcheck disable=SC2002
+    cat "$TMP" | sudo tee /etc/sudoers
 fi
 
 rm -f "$TMP"
