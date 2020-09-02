@@ -1,27 +1,32 @@
 #!/usr/bin/env bash
-
 ################################################################################
-# Filename: osx/install.sh
+# Filename: macos/install.sh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
-# Provisions a development environment on a clean intall of OSX. Script can
-# safely run at any time to ensure host machine is up to date with this script.
+# Installer script to provision a new Mac via the following tasks:
 #
-# Installs and updates HomeBrew packages, Homebrew Casks (GUI apps,
-# Quicklook plugins, fonts), Composer packages, NPM packages, RVM,
-# Ruby gems, and Python packages.
+#   - Install Homebrew
+#   - Install Homebrew packages, Casks, and Apple App Store apps from Brewfile
+#   - Fix permissions
+#   - Configure PHP
+#   - Install global Composer packages
+#   - Install and configure NVM
+#   - Install global NPM packages for each version of Node
+#   - Install Vagrant plugins
+#   - Configure Vagrant for sudoless NFS
 #
-# TODO:
-#
-# - [ ] make script provisionable, so it can be run at any time and will only
-#       - [ ] vagrant nfs config
-################################################################################
+# Script is idempotent and can be run multiple times without unexpected
+# results. Sign into Apple App Store before beginning.
+###############################################################################
+
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
-    echo -e "\n# OSX Provision: ${1}"
+    echo -e "\n# macOS Provision: ${1}"
     printf "%0.s#" {1..80}
     echo -e "$(tput sgr0)\n"
     return
@@ -43,7 +48,7 @@ BREWFILE_PATH="$(dirname "$0")/Brewfile"
 if [ -f "$BREWFILE_PATH" ]; then
     BREWFILE=$(<"$BREWFILE_PATH")
 else
-    BREWFILE=$(curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/osx/Brewfile)
+    BREWFILE=$(curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/macos/Brewfile)
 fi
 
 echo "$BREWFILE" | brew bundle install --file=- --no-lock
