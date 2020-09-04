@@ -75,19 +75,20 @@ chmod go-w /usr/local/share/zsh/site-functions
 
 banner "Configuring PHP"
 
-sed -i '' 's/;date.timezone.*/date.timezone = America\/Chicago/' /usr/local/etc/php/7.3/php.ini
-sed -i '' 's/;phar.readonly.*/phar.readonly = Off/' /usr/local/etc/php/7.3/php.ini
-sed -i '' 's/;date.timezone.*/date.timezone = America\/Chicago/' /usr/local/etc/php/7.4/php.ini
-sed -i '' 's/;phar.readonly.*/phar.readonly = Off/' /usr/local/etc/php/7.4/php.ini
+    PHP_VERSIONS=$(ls -1 /usr/local/etc/php)
+    echo "$PHP_VERSIONS" | while IFS= read -r VERSION; do
+        echo "Configuring: PHP $VERSION"
+        sed -i '' 's/;date.timezone.*/date.timezone = America\/Chicago/' "/usr/local/etc/php/$VERSION/php.ini"
+        sed -i '' 's/;phar.readonly.*/phar.readonly = Off/' "/usr/local/etc/php/$VERSION/php.ini"
+    done
 
 brew list | grep php | xargs -L1 brew unlink
-brew link --force --overwrite php@7.4
+brew link --force --overwrite php@$(echo "$PHP_VERSIONS" | tail -n1)
 
 composer global require consolidation/cgr
 
 cgr hirak/prestissimo
 cgr laravel/installer
-cgr laravel/lumen-installer
 cgr tightenco/takeout
 
 composer self-update

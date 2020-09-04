@@ -33,12 +33,10 @@ if test "$(which brew)"; then
     brew analytics off
     brew update
     brew upgrade
-    brew cask upgrade
     brew cleanup
     (cd "$(brew --repo)" && git prune && git gc)
     rm -rf "$(brew --cache)"
-    brew doctor
-    brew cask doctor
+    brew doctor --verbose
 fi
 
 # fix permissions
