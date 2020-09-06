@@ -4,7 +4,7 @@
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
-# Installer script to provision a new Mac via the following tasks:
+# Provision a Mac via the following tasks:
 #
 #   - Install Homebrew
 #   - Install Homebrew packages, Casks, and Apple App Store apps from Brewfile
@@ -16,14 +16,11 @@
 #   - Install Vagrant plugins
 #   - Configure Vagrant for sudoless NFS
 #
-# Script is idempotent and can be run multiple times without unexpected
-# results. Sign into Apple App Store before beginning.
+# Script is idempotent and can be at any time without unexpected results. Sign
+# into Apple App Store before beginning.
 ###############################################################################
 
-sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-read -p "Sign in to the Apple App Store and press any key to continue."
+read -r -p "Sign in to the Apple App Store and press any key to continue."
 
 banner() {
     echo -e "\n\n\033[0;34m"
@@ -38,8 +35,9 @@ banner() {
 # Homebrew
 ################################################################################
 
+banner "Installing Homebrew"
+
 if test ! "$(which brew)"; then
-    banner "Installing Homebrew"
     mkdir homebrew
     curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
@@ -56,8 +54,7 @@ fi
 echo "$BREWFILE" | brew bundle install --file=- --no-lock
 echo "$BREWFILE" | brew bundle cleanup --file=- -f
 
-brew doctor
-brew cask doctor
+brew doctor --verbose
 
 ################################################################################
 # Fixing Permissions
@@ -77,23 +74,21 @@ chmod go-w /usr/local/share/zsh/site-functions
 
 banner "Configuring PHP"
 
-    PHP_VERSIONS=$(ls -1 /usr/local/etc/php)
-    echo "$PHP_VERSIONS" | while IFS= read -r VERSION; do
-        echo "Configuring: PHP $VERSION"
-        sed -i '' 's/;date.timezone.*/date.timezone = America\/Chicago/' "/usr/local/etc/php/$VERSION/php.ini"
-        sed -i '' 's/;phar.readonly.*/phar.readonly = Off/' "/usr/local/etc/php/$VERSION/php.ini"
-    done
+PHP_VERSIONS=$(ls -1 /usr/local/etc/php)
+echo "$PHP_VERSIONS" | while IFS= read -r VERSION; do
+    echo "Configuring: PHP $VERSION"
+    sed -i '' 's/;date.timezone.*/date.timezone = America\/Chicago/' "/usr/local/etc/php/$VERSION/php.ini"
+    sed -i '' 's/;phar.readonly.*/phar.readonly = Off/' "/usr/local/etc/php/$VERSION/php.ini"
+done
 
 brew list | grep php | xargs -L1 brew unlink
-brew link --force --overwrite php@$(echo "$PHP_VERSIONS" | tail -n1)
-
-composer global require consolidation/cgr
-
-cgr hirak/prestissimo
-cgr laravel/installer
-cgr tightenco/takeout
+brew link --force --overwrite "php@$(echo "$PHP_VERSIONS" | tail -n1)"
 
 composer self-update
+
+composer global require hirak/prestissimo
+composer global require laravel/installer
+composer global require tightenco/takeout
 composer global update
 
 ################################################################################
@@ -132,7 +127,6 @@ nvm use default
 # Install Vagrant Hostsupdater Plugin
 banner "Install Vagrant Plugins"
 vagrant plugin repair
-# https://github.com/cogitatio/vagrant-hostsupdater
 vagrant plugin install vagrant-hostsupdater
 
 # Sudoless NFS with Vagrant
@@ -158,7 +152,7 @@ EOF
 
 if visudo -c -f "$TMP"; then
     # shellcheck disable=SC2002
-    cat "$TMP" | sudo tee /etc/sudoers
+    cat "$TMP" | sudo tee /etc/sudoers > /dev/null
 fi
 
 rm -f "$TMP"

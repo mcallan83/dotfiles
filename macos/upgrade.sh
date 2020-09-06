@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 ################################################################################
-# Filename: osx/upgrade.sh
+# Filename: macos/upgrade.sh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
-# Upgrade the folliwng:
+# Upgrades the following:
+#
 #   - System software (with --system flag)
 #   - Homebrew (and Casks)
 #   - Vagrant plugins
@@ -33,7 +34,7 @@ if test "$(which brew)"; then
     brew update
     brew upgrade
     brew cleanup
-    (cd "$(brew --repo)" && git prune && git gc)
+    cd "$(brew --repo)" && git prune && git gc
     rm -rf "$(brew --cache)"
     brew doctor --verbose
 fi
@@ -56,7 +57,11 @@ fi
 if test "$(which composer)"; then
     banner "Composer"
     composer self-update
-    composer global update
+    COMPOSER_PACKAGES="$(composer global show -t | grep "^\w" | awk '{print $1}')"
+    echo "$COMPOSER_PACKAGES" | while IFS= read -r PACKAGE; do
+      composer global remove "$PACKAGE"
+      composer global require "$PACKAGE"
+    done
 fi
 
 # nvm/node
