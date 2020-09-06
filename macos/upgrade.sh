@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 ################################################################################
 # Filename: osx/upgrade.sh
 # Author: Mike Callan
