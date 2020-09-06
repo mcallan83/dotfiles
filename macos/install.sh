@@ -23,6 +23,8 @@
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+read -p "Sign in to the Apple App Store and press any key to continue."
+
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
