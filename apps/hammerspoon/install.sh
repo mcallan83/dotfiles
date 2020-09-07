@@ -1,14 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-CONFIG_PATH="$HOME/.hammerspoon"
+DESTINATION_PATH="$HOME/.hammerspoon"
 
 # backup existing settings
-if [ -d "$CONFIG_PATH" ] || [ -f "$CONFIG_PATH" ]; then
+if [ -L "$DESTINATION_PATH" ]; then
     echo "Hammerspoon: Backing Up Settings"
-    mv "$CONFIG_PATH" "$CONFIG_PATH.$(date +%s).bak"
+    mv "$DESTINATION_PATH" "$DESTINATION_PATH.$(date +%s).bak"
 fi
 
 # symlink settings
 echo "Hammerspoon: Symlinking Settings"
-cd "$HOME"
-ln -s "$HOME/.dotfiles/osx/hammerspoon/config" ".hammerspoon"
+ln -s "$DOTFILES/apps/hammerspoon/config" "$DESTINATION_PATH"
