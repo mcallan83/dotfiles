@@ -1,6 +1,6 @@
 *.DS_Store
 *.swp
 /apps/hammerspoon/config/Spoons/
-/osx/sublime/config/ANSIescape/
-/osx/sublime/config/Emmet.sublime-settings
-/osx/sublime/config/oscrypto-ca-bundle.crt
+/apps/sublime/config/ANSIescape/
+/apps/sublime/config/Emmet.sublime-settings
+/apps/sublime/config/oscrypto-ca-bundle.crt
