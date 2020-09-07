@@ -10,4 +10,4 @@ fi
 
 # symlink settings
 echo "Hyper: Symlinking Settings"
-ln -s "$DOTFILES/macos/hyper/hyper.js" "$DESTINATION_PATH/.hyper.js"
+ln -s "$DOTFILES/apps/hyper/hyper.js" "$DESTINATION_PATH/.hyper.js"
