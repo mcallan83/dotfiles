@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 DESTINATION_PATH="$HOME/.config"
 
@@ -13,5 +13,4 @@ fi
 
 # symlink settings
 echo "Starship: Symlinking Settings"
-cd "$DESTINATION_PATH"
-ln -s "$DOTFILES/apps/starship/starship.toml" starship.toml
+ln -s "$DOTFILES/apps/starship/starship.toml" "$DESTINATION_PATH/starship.toml"

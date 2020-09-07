@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/apps/iterm"
 defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
