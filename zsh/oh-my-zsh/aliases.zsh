@@ -20,10 +20,10 @@ alias ap="ansible-playbook"
 alias avd="ansible-vault decrypt"
 alias ave="ansible-vault encrypt"
 
-# cd back
-alias cdb="cd -"
+# cd to previous directory
+alias cdp="cd -"
 
-# composer update with no memory limits
+# composer
 alias cr="composer require"
 alias cu="composer update"
 
