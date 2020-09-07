@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# shellcheck disable=SC1091
+. ../utils.sh
+
+confirm "Configure Sublime?"
+
 DESTINATION_PATH="$HOME/Library/Application Support/Sublime Text 3"
 
 # create directories

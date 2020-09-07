@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# shellcheck disable=SC1091
+. ../utils.sh
+
+confirm "Configure GIT?"
+
 GITCONFIG="$HOME/.gitconfig"
 
 # ask for name and email address

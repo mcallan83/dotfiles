@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
+
 ################################################################################
-# Filename: macos/upgrade.sh
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
 # Upgrades the following:
 #
 #   - System software (with --system flag)

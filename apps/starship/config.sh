@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# shellcheck disable=SC1091
+. ../utils.sh
+
+confirm "Configure Starship?"
+
 DESTINATION_PATH="$HOME/.config"
 
 # create config directory

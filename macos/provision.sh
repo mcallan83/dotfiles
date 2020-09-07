@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
+
 ################################################################################
-# Filename: macos/provision.sh
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
 # Provision a Mac via the following tasks:
 #
 #   - Install Homebrew
