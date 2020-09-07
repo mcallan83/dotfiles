@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ################################################################################
-# Filename: macos/install.sh
+# Filename: macos/provision.sh
 # Author: Mike Callan
 # URL: http://github.com/mcallan83/dotfiles
 #
@@ -16,8 +16,8 @@
 #   - Install Vagrant plugins
 #   - Configure Vagrant for sudoless NFS
 #
-# Script is idempotent and can be at any time without unexpected results. Sign
-# into Apple App Store before beginning.
+# Script is idempotent and can be run repeatedly without unexpected results.
+# Sign into Apple App Store before beginning.
 ###############################################################################
 
 read -r -p "Sign in to the Apple App Store and press any key to continue."
@@ -89,7 +89,6 @@ composer self-update
 composer global require hirak/prestissimo
 composer global require laravel/installer
 composer global require tightenco/takeout
-composer global update
 
 ################################################################################
 # Node Version Manager
