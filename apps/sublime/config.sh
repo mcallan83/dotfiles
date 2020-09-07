@@ -1,16 +1,5 @@
 #!/usr/bin/env bash
 
-################################################################################
-# Filename: apps/sublime/install.sh
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
-# Installs Sublime configuration, including Package Control and various
-# packages. Sublime may need to be restarted multiple times befores
-# all packages install correctly.
-################################################################################
-
-
 DESTINATION_PATH="$HOME/Library/Application Support/Sublime Text 3"
 
 # create directories

@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-################################################################################
-# Filename: apps/git/install.sh
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
-# Configure GIT.
-################################################################################
-
 GITCONFIG="$HOME/.gitconfig"
 
 # ask for name and email address
