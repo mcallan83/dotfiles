@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC1091
-. ../utils.sh
-
-confirm "Configure Visual Studio Code?"
-
 DESTINATION_PATH="$HOME/Library/Application Support/Code/User"
 
 # create directories

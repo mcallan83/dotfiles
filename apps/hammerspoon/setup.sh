@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC1091
-. ../utils.sh
-
-confirm "Configure Hammerspoon?"
-
 DESTINATION_PATH="$HOME/.hammerspoon"
 
 # backup existing settings

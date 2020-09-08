@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC1091
-. ../utils.sh
-
-confirm "Configure Karabiner Elements?"
-
 DESTINATION_PATH="$HOME/.config/karabiner"
 
 # create config directory
