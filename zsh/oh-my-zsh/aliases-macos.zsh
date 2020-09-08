@@ -20,8 +20,5 @@ alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;sl
 # hide hidden files
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
 
-# capture screen
-alias sc="screencapture -c -W"
-
 # show hidden files
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
