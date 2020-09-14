@@ -10,15 +10,6 @@ function dsclean {
     find "${@:-.}" -type f -name .DS_Store -delete
 }
 
-# export git repo as zip file to desktop
-function gitzip {
-    TIMESTAMP=$(date +%s)
-    BRANCH="master"
-    vared -p "Branch [master]:" -c $BRANCH
-    OUTPUT="$HOME/Desktop/$TIMESTAMP-archive.zip"
-    git archive --format zip --output $OUTPUT $BRANCH
-}
-
 # switch php version
 function phpv {
     brew list | grep php | xargs -L1 brew unlink
@@ -39,11 +30,4 @@ function tmexcludevendors {
 # list excluded time machine files
 function tmlistexcluded {
     sudo mdfind "com_apple_backup_excludeItem = 'com.apple.backupd'"
-}
-
-# open google chrome with bypass paywalls extension loaded
-function chromebypass {
-    osascript -e 'tell application "Google Chrome" to quit'
-    sleep 1s
-    open -a '/Applications/Google Chrome.app' --args --load-extension=/$DOTFILES/vendor/chrome/bypass-paywalls
 }

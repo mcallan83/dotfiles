@@ -74,7 +74,7 @@ if [ -d "$NVM_DIR" ]; then
     \. "$NVM_DIR/nvm.sh"
 
     banner "Reinstall Node And Global NPM Packages"
-    NODE_VERSIONS=$(nvm list | awk '/default/ {exit} {print}' | sed 's/.*v//' | sed 's/\..*//')
+    NODE_VERSIONS=$(nvm list | awk '/default/ {exit} {print}' | sed 's/.*v//' | sed 's/\..*//' | uniq)
     echo "$NODE_VERSIONS" | while IFS= read -r VERSION; do
       nvm install "$VERSION"
       nvm use "$VERSION"

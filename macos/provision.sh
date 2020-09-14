@@ -15,7 +15,7 @@
 #
 # Script is idempotent and can be run repeatedly without unexpected results.
 # Sign into Apple App Store before beginning.
-###############################################################################
+################################################################################
 
 read -r -p "Sign in to the Apple App Store and press any key to continue."
 

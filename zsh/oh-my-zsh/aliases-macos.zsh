@@ -11,9 +11,6 @@ alias -g C='| pbcopy'
 # speed up osx terminal by removing log files
 alias cleanlog="sudo rm -rf /private/var/log/asl/*.asl"
 
-# empty all trashes and clear system logs
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash;"
-
 # flush dns
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;sleep 2"
 
