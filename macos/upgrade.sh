@@ -54,7 +54,7 @@ fi
 if test "$(which composer)"; then
     banner "Composer"
     composer self-update
-    COMPOSER_PACKAGES="$(composer global show -t | grep "^\w" | awk '{print $1}')"
+    COMPOSER_PACKAGES="$(composer global show -t --no-ansi | grep "^\w" | awk '{print $1}')"
     echo "$COMPOSER_PACKAGES" | while IFS= read -r PACKAGE; do
       composer global remove "$PACKAGE"
       composer global require "$PACKAGE"
