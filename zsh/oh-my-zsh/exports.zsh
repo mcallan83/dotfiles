@@ -1,6 +1,7 @@
 export ARCHFLAGS="-arch x86_64"
 export CLICOLOR=1
 export COMPOSER_MEMORY_LIMIT=-1
+export COMPOSER_PROCESS_TIMEOUT=600
 export EDITOR='vim'
 export KEYTIMEOUT=1
 export LANG=en_US.UTF-8
