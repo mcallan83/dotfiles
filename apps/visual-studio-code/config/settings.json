@@ -1,5 +1,5 @@
 {
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontLigatures": true,
     "editor.fontFamily": "FiraCode-Regular",
@@ -98,5 +98,8 @@
     //
     "vetur.dev.vlsPath": "/Users/mcallan/.config/yarn/global/node_modules/vue-language-server",
     "vetur.format.defaultFormatter.html": "none",
-    "vetur.format.defaultFormatter.js": "none"
+    "vetur.format.defaultFormatter.js": "none",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 }

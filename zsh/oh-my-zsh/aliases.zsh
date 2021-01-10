@@ -26,6 +26,10 @@ alias cdp="cd -"
 alias cr="composer require"
 alias cu="composer update"
 
+# laravel sail
+# https://laravel.com/docs/8.x/sail#configuring-a-bash-alias
+alias sail="\$(git rev-parse --show-toplevel)/vendor/bin/sail"
+
 # git
 alias gj="git checkout -"
 alias gsub="git submodule foreach git pull origin master"
