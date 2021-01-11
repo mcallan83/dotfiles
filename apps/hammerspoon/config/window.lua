@@ -54,7 +54,7 @@ local actions = {
     local max = screen:frame()
     local width = max.w * 0.7
 
-    if (f.x == 0) then
+    if (f.x == max.x) then
       if (f.w == max.w * 0.7) then
         width = max.w * 0.6
       elseif (f.w == max.w * 0.6) then
@@ -80,20 +80,18 @@ local actions = {
     local width = max.w * 0.3
     local offset = max.w * 0.7
 
-    if ((f.x + f.w) == max.w) then
-      if (f.w == max.w * 0.3) then
-        width = max.w * 0.4
-        offset = max.w * 0.6
-      elseif (f.w == max.w * 0.4) then
-        width = max.w * 0.6
-        offset = max.w * 0.4
-      elseif (f.w == max.w * 0.6) then
-        width = max.w * 0.7
-        offset = max.w * 0.3
-      end
+    if (f.w == max.w * 0.3) then
+      width = max.w * 0.4
+      offset = max.w * 0.6
+    elseif (f.w == max.w * 0.4) then
+      width = max.w * 0.6
+      offset = max.w * 0.4
+    elseif (f.w == max.w * 0.6) then
+      width = max.w * 0.7
+      offset = max.w * 0.3
     end
 
-    f.x = offset
+    f.x = offset + max.x
     f.y = max.y
     f.w = width
     f.h = max.h
