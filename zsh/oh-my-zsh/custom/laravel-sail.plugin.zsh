@@ -1,18 +1,14 @@
 # laravel sail
 # https://laravel.com/docs/8.x/sail
 function sail() {
-    "$(git rev-parse --show-toplevel)"/vendor/bin/sail $@
+    BASE_PATH="$(git rev-parse --show-toplevel)" 2> /dev/null || BASE_PATH="."
+    ${BASE_PATH}/vendor/bin/sail $@
 }
 
-alias saa="sail artisan"
-alias sab="sail build --no-cache"
-alias sac="sail composer"
-alias sad="sail down"
-alias sam="sail artisan migrate:fresh --seed"
-alias san="sail npm"
-alias sanx="sail npx"
-alias sapw="sail artisan migrate:fresh --env=testing && \
+alias sart="sail artisan"
+alias shh="sail shell"
+alias sd="sail down"
+alias smf="sail artisan migrate:fresh --seed"
+alias spw="sail artisan migrate:fresh --env=testing && \
     sail php vendor/bin/phpunit-watcher watch"
-alias sat="sail tinker"
-alias sau="sail up -d"
-alias say="sail yarn"
+alias su="sail up -d"
