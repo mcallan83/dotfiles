@@ -14,11 +14,6 @@ alias sshk="$EDITOR ~/.ssh/known_hosts"
 alias -g G='| grep'
 alias -g L='| less'
 
-# ansible
-alias ap="ansible-playbook"
-alias avd="ansible-vault decrypt"
-alias ave="ansible-vault encrypt"
-
 # cd to previous directory
 alias cdp="cd -"
 

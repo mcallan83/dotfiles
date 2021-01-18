@@ -36,8 +36,3 @@ function zvendor () {
 
     echo "${COMPOSER_SCRIPTS}\n${NPM_SCRIPTS}" | sort | fzf --reverse -1 -0 -d ',' --with-nth=1 --header 'Run Script:' | sed -e 's/\[composer\] /composer /;s/\[npm\] /npm run /' | xargs -L 1 -I {} sh -c "{}"
 }
-
-# list and run ansible playbooks
-function zplay () {
-    ls -1 | grep .yml$ | sed -e '/requirements/d;s/\.yml$//' | sort | fzf --reverse -1 -0 -d ',' --with-nth=1 --header 'Select Playbook:' | sed -e 's/^/ansible-playbook /;s/$/\.yml/' | xargs -L 1 -I {} sh -c "{}"
-}
