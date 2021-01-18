@@ -11,6 +11,7 @@ plugins=(
     docker
     extract
     git
+    git-extras
     laravel5
     sail
     sublime
@@ -20,8 +21,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-PATH="/usr/local/sbin:$PATH"
-PATH="$PATH:$DOTFILES/zsh/oh-my-zsh/bin"
+PATH="/usr/local/sbin:$PATH:$DOTFILES/zsh/oh-my-zsh/bin"
 
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/oh-my-zsh/exports.zsh

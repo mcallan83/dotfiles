@@ -45,14 +45,6 @@ function encrypt {
   fi
 }
 
-# init a git repo
-function gitinit {
-    touch readme.md
-    git init
-    git add --all
-    git commit -m 'Initial commit'
-}
-
 # use for knockd port knocking
 # example: knock 127.0.0.1 80 90 100
 function knock {
