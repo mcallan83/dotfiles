@@ -8,10 +8,11 @@ plugins=(
     ansible
     brew
     composer
+    docker
     extract
     git
     laravel5
-    laravel-sail
+    sail
     sublime
     vi-mode
     yarn
@@ -26,7 +27,6 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 
 source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
-source $DOTFILES/zsh/oh-my-zsh/aliases-docker.zsh
 source $DOTFILES/zsh/oh-my-zsh/functions.zsh
 
 if [[ $(uname) == 'Darwin' ]]; then
