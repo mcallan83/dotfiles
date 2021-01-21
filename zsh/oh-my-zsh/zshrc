@@ -12,8 +12,8 @@ plugins=(
     extract
     git
     git-custom
-    laravel5
     laravel-sail-custom
+    laravel5
     sublime
     vagrant-custom
     vi-mode
@@ -25,16 +25,13 @@ plugins=(
 PATH="/usr/local/sbin:$PATH:$DOTFILES/zsh/oh-my-zsh/bin"
 
 source $ZSH/oh-my-zsh.sh
-source $DOTFILES/zsh/oh-my-zsh/exports.zsh
 
-source $DOTFILES/zsh/oh-my-zsh/aliases.zsh
-source $DOTFILES/zsh/oh-my-zsh/functions.zsh
+for file in $DOTFILES/zsh/oh-my-zsh/includes/*.zsh; do
+    source "$file"
+done
 
 if [[ $(uname) == 'Darwin' ]]; then
     source $DOTFILES/zsh/oh-my-zsh/aliases-macos.zsh
     source $DOTFILES/zsh/oh-my-zsh/functions-macos.zsh
 fi
 
-source $DOTFILES/zsh/oh-my-zsh/fzf.zsh
-source $DOTFILES/zsh/oh-my-zsh/nvm.zsh
-source $DOTFILES/zsh/oh-my-zsh/prompt.zsh

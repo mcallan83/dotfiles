@@ -62,11 +62,6 @@ function mkcd {
     mkdir -p "$dir" && cd "$dir";
 }
 
-# scrape a webpage and its assets
-function scrape() {
-    wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
-}
-
 # fancy tree
 function ftree() {
   tree -aC -I '.git|node_modules|vendor' --dirsfirst "$@" | less -FRNX
