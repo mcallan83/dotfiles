@@ -8,6 +8,9 @@
 # copy to clipboard
 alias -g C='| pbcopy'
 
+# from http://apple.stackexchange.com/questions/110343/copy-last-command-in-terminal
+alias ccmd='fc -ln -1 | awk '\''{$1=$1}1'\'' ORS='\'''\'' | pbcopy'
+
 # speed up osx terminal by removing log files
 alias cleanlog="sudo rm -rf /private/var/log/asl/*.asl"
 
