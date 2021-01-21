@@ -17,10 +17,6 @@ alias -g L='| less'
 # cd to previous directory
 alias cdp="cd -"
 
-# composer
-alias cr="composer require"
-alias cu="composer update"
-
 # ps
 alias psa="ps aux"
 

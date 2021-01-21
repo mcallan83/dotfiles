@@ -62,12 +62,6 @@ function mkcd {
     mkdir -p "$dir" && cd "$dir";
 }
 
-# output a random password 32 characters in length
-function randpass ()
-{
-    shuf -zer -n32  {A..Z} {a..z} {0..9}
-}
-
 # scrape a webpage and its assets
 function scrape() {
     wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"

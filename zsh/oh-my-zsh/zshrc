@@ -5,15 +5,15 @@ DISABLE_AUTO_UPDATE=true
 ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
 
 plugins=(
-    ansible
+    ansible-custom
     brew
-    composer
-    docker
+    composer-custom
+    docker-custom
     extract
     git
-    git-extras
+    git-custom
     laravel5
-    sail
+    laravel-sail-custom
     sublime
     vagrant-custom
     vi-mode
