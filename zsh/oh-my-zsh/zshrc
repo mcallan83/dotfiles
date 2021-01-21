@@ -35,6 +35,5 @@ if [[ $(uname) == 'Darwin' ]]; then
 fi
 
 source $DOTFILES/zsh/oh-my-zsh/fzf.zsh
-source $DOTFILES/zsh/oh-my-zsh/toggle.zsh
 source $DOTFILES/zsh/oh-my-zsh/nvm.zsh
 source $DOTFILES/zsh/oh-my-zsh/prompt.zsh
