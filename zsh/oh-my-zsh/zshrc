@@ -15,6 +15,7 @@ plugins=(
     laravel5
     sail
     sublime
+    vagrant-custom
     vi-mode
     yarn
     z
