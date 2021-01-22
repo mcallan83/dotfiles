@@ -16,7 +16,7 @@ z() {
 
 # list and connect to configured servers via ssh (bound to ^s)
 # https://gist.github.com/dohq/1dc702cc0b46eb62884515ea52330d60
-function zssh () {
+function fssh () {
   local selected_host=$(grep "Host " ~/.ssh/config | grep -v '*' | cut -b 6- | fzf --query "$LBUFFER")
 
   if [ -n "$selected_host" ]; then
@@ -26,13 +26,5 @@ function zssh () {
   zle reset-prompt
 }
 
-zle -N zssh
-bindkey '^s' zssh
-
-# list and run composer and npm scripts
-function zvendor () {
-    COMPOSER_SCRIPTS=$(cat composer.json | \jq -r '.scripts | keys[]' | sed -e '/^post/d;s/^/[composer] /')
-    NPM_SCRIPTS=$(cat package.json | jq -r '.scripts | keys[]' | sed -e 's/^/[npm] /')
-
-    echo "${COMPOSER_SCRIPTS}\n${NPM_SCRIPTS}" | sort | fzf --reverse -1 -0 -d ',' --with-nth=1 --header 'Run Script:' | sed -e 's/\[composer\] /composer /;s/\[npm\] /npm run /' | xargs -L 1 -I {} sh -c "{}"
-}
+zle -N fssh
+bindkey '^s' fssh

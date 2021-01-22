@@ -2,7 +2,7 @@ export DOTFILES=$HOME/.dotfiles
 export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 
 DISABLE_AUTO_UPDATE=true
-ZSH_CUSTOM=$DOTFILES/zsh/oh-my-zsh/custom
+ZSH_CUSTOM=$DOTFILES/zsh/env/oh-my-zsh/custom
 
 plugins=(
     ansible-custom
@@ -22,16 +22,15 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-PATH="/usr/local/sbin:$PATH:$DOTFILES/zsh/oh-my-zsh/bin"
+if [[ $(uname) == 'Darwin' ]]; then
+    plugins+=("macos-custom")
+fi
+
+PATH="/usr/local/sbin:$PATH:$DOTFILES/zsh/env/oh-my-zsh/bin"
 
 source $ZSH/oh-my-zsh.sh
 
-for file in $DOTFILES/zsh/oh-my-zsh/includes/*.zsh; do
+for file in $DOTFILES/zsh/env/oh-my-zsh/includes/*.zsh; do
     source "$file"
 done
-
-if [[ $(uname) == 'Darwin' ]]; then
-    source $DOTFILES/zsh/oh-my-zsh/aliases-macos.zsh
-    source $DOTFILES/zsh/oh-my-zsh/functions-macos.zsh
-fi
 
