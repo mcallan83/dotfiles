@@ -1,11 +1,3 @@
-################################################################################
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
-# Fzf (a command-line fuzzy finder) config.
-# https://github.com/junegunn/fzf
-################################################################################
-
 # use with z
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/z
 unalias z 2> /dev/null
@@ -14,9 +6,9 @@ z() {
   cd "$(_z -l 2>&1 | fzf --height 40% --reverse --inline-info +s --tac --query "$*" | sed 's/^[0-9,.]* *//')"
 }
 
-# list and connect to configured servers via ssh (bound to ^s)
+# list and connect to configured ssh servers (bound to ^s)
 # https://gist.github.com/dohq/1dc702cc0b46eb62884515ea52330d60
-function fssh () {
+function fzfssh () {
   local selected_host=$(grep "Host " ~/.ssh/config | grep -v '*' | cut -b 6- | fzf --query "$LBUFFER")
 
   if [ -n "$selected_host" ]; then
@@ -26,5 +18,5 @@ function fssh () {
   zle reset-prompt
 }
 
-zle -N fssh
-bindkey '^s' fssh
+zle -N fzfssh
+bindkey '^s' fzfssh

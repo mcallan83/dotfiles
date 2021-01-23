@@ -1,11 +1,4 @@
-################################################################################
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
-# Functions for ZSH.
-################################################################################
-
-# search all aliases
+# search aliases
 function als() {
     alias | grep $1
 }
@@ -45,6 +38,11 @@ function encrypt {
   fi
 }
 
+# fancy tree
+function ftree() {
+  tree -aC -I '.git|node_modules|vendor' --dirsfirst "$@" | less -FRNX
+}
+
 # use for knockd port knocking
 # example: knock 127.0.0.1 80 90 100
 function knock {
@@ -60,9 +58,4 @@ function knock {
 function mkcd {
     dir="$*";
     mkdir -p "$dir" && cd "$dir";
-}
-
-# fancy tree
-function ftree() {
-  tree -aC -I '.git|node_modules|vendor' --dirsfirst "$@" | less -FRNX
 }

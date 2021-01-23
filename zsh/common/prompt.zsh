@@ -1,10 +1,3 @@
-################################################################################
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
-# Configure prompt. Use starship if installed, falling back to pure.
-################################################################################
-
 if [ -x "$(command -v starship)" ]
 then
     eval "$(starship init zsh)"

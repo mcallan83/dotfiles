@@ -1,11 +1,3 @@
-################################################################################
-# Author: Mike Callan
-# URL: http://github.com/mcallan83/dotfiles
-#
-# Load NVM and automatically change Node versions when changing into a diretory
-# that contains an .nvmrc file.
-################################################################################
-#
 if [ -s "$NVM_DIR/nvm.sh" ]; then
 
   source "$NVM_DIR/nvm.sh"
