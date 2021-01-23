@@ -28,9 +28,10 @@ fi
 
 PATH="/usr/local/sbin:$PATH:$DOTFILES/zsh/env/oh-my-zsh/bin"
 
+source "$DOTFILES/zsh/env/oh-my-zsh/includes/00_exports.zsh"
+
 source $ZSH/oh-my-zsh.sh
 
-for file in $DOTFILES/zsh/env/oh-my-zsh/includes/*.zsh; do
+for file in $DOTFILES/zsh/env/oh-my-zsh/includes/*.include.zsh; do
     source "$file"
 done
-

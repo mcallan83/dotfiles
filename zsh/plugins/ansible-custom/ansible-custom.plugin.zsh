@@ -1,12 +1,15 @@
 # ansible playbook 2.8
 # https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+
+ANSIBLE_VERSION="${ANSIBLE_VERSION:-2.8}"
+
 alias ansible-playbook="docker run \
     --rm \
     -it \
     -v \"$(pwd)\":/ansible \
     -v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
     --workdir=/ansible \
-    willhallonline/ansible:2.8-alpine \
+    willhallonline/ansible:${ANSIBLE_VERSION}-alpine \
     ansible-playbook"
 
 # ansible vault 2.8
@@ -17,7 +20,7 @@ alias ansible-vault="docker run \
     -v \"$(pwd)\":/ansible \
     -v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
     --workdir=/ansible \
-    willhallonline/ansible:2.8-alpine \
+    willhallonline/ansible:${ANSIBLE_VERSION}-alpine \
     ansible-vault"
 
 # generate user password hashes via mkpasswd
