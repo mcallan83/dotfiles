@@ -1,4 +1,4 @@
-export ANSIBLE_VERSION=2.9
+export ANSIBLE_VERSION=2.8
 export ARCHFLAGS="-arch x86_64"
 export CLICOLOR=1
 export COMPOSER_MEMORY_LIMIT=-1
