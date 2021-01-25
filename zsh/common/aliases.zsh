@@ -24,6 +24,3 @@ alias ss="stt"
 
 # tail
 alias t="tail -f"
-
-# yarn
-alias yw="yarn watch"

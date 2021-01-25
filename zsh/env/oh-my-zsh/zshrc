@@ -17,7 +17,7 @@ plugins=(
     sublime
     vagrant-custom
     vi-mode
-    yarn
+    yarn-custom
     z
     zsh-syntax-highlighting
 )
