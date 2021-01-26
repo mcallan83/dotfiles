@@ -22,7 +22,8 @@ brew "jq"
 brew "mas"
 brew "nmap"
 brew "php@7.3"
-brew "php@7.4"
+brew "php@7.4", link: true
+brew "php@8.0", link: false
 brew "rclone"
 brew "reattach-to-user-namespace"
 brew "shellcheck"
