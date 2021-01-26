@@ -14,10 +14,10 @@ plugins=(
     git-custom
     laravel-sail-custom
     laravel5
+    node-custom
     sublime
     vagrant-custom
     vi-mode
-    yarn-custom
     z
     zsh-syntax-highlighting
 )

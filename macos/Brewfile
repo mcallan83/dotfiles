@@ -86,6 +86,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "webpquicklook"
 mas "Pixelmator Pro", id: 1289583905
+mas "Reeder", id: 1529448980
 mas "Snappy", id: 512617038
 mas "Soulver", id: 413965349
 mas "Spark", id: 1176895641

@@ -107,6 +107,7 @@ cat << 'EOF' > "$NVM_DIR/default-packages"
 @vue/cli
 fkill-cli
 local-web-server
+live-server
 vmd
 yarn
 EOF

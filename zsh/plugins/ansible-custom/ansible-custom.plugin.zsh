@@ -1,8 +1,7 @@
-# ansible playbook 2.8
-# https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
-
 ANSIBLE_VERSION="${ANSIBLE_VERSION:-2.8}"
 
+# ansible playbook 2.8
+# https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
 alias ansible-playbook="docker run \
     --rm \
     -it \
@@ -26,7 +25,6 @@ alias ansible-vault="docker run \
 # generate user password hashes via mkpasswd
 alias mkpasswd="docker run -it --rm egray/mkpasswd"
 
-# ansible shortcut aliases
 alias ap="ansible-playbook"
 alias avd="ansible-vault decrypt"
 alias ave="ansible-vault encrypt"
