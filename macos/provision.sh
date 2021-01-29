@@ -78,9 +78,6 @@ echo "$PHP_VERSIONS" | while IFS= read -r VERSION; do
     sed -i '' 's/;phar.readonly.*/phar.readonly = Off/' "/usr/local/etc/php/$VERSION/php.ini"
 done
 
-brew list | grep php | xargs -L1 brew unlink
-brew link --force --overwrite "php@$(echo "$PHP_VERSIONS" | tail -n1)"
-
 composer self-update
 
 composer global require hirak/prestissimo
