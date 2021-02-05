@@ -37,10 +37,12 @@ local actions = {
   -- move window one screen to the left
   moveScreenLeft = function(win)
     win:moveOneScreenWest()
+    win:centerOnScreen()
   end,
   -- move window one screen to the right
   moveScreenRight = function(win)
     win:moveOneScreenEast()
+    win:centerOnScreen()
   end,
   -- show window hints
   showHints = function()
