@@ -15,6 +15,7 @@ airpods({hyper, '\\', 'Mike’s Airpods Pro'})
 
 app({
   {hyper, '3', 'Spark'},
+  {hyper, 'd', 'Reeder'},
   {hyper, 'a', 'Safari'},
   {hyper, 'c', 'Google Chrome'},
   {hyper, 'e', 'Microsoft Outlook'},
