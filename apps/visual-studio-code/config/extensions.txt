@@ -1,3 +1,5 @@
+bmewburn.vscode-intelephense-client@1.6.3
+MehediDracula.php-namespace-resolver@1.1.8
 naumovs.theme-oceanicnext@0.0.4
 PKief.material-icon-theme@4.5.0
 vscode-icons-team.vscode-icons@11.1.0
