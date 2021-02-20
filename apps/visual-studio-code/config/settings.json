@@ -1,6 +1,7 @@
 {
-    "editor.fontLigatures": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontFamily": "FiraCode-Regular",
+    "editor.fontLigatures": true,
     "editor.fontSize": 20,
     "editor.formatOnPaste": true,
     "editor.letterSpacing": 0,
@@ -10,6 +11,9 @@
     "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
     "explorer.openEditors.visible": 0,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Oceanic Next"
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Oceanic Next",
+    "workbench.iconTheme": "material-icon-theme"
 }
