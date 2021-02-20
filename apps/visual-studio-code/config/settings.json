@@ -1,5 +1,12 @@
 {
+    "breadcrumbs.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
+    "files.associations": {
+        ".php_cs.dist": "php",
+        ".php_cs": "php",
+        "*.php": "php",
+        "zshrc": "shellscript"
+    },
     "editor.fontFamily": "FiraCode-Regular",
     "editor.fontLigatures": true,
     "editor.fontSize": 20,
