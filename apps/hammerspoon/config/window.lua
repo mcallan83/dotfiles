@@ -1,6 +1,22 @@
-hs.window.animationDuration = 0
+hs.window.animationDuration = .03
 
 local frameCache = {}
+local positions = require('positions')
+
+-- cycle window placement through provided positions
+local togglePlacement = function (win, positions)
+  win:setFullScreen(false)
+  local index = 0
+  hs.fnutils.find(positions, function(position)
+    index = index + 1
+    local geo = hs.geometry.new(position)
+      :fromUnitRect(hs.screen.mainScreen():frame())
+      :floor()
+    return win:frame():equals(geo)
+  end)
+  if index == #positions then index = 0 end
+  win:moveToUnit(positions[index + 1])
+end
 
 local actions = {
   -- focus the next window down
@@ -27,12 +43,12 @@ local actions = {
   -- move window to the left 50%
   moveHalfLeft = function(win)
     win:setFullScreen(false)
-    win:move(hs.layout.left50)
+    win:move(positions.left50)
   end,
   -- move window to the right 50%
   moveHalfRight = function(win)
     win:setFullScreen(false)
-    win:move(hs.layout.right50)
+    win:move(positions.right50)
   end,
   -- move window one screen to the left
   moveScreenLeft = function(win)
@@ -50,54 +66,21 @@ local actions = {
   end,
   -- move window to the left and toggle with of 70/60/40/30%
   moveVariableLeft = function(win)
-    win:setFullScreen(false)
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-    local width = max.w * 0.7
-
-    if (f.x == max.x) then
-      if (f.w == max.w * 0.7) then
-        width = max.w * 0.6
-      elseif (f.w == max.w * 0.6) then
-        width = max.w * 0.4
-      elseif (f.w == max.w * 0.4) then
-        width = max.w * 0.3
-      end
-    end
-
-    f.x = max.x
-    f.y = max.y
-    f.w = width
-    f.h = max.h
-
-    win:setFrame(f)
+    togglePlacement(win, {
+      positions.left70,
+      positions.left60,
+      positions.left40,
+      positions.left30,
+    })
   end,
   -- move window to the right and toggle with of 30/40/60/70%
   moveVariableRight = function(win)
-    win:setFullScreen(false)
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-    local width = max.w * 0.3
-    local offset = max.w * 0.7
-
-    if (f.w == max.w * 0.3) then
-      width = max.w * 0.4
-      offset = max.w * 0.6
-    elseif (f.w == max.w * 0.4) then
-      width = max.w * 0.6
-      offset = max.w * 0.4
-    elseif (f.w == max.w * 0.6) then
-      width = max.w * 0.7
-      offset = max.w * 0.3
-    end
-
-    f.x = offset + max.x
-    f.y = max.y
-    f.w = width
-    f.h = max.h
-    win:setFrame(f)
+    togglePlacement(win, {
+      positions.right30,
+      positions.right40,
+      positions.right60,
+      positions.right70,
+    })
   end,
   -- toggle full screen on/off
   toggleFullScreen = function(win)
@@ -111,7 +94,7 @@ local actions = {
        frameCache[win:id()] = nil
     else
       frameCache[win:id()] = win:frame()
-      win:maximize()
+      win:move(positions.maximized)
     end
   end
 }
