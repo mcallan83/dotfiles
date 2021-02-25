@@ -1,6 +1,6 @@
 # aliases
 alias gj="git checkout -"
-alias gsub="git submodule update --recursive"
+alias gsub="git submodule update --recursive --remote"
 alias gt="cd \$(git rev-parse --show-toplevel)"
 
 # github
