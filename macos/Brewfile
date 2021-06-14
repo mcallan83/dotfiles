@@ -1,3 +1,4 @@
+tap "achannarasappa/tap"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -21,9 +22,9 @@ brew "htop"
 brew "jq"
 brew "mas"
 brew "nmap"
-brew "php@7.3"
-brew "php@7.4", link: true
-brew "php@8.0", link: false
+brew "php@7.3", link: false
+brew "php@7.4", link: false
+brew "php@8.0", link: true
 brew "rclone"
 brew "reattach-to-user-namespace"
 brew "shellcheck"
@@ -60,6 +61,7 @@ cask "imageoptim"
 cask "iterm2"
 cask "kaleidoscope"
 cask "karabiner-elements"
+cask "landrop"
 cask "libreoffice"
 cask "multi"
 cask "numi"
@@ -72,6 +74,7 @@ cask "quicklook-csv"
 cask "quicklook-json"
 cask "sequel-ace"
 cask "sequel-pro"
+cask "signal"
 cask "slack"
 cask "sloth"
 cask "spotify"
@@ -91,4 +94,5 @@ mas "Reeder", id: 1529448980
 mas "Snappy", id: 512617038
 mas "Soulver", id: 413965349
 mas "Spark", id: 1176895641
+mas "Vimari", id: 1480933944
 mas "WireGuard", id: 1451685025
