@@ -22,7 +22,7 @@
 	"ignored_packages":
 	[
 		"Markdown",
-		"Vintageous"
+		"Vintageous",
 	],
 	"indent_guide_options":
 	[
@@ -42,5 +42,5 @@
 	"theme": "Cobalt2.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"use_simple_full_screen": true,
-	"word_wrap": true
+	"word_wrap": true,
 }
