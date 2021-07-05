@@ -22,7 +22,6 @@ brew "htop"
 brew "jq"
 brew "mas"
 brew "nmap"
-brew "php@7.3", link: false
 brew "php@7.4", link: false
 brew "php@8.0", link: true
 brew "rclone"
