@@ -1,7 +1,3 @@
-[character]
-style_success = 'bold green'
-style_error = 'bold red'
-
 [directory]
 style = "blue"
 
