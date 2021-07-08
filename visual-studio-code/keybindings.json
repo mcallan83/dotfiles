@@ -1,0 +1,15 @@
+[
+   // Toggle Font Size
+   {
+    "key": "cmd+k cmd+k",
+    "command": "toggle",
+    "when": "editorTextFocus",
+    "args": {
+        "id": "fontSize",
+        "value": [
+            {"editor.fontSize": 18, "editor.lineHeight": 40},
+            {"editor.fontSize": 14, "editor.lineHeight": 0}
+        ]
+    }
+    }
+]
