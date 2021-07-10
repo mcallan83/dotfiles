@@ -1,2 +1,5 @@
-mdixon18.palenight@0.0.1
+esbenp.prettier-vscode@8.0.1
+GitHub.vscode-pull-request-github@0.28.0
+ikappas.composer@0.7.1
 rebornix.toggle@0.0.2
+zhuangtongfa.material-theme@3.10.14

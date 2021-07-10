@@ -1,18 +1,17 @@
 {
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "workbench.colorTheme": "Palenight Theme based on Olaolu Olaywuyi for Code Server",
-    
-    // UI 
     "breadcrumbs.enabled": false,
-
-    // Fonts
     "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 18,
-    "editor.lineHeight": 40,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 0,
     "editor.minimap.enabled": false,
     "editor.suggestFontSize": 16,
     "editor.suggestLineHeight": 28,
+    "gulp.autoDetect": "on",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
     "terminal.integrated.fontSize": 15,
-    "terminal.integrated.lineHeight": 1.5
+    "terminal.integrated.lineHeight": 1.5,
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.startupEditor": "none"
 }
