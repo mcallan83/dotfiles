@@ -19,3 +19,6 @@ format = "[PHP $version]($style) "
 
 [username]
 style_user = "purple bold"
+
+[vagrant]
+disabled = true
