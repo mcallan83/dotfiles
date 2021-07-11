@@ -6,6 +6,9 @@
     "editor.minimap.enabled": false,
     "editor.suggestFontSize": 16,
     "editor.suggestLineHeight": 28,
+    "githubIssues.createInsertFormat": "url",
+    "githubIssues.issueBranchTitle": "feature/${issueNumber}/${sanitizedIssueTitle}",
+    "githubIssues.useBranchForIssues": "prompt",
     "gulp.autoDetect": "on",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
@@ -13,5 +16,8 @@
     "terminal.integrated.lineHeight": 1.5,
     "workbench.colorTheme": "One Dark Pro",
     "workbench.editor.untitled.hint": "hidden",
-    "workbench.startupEditor": "none"
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always"
 }
