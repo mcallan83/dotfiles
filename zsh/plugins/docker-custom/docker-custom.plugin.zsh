@@ -9,6 +9,10 @@ alias docker-clean="docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     zzrot/docker-clean"
 
+# phone number lookup tool
+# https://github.com/sundowndev/phoneinfoga
+alias phoneinfoga="docker run --rm -it sundowndev/phoneinfoga"
+
 # portainer
 # https://www.portainer.io
 alias portainer="docker run \

@@ -19,5 +19,6 @@
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none",
     "workbench.tree.indent": 20,
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "editor.inlineSuggest.enabled": true
 }
