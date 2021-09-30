@@ -64,20 +64,22 @@ local actions = {
   showHints = function()
     hs.hints.windowHints()
   end,
-  -- move window to the left and toggle with of 70/60/40/30%
+  -- move window to the left and toggle with of 70/60/50/40/30%
   moveVariableLeft = function(win)
     togglePlacement(win, {
       positions.left70,
       positions.left60,
+      positions.left50,
       positions.left40,
       positions.left30,
     })
   end,
-  -- move window to the right and toggle with of 30/40/60/70%
+  -- move window to the right and toggle with of 30/40/50/60/70%
   moveVariableRight = function(win)
     togglePlacement(win, {
       positions.right30,
       positions.right40,
+      positions.right50,
       positions.right60,
       positions.right70,
     })
