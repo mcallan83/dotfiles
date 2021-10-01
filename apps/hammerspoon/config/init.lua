@@ -35,12 +35,10 @@ window({
   {hyper,     ']',      'moveScreenRight'},
   {hyper,     'down',   'moveCenter'},
   {hyper,     'h',      'showHints'},
-  {hyper,     'left',   'moveHalfLeft'},
+  {hyper,     'left',   'moveVariableLeft'},
   {hyper,     'return', 'toggleMaximize'},
-  {hyper,     'right',  'moveHalfRight'},
+  {hyper,     'right',  'moveVariableRight'},
   {hyper,     'up',     'toggleFullScreen'},
-  {hyperLite, 'left',   'moveVariableLeft'},
-  {hyperLite, 'right',  'moveVariableRight'},
 })
 
 hs.loadSpoon("SpoonInstall")
