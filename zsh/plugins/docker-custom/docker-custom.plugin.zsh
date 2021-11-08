@@ -13,6 +13,9 @@ alias docker-clean="docker run \
 # https://github.com/sundowndev/phoneinfoga
 alias phoneinfoga="docker run --rm -it sundowndev/phoneinfoga"
 
+# tor browser
+alias torb="docker run -d -p 5800:5800 domistyle/tor-browser"
+
 # portainer
 # https://www.portainer.io
 alias portainer="docker run \
