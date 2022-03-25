@@ -24,3 +24,5 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
   add-zsh-hook chpwd load-nvmrc
   load-nvmrc
 fi
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
