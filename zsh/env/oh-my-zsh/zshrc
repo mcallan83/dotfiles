@@ -6,6 +6,7 @@ ZSH_CUSTOM=$DOTFILES/zsh/env/oh-my-zsh/custom
 
 plugins=(
     # ansible-custom
+    ansible-homebrew-custom
     brew
     composer-custom
     docker-custom

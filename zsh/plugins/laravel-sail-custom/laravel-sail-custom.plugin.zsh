@@ -8,7 +8,4 @@ function sail() {
 alias sart="sail artisan"
 alias shh="sail shell"
 alias sd="sail down"
-alias smf="sail artisan migrate:fresh --seed"
-alias spw="sail artisan migrate:fresh --env=testing && \
-    sail php vendor/bin/phpunit-watcher watch"
 alias su="sail up -d"
