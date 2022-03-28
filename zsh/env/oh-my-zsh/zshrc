@@ -9,6 +9,7 @@ plugins=(
     ansible-homebrew-custom
     brew
     composer-custom
+    diff-so-fancy-custom
     docker-custom
     extract
     git
