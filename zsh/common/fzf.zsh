@@ -1,6 +1,7 @@
 # checkout local or remote git branch
 # https://github.com/wellle/dotfiles/blob/577d9ee28f772b2f57e44c00a3d392c3238660eb/fzf.zsh#L110
 fbr() {
+  git fetch
   local branches branch
   branches=$(git branch --all | grep -v HEAD | grep -v dependabot) &&
   branch=$(echo "$branches" |
