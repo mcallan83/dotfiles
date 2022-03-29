@@ -22,11 +22,6 @@ git config --global user.email "$EMAIL"
 git config --global push.default simple
 git config --global pull.rebase false
 
-# osx only
-# if [[ $(uname) == 'Darwin' ]]; then
-#     git config --global credential.helper osxkeychain
-# fi
-
 # https://github.com/so-fancy/diff-so-fancy
 if [ -x "$(command -v diff-so-fancy)" ]
 then
