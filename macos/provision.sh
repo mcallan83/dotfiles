@@ -54,18 +54,6 @@ echo "$BREWFILE" | brew bundle cleanup --file=- -f
 brew doctor --verbose
 
 ################################################################################
-# Fixing Permissions
-################################################################################
-
-banner "Fixing Permissions"
-
-echo "/usr/local/share/zsh"
-chmod go-w /usr/local/share/zsh
-
-echo "/usr/local/share/zsh/site-functions"
-chmod go-w /usr/local/share/zsh/site-functions
-
-################################################################################
 # PHP
 ################################################################################
 
@@ -78,11 +66,7 @@ echo "$PHP_VERSIONS" | while IFS= read -r VERSION; do
     sed -i '' 's/;phar.readonly.*/phar.readonly = Off/' "/usr/local/etc/php/$VERSION/php.ini"
 done
 
-composer self-update
-
-composer global require hirak/prestissimo
-composer global require laravel/installer
-composer global require tightenco/takeout
+composer self-update --2
 
 ################################################################################
 # Node Version Manager
@@ -101,18 +85,13 @@ NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 cat << 'EOF' > "$NVM_DIR/default-packages"
-@vue/cli
-fkill-cli
-local-web-server
-live-server
-vmd
 yarn
 EOF
 
+nvm install 16
 nvm install 14
-nvm install 12
 
-nvm alias default 12
+nvm alias default 14
 nvm use default
 
 ################################################################################
