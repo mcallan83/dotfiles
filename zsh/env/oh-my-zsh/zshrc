@@ -28,7 +28,7 @@ if [[ $(uname) == 'Darwin' ]]; then
     plugins+=("macos-custom")
 fi
 
-PATH="/usr/local/sbin:$PATH:$DOTFILES/zsh/env/oh-my-zsh/bin"
+PATH="/usr/local/sbin:$PATH"
 
 for file in $DOTFILES/zsh/env/oh-my-zsh/includes/pre/*.zsh; do
     source "$file"

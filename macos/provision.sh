@@ -1,20 +1,12 @@
 #!/usr/bin/env bash
-
 ################################################################################
-# Provision a Mac via the following tasks:
+# Provision MacOS via the following tasks:
 #
-#   - Install Homebrew
-#   - Install Homebrew packages, Casks, and Apple App Store apps from Brewfile
-#   - Fix permissions
+#   - Install Homebrew and packages
 #   - Configure PHP
-#   - Install global Composer packages
-#   - Install and configure NVM
-#   - Install global NPM packages for each version of Node
+#   - Install NVM
 #   - Install Vagrant plugins
 #   - Configure Vagrant for sudoless NFS
-#
-# Script is idempotent and can be run repeatedly without unexpected results.
-# Sign into Apple App Store before beginning.
 ################################################################################
 
 read -r -p "Sign in to the Apple App Store and press any key to continue."
