@@ -60,15 +60,6 @@ if [ -d "$NVM_DIR" ]; then
     git checkout "$TAG"
     # shellcheck disable=SC1090
     \. "$NVM_DIR/nvm.sh"
-
-    banner "Reinstall Node And Global NPM Packages"
-    NODE_VERSIONS=$(nvm list | awk '/default/ {exit} {print}' | sed 's/.*v//' | sed 's/\..*//' | uniq)
-    echo "$NODE_VERSIONS" | while IFS= read -r VERSION; do
-      nvm install "$VERSION"
-      nvm use "$VERSION"
-      npm -g update
-    done
-    nvm use default
 fi
 
 # register update time
