@@ -6,8 +6,10 @@ function sail() {
 }
 
 alias sa="sail artisan"
+alias scu="sail composer update"
 alias sd="sail down"
 alias shh="sail shell"
 alias smfs="sail artisan migrate:fresh --seed"
 alias sti="sail tinker"
 alias su="sail up -d"
+alias syu="sail yarn upgrade"
