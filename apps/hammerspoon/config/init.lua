@@ -14,8 +14,6 @@ end)
 airpods({hyper, '\\', 'Mike’s Airpods Pro'})
 
 app({
-  {hyper, '3', 'Spark'},
-  {hyper, 'd', 'Reeder'},
   {hyper, 'a', 'Safari'},
   {hyper, 'c', 'Google Chrome'},
   {hyper, 'e', 'Microsoft Outlook'},
@@ -23,11 +21,9 @@ app({
   {hyper, 'i', 'iTerm'},
   {hyper, 'l', 'Slack'},
   {hyper, 'm', 'Sequel Ace'},
-  {hyper, 'n', 'Notes'},
   {hyper, 'p', 'Spotify'},
-  {hyper, 'r', 'Reminders'},
   {hyper, 's', 'Sublime Text'},
-  {hyper, 'z', 'Messages'},
+  {hyper, 'v', 'Visual Studio Code'},
 })
 
 window({
