@@ -36,13 +36,6 @@ if test "$(which brew)"; then
     brew doctor --verbose
 fi
 
-# fix permissions
-banner "Fixing Permissions"
-echo "/usr/local/share/zsh"
-chmod go-w /usr/local/share/zsh
-echo "/usr/local/share/zsh/site-functions"
-chmod go-w /usr/local/share/zsh/site-functions
-
 # vagrant plugins
 if test "$(which vagrant)"; then
     banner "Vagrant Plugins"
@@ -53,12 +46,7 @@ fi
 # composer
 if test "$(which composer)"; then
     banner "Composer"
-    composer self-update
-    COMPOSER_PACKAGES="$(composer global show -t --no-ansi | grep "^\w" | awk '{print $1}')"
-    echo "$COMPOSER_PACKAGES" | while IFS= read -r PACKAGE; do
-      composer global remove "$PACKAGE"
-      composer global require "$PACKAGE"
-    done
+    composer self-update --2
 fi
 
 # nvm/node
