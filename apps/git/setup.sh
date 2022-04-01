@@ -4,8 +4,9 @@ GITCONFIG="$HOME/.gitconfig"
 GITIGNORE="$HOME/.gitignore"
 
 # ask for name and email address
-read -r -p "Full Name [Mike Callan]: " NAME
-NAME=${NAME:-Mike Callan}
+DEFAULT_NAME="$(echo 'Zvxr Pnyyna' | tr 'A-Za-z' 'N-ZA-Mn-za-m')"
+read -r -p "Full Name [$DEFAULT_NAME]: " NAME
+NAME=${NAME:-$DEFAULT_NAME}
 
 DEFAULT_EMAIL="$(echo 'zpnyyna83@tznvy.pbz' | tr 'A-Za-z' 'N-ZA-Mn-za-m')"
 read -r -p "Email [$DEFAULT_EMAIL]: " EMAIL

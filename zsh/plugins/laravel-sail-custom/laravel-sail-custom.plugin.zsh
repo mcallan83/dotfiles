@@ -8,7 +8,6 @@ function sail() {
 
 alias sart="sail artisan"
 alias sc="sail composer"
-alias scu="sail composer update"
 alias sd="sail down"
 alias shh="sail shell"
 alias smfs="sail artisan migrate:fresh --seed"
