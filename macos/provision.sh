@@ -3,7 +3,6 @@
 # Provision MacOS via the following tasks:
 #
 #   - Install Homebrew and packages
-#   - Configure PHP
 #   - Install NVM
 #   - Install Vagrant plugins
 #   - Configure Vagrant for sudoless NFS
@@ -45,20 +44,6 @@ echo "$BREWFILE" | brew bundle cleanup --file=- -f
 
 brew doctor --verbose
 
-################################################################################
-# PHP
-################################################################################
-
-banner "Configuring PHP"
-
-PHP_VERSIONS=$(ls -1 /usr/local/etc/php)
-echo "$PHP_VERSIONS" | while IFS= read -r VERSION; do
-    echo "Configuring: PHP $VERSION"
-    sed -i '' 's/;date.timezone.*/date.timezone = America\/Chicago/' "/usr/local/etc/php/$VERSION/php.ini"
-    sed -i '' 's/;phar.readonly.*/phar.readonly = Off/' "/usr/local/etc/php/$VERSION/php.ini"
-done
-
-composer self-update --2
 
 ################################################################################
 # Node Version Manager
