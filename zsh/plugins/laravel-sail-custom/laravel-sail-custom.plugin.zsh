@@ -5,12 +5,14 @@ function sail() {
     ${BASE_PATH}/vendor/bin/sail $@
 }
 
-alias sa="sail artisan"
+alias sart="sail artisan"
+alias sc="sail composer"
 alias scu="sail composer update"
 alias sd="sail down"
 alias shh="sail shell"
 alias smfs="sail artisan migrate:fresh --seed"
 alias sti="sail tinker"
-alias su="sail up -d"
 alias sub="sail up -d --build"
-alias syu="sail yarn upgrade"
+alias sup="sail up -d"
+alias sy="sail yarn"
+alias syw="sail yarn watch"
