@@ -5,6 +5,9 @@
 # MacOS aliases for ZSH.
 ################################################################################
 
+# airport wifi utility
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+
 # copy to clipboard
 alias -g C='| pbcopy'
 
