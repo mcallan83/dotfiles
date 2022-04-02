@@ -44,20 +44,21 @@ echo "$BREWFILE" | brew bundle cleanup --file=- -f
 
 brew doctor --verbose
 
-
 ################################################################################
 # Node Version Manager
 ################################################################################
 
 banner "Installing Node Version Manager"
 
-if [[ ! -d "$HOME/.nvm" ]]; then
+NVM_DIR="$HOME/.nvm"
+
+if [[ ! -d "$NVM_DIR" ]]; then
     banner "Install Node Version Manager"
-    mkdir "$HOME/.nvm"
+    mkdir "$NVM_DIR"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 fi
 
-NVM_DIR="$HOME/.nvm"
+
 # shellcheck disable=SC1090
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
