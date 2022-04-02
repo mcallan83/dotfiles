@@ -10,12 +10,6 @@ function dsclean {
     find "${@:-.}" -type f -name .DS_Store -delete
 }
 
-# switch php version
-function phpv {
-    brew list --formula | grep php | xargs -L1 brew unlink
-    brew link --force --overwrite "php@$1"
-}
-
 # open man pages in preview.app
 function pman {
     man -t "${1}" | open -f -a /System/Applications/Preview.app/

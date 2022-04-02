@@ -6,7 +6,6 @@ ZSH_CUSTOM=$DOTFILES/zsh/env/oh-my-zsh/custom
 
 plugins=(
     # ansible-custom
-    ansible-homebrew-custom
     brew
     composer-custom
     diff-so-fancy-custom
@@ -25,6 +24,8 @@ plugins=(
 )
 
 if [[ $(uname) == 'Darwin' ]]; then
+    plugins+=("ansible-homebrew-custom")
+    plugins+=("php-homebrew-custom")
     plugins+=("macos-custom")
 fi
 
