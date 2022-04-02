@@ -28,7 +28,7 @@ fch() {
 # list and connect to configured ssh servers (bound to ^s)
 # https://gist.github.com/dohq/1dc702cc0b46eb62884515ea52330d60
 function fssh () {
-  local selected_host=$(grep "Host " ~/.ssh/config | grep -v '*' | cut -b 6- | fzf --query "$LBUFFER")
+  local selected_host=$(grep "Host " ~/.ssh/config | grep -v '*' | cut -b 6- | sort -r | fzf --query "$LBUFFER")
 
   if [ -n "$selected_host" ]; then
     BUFFER="ssh ${selected_host}"
