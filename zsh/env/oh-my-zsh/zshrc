@@ -5,7 +5,6 @@ DISABLE_AUTO_UPDATE=true
 ZSH_CUSTOM=$DOTFILES/zsh/env/oh-my-zsh/custom
 
 plugins=(
-    # ansible-custom
     brew
     composer-custom
     diff-so-fancy-custom
