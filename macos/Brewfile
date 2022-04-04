@@ -1,8 +1,5 @@
-tap "achannarasappa/tap"
-tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "hudochenkov/sshpass"
