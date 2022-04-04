@@ -21,6 +21,7 @@ plugins=(
     vi-mode
     z
     zsh-syntax-highlighting
+    fzf-custom
 )
 
 if [[ $(uname) == 'Darwin' ]]; then
