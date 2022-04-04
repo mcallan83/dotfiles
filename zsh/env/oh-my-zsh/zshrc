@@ -21,6 +21,7 @@ plugins=(
     laravel-sail-custom
     laravel5
     node-custom
+    nvm-custom
     sublime
     vagrant-custom
     vi-mode
