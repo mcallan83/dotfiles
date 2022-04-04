@@ -1,7 +1,8 @@
 ################################################################################
 # Fzf Plugin
 #
-# Adds custom functions to enhance fzf, along with custom key bindings.
+# Adds custom functions to enhance fzf, along with custom key bindings. This
+# plugin must be loaded after the "z" plugin.
 ################################################################################
 
 # checkout local or remote git branch
