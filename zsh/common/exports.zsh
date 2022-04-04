@@ -5,4 +5,3 @@ export EDITOR='vim'
 export KEYTIMEOUT=1
 export LANG=en_US.UTF-8
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
-export NVM_DIR="$HOME/.nvm"
