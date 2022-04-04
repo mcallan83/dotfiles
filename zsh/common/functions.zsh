@@ -53,9 +53,3 @@ function knock {
         nmap -Pn --host-timeout 100 --max-retries 0 -p $ARG $HOST
     done
 }
-
-# mkdir and cd to it
-function mkcd {
-    dir="$*";
-    mkdir -p "$dir" && cd "$dir";
-}
