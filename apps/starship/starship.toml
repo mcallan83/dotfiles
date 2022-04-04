@@ -10,6 +10,9 @@ style = "yellow"
 format = "[$all_status$ahead_behind]($style) "
 style = "bold 196"
 
+[lua]
+disabled = true
+
 [nodejs]
 style = "bold green"
 format = "[JS $version]($style) "
