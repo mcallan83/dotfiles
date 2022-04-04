@@ -1,7 +1,7 @@
 ################################################################################
 # Ansible Homebrew Plugin
 #
-# Adds the Ansible bin folder to $PATH and creates aliases.
+# Adds the Ansible bin folder to $PATH and creates custom aliases.
 ################################################################################
 
 ANSIBLE_VERSION="${ANSIBLE_VERSION:-2.8}"
