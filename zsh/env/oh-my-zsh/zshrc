@@ -4,12 +4,6 @@ export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 DISABLE_AUTO_UPDATE=true
 ZSH_CUSTOM=$DOTFILES/zsh/env/oh-my-zsh/custom
 
-if [[ $(uname) == 'Darwin' ]]; then
-    plugins+=("ansible-homebrew-custom")
-    plugins+=("php-homebrew-custom")
-    plugins+=("macos-custom")
-fi
-
 plugins=(
     brew
     composer-custom
@@ -29,6 +23,12 @@ plugins=(
     zsh-syntax-highlighting
     fzf-custom
 )
+
+if [[ $(uname) == 'Darwin' ]]; then
+    plugins+=("ansible-homebrew-custom")
+    plugins+=("php-homebrew-custom")
+    plugins+=("macos-custom")
+fi
 
 PATH="/usr/local/sbin:$PATH"
 

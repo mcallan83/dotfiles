@@ -1,4 +1,3 @@
-export ANSIBLE_VERSION=2.8
 export ARCHFLAGS="-arch x86_64"
 export CLICOLOR=1
 export EDITOR='vim'
