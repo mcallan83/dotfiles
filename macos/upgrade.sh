@@ -1,15 +1,5 @@
 #!/usr/bin/env bash
 
-################################################################################
-# Upgrades the following:
-#
-#   - System software (with --system flag)
-#   - Homebrew (and Casks)
-#   - Vagrant plugins
-#   - Composer (and global packages)
-#   - NVM (and global NPM packages for all installed Node versions)
-################################################################################
-
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}

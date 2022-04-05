@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
-################################################################################
-# Provision MacOS via the following tasks:
-#
-#   - Install Homebrew and packages
-#   - Install NVM
-#   - Install Vagrant plugins
-#   - Configure Vagrant for sudoless NFS
-################################################################################
 
 read -r -p "Sign in to the Apple App Store and press any key to continue."
 

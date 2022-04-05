@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-################################################################################
-# Set Mac OS defaults. Based on https://mths.be/macos.
-################################################################################
-
 # General
 
 # expand save panel by default
