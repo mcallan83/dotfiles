@@ -29,7 +29,6 @@ window({
   {hyper,     '[',      'moveScreenLeft'},
   {hyper,     ']',      'moveScreenRight'},
   {hyper,     'down',   'moveCenter'},
-  {hyper,     'h',      'showHints'},
   {hyper,     'j',      'focusLeft'},
   {hyper,     'k',      'focusRight'},
   {hyper,     'left',   'moveVariableLeft'},

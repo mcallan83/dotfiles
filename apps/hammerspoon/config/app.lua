@@ -6,6 +6,8 @@ return function (bindings)
 
       if appName == 'iTerm' then
         app = hs.application.get('iTerm2')
+      elseif appName == 'Visual Studio Code' then
+        app = hs.application.get('Code')
       else
         app = hs.application.get(appName)
       end
