@@ -437,7 +437,7 @@
                         ]
                     },
                     {
-                      "description": "Tap Shifts to move by word",
+                      "description": "Tap Shifts To Move By Word",
                       "manipulators": [
                         {
                           "description": "Left shift moves the cursor one word backward when pressed alone. When used with other keys, act as normal shift.",

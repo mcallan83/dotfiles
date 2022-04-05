@@ -32,11 +32,11 @@ EOF
 
 # build .gitconfig
 echo "Git: Installing Git Configuration"
-git config --global user.name "$NAME"
-git config --global user.email "$EMAIL"
 git config --global core.excludesfile ~/.gitignore
+git config --global pull.rebase false
 git config --global push.default simple
-#git config --global pull.rebase false
+git config --global user.email "$EMAIL"
+git config --global user.name "$NAME"
 
 # https://github.com/so-fancy/diff-so-fancy
 if [ -x "$(command -v diff-so-fancy)" ]
@@ -57,5 +57,5 @@ then
 fi
 
 # append git aliases
-git config --global alias.up "!git pull --rebase --prune $* && git submodule update --init --recursive"
 git config --global alias.sub "!git submodule foreach git pull origin master"
+git config --global alias.up "!git pull --rebase --prune $* && git submodule update --init --recursive"
