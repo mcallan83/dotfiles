@@ -25,9 +25,11 @@ plugins=(
 )
 
 if [[ $(uname) == 'Darwin' ]]; then
-    plugins+=("ansible-homebrew-custom")
-    plugins+=("php-homebrew-custom")
-    plugins+=("macos-custom")
+    plugins+=(
+        ansible-homebrew-custom
+        php-homebrew-custom
+        macos-custom
+    )
 fi
 
 PATH="/usr/local/sbin:$PATH"
