@@ -1,6 +1,3 @@
-# laravel sail
-# https://laravel.com/docs/8.x/sail
-
 function sail() {
     BASE_PATH="$(git rev-parse --show-toplevel)" 2> /dev/null || BASE_PATH="."
     ${BASE_PATH}/vendor/bin/sail $@

@@ -1,9 +1,4 @@
-################################################################################
-# Fzf Plugin
-#
-# Adds custom functions to enhance fzf, along with custom key bindings. This
-# plugin must be loaded after the "z" plugin.
-################################################################################
+# Important: This plugin must be loaded after the "z" plugin.
 
 # checkout local or remote git branch
 # https://github.com/wellle/dotfiles/blob/577d9ee28f772b2f57e44c00a3d392c3238660eb/fzf.zsh#L110

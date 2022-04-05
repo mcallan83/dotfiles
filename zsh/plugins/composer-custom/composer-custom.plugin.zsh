@@ -1,9 +1,3 @@
-################################################################################
-# Composer Plugin
-#
-# Sets composer ENV variables and create custom aliases.
-################################################################################
-#
 export COMPOSER_MEMORY_LIMIT=-1
 export COMPOSER_PROCESS_TIMEOUT=0
 

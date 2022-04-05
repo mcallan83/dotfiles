@@ -1,11 +1,3 @@
-################################################################################
-# NVM Plugin
-#
-# - Set NVM directory
-# - Load NVM and completions
-# - Watch for .nvmrc and automatically install required version
-################################################################################
-
 export NVM_DIR="$HOME/.nvm"
 
 if [ -s "$NVM_DIR/nvm.sh" ]; then

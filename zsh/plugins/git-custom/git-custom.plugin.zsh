@@ -1,9 +1,3 @@
-################################################################################
-# Git Plugin
-#
-# Register custom aliases and functions for git and gh.
-################################################################################
-
 alias gj="git checkout -"
 alias gsub="git submodule update --recursive --remote"
 alias gt="cd \$(git rev-parse --show-toplevel)"

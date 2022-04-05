@@ -1,10 +1,3 @@
-################################################################################
-# Docker Plugin
-#
-# - Create custom aliases for Docker and Docker compose
-# - Alias various commands to run from temporary docker containers
-################################################################################
-#
 # docker compose
 alias dcu="docker-compose up"
 alias dcub="docker-compose up --build"
