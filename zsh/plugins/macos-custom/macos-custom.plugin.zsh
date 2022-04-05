@@ -13,6 +13,10 @@ alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;sl
 # hide hidden files
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killAll Finder"
 
+# clean up launch services to remove duplicates in the “open with” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
+    -kill -r -domain local -domain system -domain user && killall Finder"
+
 # show hidden files
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killAll Finder"
 
