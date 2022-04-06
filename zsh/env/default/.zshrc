@@ -2,7 +2,7 @@ export DOTFILES=$HOME/.dotfiles
 export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
 
 DISABLE_AUTO_UPDATE=true
-ZSH_CUSTOM=$DOTFILES/zsh/env/oh-my-zsh/custom
+ZSH_CUSTOM=$DOTFILES/zsh/env/default/custom
 
 plugins=(
     brew
@@ -24,7 +24,7 @@ plugins=(
     fzf-custom
 )
 
-if [[ $(uname) == 'Darwin' ]]; then
+if [[ $(uname -s) == 'Darwin' ]]; then
     plugins+=(
         ansible-homebrew-custom
         php-homebrew-custom
@@ -34,12 +34,12 @@ fi
 
 PATH="/usr/local/sbin:$PATH"
 
-for file in $DOTFILES/zsh/env/oh-my-zsh/includes/pre/*.zsh; do
+for file in $DOTFILES/zsh/env/default/includes/pre/*.zsh; do
     source "$file"
 done
 
 source $ZSH/oh-my-zsh.sh
 
-for file in $DOTFILES/zsh/env/oh-my-zsh/includes/post/*.zsh; do
+for file in $DOTFILES/zsh/env/default/includes/post/*.zsh; do
     source "$file"
 done
