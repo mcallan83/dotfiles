@@ -19,6 +19,7 @@ app({
   {hyper, 'e', 'Microsoft Outlook'},
   {hyper, 'f', 'Finder'},
   {hyper, 'i', 'iTerm'},
+  {hyper, 'l', 'Slack'},
   {hyper, 'm', 'Sequel Ace'},
   {hyper, 'p', 'Spotify'},
   {hyper, 's', 'Sublime Text'},
