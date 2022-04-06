@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
+if [ "$(uname -s)" != "Darwin" ]; then
+    echo 'MacOS only'
+    exit 1
+fi
+
 read -r -p "Sign in to the Apple App Store and press any key to continue."
 
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
-    echo -e "\n# macOS Provision: ${1}"
+    echo -e "\n# MacOS Provision: ${1}"
     printf "%0.s#" {1..80}
     echo -e "$(tput sgr0)\n"
     return
@@ -17,9 +22,10 @@ banner() {
 
 banner "Installing Homebrew"
 
+# uninstall: https://github.com/homebrew/install#uninstall-homebrew
+
 if test ! "$(which brew)"; then
-    mkdir homebrew
-    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 brew analytics off
@@ -60,6 +66,7 @@ EOF
 
 nvm install 16
 nvm install 14
+nvm install 12
 
 nvm alias default 14
 nvm use default

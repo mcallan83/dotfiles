@@ -2,6 +2,11 @@
 
 # https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
+if [ "$(uname -s)" != "Darwin" ]; then
+    echo 'MacOS only'
+    exit 1
+fi
+
 ################################################################################
 # General
 ################################################################################

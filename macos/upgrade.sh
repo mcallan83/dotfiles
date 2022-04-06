@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$(uname -s)" != "Darwin" ]; then
+    echo 'MacOS only'
+    exit 1
+fi
+
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
