@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
 
 if [ "$(uname -s)" != "Darwin" ]; then
-    echo 'MacOS only'
+    echo 'Must run from MacOS.'
     exit 1
+fi
+
+if [[ "$*" != *--force* ]]; then
+    read -p "Run MacOs update script? [yN] " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        exit 0
+    fi
 fi
 
 banner() {
     echo -e "\n\n\033[0;34m"
     printf "%0.s#" {1..80}
-    echo -e "\n# Upgrading: ${1}"
+    echo -e "\n# Updating: ${1}"
     printf "%0.s#" {1..80}
     echo -e "$(tput sgr0)\n"
     return
@@ -56,6 +64,3 @@ if [ -d "$NVM_DIR" ]; then
     # shellcheck disable=SC1090
     \. "$NVM_DIR/nvm.sh"
 fi
-
-# register update time
-git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"

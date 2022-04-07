@@ -3,8 +3,16 @@
 # https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
 if [ "$(uname -s)" != "Darwin" ]; then
-    echo 'MacOS only'
+    echo 'Must run from MacOS.'
     exit 1
+fi
+
+if [[ "$*" != *--force* ]]; then
+    read -p "Run MacOs defaults script? [yN] " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        exit 0
+    fi
 fi
 
 ################################################################################
@@ -47,10 +55,10 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # keyboard: set repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
-# defaults write NSGlobalDomain KeyRepeat -int 6
-# defaults write NSGlobalDomain InitialKeyRepeat -int 25
+defaults write NSGlobalDomain KeyRepeat -int 6
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
+# defaults write NSGlobalDomain KeyRepeat -int 1
+# defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 ################################################################################
 # Finder

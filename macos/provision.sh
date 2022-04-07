@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
 if [ "$(uname -s)" != "Darwin" ]; then
-    echo 'MacOS only'
+    echo 'Must run from MacOS.'
     exit 1
 fi
 
-read -r -p "Sign in to the Apple App Store and press any key to continue."
+if [[ "$*" != *--force* ]]; then
+    read -p "Run MacOs provision script? [yN] " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        exit 0
+    fi
+fi
 
 banner() {
     echo -e "\n\n\033[0;34m"
@@ -15,6 +21,8 @@ banner() {
     echo -e "$(tput sgr0)\n"
     return
 }
+
+read -r -p "Sign in to the Apple App Store and press any key to continue."
 
 ################################################################################
 # Homebrew
