@@ -33,21 +33,14 @@ banner "Installing Homebrew"
 # uninstall: https://github.com/homebrew/install#uninstall-homebrew
 
 if test ! "$(which brew)"; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 fi
+
+BREWFILE="$DOTFILES/macos/Brewfile"
 
 brew analytics off
-
-BREWFILE_PATH="$(dirname "$0")/Brewfile"
-if [ -f "$BREWFILE_PATH" ]; then
-    BREWFILE=$(<"$BREWFILE_PATH")
-else
-    BREWFILE=$(curl https://raw.githubusercontent.com/mcallan83/dotfiles/master/macos/Brewfile)
-fi
-
-echo "$BREWFILE" | brew bundle install --file=- --no-lock
-echo "$BREWFILE" | brew bundle cleanup --file=- -f
-
+brew bundle install --file="$BREWFILE" --no-lock
+brew bundle cleanup --file="$BREWFILE" -f
 brew doctor --verbose
 
 ################################################################################

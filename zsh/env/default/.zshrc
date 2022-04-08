@@ -30,6 +30,7 @@ if [[ $(uname -s) == 'Darwin' ]]; then
         php-homebrew-custom
         macos-custom
     )
+    PATH="$DOTFILES/macos/bin:$PATH"
 fi
 
 PATH="/usr/local/sbin:$PATH"
