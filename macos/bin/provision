@@ -33,7 +33,7 @@ banner "Installing Homebrew"
 # uninstall: https://github.com/homebrew/install#uninstall-homebrew
 
 if test ! "$(which brew)"; then
-    curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+    bash -c "`curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh`"
 fi
 
 BREWFILE="$DOTFILES/macos/Brewfile"

@@ -16,6 +16,11 @@ bb() {
         | xargs open
 }
 
+# browse files using `bat` for syntax highlighting
+bf() {
+    fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'
+}
+
 # checkout local or remote git branch
 # https://github.com/wellle/dotfiles/blob/577d9ee28f772b2f57e44c00a3d392c3238660eb/fzf.zsh#L110
 br() {
