@@ -62,6 +62,7 @@ fi
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 cat << 'EOF' > "$NVM_DIR/default-packages"
+vmd
 yarn
 EOF
 
