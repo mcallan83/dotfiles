@@ -11,20 +11,18 @@ if ! [ -x "$(command -v git)" ]; then
         echo 'Install Git and try again.'
         exit 1
     fi
-
 fi
 
 if [[ ! -d $TARGET ]]; then
-    echo -e "Cloning Dotfiles:"
     git clone --recursive $SOURCE $TARGET || exit 1
 fi
 
-cp "$TARGET/zsh/.zshenv" "$HOME/.zshenv"
-
-if [[ ! -f "$HOME/.zshrc" ]]; then
-    ln -s "$TARGET/zsh/.zshrc" "$HOME/.zshrc"
-else
-    echo "$HOME/.zshrc already exists. Cannot symlink."
+if [[ -f "$HOME/.zshenv" || -f "$HOME/.zshrc" ]]; then
+    echo -e "Remove ~/.zshenv and ~/.zshrc and run installer again."
+    exit 1
 fi
 
+cp "$TARGET/zsh/.zshenv" "$HOME/.zshenv"
+ln -s "$TARGET/zsh/.zshrc" "$HOME/.zshrc"
 
+echo -e "Done!"
