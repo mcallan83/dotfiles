@@ -1,6 +1,3 @@
-export DOTFILES=$HOME/.dotfiles
-export ZSH=$DOTFILES/vendor/zsh/oh-my-zsh
-
 DISABLE_AUTO_UPDATE=true
 ZSH_CUSTOM=$DOTFILES/zsh/env/default/custom
 
@@ -30,17 +27,11 @@ if [[ $(uname -s) == 'Darwin' ]]; then
         php-homebrew-custom
         macos-custom
     )
-    PATH="$DOTFILES/macos/bin:$PATH"
+    PATH="$DOTFILES/macos/bin:/usr/local/sbin:$PATH"
 fi
-
-PATH="/usr/local/sbin:$PATH"
-
-for file in $DOTFILES/zsh/env/default/includes/pre/*.zsh; do
-    source "$file"
-done
 
 source $ZSH/oh-my-zsh.sh
 
-for file in $DOTFILES/zsh/env/default/includes/post/*.zsh; do
+for file in $DOTFILES/zsh/env/default/includes/*.zsh; do
     source "$file"
 done
