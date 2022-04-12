@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SOURCE="https://github.com/mcallan83/dotfiles"
-TARGET="$HOME/.dotfiles"
+TARGET="${DOTFILES:-$HOME/.dotfiles}"
 
 if ! [ -x "$(command -v git)" ]; then
     if [[ $(uname -s) == 'Darwin' ]]; then
@@ -14,6 +14,17 @@ if ! [ -x "$(command -v git)" ]; then
 
 fi
 
-git clone --recursive $SOURCE $TARGET || exit 1
+if [[ ! -d $TARGET ]]; then
+    echo -e "Cloning Dotfiles:"
+    git clone --recursive $SOURCE $TARGET || exit 1
+fi
 
-ln -s "$TARGET/zsh/.zshrc" "$HOME/.zshrc"
+cp "$TARGET/zsh/.zshenv" "$HOME/.zshenv"
+
+if [[ ! -f "$HOME/.zshrc" ]]; then
+    ln -s "$TARGET/zsh/.zshrc" "$HOME/.zshrc"
+else
+    echo "$HOME/.zshrc already exists. Cannot symlink."
+fi
+
+
