@@ -4,13 +4,6 @@ alias gt="cd \$(git rev-parse --show-toplevel)"
 
 alias ghb="gh repo view --web"
 alias ghi="gh issue list --search \"sort:created-desc\""
-alias ghim="gh issue list --assignee \"@me\""
+alias ghis="gh issue status"
+alias ghiv="gh issue view"
 alias ghpr="gh pr create"
-
-# init a git repo
-function gitinit {
-    touch readme.md
-    git init
-    git add --all
-    git commit -m 'Initial commit'
-}
