@@ -33,8 +33,5 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 for file in $DOTFILES/zsh/env/default/includes/*.zsh; do
-    test -e "${file}" && source "$file"
+    test -e "$file" && source "$file"
 done
-
-
-
