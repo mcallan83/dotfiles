@@ -10,7 +10,6 @@ mkdir -p "$DESTINATION_PATH/Installed Packages"
 if [ ! -f "$DESTINATION_PATH/Installed Packages/Package Control.sublime-package" ]; then
     echo "Sublime: Installing Package Manager"
     (
-        # shellcheck disable=SC2164
         cd "$DESTINATION_PATH/Installed Packages"
         curl -O "https://packagecontrol.io/Package Control.sublime-package" > /dev/null
     )
