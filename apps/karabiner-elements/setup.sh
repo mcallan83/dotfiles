@@ -14,7 +14,3 @@ fi
 # symlink settings
 echo "Karabiner Elements: Copying Settings"
 cp -r "$DOTFILES/apps/karabiner-elements/karabiner.json" "$DESTINATION_PATH/karabiner.json"
-
-echo ""
-echo ""
-echo "Warning: This config has two conflicting caps lock rules. Manually ensure that only one rule is loaded inside of Karabiner."

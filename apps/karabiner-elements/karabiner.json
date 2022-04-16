@@ -410,33 +410,6 @@
                         ]
                     },
                     {
-                        "description": "Caps Lock => Control/Escape",
-                        "manipulators": [
-                            {
-                                "description": "Map Caps Lock to Control when pressed with other keys, or escape if pressed alone.",
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                       "description": "Tap Shifts To Move By Word",
                       "manipulators": [
                         {
