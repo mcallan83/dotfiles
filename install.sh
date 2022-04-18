@@ -17,9 +17,12 @@ if [[ ! -d $TARGET ]]; then
     git clone --recursive $SOURCE $TARGET || exit 1
 fi
 
-if [[ -f "$HOME/.zshenv" || -f "$HOME/.zshrc" ]]; then
-    echo -e "Remove ~/.zshenv and ~/.zshrc and run installer again."
-    exit 1
+if [[ -f "$HOME/.zshenv" ]]; then
+    mv "$HOME/.zshenv" "$HOME/.zshenv.$(date +%F_%T).bak"
+fi
+
+if [[ -f "$HOME/.zshrc" ]]; then
+    mv "$HOME/.zshrc" "$HOME/.zshrc.$(date +%F_%T).bak"
 fi
 
 cp "$TARGET/zsh/.zshenv" "$HOME/.zshenv"
