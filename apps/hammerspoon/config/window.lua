@@ -42,6 +42,12 @@ local actions = {
   focusLeft = function(win)
     win:focusWindowWest()
   end,
+  -- focus the previously focused window
+  focusPrevious = function()
+    local wf = hs.window.filter
+    local previous = wf.defaultCurrentSpace:getWindows(wf.sortByFocusedLast)
+    previous[2]:focus()
+  end,
   -- focus the next window right
   focusRight = function(win)
     win:focusWindowEast()

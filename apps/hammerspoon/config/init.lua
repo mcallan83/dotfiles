@@ -27,15 +27,14 @@ app({
 })
 
 window({
-  {hyper,     '[',      'moveScreenLeft'},
-  {hyper,     ']',      'moveScreenRight'},
-  {hyper,     'down',   'moveCenter'},
-  {hyper,     'j',      'focusLeft'},
-  {hyper,     'k',      'focusRight'},
-  {hyper,     'left',   'moveVariableLeft'},
-  {hyper,     'return', 'toggleMaximize'},
-  {hyper,     'right',  'moveVariableRight'},
-  {hyper,     'up',     'toggleFullScreen'},
+  {hyper, ';',      'focusPrevious'},
+  {hyper, '[',      'moveScreenLeft'},
+  {hyper, ']',      'moveScreenRight'},
+  {hyper, 'down',   'moveCenter'},
+  {hyper, 'left',   'moveVariableLeft'},
+  {hyper, 'return', 'toggleMaximize'},
+  {hyper, 'right',  'moveVariableRight'},
+  {hyper, 'up',     'toggleFullScreen'},
 })
 
 hs.loadSpoon("SpoonInstall")

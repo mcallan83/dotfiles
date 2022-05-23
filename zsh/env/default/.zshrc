@@ -32,8 +32,6 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-setopt complete_aliases
-
 for file in $DOTFILES/zsh/env/default/includes/*.zsh; do
     test -e "$file" && source "$file"
 done
