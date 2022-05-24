@@ -3,6 +3,7 @@ local hyperLite = {'ctrl', 'alt', 'cmd'}
 
 local airpods = require('airpods')
 local app = require('app')
+local macos = require('macos')
 local window = require('window')
 
 hs.hotkey.bind(hyper, '`', function()
@@ -24,6 +25,10 @@ app({
   {hyper, 'p', 'Spotify'},
   {hyper, 's', 'Sublime Text'},
   {hyper, 'v', 'Visual Studio Code'},
+})
+
+macos({
+  {hyper, '\\', 'clearAllNotifications'}
 })
 
 window({

@@ -439,11 +439,11 @@
     <key>settings</key>
     <dict>
 
-        <key>foreground</key>
-        <string>#9911</string>
-
         <key>background</key>
         <string>#991</string>
+
+        <key>foreground</key>
+        <string>#9911</string>
 
     </dict>
 </dict><dict>
@@ -454,11 +454,11 @@
     <key>settings</key>
     <dict>
 
-        <key>foreground</key>
-        <string>#991</string>
-
         <key>background</key>
         <string>#99991109</string>
+
+        <key>foreground</key>
+        <string>#991</string>
 
     </dict>
 </dict><dict>
@@ -469,11 +469,11 @@
     <key>settings</key>
     <dict>
 
-        <key>foreground</key>
-        <string>#f91d</string>
-
         <key>background</key>
         <string>#99991109</string>
+
+        <key>foreground</key>
+        <string>#f91d</string>
 
     </dict>
 </dict><dict>
@@ -484,11 +484,11 @@
     <key>settings</key>
     <dict>
 
-        <key>foreground</key>
-        <string>#19d</string>
-
         <key>background</key>
         <string>#99991109</string>
+
+        <key>foreground</key>
+        <string>#19d</string>
 
     </dict>
 </dict><dict>
@@ -499,11 +499,11 @@
     <key>settings</key>
     <dict>
 
-        <key>foreground</key>
-        <string>#1991</string>
-
         <key>background</key>
         <string>#199</string>
+
+        <key>foreground</key>
+        <string>#1991</string>
 
     </dict>
 </dict></array>
