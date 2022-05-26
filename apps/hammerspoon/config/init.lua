@@ -1,7 +1,8 @@
 local hyper = {'shift', 'ctrl', 'alt', 'cmd'}
 local hyperLite = {'ctrl', 'alt', 'cmd'}
 
-local airpods = require('airpods')
+hs.loadSpoon("SpoonInstall")
+
 local app = require('app')
 local macos = require('macos')
 local window = require('window')
@@ -11,8 +12,6 @@ hs.hotkey.bind(hyper, '`', function()
   hs.openConsole(true)
   hs.reload()
 end)
-
-airpods({hyper, '\\', 'Mike’s Airpods Pro'})
 
 app({
   {hyper, 'a', 'Safari'},
@@ -28,23 +27,17 @@ app({
 })
 
 macos({
-  {hyper, '\\', 'clearAllNotifications'}
+  {hyper, '\\', 'clearAllNotifications'},
 })
 
 window({
-  {hyper, ';',      'focusPrevious'},
-  {hyper, '[',      'moveScreenLeft'},
-  {hyper, ']',      'moveScreenRight'},
-  {hyper, 'down',   'moveCenter'},
-  {hyper, 'left',   'moveVariableLeft'},
-  {hyper, 'return', 'toggleMaximize'},
-  {hyper, 'right',  'moveVariableRight'},
-  {hyper, 'up',     'toggleFullScreen'},
+  {hyper,     ';',      'focusPrevious'},
+  {hyper,     '[',      'moveMonitorLeft'},
+  {hyper,     ']',      'moveMonitorRight'},
+  {hyper,     'left',   'moveVariableLeft'},
+  {hyper,     'return', 'toggleMaximize'},
+  {hyper,     'right',  'moveVariableRight'},
+  {hyper,     'up',     'toggleFullScreen'},
+  {hyperLite, 'left',   'moveHalfLeft'},
+  {hyperLite, 'right',  'moveHalfRight'},
 })
-
-hs.loadSpoon("SpoonInstall")
-
-hs.notify.new({
-  title='Hammerspoon',
-  informativeText='Configuration Initialized'
-}):send()

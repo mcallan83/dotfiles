@@ -1,4 +1,4 @@
-hs.window.animationDuration = .03
+hs.window.animationDuration = .1
 
 local frameCache = {}
 
@@ -71,13 +71,13 @@ local actions = {
     win:setFullScreen(false)
     win:move(positions.right50)
   end,
-  -- move window one screen to the left
-  moveScreenLeft = function(win)
+  -- move window to left monitor
+  moveMonitorLeft = function(win)
     win:moveOneScreenWest()
     win:centerOnScreen()
   end,
-  -- move window one screen to the right
-  moveScreenRight = function(win)
+  -- move window to right monitor
+  moveMonitorRight = function(win)
     win:moveOneScreenEast()
     win:centerOnScreen()
   end,
