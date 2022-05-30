@@ -1,6 +1,6 @@
 local actions = {
   -- clear all macos notifications
-  clearAllNotifications = function()
+  clearNotifications = function()
     hs.applescript([[
       tell application "System Events"
           tell process "Notification Center"

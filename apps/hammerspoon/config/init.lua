@@ -3,9 +3,10 @@ local hyperLite = {'ctrl', 'alt', 'cmd'}
 
 hs.loadSpoon("SpoonInstall")
 
-local app = require('app')
+local appToggle = require('app-toggle')
+local keyRemap = require('key-remap')
 local macos = require('macos')
-local window = require('window')
+local windowManagement = require('window-management')
 
 hs.hotkey.bind(hyper, '`', function()
   hs.console.clearConsole()
@@ -13,7 +14,7 @@ hs.hotkey.bind(hyper, '`', function()
   hs.reload()
 end)
 
-app({
+appToggle({
   {hyper, 'a', 'Safari'},
   {hyper, 'c', 'Google Chrome'},
   {hyper, 'e', 'Microsoft Outlook'},
@@ -26,11 +27,15 @@ app({
   {hyper, 'v', 'Visual Studio Code'},
 })
 
-macos({
-  {hyper, '\\', 'clearAllNotifications'},
+keyRemap({
+  {'Slack', {'cmd', 'p'}, {'cmd', 'k'}},
 })
 
-window({
+macos({
+  {hyper, '\\', 'clearNotifications'},
+})
+
+windowManagement({
   {hyper,     ';',      'focusPrevious'},
   {hyper,     '[',      'moveMonitorLeft'},
   {hyper,     ']',      'moveMonitorRight'},
