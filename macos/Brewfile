@@ -3,12 +3,13 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "hudochenkov/sshpass"
-brew "ansible@2.8"
+brew "ansible"
 brew "bat"
 brew "composer"
 brew "coreutils"
 brew "curl"
 brew "ddrescue"
+brew "deno"
 brew "diff-so-fancy"
 brew "duplicity"
 brew "fd"
@@ -57,6 +58,7 @@ cask "imageoptim"
 cask "iterm2"
 cask "kaleidoscope"
 cask "karabiner-elements"
+cask "kitty"
 cask "landrop"
 cask "libreoffice"
 cask "numi"
@@ -75,6 +77,9 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "vlc"
+mas "1Password for Safari", id: 1569813296
+mas "DevSwatch", id: 1477857867
+mas "Ka-Block!", id: 1335413823
 mas "Pixelmator Pro", id: 1289583905
 mas "Reeder", id: 1529448980
 mas "Snappy", id: 512617038
