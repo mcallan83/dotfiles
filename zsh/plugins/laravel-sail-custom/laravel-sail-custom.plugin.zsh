@@ -6,6 +6,7 @@ function sail() {
 alias sart="sail artisan"
 alias sc="sail composer"
 alias sci="sail composer install"
+alias scr="sail composer require"
 alias scu="sail composer update"
 alias sd="sail down"
 alias shh="sail shell"
