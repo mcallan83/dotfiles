@@ -29,7 +29,8 @@ appToggle({
 })
 
 keyRemap({
-  {'Slack', {'cmd', 'p'}, {'cmd', 'k'}},
+  {'Slack', {'cmd', 'p'}, {'cmd', 'k'}}, -- jump to
+  {'Google Chrome', {'cmd', 'p'}, {{'cmd', 'shift'}, 'a'}}, -- search open tabs
 })
 
 macos({
