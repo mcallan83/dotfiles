@@ -9,7 +9,6 @@ brew "ansible-lint"
 brew "bat"
 brew "composer"
 brew "coreutils"
-brew "curl"
 brew "ddrescue"
 brew "diff-so-fancy"
 brew "duplicity"
@@ -42,6 +41,7 @@ brew "zsh"
 cask "1password"
 cask "alfred"
 cask "arq"
+cask "avg-antivirus"
 cask "balenaetcher"
 cask "barrier"
 cask "betterzip"
@@ -82,7 +82,12 @@ cask "visual-studio-code"
 cask "vlc"
 mas "1Password for Safari", id: 1569813296
 mas "DevSwatch", id: 1477857867
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Ka-Block!", id: 1335413823
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Pixelmator Pro", id: 1289583905
 mas "Reeder", id: 1529448980
 mas "Snappy", id: 512617038
