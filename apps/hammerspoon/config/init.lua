@@ -29,8 +29,9 @@ appToggle({
 })
 
 keyRemap({
-  {'Slack', {'cmd', 'p'}, {'cmd', 'k'}}, -- jump to
   {'Google Chrome', {{'cmd', 'shift'}, 'p'}, {{'cmd', 'shift'}, 'a'}}, -- search open tabs
+  {'Slack', {'cmd', 'b'}, {{'cmd', 'shift'}, 'd'}}, -- toggle sidebar
+  {'Slack', {'cmd', 'p'}, {'cmd', 'k'}}, -- jump to
 })
 
 macos({
