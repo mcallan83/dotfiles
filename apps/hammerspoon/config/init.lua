@@ -20,7 +20,6 @@ appToggle({
   {hyper, 'e', 'Microsoft Outlook'},
   {hyper, 'f', 'Finder'},
   {hyper, 'i', 'iTerm'},
-  {hyper, 'k', 'kitty'},
   {hyper, 'l', 'Slack'},
   {hyper, 'm', 'Sequel Ace'},
   {hyper, 'p', 'Spotify'},
@@ -46,6 +45,7 @@ windowManagement({
   {hyper,     'return', 'toggleMaximize'},
   {hyper,     'right',  'moveVariableRight'},
   {hyper,     'up',     'toggleFullScreen'},
+  {hyper,     'z',      'applyLayout'},
   {hyperLite, 'left',   'moveHalfLeft'},
   {hyperLite, 'right',  'moveHalfRight'},
 })
