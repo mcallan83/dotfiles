@@ -48,7 +48,6 @@ local actions = {
         }
       end
     end)
-
     local chooser = hs.chooser.new(function(choice)
       if choice ~= nil then
         local focused = hs.window.focusedWindow()
@@ -68,7 +67,6 @@ local actions = {
         focused:focus()
       end
     end)
-
     chooser
       :placeholderText("Choose window for 70/30 split. Hold ⎇ for a 50/50 split.")
       :searchSubText(true)
@@ -122,10 +120,6 @@ local actions = {
     win:moveOneScreenEast()
     win:centerOnScreen()
   end,
-  -- show window hints
-  showHints = function()
-    hs.hints.windowHints()
-  end,
   -- move window to the left and toggle with of 70/60/50/40/30%
   moveVariableLeft = function(win)
     togglePlacement(win, {
@@ -145,6 +139,18 @@ local actions = {
       positions.right60,
       positions.right70,
     })
+  end,
+  -- show window hints
+  showHints = function()
+    hs.hints.windowHints()
+  end,
+  -- tile window to left or screen
+  tileLeft = function (win)
+    win:application():selectMenuItem('Tile Window to Left of Screen')
+  end,
+  -- tile window to right of screen
+  tileRight = function (win)
+    win:application():selectMenuItem('Tile Window to Right of Screen')
   end,
   -- toggle full screen on/off
   toggleFullScreen = function(win)

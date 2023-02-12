@@ -21,8 +21,9 @@ appToggle({
   {hyper, 'f', 'Finder'},
   {hyper, 'i', 'iTerm'},
   {hyper, 'l', 'Slack'},
-  {hyper, 'm', 'Sequel Ace'},
+  {hyper, 'm', 'Messages'},
   {hyper, 'p', 'Spotify'},
+  {hyper, 'q', 'Sequel Ace'},
   {hyper, 's', 'Sublime Text'},
   {hyper, 'v', 'Visual Studio Code'},
 })
