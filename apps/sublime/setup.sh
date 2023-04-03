@@ -11,7 +11,7 @@ if [ ! -f "$DESTINATION_PATH/Installed Packages/Package Control.sublime-package"
     echo "Sublime: Installing Package Manager"
     (
         cd "$DESTINATION_PATH/Installed Packages"
-        curl -O "https://packagecontrol.io/Package Control.sublime-package" > /dev/null
+        curl -O "https://packagecontrol.io/Package%20Control.sublime-package" > /dev/null
     )
 fi
 
