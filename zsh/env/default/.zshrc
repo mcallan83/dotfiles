@@ -18,16 +18,10 @@ plugins=(
     z
     zsh-syntax-highlighting
     fzf-custom
+    ansible-homebrew-custom
+    php-homebrew-custom
+    macos-custom
 )
-
-if [[ $(uname -s) == 'Darwin' ]]; then
-    plugins+=(
-        ansible-homebrew-custom
-        php-homebrew-custom
-        macos-custom
-    )
-    PATH="$DOTFILES/macos/bin:/usr/local/sbin:$PATH"
-fi
 
 source $ZSH/oh-my-zsh.sh
 
