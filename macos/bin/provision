@@ -47,8 +47,10 @@ fi
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 cat << 'EOF' > "$NVM_DIR/default-packages"
-vmd
 yarn
 EOF
 
 nvm install 16
+nvm install 18
+
+nvm alias default 16
