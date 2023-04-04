@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DESTINATION_PATH="$HOME/Library/Application Support/Sublime Text 3"
+DESTINATION_PATH="$HOME/Library/Application Support/Sublime Text"
 
 # create directories
 mkdir -p "$DESTINATION_PATH/Packages"
@@ -11,7 +11,7 @@ if [ ! -f "$DESTINATION_PATH/Installed Packages/Package Control.sublime-package"
     echo "Sublime: Installing Package Manager"
     (
         cd "$DESTINATION_PATH/Installed Packages"
-        curl -O "https://packagecontrol.io/Package%20Control.sublime-package" > /dev/null
+        curl -o "Package Control.sublime-package" "https://packagecontrol.io/Package%20Control.sublime-package" > /dev/null
     )
 fi
 
