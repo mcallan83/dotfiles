@@ -14,7 +14,6 @@ plugins=(
     node-custom
     nvm-custom
     sublime
-    vagrant-custom
     vi-mode
     z
     zsh-syntax-highlighting
