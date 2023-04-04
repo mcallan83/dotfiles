@@ -29,12 +29,6 @@ if test "$(which brew)"; then
     brew doctor --verbose
 fi
 
-# vagrant plugins
-if test "$(which vagrant)"; then
-    vagrant plugin repair
-    vagrant plugin update
-fi
-
 # composer
 if test "$(which composer)"; then
     composer self-update --2
