@@ -48,6 +48,10 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# trackpad: enable drag lock
+defaults write com.apple.AppleMultitouchTrackpad Dragging -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 1
+
 # keyboard: enable full access for all controls
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
