@@ -25,8 +25,13 @@ if [[ -f "$HOME/.zshrc" ]]; then
     mv "$HOME/.zshrc" "$HOME/.zshrc.$(date +%F_%T).bak"
 fi
 
+if [[ -f "$HOME/.zprofile" ]]; then
+    mv "$HOME/.zprofile" "$HOME/.zprofile.$(date +%F_%T).bak"
+fi
+
 cp "$TARGET/zsh/.zshenv" "$HOME/.zshenv"
 ln -s "$TARGET/zsh/.zshrc" "$HOME/.zshrc"
+ln -s "$TARGET/zsh/.zprofile" "$HOME/.zprofile"
 
 curl -L https://iterm2.com/shell_integration/zsh -o "$HOME/.iterm2_shell_integration.zsh"
 
