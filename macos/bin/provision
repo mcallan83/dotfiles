@@ -31,26 +31,3 @@ brew analytics off
 brew bundle install --file="$BREWFILE" --no-lock
 brew bundle cleanup --file="$BREWFILE" -f
 brew doctor --verbose
-
-################################################################################
-# Node Version Manager
-################################################################################
-
-NVM_DIR="$HOME/.nvm"
-
-if [[ ! -d "$NVM_DIR" ]]; then
-    banner "Install Node Version Manager"
-    mkdir "$NVM_DIR"
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-fi
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-cat << 'EOF' > "$NVM_DIR/default-packages"
-yarn
-EOF
-
-nvm install 16
-nvm install 18
-
-nvm alias default 16
