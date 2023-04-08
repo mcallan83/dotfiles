@@ -1,5 +1,24 @@
 export NVM_DIR="$HOME/.nvm"
 
+default_packages=(
+    http-server
+    yarn
+)
+
+# install if not installed
+if [[ ! -d "$NVM_DIR" ]]; then
+    banner "Install Node Version Manager"
+    git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+    cd "$NVM_DIR"
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+    cd -
+    printf "%s\n" "${default_packages[@]}" > "$NVM_DIR/default-packages"
+    source "$NVM_DIR/nvm.sh"
+    nvm install --lts
+    nvm use --lts
+fi
+
+# load
 if [ -s "$NVM_DIR/nvm.sh" ]; then
     source "$NVM_DIR/nvm.sh"
     source "$NVM_DIR/bash_completion"

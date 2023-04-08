@@ -2,25 +2,25 @@ DISABLE_AUTO_UPDATE=true
 ZSH_CUSTOM=$DOTFILES/zsh/env/default/custom
 
 plugins=(
+    ansible-homebrew-custom
     brew
     composer-custom
     diff-so-fancy-custom
     docker-custom
     extract
+    fzf-custom
     git
     git-custom
     laravel-sail-custom
     laravel5
+    macos-custom
     node-custom
     nvm-custom
+    php-homebrew-custom
     sublime
     vi-mode
     z
     zsh-syntax-highlighting
-    fzf-custom
-    ansible-homebrew-custom
-    php-homebrew-custom
-    macos-custom
 )
 
 source $ZSH/oh-my-zsh.sh
