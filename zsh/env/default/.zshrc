@@ -8,7 +8,6 @@ plugins=(
     diff-so-fancy-custom
     docker-custom
     extract
-    fzf-custom
     git
     git-custom
     laravel-sail-custom
@@ -21,6 +20,7 @@ plugins=(
     vi-mode
     z
     zsh-syntax-highlighting
+    fzf-custom
 )
 
 source $ZSH/oh-my-zsh.sh
