@@ -26,12 +26,11 @@ appToggle({
   {hyper, 'q', 'Sequel Ace'},
   {hyper, 's', 'Sublime Text'},
   {hyper, 'v', 'Visual Studio Code'},
+  {hyper, 'z', 'zoom.us'},
 })
 
 keyRemap({
   {'Google Chrome', {{'cmd', 'shift'}, 'p'}, {{'cmd', 'shift'}, 'a'}}, -- search open tabs
-  {'Slack', {'cmd', 'b'}, {{'cmd', 'shift'}, 'd'}}, -- toggle sidebar
-  {'Slack', {'cmd', 'p'}, {'cmd', 'k'}}, -- jump to
 })
 
 macos({
@@ -46,7 +45,7 @@ windowManagement({
   {hyper,     'return', 'toggleMaximize'},
   {hyper,     'right',  'moveVariableRight'},
   {hyper,     'up',     'toggleFullScreen'},
-  {hyper,     'z',      'applyLayout'},
+  {hyper,     'x',      'applyLayout'},
   {hyperLite, 'left',   'moveHalfLeft'},
   {hyperLite, 'right',  'moveHalfRight'},
 })
