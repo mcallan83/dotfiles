@@ -36,6 +36,7 @@ brew "xmlstarlet"
 brew "youtube-dl"
 brew "zsh"
 cask "1password"
+cask "1password-cli"
 cask "affinity-designer"
 cask "affinity-photo"
 cask "affinity-publisher"
@@ -62,6 +63,7 @@ cask "libreoffice"
 cask "maintenance"
 cask "numi"
 cask "onyx"
+cask "raycast"
 cask "sequel-ace"
 cask "slack"
 cask "sloth"
@@ -75,6 +77,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
+mas "DevSwatch", id: 1477857867
 mas "ForkLift", id: 412448059
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
