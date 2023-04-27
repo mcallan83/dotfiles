@@ -3,6 +3,7 @@ ZSH_CUSTOM=$DOTFILES/zsh/env/default/custom
 
 plugins=(
     ansible-homebrew-custom
+    barrier-custom
     brew
     composer-custom
     diff-so-fancy-custom
