@@ -1,3 +1,13 @@
+# turn off the AWDL interface
+function awdl-off {
+    sudo ifconfig awdl0 down
+}
+
+# turn off the AWDL interface
+function awdl-on {
+    sudo ifconfig awdl0 up
+}
+
 # airport wifi utility
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 
