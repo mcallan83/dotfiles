@@ -29,3 +29,6 @@ source $ZSH/oh-my-zsh.sh
 for file in $DOTFILES/zsh/env/default/includes/*.zsh; do
     test -e "$file" && source "$file"
 done
+
+# ignored autocomplete patterns
+zstyle ':completion:*:*:git*:*' ignored-patterns '*ORIG_HEAD'
