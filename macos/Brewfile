@@ -23,8 +23,8 @@ brew "mas"
 brew "nmap"
 brew "rclone"
 brew "shellcheck"
-brew "shivammathur/php/php@8.1", link: true
-brew "shivammathur/php/php@8.2", link: false
+brew "shivammathur/php/php@8.1", link: false
+brew "shivammathur/php/php@8.2", link: true
 brew "starship"
 brew "testdisk"
 brew "the_silver_searcher"
@@ -61,6 +61,7 @@ cask "iterm2"
 cask "karabiner-elements"
 cask "libreoffice"
 cask "maintenance"
+cask "malwarebytes"
 cask "numi"
 cask "onyx"
 cask "raycast"
@@ -86,6 +87,7 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator Pro", id: 1289583905
+mas "RadarScope", id: 288419283
 mas "Reeder", id: 1529448980
 mas "Soulver 2", id: 413965349
 mas "Spark", id: 1176895641
