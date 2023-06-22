@@ -1,6 +1,9 @@
 [directory]
 style = "blue"
 
+[docker_context]
+disabled = true
+
 [git_branch]
 symbol = ""
 format="on [$symbol$branch]($style)"
