@@ -21,6 +21,7 @@ brew "git"
 brew "grip"
 brew "hudochenkov/sshpass/sshpass"
 brew "jq"
+brew "killport"
 brew "mas"
 brew "nmap"
 brew "rclone"
@@ -48,6 +49,7 @@ cask "arq"
 cask "balenaetcher"
 cask "barrier"
 cask "betterzip"
+cask "brave-browser"
 cask "cyberduck"
 cask "devtoys"
 cask "disk-inventory-x"
@@ -82,6 +84,8 @@ cask "visual-studio-code"
 cask "vlc"
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
+mas "Adblock for Youtube™", id: 1592568016
+mas "AdGuard for Safari", id: 1440147259
 mas "DevSwatch", id: 1477857867
 mas "ForkLift", id: 412448059
 mas "GarageBand", id: 682658836
@@ -90,12 +94,14 @@ mas "Ka-Block!", id: 1335413823
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Photomator", id: 1444636541
 mas "Pixelmator Pro", id: 1289583905
 mas "RadarScope", id: 288419283
 mas "Reeder", id: 1529448980
 mas "Soulver 2", id: 413965349
 mas "Spark", id: 1176895641
 mas "Vimari", id: 1480933944
+mas "Vinegar", id: 1591303229
 mas "WireGuard", id: 1451685025
 vscode "akamud.vscode-theme-onedark"
 vscode "alefragnani.project-manager"
