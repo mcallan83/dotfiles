@@ -22,7 +22,9 @@ appToggle({
   {hyper, 'i', 'iTerm'},
   {hyper, 'l', 'Slack'},
   {hyper, 'm', 'Messages'},
+  {hyper, 'n', 'Notes'},
   {hyper, 'p', 'Spotify'},
+  {hyper, 'r', 'Reminders'},
   {hyper, 'q', 'Sequel Ace'},
   {hyper, 's', 'Sublime Text'},
   {hyper, 'v', 'Visual Studio Code'},
@@ -30,11 +32,12 @@ appToggle({
 })
 
 keyRemap({
-  {'Google Chrome', {{'cmd', 'shift'}, 'p'}, {{'cmd', 'shift'}, 'a'}}, -- search open tabs
+  -- {'Google Chrome', {{'cmd', 'shift'}, 'p'}, {{'cmd', 'shift'}, 'a'}}, -- search open tabs
 })
 
 macos({
   {hyper, '\\', 'clearNotifications'},
+  {hyperLite, 'up', 'openChromeUrlInSafari'},
 })
 
 windowManagement({

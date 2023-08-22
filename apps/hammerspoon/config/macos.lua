@@ -16,6 +16,31 @@ local actions = {
         end try
       end tell
     ]])
+  end,
+  openChromeUrlInSafari = function()
+    hs.applescript([[
+      if application "Google Chrome" is running then
+        tell application "Google Chrome"
+          try
+            set currentChromeURL to URL of active tab of front window
+            set pageName to title of active tab of front window
+          end try
+        end tell
+        tell application "Safari"
+          activate
+          if (count of windows) is 0 then make new window
+          set currentSafariURL to URL of current tab of front window
+          if currentSafariURL is not currentChromeURL then
+            if currentSafariURL is not "favorites://" then
+              tell window 1
+                set current tab to (make new tab with properties {URL:currentChromeURL})
+              end tell
+            end if
+            set URL of current tab of front window to currentChromeURL
+          end if
+        end tell
+      end if
+    ]])
   end
 }
 
