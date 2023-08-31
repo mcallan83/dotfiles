@@ -1,7 +1,7 @@
 # turn off the AWDL interface
 alias awdl-off="sudo ifconfig awdl0 down"
 
-# turn off the AWDL interface
+# turn on the AWDL interface
 alias awdl-on="sudo ifconfig awdl0 up"
 
 # airport wifi utility

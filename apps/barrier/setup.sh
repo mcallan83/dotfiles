@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 ################################################################################
-# Generate certificate for barrier server.
+# Due to a bug, this will generate a certificate required for Barrier server.
+#
+# If barrier is running sluggish, running `sudo ifconfig awdl0 down` to shut
+# down the AWDL interface may speed things up.
+#
 ################################################################################
 
 mkdir -p "$HOME/Library/Application Support/barrier/SSL"

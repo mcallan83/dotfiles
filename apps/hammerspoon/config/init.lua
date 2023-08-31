@@ -41,12 +41,12 @@ macos({
 })
 
 windowManagement({
-  {hyper,     ';',      'focusPrevious'},
   {hyper,     '[',      'moveMonitorLeft'},
   {hyper,     ']',      'moveMonitorRight'},
   {hyper,     'left',   'moveVariableLeft'},
   {hyper,     'return', 'toggleMaximize'},
   {hyper,     'right',  'moveVariableRight'},
+  {hyper,     'space',  'focusPrevious'},
   {hyper,     'up',     'toggleFullScreen'},
   {hyper,     'x',      'applyLayout'},
   {hyperLite, 'left',   'moveHalfLeft'},
