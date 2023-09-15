@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "hudochenkov/sshpass"
+tap "oven-sh/bun"
 tap "shivammathur/php"
 brew "ansible"
 brew "ansible-lint"
@@ -19,6 +20,7 @@ brew "ffmpeg"
 brew "fzf"
 brew "gh"
 brew "git"
+brew "git-delta"
 brew "grip"
 brew "hudochenkov/sshpass/sshpass"
 brew "imagemagick"
@@ -26,9 +28,9 @@ brew "jq"
 brew "killport"
 brew "mas"
 brew "nmap"
+brew "oven-sh/bun/bun"
 brew "rclone"
 brew "shellcheck"
-brew "shivammathur/php/php@8.1"
 brew "shivammathur/php/php@8.1", link: false
 brew "shivammathur/php/php@8.2", link: true
 brew "starship"
@@ -96,17 +98,22 @@ mas "AdGuard for Safari", id: 1440147259
 mas "DevSwatch", id: 1477857867
 mas "ForkLift", id: 412448059
 mas "GarageBand", id: 682658836
+mas "Grammarly for Safari", id: 1462114288
+mas "Hand Mirror", id: 1502839586
 mas "iMovie", id: 408981434
 mas "Ka-Block!", id: 1335413823
 mas "Keynote", id: 409183694
+mas "Kiwix", id: 997079563
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "PayPal Honey", id: 1472777122
 mas "Photomator", id: 1444636541
 mas "Pixelmator Pro", id: 1289583905
 mas "RadarScope", id: 288419283
 mas "Reeder", id: 1529448980
 mas "Soulver 2", id: 413965349
 mas "Spark", id: 1176895641
+mas "Userscripts-Mac-App", id: 1463298887
 mas "Vimari", id: 1480933944
 mas "Vinegar", id: 1591303229
 mas "WireGuard", id: 1451685025
