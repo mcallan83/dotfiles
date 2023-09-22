@@ -4,5 +4,6 @@ alias yi="yarn install"
 alias yu="yarn upgrade"
 alias yw="yarn watch"
 
+alias envinfo="npx envinfo"
 alias live-server="npx live-server"
-alias ws="npx ws"
+alias vmd="npx vmd"
