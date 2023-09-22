@@ -14,7 +14,7 @@ EMAIL=${EMAIL:-$DEFAULT_EMAIL}
 
 # backup .gitconfig
 if [ -f "$GITCONFIG" ]; then
-    echo "Git: Backing Up Config"
+    echo "Git: Backing Up Git Config"
     mv "$GITCONFIG" "$GITCONFIG.$(date +%s).bak"
 fi
 
@@ -31,12 +31,15 @@ cat >> "$GITIGNORE" <<EOF
 EOF
 
 # build .gitconfig
-echo "Git: Installing Git Configuration"
+echo "Git: Applying Git Config"
 git config --global core.excludesfile ~/.gitignore
 git config --global pull.rebase false
 git config --global push.default simple
 git config --global user.email "$EMAIL"
 git config --global user.name "$NAME"
+
+# diff ansible vault encrypted files
+git config --global diff.ansible-vault.textconv "ansible-vault view"
 
 # https://github.com/so-fancy/diff-so-fancy
 if [ -x "$(command -v diff-so-fancy)" ]
