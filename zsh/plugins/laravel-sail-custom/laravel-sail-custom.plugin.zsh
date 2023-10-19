@@ -3,6 +3,18 @@ function sail() {
     ${BASE_PATH}/vendor/bin/sail $@
 }
 
+function spee() {
+    BASE_PATH="$(git rev-parse --show-toplevel)" 2> /dev/null || BASE_PATH="."
+    TEST_CASE="$(find ${BASE_PATH}/tests/**/*.php | fzf)"
+
+    ABSOLUTE_TEST_CASE_PATH=$(realpath "$TEST_CASE")
+    REALTIVE_TEST_CASE_PATH="${ABSOLUTE_TEST_CASE_PATH#$BASE_PATH/}"
+
+    echo "sail test $REALTIVE_TEST_CASE_PATH\n"
+
+    ${BASE_PATH}/vendor/bin/sail test $REALTIVE_TEST_CASE_PATH
+}
+
 alias sart="sail artisan"
 alias sb="sail bin"
 alias sc="sail composer"
