@@ -10,7 +10,7 @@ function spee() {
     ABSOLUTE_TEST_CASE_PATH=$(realpath "$TEST_CASE")
     REALTIVE_TEST_CASE_PATH="${ABSOLUTE_TEST_CASE_PATH#$BASE_PATH/}"
 
-    echo "sail test $REALTIVE_TEST_CASE_PATH\n"
+    print -s "sail test $REALTIVE_TEST_CASE_PATH"
 
     ${BASE_PATH}/vendor/bin/sail test $REALTIVE_TEST_CASE_PATH
 }
