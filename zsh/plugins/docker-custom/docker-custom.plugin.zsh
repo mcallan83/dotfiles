@@ -27,3 +27,8 @@ alias torb="docker run -d -p 5800:5800 domistyle/tor-browser"
 # wordpress security tool
 # https://wpscan.org/
 alias wpscan="docker run -it --rm wpscanteam/wpscan"
+
+# yamllint
+function yamllint {
+    docker run -it --rm -v "$(pwd):/workdir" ghcr.io/ffurrer2/yamllint:latest "$@"
+}
