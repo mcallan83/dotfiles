@@ -19,6 +19,7 @@ appToggle({
   {hyper, 'c', 'Google Chrome'},
   {hyper, 'e', 'Microsoft Outlook'},
   {hyper, 'f', 'Finder'},
+  {hyper, 'g', 'Gitify'},
   {hyper, 'i', 'iTerm'},
   {hyper, 'l', 'Slack'},
   {hyper, 'm', 'Messages'},
