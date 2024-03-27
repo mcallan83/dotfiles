@@ -1,7 +1,6 @@
 # This plugin must be loaded after the "z" plugin.
 
-source "/usr/local/opt/fzf/shell/completion.zsh"
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+eval "$(fzf --zsh)"
 
 # checkout local or remote git branch
 # https://github.com/wellle/dotfiles/blob/577d9ee28f772b2f57e44c00a3d392c3238660eb/fzf.zsh#L110
