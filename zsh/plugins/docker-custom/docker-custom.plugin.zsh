@@ -32,3 +32,9 @@ alias wpscan="docker run -it --rm wpscanteam/wpscan"
 function yamllint {
     docker run -it --rm -v "$(pwd):/workdir" ghcr.io/ffurrer2/yamllint:latest "$@"
 }
+
+# it tools
+alias ittools="docker run -it --rm -p 8080:80 corentinth/it-tools:latest"
+
+
+
