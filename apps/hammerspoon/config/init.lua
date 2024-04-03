@@ -21,7 +21,6 @@ appToggle({
   {hyper, 'f', 'Finder'},
   {hyper, 'g', 'Gitify'},
   {hyper, 'i', 'iTerm'},
-  {hyper, 'l', 'Slack'},
   {hyper, 'm', 'Messages'},
   {hyper, 'n', 'Notes'},
   {hyper, 'p', 'Spotify'},
