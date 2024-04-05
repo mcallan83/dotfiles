@@ -33,6 +33,7 @@ EOF
 # build .gitconfig
 echo "Git: Applying Git Config"
 git config --global core.excludesfile ~/.gitignore
+git config --global init.defaultBranch master
 git config --global pull.rebase false
 git config --global push.default simple
 git config --global user.email "$EMAIL"
