@@ -14,6 +14,3 @@
 [submodule "vendor/chrome/bypass-paywalls"]
     path = vendor/chrome/bypass-paywalls
     url = https://github.com/iamadamdev/bypass-paywalls-chrome
-[submodule "vendor/chrome/bypass-paywalls-chrome-clean"]
-    path = vendor/chrome/bypass-paywalls-chrome-clean
-    url = https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean.git/
