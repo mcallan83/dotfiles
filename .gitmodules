@@ -11,6 +11,3 @@
 [submodule "vendor/zsh/zsh-completions"]
     path = vendor/zsh/zsh-completions
     url = https://github.com/zsh-users/zsh-completions
-[submodule "vendor/chrome/bypass-paywalls"]
-    path = vendor/chrome/bypass-paywalls
-    url = https://github.com/iamadamdev/bypass-paywalls-chrome
