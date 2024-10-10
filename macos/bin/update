@@ -13,11 +13,6 @@ if [[ "$*" != *--force* ]]; then
     fi
 fi
 
-# mac os system update
-if [[ "$*" == *--system* ]]; then
-    softwareupdate -i -a
-fi
-
 # homebrew
 if test "$(which brew)"; then
     brew analytics off
