@@ -1,3 +1,5 @@
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
 export COMPOSER_MEMORY_LIMIT=-1
 export COMPOSER_PROCESS_TIMEOUT=0
 
@@ -5,6 +7,6 @@ alias ci="composer install"
 alias cr="composer require"
 alias cu="composer update"
 
-# swtich composer versions
+# switch composer versions
 alias cv1="composer self-update --1"
 alias cv2="composer self-update --2"
