@@ -1,0 +1,36 @@
+#!/bin/bash
+# copyexif - copy exif metadata + filesystem dates from one file to another
+# Usage: copyexif source.mov destination.mov
+
+show_help() {
+  grep '^#' "$0" | sed '1d;s/^# //'
+}
+
+if [[ $# -eq 0 || "$1" == "-h" || "$1" == "--help" ]]; then
+  show_help
+  exit 0
+fi
+
+if [[ $# -ne 2 ]]; then
+  echo "Error: wrong number of arguments."
+  echo "Run 'copyexif -h' for usage."
+  exit 1
+fi
+
+SRC="$1"
+DEST="$2"
+
+if [[ ! -f "$SRC" ]]; then
+  echo "Error: source file not found: $SRC"
+  exit 1
+fi
+
+if [[ ! -f "$DEST" ]]; then
+  echo "Error: destination file not found: $DEST"
+  exit 1
+fi
+
+exiftool -TagsFromFile "$SRC" \
+  -all:all -overwrite_original -preserve -P \
+  -FileModifyDate -FileCreateDate \
+  "$DEST"
