@@ -1,5 +1,5 @@
-brew "ansible"
 brew "ansible-lint"
+brew "ansible"
 brew "bat"
 brew "cloudflared"
 brew "composer"
@@ -20,7 +20,7 @@ brew "killport"
 brew "mas"
 brew "neovim"
 brew "nmap"
-brew "php@8.2"
+brew "php"
 brew "php@8.3"
 brew "php@8.4"
 brew "rclone"
@@ -32,6 +32,7 @@ brew "tailwindcss"
 brew "testdisk"
 brew "the_silver_searcher"
 brew "tmux"
+brew "tree"
 brew "vim"
 brew "wget"
 brew "xmlstarlet"
@@ -43,6 +44,7 @@ cask "1password-cli"
 cask "advancedrestclient"
 cask "affinity"
 cask "alfred"
+cask "antinote"
 cask "arq"
 cask "balenaetcher"
 cask "betterzip"
@@ -73,10 +75,10 @@ cask "microsoft-edge"
 cask "numi"
 cask "obsidian"
 cask "postman"
+cask "puremac"
 cask "raycast"
 cask "sequel-ace"
 cask "shottr"
-cask "slack"
 cask "sloth"
 cask "spotify"
 cask "sublime-text"
@@ -85,9 +87,7 @@ cask "telegram"
 cask "the-unarchiver"
 cask "transmission"
 cask "utm"
-cask "veracrypt"
 cask "visual-studio-code"
-cask "viz"
 cask "vlc"
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
@@ -99,7 +99,6 @@ mas "DevSwatch", id: 1477857867
 mas "ForkLift", id: 412448059
 mas "GarageBand", id: 682658836
 mas "Grammarly for Safari", id: 1462114288
-mas "Hand Mirror", id: 1502839586
 mas "iMovie", id: 408981434
 mas "Ka-Block!", id: 1335413823
 mas "Keynote", id: 409183694
@@ -113,9 +112,7 @@ mas "Pixelmator Pro", id: 1289583905
 mas "RadarScope", id: 288419283
 mas "Reeder", id: 1529448980
 mas "SingleFile", id: 6444322545
-mas "Soulver 2", id: 413965349
 mas "Spark", id: 1176895641
-mas "Spillo", id: 873245660
 mas "Tailscale", id: 1475387142
 mas "Userscripts", id: 1463298887
 mas "Vimari", id: 1480933944
@@ -128,7 +125,6 @@ vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
 vscode "christian-kohler.npm-intellisense"
 vscode "christian-kohler.path-intellisense"
-vscode "cjhowe7.laravel-blade"
 vscode "dbaeumer.vscode-eslint"
 vscode "devsense.composer-php-vscode"
 vscode "dhoeric.ansible-vault"
@@ -141,8 +137,7 @@ vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.docker-explorer"
 vscode "georgykurian.laravel-ide-helper"
-vscode "github.copilot"
-vscode "github.copilot-chat"
+vscode "github.github-vscode-theme"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "golang.go"
@@ -157,11 +152,13 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "naumovs.theme-oceanicnext"
 vscode "openai.chatgpt"
+vscode "oxc.oxc-vscode"
 vscode "redhat.vscode-yaml"
 vscode "ryannaddy.laravel-artisan"
 vscode "spmeesseman.vscode-taskexplorer"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tobias-z.vscode-harpoon"
+vscode "vitest.explorer"
 vscode "vscode-icons-team.vscode-icons"
 vscode "vscodevim.vim"
 vscode "vue.volar"
