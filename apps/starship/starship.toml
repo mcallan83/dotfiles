@@ -20,6 +20,9 @@ only_detached = false
 format = "[$all_status$ahead_behind]($style) "
 style = "bold 196"
 
+[gcloud]
+disabled = true
+
 [lua]
 disabled = true
 

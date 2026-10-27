@@ -56,3 +56,21 @@ done
 
 # ignored autocomplete patterns
 zstyle ':completion:*:*:git*:*' ignored-patterns '*ORIG_HEAD'
+
+# docker context switcher
+dctx() {
+    local context
+
+    context=$(docker context ls --format '{{.Name}}' |
+        grep -vx 'default' |
+        fzf --height=40% \
+            --layout=reverse \
+            --border \
+            --prompt="Docker Context > " \
+            --header="Current: $(docker context show)") || return
+
+    [[ -z "$context" ]] && return
+
+    unset DOCKER_HOST DOCKER_CONTEXT
+    docker context use "$context"
+}
