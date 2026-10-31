@@ -1,0 +1,131 @@
+set nocompatible
+let mapleader = ','
+
+" Plugins
+let g:airline_theme = 'powerlineish'
+let g:airline_section_z = '%p%% %l/%L'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
+let g:airline_detect_paste = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
+let s:vim_dir = expand('~/.vim')
+let s:plug_file = s:vim_dir . '/autoload/plug.vim'
+
+if !filereadable(s:plug_file)
+    call mkdir(fnamemodify(s:plug_file, ':h'), 'p')
+    call system('curl --fail --location --silent --show-error --connect-timeout 10 --max-time 60 --output '
+                \ . shellescape(s:plug_file)
+                \ . ' https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+    if v:shell_error != 0
+        call delete(s:plug_file)
+        echom 'Could not download vim-plug. Built-in editing is available; restart Vim to retry.'
+    endif
+endif
+
+if filereadable(s:plug_file)
+    execute 'source ' . fnameescape(s:plug_file)
+    call plug#begin(s:vim_dir . '/plugged')
+    Plug 'sheerun/vim-polyglot'
+    Plug 'editorconfig/editorconfig-vim'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'chriskempson/vim-tomorrow-theme'
+    Plug 'gosukiwi/vim-atom-dark'
+    call plug#end()
+
+    augroup dotfiles_plugins
+        autocmd!
+        if !empty(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+            autocmd VimEnter * ++once PlugInstall --sync
+        endif
+    augroup END
+endif
+
+" Editing defaults
+filetype plugin indent on
+syntax enable
+set encoding=utf-8
+set hidden
+set autoread
+set confirm
+set backspace=indent,eol,start
+set wildmenu
+set wildmode=longest:full,full
+set wildignore+=*.swp,*.swo,.DS_Store,*/.git/*,*/node_modules/*
+set nowrap
+set splitbelow
+set splitright
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set autoindent
+set expandtab
+set tabstop=2
+set softtabstop=-1
+set shiftwidth=2
+set nojoinspaces
+set timeoutlen=400
+set ttimeoutlen=50
+set updatetime=300
+set belloff=all
+
+let s:undo_dir = s:vim_dir . '/undo'
+if has('persistent_undo')
+    call mkdir(s:undo_dir, 'p', 0700)
+    let &undodir = s:undo_dir . '//'
+    set undofile
+endif
+
+" Appearance
+set number
+set cursorline
+set signcolumn=auto
+set laststatus=2
+set showmode
+if !empty(globpath(&runtimepath, 'plugin/airline.vim'))
+    set noshowmode
+endif
+set ruler
+set scrolloff=5
+set sidescrolloff=5
+set background=dark
+if has('termguicolors')
+    set termguicolors
+endif
+
+augroup dotfiles_highlights
+    autocmd!
+    autocmd ColorScheme * highlight CursorLine term=NONE cterm=NONE
+    autocmd ColorScheme * highlight CursorLineNr term=bold cterm=NONE
+augroup END
+
+let s:colorscheme = has('gui_running') ? 'atom-dark' : 'Tomorrow-Night-Eighties'
+if !empty(globpath(&runtimepath, 'colors/' . s:colorscheme . '.vim'))
+    execute 'colorscheme ' . s:colorscheme
+else
+    colorscheme desert
+endif
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+
+" Mappings
+inoremap jj <Esc>
+nnoremap <silent> <leader>w :write<CR>
+nnoremap <silent> <leader><Space> :nohlsearch<CR>
+nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>
+nnoremap <silent> <leader>1 :Lexplore<CR>
+nnoremap gV `[v`]
+
+" Automatic behavior
+augroup dotfiles_editing
+    autocmd!
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    autocmd FocusGained,BufEnter * silent! checktime
+augroup END
