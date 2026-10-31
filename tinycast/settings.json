@@ -18,9 +18,9 @@
     "dragToReposition": false
   },
   "hyperKey": {
-    "key": "none",
+    "key": "capsLock",
     "includesShift": true,
-    "quickPress": "none",
+    "quickPress": "escape",
     "secureInputCompatibility": false
   },
   "calculator": {
@@ -43,7 +43,7 @@
     ],
     "apps": {
       "com.1password.1password": {
-        "shortcut": "ctrl+option+shift+cmd+p",
+        "shortcut": "hyper+p",
         "alias": null,
         "showInLauncher": true
       },
@@ -68,12 +68,12 @@
         "showInLauncher": false
       },
       "com.apple.MobileSMS": {
-        "shortcut": "ctrl+option+shift+cmd+m",
+        "shortcut": "hyper+m",
         "alias": null,
         "showInLauncher": true
       },
       "com.apple.Notes": {
-        "shortcut": "ctrl+option+shift+cmd+n",
+        "shortcut": "hyper+n",
         "alias": null,
         "showInLauncher": true
       },
@@ -93,47 +93,47 @@
         "showInLauncher": false
       },
       "com.apple.reminders": {
-        "shortcut": "ctrl+option+shift+cmd+r",
+        "shortcut": "hyper+r",
         "alias": null,
         "showInLauncher": true
       },
       "com.apple.systempreferences": {
-        "shortcut": "ctrl+option+shift+cmd+e",
+        "shortcut": "hyper+e",
         "alias": null,
         "showInLauncher": true
       },
       "com.apple.weather": {
-        "shortcut": "ctrl+option+shift+cmd+w",
+        "shortcut": "hyper+w",
         "alias": null,
         "showInLauncher": true
       },
       "com.google.Chrome": {
-        "shortcut": "ctrl+option+shift+cmd+c",
+        "shortcut": "hyper+c",
         "alias": null,
         "showInLauncher": true
       },
       "com.microsoft.VSCode": {
-        "shortcut": "ctrl+option+shift+cmd+v",
+        "shortcut": "hyper+v",
         "alias": "code",
         "showInLauncher": true
       },
       "com.mitchellh.ghostty": {
-        "shortcut": "ctrl+option+shift+cmd+i",
+        "shortcut": "hyper+i",
         "alias": null,
         "showInLauncher": true
       },
       "com.openai.codex": {
-        "shortcut": "ctrl+option+shift+cmd+g",
+        "shortcut": "hyper+g",
         "alias": "chat",
         "showInLauncher": true
       },
       "com.spotify.client": {
-        "shortcut": "ctrl+option+shift+cmd+s",
+        "shortcut": "hyper+s",
         "alias": null,
         "showInLauncher": true
       },
       "us.zoom.xos": {
-        "shortcut": "ctrl+option+shift+cmd+z",
+        "shortcut": "hyper+z",
         "alias": null,
         "showInLauncher": true
       }
@@ -147,7 +147,7 @@
     "enabled": true,
     "actions": {
       "dismiss-notifications": {
-        "shortcut": "ctrl+option+shift+cmd+escape",
+        "shortcut": "hyper+escape",
         "alias": null,
         "showInLauncher": true
       }
@@ -225,12 +225,12 @@
     "menuSearchDisabledApps": [],
     "commands": {
       "search-menu-items": {
-        "shortcut": "ctrl+option+shift+cmd+1",
+        "shortcut": "hyper+1",
         "alias": null,
         "showInLauncher": false
       },
       "switch-windows": {
-        "shortcut": "ctrl+option+shift+cmd+\\",
+        "shortcut": "hyper+\\",
         "alias": null,
         "showInLauncher": false
       },
@@ -249,8 +249,8 @@
     "layoutsShowInLauncher": false,
     "roomsShowInLauncher": false,
     "shortcuts": {
-      "left-half": "ctrl+option+shift+cmd+left",
-      "right-half": "ctrl+option+shift+cmd+right",
+      "left-half": "hyper+left",
+      "right-half": "hyper+right",
       "top-half": null,
       "bottom-half": null,
       "top-left-quarter": null,
@@ -264,7 +264,7 @@
       "last-third": "ctrl+option+cmd+right",
       "first-two-thirds": "ctrl+option+cmd+left",
       "last-two-thirds": null,
-      "maximize": "ctrl+option+shift+cmd+up",
+      "maximize": "hyper+up",
       "almost-maximize": null,
       "reasonable-size": null,
       "maximize-height": null,
@@ -274,14 +274,14 @@
       "center-two-thirds": null,
       "make-larger": null,
       "make-smaller": null,
-      "restore": "ctrl+option+shift+cmd+down",
+      "restore": "hyper+down",
       "move-left": null,
       "move-right": null,
       "move-up": null,
       "move-down": null,
-      "next-display": "ctrl+option+shift+cmd+[",
-      "previous-display": "ctrl+option+shift+cmd+]",
-      "toggle-fullscreen": "ctrl+option+shift+cmd+return",
+      "next-display": "hyper+[",
+      "previous-display": "hyper+]",
+      "toggle-fullscreen": "hyper+return",
       "previous-space": null,
       "next-space": null
     },
