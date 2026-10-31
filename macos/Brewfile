@@ -1,0 +1,79 @@
+tap "abue-ammar/tinycast", trusted: true
+tap "saffsanity/sill", trusted: true
+brew "curl"
+brew "diff-so-fancy"
+brew "fd"
+brew "ffmpeg"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "glow"
+brew "imessage-exporter"
+brew "mas"
+brew "mise"
+brew "mole"
+brew "nmap"
+brew "rclone"
+brew "ripgrep"
+brew "sevenzip"
+brew "starship"
+brew "the_silver_searcher"
+brew "tree"
+brew "vim"
+brew "yt-dlp"
+brew "zoxide"
+cask "1password"
+cask "1password-cli"
+cask "affinity"
+cask "antinote"
+cask "arq"
+cask "chatgpt"
+cask "cryptomator"
+cask "cyberduck"
+cask "docker-desktop"
+cask "fluidvoice"
+cask "font-fira-code"
+cask "gcloud-cli"
+cask "ghostty"
+cask "gitify"
+cask "google-chrome"
+cask "hammerspoon"
+cask "handbrake-app"
+cask "lulu"
+cask "orbstack"
+cask "protonvpn"
+cask "puremac"
+cask "sequel-ace"
+cask "saffsanity/sill/sill", trusted: true
+cask "snapzy"
+cask "spotify"
+cask "suspicious-package"
+cask "abue-ammar/tinycast/tinycast", trusted: true
+cask "utm"
+cask "visual-studio-code"
+cask "vlc"
+cask "vorssaint"
+cask "zed"
+cask "zoom"
+mas "1Password for Safari", id: 1569813296
+mas "AdGuard Mini", id: 1440147259
+mas "Baking Soda", id: 1601151613
+mas "Bitdefender Virus Scanner", id: 500154009
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Ka-Block!", id: 1335413823
+mas "Keynote", id: 361285480
+mas "Kiwix", id: 997079563
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
+mas "PairVPN", id: 1347012179
+mas "PayPal Honey", id: 1472777122
+mas "Pixelmator Pro", id: 1289583905
+mas "RadarScope", id: 288419283
+mas "Reeder", id: 1529448980
+mas "SingleFile", id: 6444322545
+mas "Tailscale", id: 1475387142
+mas "Userscripts", id: 1463298887
+mas "Vimari", id: 1480933944
+mas "Vinegar", id: 1591303229
+mas "WireGuard", id: 1451685025
