@@ -1,5 +1,3 @@
-tap "abue-ammar/tinycast", trusted: true
-tap "saffsanity/sill", trusted: true
 brew "curl"
 brew "diff-so-fancy"
 brew "fd"

@@ -1,18 +1,32 @@
 #!/bin/bash
 set -e
 
-REPO_URL="https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip"
-TARGET_DIR="$DOTFILES/chrome/bypass-paywalls-clean"
-EXT_DIR="$TARGET_DIR/unpacked"
+ZIP_FILE_URL="https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip"
+TARGET_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+UNPACKED_DIR="$TARGET_DIR/unpacked"
+BACKUP_DIR="$TARGET_DIR/unpacked.bak"
+ARCHIVE="$TARGET_DIR/bypass-paywalls.zip"
 
-mkdir -p "$TARGET_DIR"
-cd "$TARGET_DIR"
+curl -L --fail -o "$ARCHIVE" "$ZIP_FILE_URL"
 
-curl -L --fail -o bypass-paywalls.zip "$REPO_URL"
+if [[ -e "$BACKUP_DIR" ]]; then
+	echo "Backup already exists: $BACKUP_DIR" >&2
+	exit 1
+fi
 
-rm -rf "$EXT_DIR"
-mkdir -p "$EXT_DIR"
-unzip -q bypass-paywalls.zip -d temp-unzip
-
-mv temp-unzip/*/* "$EXT_DIR"
-rm -rf temp-unzip bypass-paywalls.zip
+if [[ -e "$UNPACKED_DIR" ]]; then
+	mv "$UNPACKED_DIR" "$BACKUP_DIR"
+fi
+mkdir -p "$UNPACKED_DIR"
+if unzip -q "$ARCHIVE" -d "$UNPACKED_DIR"; then
+	rm -rf "$BACKUP_DIR"
+	rm -f "$ARCHIVE"
+else
+	rm -rf "$UNPACKED_DIR"
+	if [[ -e "$BACKUP_DIR" ]]; then
+		mv "$BACKUP_DIR" "$UNPACKED_DIR"
+	fi
+	rm -f "$ARCHIVE"
+	echo "Could not extract downloaded archive; restored previous installation if present" >&2
+	exit 1
+fi
