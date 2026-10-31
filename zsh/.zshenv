@@ -1,0 +1,7 @@
+export CLICOLOR=1
+export COMPOSER_MEMORY_LIMIT=-1
+export COMPOSER_PROCESS_TIMEOUT=0
+export EDITOR='vim'
+export KEYTIMEOUT=10
+export LANG=en_US.UTF-8
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
