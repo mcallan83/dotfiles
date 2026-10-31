@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[import { mapGetters } from 'vuex']]></content>
-    <tabTrigger>mapgetters</tabTrigger>
-    <scope>text.html.vue</scope>
-    <description>import { mapGetters } from 'vuex'</description>
-</snippet>

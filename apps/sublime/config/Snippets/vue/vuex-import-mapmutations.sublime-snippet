@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[import { mapMutations } from 'vuex']]></content>
-    <tabTrigger>mapmutations</tabTrigger>
-    <scope>text.html.vue</scope>
-    <description>import { mapMutations } from 'vuex'</description>
-</snippet>
