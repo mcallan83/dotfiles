@@ -227,17 +227,27 @@
       "search-menu-items": {
         "shortcut": "ctrl+option+shift+cmd+1",
         "alias": null,
-        "showInLauncher": true
+        "showInLauncher": false
+      },
+      "switch-windows": {
+        "shortcut": "ctrl+option+shift+cmd+\\",
+        "alias": null,
+        "showInLauncher": false
+      },
+      "switch-windows-backwards": {
+        "shortcut": null,
+        "alias": null,
+        "showInLauncher": false
       }
     }
   },
   "windowManagement": {
     "enabled": true,
-    "showInLauncher": true,
+    "showInLauncher": false,
     "gap": 0,
     "cycle": "off",
-    "layoutsShowInLauncher": true,
-    "roomsShowInLauncher": true,
+    "layoutsShowInLauncher": false,
+    "roomsShowInLauncher": false,
     "shortcuts": {
       "left-half": "ctrl+option+shift+cmd+left",
       "right-half": "ctrl+option+shift+cmd+right",
@@ -279,7 +289,28 @@
     "customSizes": [],
     "layouts": [],
     "rooms": [],
-    "commands": {}
+    "commands": {
+      "create-window-layout": {
+        "shortcut": null,
+        "alias": null,
+        "showInLauncher": false
+      },
+      "capture-window-layout": {
+        "shortcut": null,
+        "alias": null,
+        "showInLauncher": false
+      },
+      "switch-room": {
+        "shortcut": null,
+        "alias": null,
+        "showInLauncher": false
+      },
+      "create-room": {
+        "shortcut": null,
+        "alias": null,
+        "showInLauncher": false
+      }
+    }
   },
   "clipboard": {
     "enabled": true,
@@ -287,7 +318,8 @@
     "defaultAction": "paste",
     "disabledApps": [
       "com.apple.keychainaccess",
-      "com.apple.Passwords"
+      "com.apple.Passwords",
+      "com.1password.1password"
     ],
     "commands": {}
   },
