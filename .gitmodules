@@ -1,10 +1,6 @@
 [submodule "vendor/zsh/oh-my-zsh"]
     path = vendor/zsh/oh-my-zsh
     url = https://github.com/robbyrussell/oh-my-zsh
-[submodule "vendor/zsh/pure"]
-    path = vendor/zsh/pure
-    url = https://github.com/sindresorhus/pure
-    branch = main
 [submodule "vendor/zsh/zsh-syntax-highlighting"]
     path = vendor/zsh/zsh-syntax-highlighting
     url = https://github.com/zsh-users/zsh-syntax-highlighting
