@@ -242,7 +242,7 @@
     }
   },
   "windowManagement": {
-    "enabled": true,
+    "enabled": false,
     "showInLauncher": false,
     "gap": 0,
     "cycle": "off",
