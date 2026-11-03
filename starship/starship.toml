@@ -1,4 +1,4 @@
-command_timeout = 2000
+command_timeout = 1000
 
 [directory]
 style = "blue"
@@ -28,10 +28,12 @@ disabled = true
 
 [nodejs]
 style = "bold green"
-format = "[JS $version]($style) "
+format = "[JS$version]($style) "
+version_format = 'v${major}'
 
 [php]
-format = "[PHP $version]($style) "
+format = "[PHP$version]($style) "
+version_format = 'v${major}.${minor}'
 
 [username]
 style_user = "purple bold"
