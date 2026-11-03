@@ -3,6 +3,12 @@
 GIT_REPO_URL="https://github.com/mcallan83/dotfiles"
 TARGET="${TARGET:-$HOME/.dotfiles}"
 
+if ! xcode-select -p >/dev/null 2>&1; then
+    xcode-select --install || exit 1
+    print 'Finish installing Xcode Command Line Tools, then rerun this script.'
+    exit 0
+fi
+
 if [[ ! -d "$TARGET" ]]; then
     git clone --recursive "$GIT_REPO_URL" "$TARGET" || exit 1
 fi

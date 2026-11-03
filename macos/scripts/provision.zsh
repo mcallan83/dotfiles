@@ -4,6 +4,9 @@
 set -e
 set -o pipefail
 
+NODE_VERSION=24
+PHP_VERSION=8.5
+
 # install homebrew
 if [[ ! -x /opt/homebrew/bin/brew ]]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -21,7 +24,7 @@ mise plugins install php 'https://github.com/verzly/mise-php#latest'
 
 # install php
 if ! command -v php >/dev/null 2>&1; then
-  mise use --global php@8.5
+  mise use --global "php@$PHP_VERSION"
 fi
 
 eval "$(mise env --shell zsh)"
@@ -39,30 +42,30 @@ if ! command -v pnpm >/dev/null 2>&1; then
 fi
 
 # install node and npm
-pnpm runtime set node 24 --global
+pnpm runtime set node "$NODE_VERSION" --global
 pnpm add --global npm
 
 php --version
 composer --version
+pnpm --version
 node --version
 npm --version
 
-
-# ask which Brewfile to install
+# ask which brewfile to install
 brewfiles_dir="${0:A:h}/../homebrew"
 brewfiles=("$brewfiles_dir"/*.Brewfile(N))
 print 'Select a Brewfile to install:'
-select brewfile in "${brewfiles[@]}" 'Skip'; do
-if [[ -z "$brewfile" ]]; then
+select brewfile in "${brewfiles[@]:t}" 'Skip'; do
+  if [[ -z "$brewfile" ]]; then
     print 'Invalid selection.'
     continue
-fi
-if [[ "$brewfile" != 'Skip' ]]; then
-    brew bundle --file "$brewfile"
-fi
-break
+  fi
+  if [[ "$brewfile" != 'Skip' ]]; then
+    brew bundle --file "${brewfiles[$REPLY]}" ||
+      print -u2 'Warning: Brew bundle failed; continuing provisioning.'
+  fi
+  break
 done
-
 
 # install khord
 if [[ ! -d /Applications/Khord.app ]]; then
@@ -72,3 +75,12 @@ if [[ ! -d /Applications/Khord.app ]]; then
   "$khord_tmp/build.sh"
   ditto "$khord_tmp/build/Khord.app" /Applications/Khord.app
 fi
+
+# configure apps
+dotfiles_dir="${0:A:h}/../.."
+for config in ghostty git starship tinycast vim; do
+  if read -r "answer?Configure $config? [y/N] " &&
+    [[ "${answer:l}" == y || "${answer:l}" == yes ]]; then
+    bash "$dotfiles_dir/$config/setup.sh"
+  fi
+done

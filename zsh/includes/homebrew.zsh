@@ -7,5 +7,20 @@ if [[ -x /opt/homebrew/bin/brew ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# force update brew file
-alias bbd='brew bundle dump --force --file="$ZSH_ENV_DIR/../macos/Brewfile"'
+# force update the selected brewfile
+bbd() {
+    local brewfiles_dir="$ZSH_ENV_DIR/../macos/homebrew"
+    local selected_brewfile
+    local -a brewfiles
+
+    brewfiles=("$brewfiles_dir"/*.Brewfile(N))
+    if (( ${#brewfiles[@]} == 0 )); then
+        print -u2 "No Brewfiles found in $brewfiles_dir"
+        return 1
+    fi
+
+    selected_brewfile=$(printf '%s\n' "${brewfiles[@]}" |
+        fzf --prompt='Dump to Brewfile > ' --height=40% --layout=reverse --border --delimiter=/ --with-nth=-1) || return
+
+    brew bundle dump --force --file="$selected_brewfile"
+}
