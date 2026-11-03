@@ -9,9 +9,10 @@ set -o pipefail
 if [[ ! -x /opt/homebrew/bin/brew ]]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  brew analytics off
 fi
 
-# install mise with php plugin
+# install mise
 if ! command -v mise >/dev/null 2>&1; then
   brew install mise
 fi
