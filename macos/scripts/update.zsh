@@ -1,3 +1,6 @@
+#!/bin/zsh
+# macos update script
+
 brew update
 brew upgrade
 brew cleanup

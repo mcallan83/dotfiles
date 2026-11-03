@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-SOURCE="https://github.com/mcallan83/dotfiles"
-TARGET="${DOTFILES:-$HOME/.dotfiles}"
+GIT_REPO_URL="https://github.com/mcallan83/dotfiles"
+TARGET="${TARGET:-$HOME/.dotfiles}"
 
-if [[ ! -d $TARGET ]]; then
-    git clone --recursive $SOURCE $TARGET || exit 1
+if [[ ! -d "$TARGET" ]]; then
+    git clone --recursive "$GIT_REPO_URL" "$TARGET" || exit 1
 fi
 
 if [[ -f "$HOME/.zshenv" ]]; then
@@ -17,7 +17,5 @@ fi
 
 cp "$TARGET/zsh/.zshenv" "$HOME/.zshenv"
 ln -s "$TARGET/zsh/.zshrc" "$HOME/.zshrc"
-
-curl -L https://iterm2.com/shell_integration/zsh -o "$HOME/.iterm2_shell_integration.zsh"
 
 exec zsh

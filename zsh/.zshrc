@@ -11,12 +11,14 @@ shell_includes=(
     composer
     oh-my-zsh
     docker
+    eza
     fzf
     git
     laravel-sail
     macos
     nmap
     npx
+    vscode
     zoxide
     aliases
     functions

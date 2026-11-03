@@ -1,6 +1,5 @@
 #!/bin/zsh
-
-# MacOS Provisioning Script
+# macos provisioning script
 
 set -e
 set -o pipefail
@@ -48,10 +47,20 @@ composer --version
 node --version
 npm --version
 
+
 # ask to install packages from Brewfile
 brewfile="${0:A:h}/../Brewfile"
 printf 'Install packages from %s? [y/N] ' "$brewfile"
 read -r install_brewfile
 if [[ "$install_brewfile" == [yY] ]]; then
   brew bundle --file "$brewfile"
+fi
+
+# install khord
+if [[ ! -d /Applications/Khord.app ]]; then
+  khord_tmp="$(mktemp -d "${TMPDIR:-/tmp}/khord.XXXXXX")"
+  trap 'rm -rf -- "$khord_tmp"' EXIT
+  git clone --depth 1 https://github.com/mcallan83/khord "$khord_tmp"
+  "$khord_tmp/build.sh"
+  ditto "$khord_tmp/build/Khord.app" /Applications/Khord.app
 fi
