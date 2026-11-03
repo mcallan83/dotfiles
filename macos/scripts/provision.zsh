@@ -48,13 +48,21 @@ node --version
 npm --version
 
 
-# ask to install packages from Brewfile
-brewfile="${0:A:h}/../Brewfile"
-printf 'Install packages from %s? [y/N] ' "$brewfile"
-read -r install_brewfile
-if [[ "$install_brewfile" == [yY] ]]; then
-  brew bundle --file "$brewfile"
+# ask which Brewfile to install
+brewfiles_dir="${0:A:h}/../homebrew"
+brewfiles=("$brewfiles_dir"/*.Brewfile(N))
+print 'Select a Brewfile to install:'
+select brewfile in "${brewfiles[@]}" 'Skip'; do
+if [[ -z "$brewfile" ]]; then
+    print 'Invalid selection.'
+    continue
 fi
+if [[ "$brewfile" != 'Skip' ]]; then
+    brew bundle --file "$brewfile"
+fi
+break
+done
+
 
 # install khord
 if [[ ! -d /Applications/Khord.app ]]; then
