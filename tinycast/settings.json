@@ -13,7 +13,6 @@
     "theme": "system",
     "interfaceSize": "standard",
     "compactMode": false,
-    "showFavoritesInCompactMode": true,
     "followCursorAcrossDisplays": true,
     "dragToReposition": false
   },
@@ -43,98 +42,98 @@
     ],
     "apps": {
       "com.1password.1password": {
-        "shortcut": "hyper+p",
         "alias": null,
+        "shortcut": "hyper+p",
         "showInLauncher": true
       },
       "com.1password.safari": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       },
       "com.apple.DVDPlayer": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       },
       "com.apple.IPAInstaller": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       },
       "com.apple.MigrateAssistant": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       },
       "com.apple.MobileSMS": {
-        "shortcut": "hyper+m",
         "alias": null,
+        "shortcut": "hyper+m",
         "showInLauncher": true
       },
       "com.apple.Notes": {
-        "shortcut": "hyper+n",
         "alias": null,
+        "shortcut": "hyper+n",
         "showInLauncher": true
       },
       "com.apple.TV": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       },
       "com.apple.helpviewer": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       },
       "com.apple.podcasts": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       },
       "com.apple.reminders": {
-        "shortcut": "hyper+r",
         "alias": null,
+        "shortcut": "hyper+r",
         "showInLauncher": true
       },
       "com.apple.systempreferences": {
-        "shortcut": "hyper+e",
         "alias": null,
+        "shortcut": "hyper+e",
         "showInLauncher": true
       },
       "com.apple.weather": {
-        "shortcut": "hyper+w",
         "alias": null,
+        "shortcut": "hyper+w",
         "showInLauncher": true
       },
       "com.google.Chrome": {
-        "shortcut": "hyper+c",
         "alias": null,
+        "shortcut": "hyper+c",
         "showInLauncher": true
       },
       "com.microsoft.VSCode": {
-        "shortcut": "hyper+v",
         "alias": "code",
+        "shortcut": "hyper+v",
         "showInLauncher": true
       },
       "com.mitchellh.ghostty": {
-        "shortcut": "hyper+i",
         "alias": null,
+        "shortcut": "hyper+i",
         "showInLauncher": true
       },
       "com.openai.codex": {
-        "shortcut": "hyper+g",
         "alias": "chat",
+        "shortcut": "hyper+g",
         "showInLauncher": true
       },
       "com.spotify.client": {
-        "shortcut": "hyper+s",
         "alias": null,
+        "shortcut": "hyper+s",
         "showInLauncher": true
       },
       "us.zoom.xos": {
-        "shortcut": "hyper+z",
         "alias": null,
+        "shortcut": "hyper+z",
         "showInLauncher": true
       }
     }
@@ -147,8 +146,8 @@
     "enabled": true,
     "actions": {
       "dismiss-notifications": {
-        "shortcut": "hyper+escape",
         "alias": null,
+        "shortcut": "hyper+escape",
         "showInLauncher": true
       }
     }
@@ -225,18 +224,18 @@
     "menuSearchDisabledApps": [],
     "commands": {
       "search-menu-items": {
-        "shortcut": "hyper+1",
         "alias": null,
+        "shortcut": "hyper+1",
         "showInLauncher": false
       },
       "switch-windows": {
-        "shortcut": "hyper+\\",
         "alias": null,
+        "shortcut": "hyper+\\",
         "showInLauncher": false
       },
       "switch-windows-backwards": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       }
     }
@@ -249,65 +248,65 @@
     "layoutsShowInLauncher": false,
     "roomsShowInLauncher": false,
     "shortcuts": {
-      "left-half": "hyper+left",
-      "right-half": "hyper+right",
-      "top-half": null,
+      "almost-maximize": null,
       "bottom-half": null,
-      "top-left-quarter": null,
-      "top-right-quarter": null,
       "bottom-left-quarter": null,
       "bottom-right-quarter": null,
-      "first-three-fourths": null,
-      "last-three-fourths": null,
-      "first-third": null,
-      "center-third": null,
-      "last-third": "ctrl+option+cmd+right",
-      "first-two-thirds": "ctrl+option+cmd+left",
-      "last-two-thirds": null,
-      "maximize": "hyper+up",
-      "almost-maximize": null,
-      "reasonable-size": null,
-      "maximize-height": null,
-      "maximize-width": null,
       "center": null,
       "center-half": null,
+      "center-third": null,
       "center-two-thirds": null,
+      "first-third": null,
+      "first-three-fourths": null,
+      "first-two-thirds": "ctrl+option+cmd+left",
+      "last-third": "ctrl+option+cmd+right",
+      "last-three-fourths": null,
+      "last-two-thirds": null,
+      "left-half": "hyper+left",
       "make-larger": null,
       "make-smaller": null,
-      "restore": "hyper+down",
+      "maximize": "hyper+up",
+      "maximize-height": null,
+      "maximize-width": null,
+      "move-down": null,
       "move-left": null,
       "move-right": null,
       "move-up": null,
-      "move-down": null,
       "next-display": "hyper+[",
+      "next-space": null,
       "previous-display": "hyper+]",
-      "toggle-fullscreen": "hyper+return",
       "previous-space": null,
-      "next-space": null
+      "reasonable-size": null,
+      "restore": "hyper+down",
+      "right-half": "hyper+right",
+      "toggle-fullscreen": "hyper+return",
+      "top-half": null,
+      "top-left-quarter": null,
+      "top-right-quarter": null
     },
     "aliases": {},
     "customSizes": [],
     "layouts": [],
     "rooms": [],
     "commands": {
-      "create-window-layout": {
-        "shortcut": null,
-        "alias": null,
-        "showInLauncher": false
-      },
       "capture-window-layout": {
-        "shortcut": null,
         "alias": null,
-        "showInLauncher": false
-      },
-      "switch-room": {
         "shortcut": null,
-        "alias": null,
         "showInLauncher": false
       },
       "create-room": {
-        "shortcut": null,
         "alias": null,
+        "shortcut": null,
+        "showInLauncher": false
+      },
+      "create-window-layout": {
+        "alias": null,
+        "shortcut": null,
+        "showInLauncher": false
+      },
+      "switch-room": {
+        "alias": null,
+        "shortcut": null,
         "showInLauncher": false
       }
     }

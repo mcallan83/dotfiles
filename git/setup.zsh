@@ -1,15 +1,17 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 GITCONFIG="$HOME/.gitconfig"
 GITIGNORE="$HOME/.gitignore"
 
 # ask for name and email address
 DEFAULT_NAME="$(echo 'Zvxr Pnyyna' | tr 'A-Za-z' 'N-ZA-Mn-za-m')"
-read -r -p "Full Name [$DEFAULT_NAME]: " NAME
+printf "Full Name [$DEFAULT_NAME]: "
+read -r NAME
 NAME=${NAME:-$DEFAULT_NAME}
 
 DEFAULT_EMAIL="$(echo 'zpnyyna83@tznvy.pbz' | tr 'A-Za-z' 'N-ZA-Mn-za-m')"
-read -r -p "Email [$DEFAULT_EMAIL]: " EMAIL
+printf "Email [$DEFAULT_EMAIL]: "
+read -r EMAIL
 EMAIL=${EMAIL:-$DEFAULT_EMAIL}
 
 # backup .gitconfig
@@ -42,22 +44,13 @@ git config --global user.name "$NAME"
 # diff ansible vault encrypted files
 git config --global diff.ansible-vault.textconv "ansible-vault view"
 
-# https://github.com/so-fancy/diff-so-fancy
-if [ -x "$(command -v diff-so-fancy)" ]
+# delta
+if [ -x "$(command -v delta)" ]
 then
-    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-    git config --global color.ui true
-    git config --global color.diff-highlight.oldNormal    "red bold"
-    git config --global color.diff-highlight.oldHighlight "red bold 52"
-    git config --global color.diff-highlight.newNormal    "green bold"
-    git config --global color.diff-highlight.newHighlight "green bold 22"
-    git config --global color.diff.meta       "11"
-    git config --global color.diff.frag       "magenta bold"
-    git config --global color.diff.commit     "yellow bold"
-    git config --global color.diff.old        "red bold"
-    git config --global color.diff.new        "green bold"
-    git config --global color.diff.whitespace "red reverse"
-    git config --bool --global diff-so-fancy.markEmptyLines false
+    git config --global core.pager delta
+    git config --global interactive.diffFilter 'delta --color-only'
+    git config --global delta.navigate true
+    git config --global merge.conflictStyle zdiff3
 fi
 
 # append git aliases

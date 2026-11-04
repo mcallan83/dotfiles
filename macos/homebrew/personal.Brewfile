@@ -1,13 +1,13 @@
 tap "abue-ammar/tinycast", trusted: true
 tap "saffsanity/sill", trusted: true
 brew "curl"
-brew "diff-so-fancy"
 brew "eza"
 brew "fd"
 brew "ffmpeg"
 brew "fzf"
 brew "gh"
 brew "git"
+brew "git-delta"
 brew "glow"
 brew "imessage-exporter"
 brew "mas"

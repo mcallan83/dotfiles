@@ -81,6 +81,10 @@ dotfiles_dir="${0:A:h}/../.."
 for config in ghostty git starship tinycast vim; do
   if read -r "answer?Configure $config? [y/N] " &&
     [[ "${answer:l}" == y || "${answer:l}" == yes ]]; then
-    bash "$dotfiles_dir/$config/setup.sh"
+    if [[ "$config" == ghostty ]]; then
+      zsh "$dotfiles_dir/$config/setup.sh"
+    else
+      bash "$dotfiles_dir/$config/setup.sh"
+    fi
   fi
 done
