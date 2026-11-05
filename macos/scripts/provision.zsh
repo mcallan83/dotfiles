@@ -1,8 +1,6 @@
 #!/bin/zsh
-# macos provisioning script
 
-set -e
-set -o pipefail
+set -euo pipefail
 
 NODE_VERSION=24
 PHP_VERSION=8.5
@@ -54,6 +52,8 @@ npm --version
 # ask which brewfile to install
 brewfiles_dir="${0:A:h}/../homebrew"
 brewfiles=("$brewfiles_dir"/*.Brewfile(N))
+original_columns=$COLUMNS
+COLUMNS=1
 print 'Select a Brewfile to install:'
 select brewfile in "${brewfiles[@]:t}" 'Skip'; do
   if [[ -z "$brewfile" ]]; then
@@ -62,10 +62,11 @@ select brewfile in "${brewfiles[@]:t}" 'Skip'; do
   fi
   if [[ "$brewfile" != 'Skip' ]]; then
     brew bundle --file "${brewfiles[$REPLY]}" ||
-      print -u2 'Warning: Brew bundle failed; continuing provisioning.'
+      print -u2 'Brew Bundle Install Failed'
   fi
   break
 done
+COLUMNS=$original_columns
 
 # install khord
 if [[ ! -d /Applications/Khord.app ]]; then
@@ -79,12 +80,9 @@ fi
 # configure apps
 dotfiles_dir="${0:A:h}/../.."
 for config in ghostty git starship tinycast vim; do
+  print
   if read -r "answer?Configure $config? [y/N] " &&
     [[ "${answer:l}" == y || "${answer:l}" == yes ]]; then
-    if [[ "$config" == ghostty ]]; then
-      zsh "$dotfiles_dir/$config/setup.sh"
-    else
-      bash "$dotfiles_dir/$config/setup.sh"
-    fi
+    zsh "$dotfiles_dir/$config/setup.zsh"
   fi
 done

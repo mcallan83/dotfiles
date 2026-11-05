@@ -1,5 +1,6 @@
 #!/bin/zsh
-# macos update script
+
+set -euo pipefail
 
 NODE_VERSION=24
 PHP_VERSION=8.5
