@@ -1,4 +1,3 @@
-tap "abue-ammar/tinycast", trusted: true
 tap "saffsanity/sill", trusted: true
 brew "curl"
 brew "eza"
@@ -29,6 +28,7 @@ cask "affinity"
 cask "antinote"
 cask "arq"
 cask "chatgpt"
+cask "codex"
 cask "cryptomator"
 cask "cyberduck"
 cask "docker-desktop"
@@ -48,7 +48,7 @@ cask "saffsanity/sill/sill", trusted: true
 cask "snapzy"
 cask "spotify"
 cask "suspicious-package"
-cask "abue-ammar/tinycast/tinycast", trusted: true
+cask "tinycast"
 cask "utm"
 cask "visual-studio-code"
 cask "vlc"
@@ -59,7 +59,6 @@ mas "1Password for Safari", id: 1569813296
 mas "AdGuard Mini", id: 1440147259
 mas "Baking Soda", id: 1601151613
 mas "Bitdefender Virus Scanner", id: 500154009
-mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Ka-Block!", id: 1335413823
 mas "Keynote", id: 361285480

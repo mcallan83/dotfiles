@@ -10,6 +10,7 @@ shell_includes=(
     mise
     composer
     oh-my-zsh
+    orbstack
     docker
     eza
     fzf

@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-set -euo pipefail
+set -uo pipefail
 
 NODE_VERSION=24
 PHP_VERSION=8.5
