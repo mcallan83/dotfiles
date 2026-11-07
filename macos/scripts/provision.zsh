@@ -50,23 +50,19 @@ node --version
 npm --version
 
 # ask which brewfile to install
+brew install gum
 brewfiles_dir="${0:A:h}/../homebrew"
-brewfiles=("$brewfiles_dir"/*.Brewfile(N))
-original_columns=$COLUMNS
-COLUMNS=1
-print 'Select a Brewfile to install:'
-select brewfile in "${brewfiles[@]:t}" 'Skip'; do
-  if [[ -z "$brewfile" ]]; then
-    print 'Invalid selection.'
-    continue
+brewfiles=("$brewfiles_dir"/*Brewfile*(N.))
+if ! brewfile=$(gum choose --header 'Select a Brewfile to install:' "${brewfiles[@]:t}" 'Skip Homebrew Install'); then
+  print 'Brewfile selection cancelled; continuing without Homebrew install.'
+  brewfile='Skip Homebrew Install'
+fi
+if [[ "$brewfile" != 'Skip Homebrew Install' ]]; then
+  if ! brew bundle --file "$brewfiles_dir/$brewfile"; then
+    print -u2 'Brew Bundle Install Failed'
+    exit 1
   fi
-  if [[ "$brewfile" != 'Skip' ]]; then
-    brew bundle --file "${brewfiles[$REPLY]}" ||
-      print -u2 'Brew Bundle Install Failed'
-  fi
-  break
-done
-COLUMNS=$original_columns
+fi
 
 # install khord
 if [[ ! -d /Applications/Khord.app ]]; then
@@ -91,5 +87,3 @@ done
 # symlink update script to local bin
 mkdir -p "$HOME/.local/bin"
 ln -sfn "$dotfiles_dir/macos/scripts/update.zsh" "$HOME/.local/bin/update"
-
-

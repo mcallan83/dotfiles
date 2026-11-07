@@ -1,4 +1,5 @@
 tap "saffsanity/sill", trusted: true
+brew "bat"
 brew "curl"
 brew "eza"
 brew "fd"
@@ -8,6 +9,7 @@ brew "gh"
 brew "git"
 brew "git-delta"
 brew "glow"
+brew "gum"
 brew "imessage-exporter"
 brew "mas"
 brew "mise"
