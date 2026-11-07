@@ -77,8 +77,9 @@ if [[ ! -d /Applications/Khord.app ]]; then
   ditto "$khord_tmp/build/Khord.app" /Applications/Khord.app
 fi
 
-# configure apps
 dotfiles_dir="${0:A:h}/../.."
+
+# configure apps
 for config in ghostty git starship tinycast vim; do
   print
   if read -r "answer?Configure $config? [y/N] " &&
@@ -86,3 +87,9 @@ for config in ghostty git starship tinycast vim; do
     zsh "$dotfiles_dir/$config/setup.zsh"
   fi
 done
+
+# symlink update script to local bin
+mkdir -p "$HOME/.local/bin"
+ln -sfn "$dotfiles_dir/macos/scripts/update.zsh" "$HOME/.local/bin/update"
+
+

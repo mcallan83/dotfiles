@@ -33,3 +33,5 @@ if command -v mo >/dev/null 2>&1; then
 	mo clean
 	mo optimize
 fi
+
+npx --yes envinfo

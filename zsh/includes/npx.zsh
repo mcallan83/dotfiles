@@ -1,2 +1,2 @@
-alias envinfo="npx envinfo"
-alias http="npx live-server"
+alias envinfo="npx --yes envinfo"
+alias http="npx --yes live-server"

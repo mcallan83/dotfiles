@@ -13,6 +13,7 @@ function sail() {
 }
 
 # aliases
+alias sart="sail artisan"
 alias sd="sail down"
 alias smfs="sail artisan migrate:fresh --seed"
 alias sti="sail tinker"
