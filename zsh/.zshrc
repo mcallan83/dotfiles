@@ -30,6 +30,9 @@ for include in "${shell_includes[@]}"; do
     source "$INCLUDES_DIR/${include}.zsh"
 done
 
+# additional paths
+path+=("$HOME/.local/bin")
+
 # ignored autocomplete patterns
 zstyle ':completion:*:*:git*:*' ignored-patterns '*ORIG_HEAD'
 
