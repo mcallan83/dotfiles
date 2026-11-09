@@ -22,6 +22,7 @@ brew "sevenzip"
 brew "starship"
 brew "the_silver_searcher"
 brew "vim"
+brew "viu"
 brew "yt-dlp"
 brew "zoxide"
 cask "1password"
@@ -73,7 +74,6 @@ mas "Pixelmator Pro", id: 1289583905
 mas "RadarScope", id: 288419283
 mas "Reeder", id: 1529448980
 mas "SingleFile", id: 6444322545
-mas "Tailscale", id: 1475387142
 mas "Userscripts", id: 1463298887
 mas "Vimari", id: 1480933944
 mas "Vinegar", id: 1591303229
