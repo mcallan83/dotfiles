@@ -20,6 +20,7 @@ shell_includes=(
     nmap
     npx
     vscode
+    yt-dlp
     zoxide
     aliases
     functions
