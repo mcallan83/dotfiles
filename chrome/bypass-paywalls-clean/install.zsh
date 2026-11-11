@@ -10,12 +10,15 @@ BACKUP_DIR="$BASE_DIR/unpacked.$(date +%F_%T).bak"
 TEMP_DIR="$(mktemp -d "/tmp/bypass-paywalls.XXXXXX")"
 NEW_UNPACKED_DIR="$TEMP_DIR/bypass-paywalls-chrome-clean-master"
 ARCHIVE="$TEMP_DIR/bypass-paywalls.zip"
+FIRST_INSTALL=false
 
 curl -L --fail -o "$ARCHIVE" "$ZIP_FILE_URL"
 unzip -q "$ARCHIVE" -d "$TEMP_DIR"
 
 if [[ -e "$UNPACKED_DIR" ]]; then
 	mv "$UNPACKED_DIR" "$BACKUP_DIR"
+else
+	FIRST_INSTALL=true
 fi
 
 if ! mv "$NEW_UNPACKED_DIR" "$UNPACKED_DIR"; then
@@ -27,7 +30,13 @@ if ! mv "$NEW_UNPACKED_DIR" "$UNPACKED_DIR"; then
 	exit 1
 fi
 
+if [[ -e "$BACKUP_DIR" ]]; then
+	rm -rf "$BACKUP_DIR"
+fi
+
 print 'Add the extension to Chrome manually using "Load unpacked".'
 print "Install directory: $UNPACKED_DIR"
 
-open "$BASE_DIR"
+if [[ "$FIRST_INSTALL" == true ]]; then
+	open "$BASE_DIR"
+fi

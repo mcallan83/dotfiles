@@ -29,9 +29,15 @@ if command -v mas >/dev/null 2>&1; then
 	mas update
 fi
 
+if [[ -d "${0:A:h}/../../chrome/bypass-paywalls-clean/unpacked" ]]; then
+	"${0:A:h}/../../chrome/bypass-paywalls-clean/install.zsh"
+fi
+
 if command -v mo >/dev/null 2>&1; then
 	mo clean
 	mo optimize
 fi
 
 npx --yes envinfo
+
+
