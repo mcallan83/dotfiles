@@ -34,14 +34,19 @@ composer global require laravel/installer
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME/bin:$PNPM_HOME:$PATH"
 
-if ! command -v pnpm >/dev/null 2>&1; then
+if ! pnpm --version >/dev/null 2>&1; then
   curl -fsSL https://get.pnpm.io/install.sh |
     env PNPM_NO_MODIFY_PATH=1 sh -
+  rehash
 fi
 
 # install node and npm
 pnpm runtime set node "$NODE_VERSION" --global
-pnpm add --global npm
+if npm --version >/dev/null 2>&1; then
+  pnpm add --global npm
+else
+  pnpm add --global npm@latest --force
+fi
 
 php --version
 composer --version
