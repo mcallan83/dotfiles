@@ -5,3 +5,4 @@ export EDITOR='vim'
 export KEYTIMEOUT=10
 export LANG=en_US.UTF-8
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+export OP_BIOMETRIC_UNLOCK_ENABLED=true

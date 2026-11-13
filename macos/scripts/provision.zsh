@@ -4,6 +4,7 @@ set -euo pipefail
 
 NODE_VERSION=24
 PHP_VERSION=8.5
+RUST_VERSION=stable
 
 # install homebrew
 if [[ ! -x /opt/homebrew/bin/brew ]]; then
@@ -23,6 +24,11 @@ mise plugins install php 'https://github.com/verzly/mise-php#latest'
 # install php
 if ! command -v php >/dev/null 2>&1; then
   mise use --global "php@$PHP_VERSION"
+fi
+
+# install rust
+if ! command -v rustc >/dev/null 2>&1; then
+  mise use --global "rust@$RUST_VERSION"
 fi
 
 eval "$(mise env --shell zsh)"
@@ -48,12 +54,6 @@ else
   pnpm add --global npm@latest --force
 fi
 
-php --version
-composer --version
-pnpm --version
-node --version
-npm --version
-
 # ask which brewfile to install
 brew install gum
 brewfiles_dir="${0:A:h}/../homebrew"
@@ -64,8 +64,8 @@ if ! brewfile=$(gum choose --header 'Select a Brewfile to install:' "${brewfiles
 fi
 if [[ "$brewfile" != 'Skip Homebrew Install' ]]; then
   if ! brew bundle --file "$brewfiles_dir/$brewfile"; then
-    print -u2 'Brew Bundle Install Failed'
-    exit 1
+    print -u2 'Brew Bundle install failed. Press Enter to continue.'
+    read -r || :
   fi
 fi
 
@@ -92,3 +92,13 @@ done
 # symlink update script to local bin
 mkdir -p "$HOME/.local/bin"
 ln -sfn "$dotfiles_dir/macos/scripts/update.zsh" "$HOME/.local/bin/update"
+
+# output installed versions
+php --version
+composer --version
+rustc --version
+cargo --version
+pnpm --version
+node --version
+npm --version
+npx --yes envinfo

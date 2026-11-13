@@ -4,6 +4,7 @@ set -uo pipefail
 
 NODE_VERSION=24
 PHP_VERSION=8.5
+RUST_VERSION=stable
 
 if command -v brew >/dev/null 2>&1; then
 	brew update
@@ -14,6 +15,7 @@ fi
 
 if command -v mise >/dev/null 2>&1; then
 	mise upgrade "php@$PHP_VERSION"
+    mise upgrade "rust@$RUST_VERSION"
 fi
 
 if command -v composer >/dev/null 2>&1; then

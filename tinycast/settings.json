@@ -88,6 +88,11 @@
         "alias": null,
         "showInLauncher": false
       },
+      "com.apple.finder": {
+        "shortcut": "hyper+f",
+        "alias": null,
+        "showInLauncher": true
+      },
       "com.apple.helpviewer": {
         "shortcut": null,
         "alias": null,
