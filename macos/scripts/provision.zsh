@@ -8,10 +8,12 @@ RUST_VERSION=stable
 
 # install homebrew
 if [[ ! -x /opt/homebrew/bin/brew ]]; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  brew analytics off
+  homebrew_installer="$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$homebrew_installer"
 fi
+brew_env="$(/opt/homebrew/bin/brew shellenv)"
+eval "$brew_env"
+brew analytics off
 
 # install mise
 if ! command -v mise >/dev/null 2>&1; then
@@ -19,19 +21,18 @@ if ! command -v mise >/dev/null 2>&1; then
 fi
 
 # install mise php plugin
-mise plugins install php 'https://github.com/verzly/mise-php#latest'
-
-# install php
-if ! command -v php >/dev/null 2>&1; then
-  mise use --global "php@$PHP_VERSION"
+installed_plugins="$(mise plugins ls)"
+plugins=("${(@f)installed_plugins}")
+if (( ! ${plugins[(Ie)php]} )); then
+  mise plugins install php 'https://github.com/verzly/mise-php#latest'
 fi
 
-# install rust
-if ! command -v rustc >/dev/null 2>&1; then
-  mise use --global "rust@$RUST_VERSION"
-fi
+# install and configure php and rust
+mise use --global "php@$PHP_VERSION"
+mise use --global "rust@$RUST_VERSION"
 
-eval "$(mise env --shell zsh)"
+mise_env="$(mise env --shell zsh)"
+eval "$mise_env"
 
 # install laravel installer
 composer global require laravel/installer
@@ -48,24 +49,24 @@ fi
 
 # install node and npm
 pnpm runtime set node "$NODE_VERSION" --global
-if npm --version >/dev/null 2>&1; then
-  pnpm add --global npm
-else
+if ! "$PNPM_HOME/bin/npm" --version >/dev/null 2>&1 ||
+  ! "$PNPM_HOME/bin/npx" --version >/dev/null 2>&1; then
   pnpm add --global npm@latest --force
 fi
 
 # ask which brewfile to install
 brew install gum
-brewfiles_dir="${0:A:h}/../homebrew"
-brewfiles=("$brewfiles_dir"/*Brewfile*(N.))
-if ! brewfile=$(gum choose --header 'Select a Brewfile to install:' "${brewfiles[@]:t}" 'Skip Homebrew Install'); then
-  print 'Brewfile selection cancelled; continuing without Homebrew install.'
-  brewfile='Skip Homebrew Install'
-fi
-if [[ "$brewfile" != 'Skip Homebrew Install' ]]; then
-  if ! brew bundle --file "$brewfiles_dir/$brewfile"; then
-    print -u2 'Brew Bundle install failed. Press Enter to continue.'
-    read -r || :
+if gum confirm --default=false 'Would you like to install a Brewfile?'; then
+  brewfiles_dir="${0:A:h}/../homebrew"
+  brewfiles=("$brewfiles_dir"/*Brewfile*(N.))
+  if (( ${#brewfiles} == 0 )); then
+    print -u2 "No Brewfiles found in $brewfiles_dir."
+    exit 1
+  fi
+  if brewfile=$(gum choose --header 'Select a Brewfile to install:' "${brewfiles[@]:t}"); then
+    brew bundle --file "$brewfiles_dir/$brewfile"
+  else
+    print 'Brewfile selection cancelled; continuing without Homebrew install.'
   fi
 fi
 
@@ -93,12 +94,5 @@ done
 mkdir -p "$HOME/.local/bin"
 ln -sfn "$dotfiles_dir/macos/scripts/update.zsh" "$HOME/.local/bin/update"
 
-# output installed versions
-php --version
-composer --version
-rustc --version
-cargo --version
-pnpm --version
-node --version
-npm --version
+# output env info
 npx --yes envinfo
