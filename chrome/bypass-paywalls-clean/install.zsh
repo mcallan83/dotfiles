@@ -12,6 +12,8 @@ NEW_UNPACKED_DIR="$TEMP_DIR/bypass-paywalls-chrome-clean-master"
 ARCHIVE="$TEMP_DIR/bypass-paywalls.zip"
 FIRST_INSTALL=false
 
+trap 'rm -rf -- "$TEMP_DIR"' EXIT
+
 curl -L --fail -o "$ARCHIVE" "$ZIP_FILE_URL"
 unzip -q "$ARCHIVE" -d "$TEMP_DIR"
 

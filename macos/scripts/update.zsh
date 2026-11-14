@@ -14,8 +14,8 @@ if command -v brew >/dev/null 2>&1; then
 fi
 
 if command -v mise >/dev/null 2>&1; then
-	mise upgrade "php@$PHP_VERSION"
-    mise upgrade "rust@$RUST_VERSION"
+	mise upgrade --global "php@$PHP_VERSION"
+    mise upgrade --global "rust@$RUST_VERSION"
 fi
 
 if command -v composer >/dev/null 2>&1; then
@@ -36,10 +36,8 @@ if [[ -d "${0:A:h}/../../chrome/bypass-paywalls-clean/unpacked" ]]; then
 fi
 
 if command -v mo >/dev/null 2>&1; then
-	mo clean
+    mo clean
 	mo optimize
 fi
 
 npx --yes envinfo
-
-
