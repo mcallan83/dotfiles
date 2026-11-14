@@ -55,15 +55,22 @@ if ! "$PNPM_HOME/bin/npm" --version >/dev/null 2>&1 ||
 fi
 
 # ask which brewfile to install
-brew install gum
-if gum confirm --default=false 'Would you like to install a Brewfile?'; then
+if read -r "answer?Would you like to install a Brewfile? [y/N] " &&
+  [[ "${answer:l}" == y || "${answer:l}" == yes ]]; then
   brewfiles_dir="${0:A:h}/../homebrew"
   brewfiles=("$brewfiles_dir"/*Brewfile*(N.))
   if (( ${#brewfiles} == 0 )); then
     print -u2 "No Brewfiles found in $brewfiles_dir."
     exit 1
   fi
-  if brewfile=$(gum choose --header 'Select a Brewfile to install:' "${brewfiles[@]:t}"); then
+  brewfile=''
+  PS3='Select a Brewfile to install: '
+  select brewfile in "${brewfiles[@]:t}"; do
+    if [[ -n "$brewfile" ]]; then
+      break
+    fi
+  done
+  if [[ -n "$brewfile" ]]; then
     brew bundle --file "$brewfiles_dir/$brewfile"
   else
     print 'Brewfile selection cancelled; continuing without Homebrew install.'
@@ -82,7 +89,7 @@ fi
 dotfiles_dir="${0:A:h}/../.."
 
 # configure apps
-for config in ghostty git starship tinycast vim; do
+for config in ghostty git starship tinycast vim; do 
   print
   if read -r "answer?Configure $config? [y/N] " &&
     [[ "${answer:l}" == y || "${answer:l}" == yes ]]; then

@@ -12,6 +12,7 @@ _brewfile_bundle() {
     local brewfiles_dir="$ZSH_ENV_DIR/../macos/homebrew"
     local selected_brewfile=''
     local -a brewfiles
+    local answer
 
     brewfiles=("$brewfiles_dir"/*Brewfile*(N.))
     if (( ${#brewfiles[@]} == 0 )); then
@@ -22,12 +23,18 @@ _brewfile_bundle() {
     if [[ "$action" == dump ]] && (( ${#brewfiles[@]} == 1 )); then
         selected_brewfile="${brewfiles[1]}"
     else
-        selected_brewfile=$(gum choose --header "Select a Brewfile to ${action}:" "${brewfiles[@]:t}") || return $?
+        local PS3="Select a Brewfile to ${action}: "
+        select selected_brewfile in "${brewfiles[@]:t}"; do
+            [[ -n "$selected_brewfile" ]] && break
+        done
+        [[ -n "$selected_brewfile" ]] || return 0
         selected_brewfile="$brewfiles_dir/$selected_brewfile"
     fi
 
-    [[ -n "$selected_brewfile" ]] || return 0
-    gum confirm "Run brew bundle ${action} for ${selected_brewfile:t}?" || return 0
+    if ! read -r "answer?Run brew bundle ${action} for ${selected_brewfile:t}? [y/N] " ||
+        [[ "${answer:l}" != y && "${answer:l}" != yes ]]; then
+        return 0
+    fi
 
     if [[ "$action" == dump ]]; then
         brew bundle dump --force --file="$selected_brewfile" || return $?
