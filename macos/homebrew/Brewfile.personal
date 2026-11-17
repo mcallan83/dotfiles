@@ -1,3 +1,4 @@
+tap "ifuryst/open-browser-use", "https://github.com/iFurySt/homebrew-open-browser-use"
 tap "saffsanity/sill", trusted: true
 brew "bat"
 brew "curl"
@@ -24,6 +25,7 @@ brew "vim"
 brew "viu"
 brew "yt-dlp"
 brew "zoxide"
+brew "ifuryst/open-browser-use/open-browser-use", trusted: true
 cask "1password"
 cask "1password-cli"
 cask "affinity"
