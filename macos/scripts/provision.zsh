@@ -47,12 +47,12 @@ if ! pnpm --version >/dev/null 2>&1; then
   rehash
 fi
 
-# install node and npm
+# install node
 pnpm runtime set node "$NODE_VERSION" --global
-if ! "$PNPM_HOME/bin/npm" --version >/dev/null 2>&1 ||
-  ! "$PNPM_HOME/bin/npx" --version >/dev/null 2>&1; then
-  pnpm add --global npm@latest --force
-fi
+
+# install global node packages
+pnpm add --global npm@latest --force
+pnpm add --global open-browser-use --allow-build=open-browser-use --force
 
 # ask which brewfile to install
 if read -r "answer?Would you like to install a Brewfile? [y/N] " &&
@@ -89,7 +89,7 @@ fi
 dotfiles_dir="${0:A:h}/../.."
 
 # configure apps
-for config in ghostty git starship tinycast vim; do 
+for config in ghostty git starship tinycast vim; do
   print
   if read -r "answer?Configure $config? [y/N] " &&
     [[ "${answer:l}" == y || "${answer:l}" == yes ]]; then
