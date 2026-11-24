@@ -78,4 +78,22 @@ mas "SingleFile", id: 6444322545
 mas "Userscripts", id: 1463298887
 mas "Vimari", id: 1480933944
 mas "Vinegar", id: 1591303229
+mas "wBlock", id: 6746388723
 mas "WireGuard", id: 1451685025
+vscode "bmewburn.vscode-intelephense-client"
+vscode "bradlc.vscode-tailwindcss"
+vscode "dbaeumer.vscode-eslint"
+vscode "editorconfig.editorconfig"
+vscode "esbenp.prettier-vscode"
+vscode "github.vscode-github-actions"
+vscode "laravel.vscode-laravel"
+vscode "llvm-vs-code-extensions.lldb-dap"
+vscode "mehedidracula.php-namespace-resolver"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "swiftlang.swift-vscode"
+vscode "teabyii.ayu"
+vscode "vscodevim.vim"
+vscode "vue.volar"
